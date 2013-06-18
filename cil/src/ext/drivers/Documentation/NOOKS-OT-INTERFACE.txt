@@ -1,0 +1,30 @@
+The following front end functions need to be implemented for the nooks object
+tracker.
+
+The OT must also have to store size information along with each pointer. 
+  KernPtr, UserPtr, DataType, SizeKern, SizeUser
+The size information is needed for the following pathological case:
+Say UserPtr and KernPtr point to an array. The kerndriver calls the
+userdriver, which reallocates the array (size), but does so in place
+In this case, translation will succeed, types will match, but we'll
+have an error when we try to write the modified array to the array
+pointed by the KernPtr (because we did not reallocate KernPtr).
+
+nooks_ot_lookup_kern (userptr, &kernptr, sizeof(pointed-to-type), type_enum)
+  - Will translate a user pointer into a kernel pointer using a hashtable
+    lookup.
+  - If translation fails, will allocate sizeof(pointed-to-type) number of
+    bytes in kernel memory and assign that to kernptr. Will also make an
+    entry into the hashtable.
+
+
+nooks_ot_alloc_arraymem_kern (&kernptr, sizeof(array-in-bytes), type_enum)
+  - if sizeof(array-in-bytes) does not match what is stored for SizeKern, 
+  - Delete any old (KernPtr, UserPtr) associations.
+  - Allocate array-in-bytes bytes of kernel memory.
+  - Copy the values from the old locations of KernPtr into the new location
+    (i.e., do a realloc).
+  - Modify kernptr to point to the head of this memory.
+  - Create an entry for the new mapping (Kernptr, Userptr) in the
+    hashtable.
+  This function is needed to allocate memory for arrays.

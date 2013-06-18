@@ -1,0 +1,2381 @@
+(*===========================================================================*)
+(*
+ * CIL Module for splitting device drivers into a user-component and a
+ * kernel-component, aka, "the beast". This assumes as input a completely
+ * colored call-graph.
+ *
+ * This is the most complex file in our tool. Most of the complexity is in
+ * the marshaling/demarshaling functions, which, though conceptually simple,
+ * have to check for a *lot* of cases.
+ *
+ * Vinod Ganapathy <vg@cs.wisc.edu>, September 28, 2006.
+ *)
+(*===========================================================================*)
+
+open Cil
+open Str
+open Scanf
+open Utils_dri
+open Splitter_utils_dri
+open Splitter_marshcode_dri
+open Marshannot_dri (* Marshaannot: Support for marhsaling annotations *)
+open Cgcomp_dri    (* Callgraph: we need this to find interface functions *)
+open Costgraph_dri (* Costgraph: do we need this here? *)
+open Marshal_dri   (* Marshaling analysis *)
+
+(* User or Kern annotations for each function *)
+let annotations : (string, string) Hashtbl.t = (Hashtbl.create 117)
+
+(* List of functions implemented in Java *)
+let java_funcs : string list ref = ref []
+
+(* Hashtable storing varinfo->fundec mapping. Used in splitter_user *)
+let varinfo_fundec : (varinfo, fundec) Hashtbl.t = (Hashtbl.create 117)
+
+(* Hashtable storing the varinfos of functions that are called *)
+let called_fun_varinfo : (varinfo, int) Hashtbl.t = (Hashtbl.create 117)
+
+(* Functions that do not matter for splitting. User and Kernel can have
+   individual copies of these functions.  By default we keep the prototype,
+   If the function is also listed in the "delete_proto" list, then we remove
+   the prototype as well.
+*)
+let nonstubbed_functions: (string, bool) Hashtbl.t = (Hashtbl.create 117)
+let nonstubbed_functions_delete_proto: (string, bool) Hashtbl.t = (Hashtbl.create 117)
+
+(* Names of interface functions. Only these need to be stubbed and exported *)
+let interface_functions: (string, bool) Hashtbl.t = (Hashtbl.create 117)
+
+(* Names and varinfos of functions that do not have fundecs *)
+let funcs_with_no_fundecs: (string, varinfo) Hashtbl.t = (Hashtbl.create 117)
+
+(* Marshaling stack: keeps track of the types being marshaled *)
+let marshstack = ref []
+
+(* Are we currently in a recursive access? *)
+let rec_access = ref false
+
+(*---------------------------------------------------------------------------*)
+
+let push_marshstack (s: string) =
+  marshstack := (List.append [s] !marshstack)
+
+let pop_marshstack () : unit =
+  try
+    marshstack := (List.tl !marshstack);
+  with Failure("tl") -> fatal ["Attempt to pop an empty stack"];;
+
+let is_on_marshstack (s: string) = (List.mem s !marshstack)
+
+let marshstack_len () : int = (List.length !marshstack)
+
+let set_recaccess() = rec_access := true
+let clear_recaccess() = rec_access := false
+let is_recaccess() = !rec_access
+
+(** generate_unified_m_dm: Generate marshaling or demarshaling code:
+ *
+ * Like the function generate_marshaling_code, this function generates code to
+ * demarshal a value. The arguments passed to this function are:
+ * (1) fdec: the fundec of the function that is currently being processed
+ * (2) todemarshal: the varinfo of the variable that will get its value after
+ *     we demarshal.
+ * (3) field: this is an optional parameter that is passed, determining whether
+ *     what we're demarshaling is a struct field.
+ * (4) todemarshal_typ: the type, possibly resolved of todemarshal,
+ * (5) bufvar: the varinfo of the marshbuf, that contains the flattened DSes.
+ * (6) currsize: the varinfo of the variable that stores the current offset
+ *     into the buffer.
+ * (7) fdec_demarsh: the fundec of the function for which we're generating
+ *     demarshaling code. Equivalent to the fdec2 argument of unified_dfs.
+ * (8) ptg: points-to-graph obtained after marshaling analysis.
+ * (9) resfld: resolved fields information, for opaque pointers.
+ * (10) resform: resolved formal parameter information, for opaque pointers.
+ * (11) stkdpth: stack depth, used with recursive data structures
+ * (12) marshaling:  true if we are generating marhshaling code, false
+ *      otherwise
+ * (13) gen_kern: true if generating code in the master, false otherwise
+ *
+ * As output, we generate code to marshal/demarshal. We use a
+ * function fill_marshbuf/fetch_marshbuf, that takes 4 parameters,
+ * one of which is a void * memory blob containing
+ * the data that we asked for. The arguments are:
+ * (1) a void * with the buffer containing the flattened data structure.
+ * (2) the current offset into the buffer.
+ * (3) the size of the data that we're requesting from the buffer.
+ * (4) the return buffer.
+ *)
+let rec generate_unified_m_dm
+    (fdec: fundec)
+    (to_m_dm: lval)
+    (field: fieldinfo option)
+    (to_m_dm_typ: typ)
+    (bufvar: varinfo)
+    (currsize: varinfo)
+    (fdec_m_dm: fundec)
+    (ptg: (string, (typ * string * string)) Hashtbl.t)
+    (resfld: (string, (typ * fieldinfo * typ)) Hashtbl.t)
+    (resform: (string, (int * varinfo * typ)) Hashtbl.t)
+    (stkdpth: int)
+    (marshaling: bool)
+    (gen_kern: bool)
+    : stmt list =
+  begin
+    let inserted_stmts = ref [] in
+    let m_dm_func_name = if marshaling then "fill_marshbuf" else "fetch_marshbuf" in
+    let m_dm_fundec = emptyFunction m_dm_func_name in
+    let m_dm_func = expify_fundec m_dm_fundec in
+    (*let the_buf = (mkCast
+                     (expify_lval (lvalify_varinfo bufvar))
+                     (TPtr (TVoid ([]), []))
+                  ) in*)
+    let the_buf = expify_lval (lvalify_varinfo bufvar) in
+
+    (* Buffer in/from which we marshal/demarsh data *)
+    let currsize_var = mkAddrOf (lvalify_varinfo currsize) in
+    (match to_m_dm_typ with
+       | TInt(_) ->
+           (* other_buf is the opposite of the_buf:  if the_buf is the target, then
+              other_buf is the source.  if the_buf is the source, then other_buf is
+              the target *)
+           if (is_iomem to_m_dm_typ) = false then
+             begin
+               let other_buf = ref
+                 (mkCast 
+                    (mkAddrOf (add_field_to_lval_wrapper to_m_dm field))
+                    (TPtr (TVoid ([]), []))
+                 ) in
+               (match field with
+                  | Some(f) ->
+                      (match f.fbitfield with
+                         | Some(sz) -> (* Generate an assignment of the bitfield to an int *)
+                             (* Just an integer temporary variable.  Will add just 4 bytes *)
+                             let bitfldtmp = (get_temporary_variable fdec None intType "btfld") in
+                             other_buf := (mkCast
+                                             (mkAddrOf (lvalify_varinfo bitfldtmp))
+                                             (TPtr (TVoid ([]), []))
+                                          );
+                             if marshaling then begin
+                               let assign_bitfld_lhs = (lvalify_varinfo bitfldtmp) in
+                               let assign_bitfld_rhs = (expify_lval (add_field_to_lval_wrapper to_m_dm field)) in
+                               let assign_bitfld = Set(assign_bitfld_lhs, assign_bitfld_rhs, locUnknown) in
+                               let stmt_assign_bitfld = (mkStmt (Instr [assign_bitfld])) in
+                               inserted_stmts := [stmt_assign_bitfld];
+                             end
+                             else begin
+                               let assign_bitfld_lhs = (add_field_to_lval_wrapper to_m_dm field) in
+                               let assign_bitfld_rhs = (expify_lval (lvalify_varinfo bitfldtmp)) in
+                               let assign_bitfld = Set(assign_bitfld_lhs, assign_bitfld_rhs, locUnknown) in
+                               let stmt_assign_bitfld = (mkStmt (Instr [assign_bitfld])) in
+                               inserted_stmts := [stmt_assign_bitfld];
+                             end
+                         | None -> ();
+                      );
+                  | None -> ();
+               );
+               (* Get the value of the integer *)
+               let sizeof_var = (SizeOf(to_m_dm_typ)) in
+               let (argslist, retval) =
+                 if marshaling then
+                   ([the_buf; currsize_var; !other_buf; sizeof_var],
+                    (Some((lvalify_varinfo bufvar)))
+                   )
+                 else
+                   ([the_buf; currsize_var; sizeof_var; !other_buf],
+                    None
+                   )
+               in
+               let call_m_dm_func = Call(retval, m_dm_func, argslist, locUnknown) in
+               let stmt_m_dm_call = mkStmt (Instr [call_m_dm_func]) in
+               (* We might have prepared code for demarshaling bit fields. These statements
+                * must precede that statement *)
+               inserted_stmts :=
+                 (if marshaling then
+                    (List.append !inserted_stmts [stmt_m_dm_call])
+                  else
+                    (List.append [stmt_m_dm_call] !inserted_stmts)
+                 );
+               (* Is this TInt ever a pointer? If so, translate and marshal/demarshal! *)
+               if (Marshannot_dri.is_ispointer to_m_dm_typ) = true then
+                 begin
+                   let target_typ = (Marshannot_dri.typeof_ptrtarget to_m_dm_typ) in
+                   let pointer_type = (TPtr(target_typ, [])) in
+                   let ptrlv = (add_field_to_lval_wrapper to_m_dm field) in
+                   let m_dm_stmts = (unified_dfs ptrlv pointer_type fdec
+                                       fdec_m_dm ptg resfld resform bufvar currsize
+                                       stkdpth marshaling gen_kern) in
+                   inserted_stmts := (List.append !inserted_stmts m_dm_stmts);
+                 end;
+             end
+           else
+             begin
+               (Printf.fprintf stderr "Not marshaling: %s in %s\n" (lval_tostring to_m_dm) fdec.svar.vname);
+               inserted_stmts := [];
+             end
+       | TArray(basetype,lengthexp,_) ->
+           (* Array type *)
+           (* For an array, we first note the number of elements in the array. Here, the
+              length of the array is available as an exp. Then we copy that many elements
+              over from the array into the buffer. We DO NOT copy the base pointer of
+              the array. That will be copied from the container struct. *)
+           let array_length_exp = ref (integer 0) in
+           (match lengthexp with
+              | Some(l) ->
+                  array_length_exp := l;
+              | None -> (* Read from annotations/provide manually. *)
+                  (* Initialize array length to "SUPPLYME" *)
+                  let unknown_prefix = (if marshaling then
+                                          "SUPPLYME"
+                                        else
+                                          "resolved_annot_"
+                                       ) in
+                  let unknown_var = (get_temporary_variable fdec None intType unknown_prefix) in
+                  let unknown_lval = (lvalify_varinfo unknown_var) in
+                  let unknown_exp = (expify_lval unknown_lval) in
+                  array_length_exp := unknown_exp;
+           );
+           (* Create an index variable to traverse the array *)
+           let idx_var_name = "idx_arr" ^ (itoa stkdpth) in
+           let idx_var = (get_temporary_variable fdec None intType idx_var_name) in
+           let idx_lval = (lvalify_varinfo idx_var) in
+           let idx_exp = (expify_lval idx_lval) in
+           (* Create the offset into the array: i.e., (arr + idx), where arr is the
+              name of the array declared as 'T arr[size]' *)
+           let arrnm_lval = (add_field_to_lval_wrapper to_m_dm field) in
+           let arrnm_exp = (mkAddrOrStartOf arrnm_lval) in
+           let index = Index(idx_exp, NoOffset) in
+           let ptrarith = addOffsetLval index arrnm_lval in
+           if marshaling then
+             begin
+               let stmts_marshal = (unified_dfs ptrarith basetype fdec fdec_m_dm ptg
+                                      resfld resform bufvar currsize (stkdpth + 1)
+                                      marshaling gen_kern) in
+               (* Create the loop that will traverse the array *)
+               let stmts_loop = (mkForIncr ~iter:(idx_var) ~first:(zero)
+                                   ~stopat:(!array_length_exp) ~incr:(one)
+                                   ~body:(stmts_marshal)) in
+               inserted_stmts := (List.append !inserted_stmts stmts_loop);
+             end
+           else
+             begin
+               let stmts_loopbody = ref [] in
+               (* If we have a RANGESTORE array, create a mapping for each element *)
+               if (Marshannot_dri.is_rangestore to_m_dm_typ) = true then begin
+                 let argslist = [arrnm_exp ; idx_exp] in
+                 let new_stmt = generate_storeoffset_range_call argslist in
+                 stmts_loopbody := (List.append !stmts_loopbody [new_stmt]);
+               end;
+               (* Create the dereference lval and demarshal element*)
+               let stmts_demarshal = (unified_dfs ptrarith basetype fdec fdec_m_dm
+                                        ptg resfld resform bufvar currsize (stkdpth + 1)
+                                        marshaling gen_kern) in
+               stmts_loopbody := (List.append !stmts_loopbody stmts_demarshal);
+               (* Create the loop that will traverse the array *)
+               let stmts_loop = (mkForIncr ~iter:(idx_var) ~first:(zero)
+                                   ~stopat:(!array_length_exp) ~incr:(one)
+                                   ~body:(!stmts_loopbody)) in
+               inserted_stmts := (List.append !inserted_stmts stmts_loop);
+             end
+       | TNamed(tinfo,_) ->
+           (* A named type. We must marshal/demarshal it appropriately. Do not (de)marshal a
+              compound type as that is handled by unified_dfs. *)
+           if (isCompoundType to_m_dm_typ) = false
+           then begin
+             let stmts_m_dm = (generate_unified_m_dm fdec to_m_dm field
+                                 tinfo.ttype bufvar currsize fdec_m_dm ptg
+                                 resfld resform stkdpth marshaling gen_kern) in
+             inserted_stmts := stmts_m_dm;
+           end else begin
+             (Printf.fprintf stderr "demarsh: not handled %s in %s\n" tinfo.tname fdec.svar.vname);
+             inserted_stmts := [];
+           end;
+       | TPtr(dtyp, al) -> ();
+           (* Generic pointer type. We need to check for annotations here
+            * Annotations handled here are: NULLTERM IS_CONTAINER
+            * ARITH/RECURSIVE annotations are handled in the unified_dfs algorithm. *)
+           (* Is this a NULLTERM string? *)
+           if ((Marshannot_dri.is_nullterm to_m_dm_typ) = true)
+           then begin
+             (* If we are demarshaling, "other" means "target".  If we are marshaling,
+                "other" means "src"
+             *)
+             let other_lval = (add_field_to_lval_wrapper to_m_dm field) in
+             let other_buf = (mkCast
+                                (expify_lval other_lval)
+                                (TPtr (TVoid ([]), []))
+                             ) in
+             let m_dm_generate_fetch_fill =
+               if marshaling then
+                 generate_fillmarshbuf_ptr
+               else
+                 generate_fetchmarshbuf_ptr
+             in
+             (* 1. Marshal/demarshal the value of the pointer *)
+             let ptr_m_dm = m_dm_generate_fetch_fill fdec
+               (add_field_to_lval_wrapper to_m_dm field) to_m_dm_typ bufvar currsize in
+             inserted_stmts := (List.append !inserted_stmts ptr_m_dm);
+             let deref_check = BinOp(Ne, (expify_lval other_lval), zero64Uexp, intType) in
+             let true_block = ref [] in
+             (* 2. Compute/Demarshal the string length *)
+             let strlen_var = (get_temporary_variable fdec (Some(other_lval)) intType "strlen") in
+             let strlen_lval = (lvalify_varinfo strlen_var) in
+             let strlen_exp = (expify_lval strlen_lval) in
+
+             if marshaling then
+               begin
+                 let strlen_func_name = "strlen" in
+                 let strlen_fundec = (emptyFunction strlen_func_name) in
+                 let strlen_func = (expify_fundec strlen_fundec) in
+                 let retval = (Some(strlen_lval)) in
+                 let argslist = [other_buf] in
+                 let call_strlen = Call(retval, strlen_func, argslist, locUnknown) in
+                 let stmt_strlencall = (mkStmt (Instr [call_strlen])) in
+                 let incr_strlen_rhs = (BinOp(PlusA, strlen_exp, one, intType)) in
+                 let incr_strlen = Set(strlen_lval, incr_strlen_rhs, locUnknown) in
+                 let stmt_incr = (mkStmt (Instr [incr_strlen])) in
+                 true_block := (List.append !true_block [stmt_strlencall; stmt_incr]);
+                 (* Marshal the string length *)
+                 let retval = (Some((lvalify_varinfo bufvar))) in
+                 let argslist = [the_buf; currsize_var; (mkAddrOf strlen_lval); SizeOf(intType)] in
+                 let call_marshstrlen = Call(retval, m_dm_func, argslist, locUnknown) in
+                 let stmt_call_marshstrlen = (mkStmt (Instr [call_marshstrlen])) in
+                 true_block := (List.append !true_block [stmt_call_marshstrlen]);
+               end
+             else
+               begin
+                 let strlen_addrof = (mkAddrOf strlen_lval) in
+                 let argslist = [the_buf; currsize_var; SizeOf(intType); strlen_addrof] in
+                 let call_demarsh_strlen = Call(None, m_dm_func, argslist, locUnknown) in
+                 let stmt_demarsh_strlen = (mkStmt (Instr [call_demarsh_strlen])) in
+                 true_block := (List.append !true_block [stmt_demarsh_strlen]);
+               end;
+
+             if marshaling = false && (is_fixedarray to_m_dm_typ) = false then
+               begin
+                 (* Realloc the target using nooks_ot_alloc_arraymem (this is a bug fix
+                  * Read that many bytes from the marshbuf
+                  * and store it in the target. Do so only if the target is a non-const.
+                  * If it is a const, then don't do the copy. *)
+                 let stmt_realloc_array =
+                   generate_nooks_arrayalloc_call
+                     other_lval
+                     strlen_exp
+                     dtyp
+                     false
+                 in
+                 true_block := (List.append !true_block [stmt_realloc_array]);
+               end
+             else
+               ();
+
+             (* 3. Read bytes into newly realloced target, or marshal the string itself *)
+             let strlen_mult_size_exp = (BinOp(Mult,strlen_exp,SizeOf(dtyp),intType)) in
+             let (argslist, retval) =
+               if marshaling then
+                 ([the_buf; currsize_var; other_buf; strlen_mult_size_exp],
+                  Some(lvalify_varinfo bufvar)
+                 )
+               else
+                 ([the_buf; currsize_var; strlen_mult_size_exp; other_buf],
+                  None
+                 )
+             in
+             let call_m_dm_func = Call(retval, m_dm_func, argslist, locUnknown) in
+             let stmt_m_dm_call = (mkStmt (Instr [call_m_dm_func])) in
+             true_block := (List.append !true_block [stmt_m_dm_call]);
+
+             let check_trueblock = (mkBlock !true_block) in
+             let check_falseblock = (mkBlock []) in
+             let check_ifstmt = If(deref_check, check_trueblock, check_falseblock ,locUnknown) in
+             let stmt_check = (mkStmt check_ifstmt) in
+             inserted_stmts := (List.append !inserted_stmts [stmt_check]);
+           end
+           else if ((Marshannot_dri.is_container to_m_dm_typ) = true) then
+             begin
+               (* If marshaling, other means "src".  If demarshaling, "other" means target *)
+               let other_lval = (add_field_to_lval_wrapper to_m_dm field) in
+               let cont_typ = TPtr((typeof_container to_m_dm_typ), []) in
+               let cont_var = (get_temporary_variable fdec (Some(other_lval)) cont_typ "cont") in
+               let cont_fld = (fieldof_container to_m_dm_typ) in
+               let cont_lv = (lvalify_varinfo cont_var) in
+               if marshaling then
+                 begin
+                   let stmts_get_container =
+                     (generate_get_container_code fdec other_lval cont_typ cont_lv cont_fld) in
+                   inserted_stmts := (List.append !inserted_stmts stmts_get_container);
+                   let stmts_marshcont = (unified_dfs cont_lv cont_typ fdec fdec_m_dm
+                                            ptg resfld resform bufvar currsize stkdpth
+                                            marshaling gen_kern) in
+                   inserted_stmts := (List.append !inserted_stmts stmts_marshcont);
+                 end
+               else
+                 begin
+                   let stmts_demarshcont = (unified_dfs cont_lv cont_typ fdec fdec_m_dm
+                                              ptg resfld resform bufvar currsize stkdpth
+                                              marshaling gen_kern) in
+                   inserted_stmts := (List.append !inserted_stmts stmts_demarshcont);
+
+                   (* Assign the demarshaled container's member field to the other_lval. Here,
+                    * check for compatibility of types *)
+		   if (isPointerType (typeOfLval cont_lv)) = false
+		   then begin
+		     (fatal ["Non pointer type:"; (typ_tostring_noattr cont_typ);
+			     (lval_tostring cont_lv); (fdec.svar.vname)]);
+		   end;
+                   let cont_fld_lv = (add_field_to_lval_wrapper
+                                        (mkMem (expify_lval cont_lv) NoOffset) cont_fld) in
+                   let cont_fld_exp = ref (expify_lval cont_fld_lv) in
+                   (* If it's not a pointer, cast to a pointer *)
+                   if (isPointerType (typeOf !cont_fld_exp)) = false &&
+                     (isArrayType (typeOf !cont_fld_exp)) = false then
+                       begin
+                         (* We don't do a mkAddrOf in case of arrays: this is the last-member
+                          * is array of size 0 trick that is employed in the kernel *)
+                         cont_fld_exp := (mkAddrOf cont_fld_lv);
+                       end;
+                   (* Check for compatibility of types *)
+                   let lhs_typ_str = (typ_tostring_noattr to_m_dm_typ) in
+                   let rhs_typ_str = (typ_tostring_noattr (typeOf !cont_fld_exp)) in
+                   if (String.compare lhs_typ_str rhs_typ_str) <> 0 then
+                     begin
+                       (addwarn ["You're trying to generate an asg with incompatible types.";
+                                 "Here are the details:\n"; "\tLHS (var, type)";
+                                 (lval_tostring other_lval); lhs_typ_str;
+                                 "\n\t RHS (var, type)";
+                                 (exp_tostring !cont_fld_exp); rhs_typ_str]);
+                     end;
+                   let set_other_lval = Set(other_lval, !cont_fld_exp, locUnknown) in
+                   let stmt_set_other_lval = (mkStmt (Instr [set_other_lval])) in
+                   inserted_stmts := (List.append !inserted_stmts [stmt_set_other_lval]);
+                 end
+             end
+           else begin
+             (match dtyp with
+                | TInt (kind, _) ->
+                    if kind = IChar then
+                      if (Marshannot_dri.is_nullterm to_m_dm_typ) = false then
+                        addwarn ["Assuming standard char * pointer for "; (lval_tostring to_m_dm);
+                                 " in function: "; fdec.svar.vname];
+                | _ -> ()
+             );
+
+             (* TODO: More cases to handle annotations to go here. Currently none. *)
+           (*(Printf.fprintf stderr "Demarsh: Unexpected type %s\n" (typ_tostring to_m_dm_typ));*)
+           end;
+       | TEnum(einfo,_) ->
+           (* An enum type variable must have size of an integer *)
+           inserted_stmts := (generate_unified_m_dm fdec to_m_dm field
+                                (TInt(IInt,[])) bufvar currsize fdec_m_dm ptg
+                                resfld resform stkdpth marshaling gen_kern);
+       | _ -> ();
+    );
+    !inserted_stmts;
+  end
+(*---------------------------------------------------------------------------*)
+(** Insert marshaling/demarshaling code at the call-site stub. Return the list of
+ * statements to be inserted before the function call.
+ * (1) lv: this denotes the lval of the variable to be demarshed.
+ * (2) lvtype: this denotes the type of the lval.
+ * (3) fdec: This corresponds to the function within the generated
+ *     (de)marshaling code will be placed.
+ * (4) fdec2: this denotes the fundec of the function corresponding to which
+ *     we're generating (de)marshaling code. Typically fdec2 and fdec will differ
+ *     when we're generating (de)marshaling code for glue functions.
+ *     fdec and fdec2 are the same if we're dealing with an internal kernel
+ *     function, e.g. __MARSH_WRAP__register_netdev.  They differ if we're not,
+ *     e.g. e1000_blah vs __MARSH_WRAP__e1000_blah.
+ * (5) ptg: points-to-graph obtained after marshaling analysis.
+ * (6) resfld: resolved fields information, for opaque pointers.
+ * (7) resform: resolved formal parameter information, for opaque pointers.
+ * (8) m_dm_buf: the field from which we're (de)marshaling data.
+ * (9) m_dm_off: the offset into the buffer from which we're (de)marshaling data.
+ * (10) stkdpth: the stack depth, used during recursion
+ * (11) marshaling: true if we're generating marshaling code, false if
+ *      generating demarshaling code
+ * (12) gen_kern: true if generating code in the master, false if
+ *      generating code in the slave.
+ *)
+and unified_dfs (lv: lval)
+    (lvtyp: typ)
+    (fdec: fundec)
+    (fdec2: fundec)
+    (ptg: (string, (typ * string * string)) Hashtbl.t)
+    (resfld: (string, (typ * fieldinfo * typ)) Hashtbl.t)
+    (resform: (string, (int * varinfo * typ)) Hashtbl.t)
+    (m_dm_buf: varinfo)
+    (m_dm_off: varinfo)
+    (stkdpth: int)
+    (marshaling: bool)
+    (gen_kern: bool)
+    : stmt list =
+  begin
+    (* Check if we are potentially in an infinite loop. If in infinite loop,
+       nothing is returned *)
+    if (stkdpth > !threshold_stackdepth)
+    then begin
+      (addwarn ["Potentially an infinite loop in unified_dfs:";
+                fdec.svar.vname; " "; fdec2.svar.vname; " ";
+                (lval_tostring lv); " "; (typ_tostring_noattr lvtyp)]);
+      [];
+    end
+    else if (is_on_marshstack (typ_tostring_noattr lvtyp)) = true
+    then begin
+      (* We now check if we're (de)marshaling a recursive structure. We stop when
+       * we see a node we've visited before. *)
+      (set_recaccess());
+      [];
+    end
+    else if (is_iomem lvtyp) = true then (* MJR:  This is aggressive, but is it right? *)
+      []
+    else begin
+      (* Type to be marshaled not on stack. Normal marshaling *)
+      (* Is v a variable that we can generate (de)marshaling code for directly? *)
+      let m_dm_v_stmts = (generate_unified_m_dm fdec lv None lvtyp
+                                 m_dm_buf m_dm_off fdec2 ptg resfld resform
+                                 stkdpth marshaling gen_kern) in
+      if (List.length m_dm_v_stmts) <> 0
+      then begin
+        (* We must have just generated some marshaling code, so that's it *)
+        let m_dm_stmts = ref [] in
+        m_dm_stmts := (List.append !m_dm_stmts m_dm_v_stmts);
+        !m_dm_stmts;
+      end
+      else if (isPointerType lvtyp) && (isVoidPtrType lvtyp) = false
+      then begin
+        (* List of statements for marshaling/demarshaling the value
+           pointed to by the pointer. *)
+        let stmts_unified_dfs = ref [] in
+
+        (* v.vtype is a type that we do not support for marshaling/demarshaling,
+         * and it is pointer type. We handle opaque pointers in a separate case. *)
+
+        (* Are we marshaling or demarshaling? *)
+        let m_dm_generate_fetch_fill = (if marshaling then generate_fillmarshbuf_ptr
+                                        else generate_fetchmarshbuf_ptr) in
+        (* Marshal/demarshal the value of the pointer *)
+        let stmt_m_dm_ptr = (m_dm_generate_fetch_fill fdec lv lvtyp m_dm_buf m_dm_off) in
+
+        (* Get the dereferenced type of the variable *)
+        let dereftype = deref_ptr_typ lvtyp in
+        (* Create a check to see that the pointer is not NULL *)
+        let deref_check = BinOp(Ne, (expify_lval lv), zero64Uexp, intType) in
+
+        (* Are we dealing with iomem? *)
+        if (is_iomem lvtyp) = false then
+          begin
+            (*At this point, we check to see if this is an arith or a recursive pointer *)
+            if ((Marshannot_dri.is_array lvtyp) = false) then
+              begin
+                (* Create the dereference lval *)
+                let deref_lv = mkMem (expify_lval lv) NoOffset in
+                (* Send the dereferenced pointer for marshaling/demarshaling *)
+                stmts_unified_dfs := (unified_dfs deref_lv dereftype fdec fdec2
+                                        ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                                        marshaling gen_kern);
+                (* If it is an arith pointer, we must copy until the end of the array *)
+              end
+            else if ((Marshannot_dri.is_array lvtyp) = true) then
+              begin
+                let var_suffix = fdec.svar.vname ^ (makevarname (lval_tostring lv)) in
+                let bvname = "arraylen_" ^ var_suffix in
+                let bdry_var = get_temporary_variable fdec (Some(lv)) intType bvname in
+                if marshaling then begin
+                  (* Marshaling *)
+                  (* 1. Create the code to marshal the length of the array *)
+                  let (container_lv, offset) = removeOffsetLval lv in
+                  let option_container_lv = (if offset = NoOffset then None
+                                             else Some(container_lv)) in
+                  let vars_to_search = fdec2.sformals @ fdec2.slocals @ fdec.sformals @ fdec.slocals in
+                  let len_stmtopt = Marshannot_dri.get_array_length lvtyp option_container_lv
+                    vars_to_search bdry_var in
+                  (match len_stmtopt with
+                     | Some(len_stmt) ->
+                         stmts_unified_dfs := (List.append !stmts_unified_dfs [len_stmt]);
+                     | _ ->
+                         bdry_var.vname <- "SUPPLYME" ^ var_suffix;
+                  );
+                  let stmts_marsh_bdry =
+                    (generate_unified_m_dm fdec (lvalify_varinfo bdry_var) None intType
+                       m_dm_buf m_dm_off fdec2 ptg resfld resform stkdpth
+                       marshaling gen_kern) in
+                  stmts_unified_dfs := (List.append !stmts_unified_dfs stmts_marsh_bdry);
+                end
+                else
+                  begin
+                    (* Demarshaling *)
+                    (* 1. Create the code to demarshal the length of the array *)
+                    let stmts_demarsh_bdry =
+                      (generate_unified_m_dm fdec (lvalify_varinfo bdry_var)
+                         None intType m_dm_buf m_dm_off fdec2 ptg resfld resform
+                         stkdpth marshaling gen_kern) in
+                    stmts_unified_dfs := (List.append !stmts_unified_dfs stmts_demarsh_bdry);
+                    (* 2. Once we've fetched the size of the array, we've to communicate its
+                     * size to the nooks object tracker. *)
+                    let deref_type = (deref_ptr_typ lvtyp) in (* Type of individual elements *)
+                    (* TODO:  What if we are generating demarshaling code for an array
+                       that conincidentally is located at the start of a structure which
+                       is also in the object tracker?  In this case, the array and the structure
+                       have the same address, but we don't want to allocate memory in this case,
+                       since the array is already a part of the structure.  e.g. the name array
+                       in the net_device structure.
+                    *)
+                    if (Marshannot_dri.is_fixedarray lvtyp) = false then
+                      begin
+                        (* Only generate code for variable sized arrays.  We don't want
+                           to allocate new memory if the array size is fixed *)
+                        let stmt_nooks_arralloc = 
+                          generate_nooks_arrayalloc_call
+                            lv
+                            (expify_lval (lvalify_varinfo bdry_var))
+                            deref_type
+                            (Marshannot_dri.is_rangestore lvtyp) in
+                        stmts_unified_dfs :=
+                          (List.append !stmts_unified_dfs [stmt_nooks_arralloc]);
+                      end;
+                  end;
+
+                (* 3. Create temporary variable to perform offsets. Init it to 0 *)
+                (* Each level of nesting means we must create a new variable name else
+                 * we'll be messing around with the values of index variables for outer
+                 * loops *)
+                let idx_var_name = "idx" ^ (itoa stkdpth) in
+                let idx_var = (get_temporary_variable fdec None intType idx_var_name) in
+                (* 4. Create the dereference lval with an offset *)
+                let idx_exp = (expify_lval (lvalify_varinfo idx_var)) in
+                let ptrarith = BinOp(PlusPI, (expify_lval lv), idx_exp, lvtyp)  in
+                let deref_lv = mkMem ptrarith NoOffset in
+                let stmts_m_dm = (unified_dfs deref_lv dereftype fdec fdec2
+                                    ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                                    marshaling gen_kern) in
+                (* 5. Create the conditional/sentinel to break out of the loop/end
+                 * traveral of the array *)
+                let bdry_exp = (expify_lval (lvalify_varinfo bdry_var)) in
+                (* 6. Create the loop itself *)
+                let stmts_loop = (mkForIncr ~iter:(idx_var) ~first:(zero)
+                                    ~stopat:(bdry_exp) ~incr:(one)
+                                    ~body:(stmts_m_dm)) in
+                (* 7. Finally, append everything to the marshaled statements *)
+                stmts_unified_dfs := (List.append !stmts_unified_dfs stmts_loop);
+              end;
+          end (* End is_iomem *)
+        else
+          begin
+            (*(Printf.fprintf stderr "Type %s is iomem\n" (typ_tostring lvtyp));*)
+            stmts_unified_dfs := [];
+          end;
+
+        (* Obtain the statements to be returned *)
+        (* Put the whole thing within the IF check for non-NULL if we're not
+         * dealing with a recursive pointer. *)
+        let true_block = !stmts_unified_dfs in
+        let check_trueblock = (mkBlock true_block) in
+        let check_falseblock = (mkBlock []) in
+        let check_ifstmt = If(deref_check,check_trueblock,check_falseblock,locUnknown) in
+        let stmt_check = (mkStmt check_ifstmt) in
+        (* Return value *)
+        if (List.length true_block) > 0 then
+          (List.append stmt_m_dm_ptr [stmt_check])
+        else
+          stmt_m_dm_ptr;
+      end
+      (* v.vtype is a type that we do not support for marshaling, and it is
+       * an opaque pointer. In this case, we derefence the pointer, and marshal
+       * the dereferenced structure. In case the opaque pointer resolved to more
+       * than one type, we generate code for all resolutions, and throw a warning.
+       * The user has to manually prune out the unwanted marshaling code. *)
+      else if (isPointerType lvtyp) && (isVoidPtrType lvtyp) = true
+      then begin
+        let ret_stmts = ref [] in
+
+        (* Are we dealing with iomem? *)
+        if ((is_iomem lvtyp) = false) then
+          begin
+            (* Get the resolved type(s) of the variable *)
+            let v = obtain_varinfo_from_lval lv in
+            let restyp_list = (resolve_opaque_formal v fdec2 resform) in
+            (* Are we marshaling or demarshaling? *)
+            let m_dm_generate_fetch_fill = (if marshaling then generate_fillmarshbuf_ptr
+                                            else generate_fetchmarshbuf_ptr) in
+            (* If we don't resolve to anything, just (de)marsh the value of the pointer *)
+            if (List.length restyp_list) = 0 then
+              begin
+                let stmt_m_dm_ptr = (m_dm_generate_fetch_fill fdec lv lvtyp m_dm_buf m_dm_off) in
+                ret_stmts := (List.append !ret_stmts stmt_m_dm_ptr);
+              end;
+            for i = 0 to (List.length restyp_list) - 1 do
+              let ithres = (List.nth restyp_list i) in
+              if (isPointerType ithres) = true then begin
+                (* Fetch/Fill the value of the pointer *)
+                let stmt_m_dm_ptr = (m_dm_generate_fetch_fill fdec lv ithres m_dm_buf m_dm_off) in
+                (* Check that the pointer is not NULL, and
+                   get the dereferenced type of the variable *)
+                let dereftype = (deref_ptr_typ ithres) in
+                (* TODO: Must add the code to check whether this is an arith pointer,
+                 * and the appropriate marshaling code here. I'm not doing this right
+                 * now because I've not encountered any opaque arith pointers *)
+                (* Create a check to see that the pointer is not NULL *)
+                let deref_check = BinOp(Ne, (expify_lval lv), zero64Uexp, intType) in
+                (* Create the dereferenced lval, and
+                 * send the pointer for marshaling/demarshaling *)
+                let deref_lv = mkMem (mkCast (expify_lval lv) ithres) NoOffset in
+                let stmts_unified_dfs =
+                  (unified_dfs deref_lv dereftype fdec fdec2
+                     ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                     marshaling gen_kern) in
+                (* Put the whole thing within the IF check for non-NULL *)
+                let true_block = stmts_unified_dfs in
+                let check_trueblock = (mkBlock true_block) in
+                let check_falseblock = (mkBlock []) in
+                let check_ifstmt = If(deref_check,check_trueblock,check_falseblock,locUnknown) in
+                let stmt_check = (mkStmt check_ifstmt) in
+                (* Return value *)
+                if (List.length true_block) > 0
+                then ret_stmts := (List.append !ret_stmts (List.append stmt_m_dm_ptr [stmt_check]))
+                else ret_stmts := (List.append !ret_stmts stmt_m_dm_ptr);
+              end
+                (* If the resolved type is not a pointer, try generating marshaling code
+                   for it. If no code was generated, then raise a warning *)
+              else begin
+                let m_dm_v_stmts =
+                  (generate_unified_m_dm fdec lv None ithres m_dm_buf m_dm_off
+                     fdec2 ptg resfld resform stkdpth marshaling gen_kern) in
+                if (List.length m_dm_v_stmts) <> 0
+                then begin
+                  ret_stmts := (List.append !ret_stmts m_dm_v_stmts);
+                end else begin
+                  let what_we_are_doing = (if marshaling then "marshaling" else "demarshaling") in
+                  (addwarn ["This case is currently not supported in"; what_we_are_doing; "/resolve:";
+                            (lval_tostring lv); (typ_tostring_noattr ithres); fdec.svar.vname; fdec2.svar.vname]);
+                end;
+              end;
+            done;
+          end
+        else (* This is iomem *)
+          begin
+            (*(Printf.fprintf stderr "Type %s is iomem\n" (typ_tostring lvtyp));*)
+          end;
+        !ret_stmts;
+      end
+
+      (* v.vtype is a type that we do not support for marshaling, and it is not
+       * a pointer type. If it is a compound type, extract fields and marshal/demarshal
+       * each of them *)
+      else if (isCompoundType lvtyp)
+      then begin
+        let m_dm_stmts = ref [] in
+        if (is_iomem lvtyp) = false then
+          begin
+            let ptg_recursive = ref false in
+            (* Get the fields, and marshal/demarshal them iteratively. Ensure
+               we don't have repeats in the field accesses. *)
+            let ptg_query_result =
+              (get_fields_accessed (Hashtbl.find_all ptg (typ_tostring_noattr lvtyp))) in
+            ptg_recursive := (Marshannot_dri.is_recursive_access ptg_query_result);
+            if (!ptg_recursive)
+            then begin
+              (push_marshstack (typ_tostring_noattr lvtyp));
+              (infomsg ["Pushing on stack:"; (lval_tostring lv);
+                        (typ_tostring_noattr lvtyp)]);
+            end;
+
+            for i = 0 to (List.length ptg_query_result) - 1 do
+              let (ithtyp,ithfield,ithaccess) = (List.nth ptg_query_result i) in
+              let ithcomp = (tcomp_compinfo ithtyp) in
+
+              (* Whether we're generating code in the kernel or user is irrelevant. *)
+              (* This conditional is very subtle, because there are 2^3 = 8 distinct
+                 places that marshaling/demarshaling code is generated, and we need to
+                 be sure they all match up.  That is, we need to be sure that whenever
+                 we marshal a value, we also demarshal it.  To reason through this,
+                 I used a short test program that contained all the possibilities.  *)
+              if ((String.compare ithaccess "read ") <> 0) ||
+                (*(    marshaling &&     gen_kern &&     (contains_marshwrap_prefix fdec.svar.vname)) ||*)
+                (    marshaling &&     gen_kern && not (contains_marshwrap_prefix fdec.svar.vname)) ||
+                (*(    marshaling && not gen_kern &&     (contains_marshwrap_prefix fdec.svar.vname)) ||*)
+                (    marshaling && not gen_kern && not (contains_marshwrap_prefix fdec.svar.vname)) ||
+                (not marshaling &&     gen_kern &&     (contains_marshwrap_prefix fdec.svar.vname)) ||
+                (*(not marshaling &&     gen_kern && not (contains_marshwrap_prefix fdec.svar.vname)) ||*)
+                (not marshaling && not gen_kern &&     (contains_marshwrap_prefix fdec.svar.vname)) ||
+                (*(not marshaling && not gen_kern && not (contains_marshwrap_prefix fdec.svar.vname)) ||*)
+                false
+              then
+                (match ithcomp with
+                   | Some(ithcompinfo) ->
+                       begin
+                         (* This will not throw an exception because ithtyp is a TComp, and
+                          * our marshaling analysis will only return fields that belong to the
+                          * TComp. Check if the field is a void pointer, and if so, lookup its
+                          * resolved type. *)
+                         let ithfieldinfo = (get_fieldinfo ithcompinfo ithfield) in
+                         let ithfieldtyp = ithfieldinfo.ftype in
+
+                         if marshaling = false then begin
+                           (* If the field is one whose address is taken, or it has a
+                            * STOREOFFSET annotation, then generate code to store the offset
+                            * of this field. We currently do so only if the lv is of the form
+                            * *PTR. *)
+                           if ((Marshal_dri.is_field_addr_taken ithfieldinfo) = true) ||
+                             ((Marshannot_dri.is_storeoffset ithfieldtyp) = true)
+                           then begin
+                             let (lh, off) = lv in
+                             (match lh with
+                                | Mem(_) ->
+                                    let reg_offset_stmts = generate_storeoffset_call
+                                      lv ithfieldinfo fdec
+                                    in
+                                    m_dm_stmts := (List.append !m_dm_stmts reg_offset_stmts);
+                                | Var(_) ->
+                                    (addwarn ["generating storeoffset in a case I've never seen before";
+                                              "Check this case in the code that is generated. Info:";
+                                              (lval_tostring lv); fdec.svar.vname; fdec2.svar.vname]);
+                                    let reg_offset_stmts = generate_storeoffset_call
+                                      lv ithfieldinfo fdec
+                                    in
+                                    m_dm_stmts := (List.append !m_dm_stmts reg_offset_stmts);
+                             );
+                           end;
+                         end;
+
+                         if (isVoidPtrType ithfieldtyp) = true
+                         then begin
+                           let restyp_list = (resolve_opaque_field fdec2 resfld ithtyp ithfieldinfo) in
+                           for j = 0 to (List.length restyp_list) - 1 do
+                             let jthres = (List.nth restyp_list j) in
+                             let m_dm_v_stmts =
+                               (generate_unified_m_dm fdec lv (Some(ithfieldinfo)) jthres
+                                  m_dm_buf m_dm_off fdec2 ptg resfld resform stkdpth
+                                  marshaling gen_kern) in
+                             if (List.length m_dm_v_stmts) <> 0
+                             then begin
+                               m_dm_stmts := (List.append !m_dm_stmts m_dm_v_stmts);
+                             end
+                             else begin
+                               (* Cannot marshal/demarshal this field type. *)
+                               if marshaling then begin
+                                 (* Cannot marshal this field type. Simply generate an assignment, and
+                                  * call the marshaling function recursively. *)
+                                 (* In this case, we need to generate an assignment with a cast
+                                    statement resolving the field *)
+                                 let lhs_var = (get_temporary_variable fdec None jthres ithfield) in
+                                 (* Commented out the following because it occasionally leads to code like this:
+                                    private_data13 = 0U;
+                                    private_data13 = (struct ensoniq * )((private_data13->midi_output)->rmidi)->private_data;
+                                 *)
+                                 (*let init_instr = Set((lvalify_varinfo lhs_var), zero64Uexp, locUnknown) in
+                                   let stmt_init = (mkStmt (Instr [init_instr])) in
+                                 *)
+                                 let cast_lhs = (lvalify_varinfo lhs_var) in
+                                 let cast_rhs = (expify_lval (add_field_to_lval lv ithfieldinfo)) in
+                                 let cast_rhs' = (mkCast cast_rhs jthres) in
+                                 let cast_instr = Set(cast_lhs,cast_rhs',locUnknown) in
+                                 let stmt_cast = (mkStmt (Instr [cast_instr])) in
+                                 let stmt_marsh_lhs =
+                                   (unified_dfs cast_lhs jthres fdec fdec2
+                                      ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                                      marshaling gen_kern) in
+                                 m_dm_stmts := (List.append !m_dm_stmts ((*stmt_init::*) stmt_cast::stmt_marsh_lhs));
+                               end
+                               else begin
+                                 (* In this case, we generate
+                                  * a fetch of the pointer value. We then assign the fetched
+                                  * pointer value to a temp, and then recursively demarsh the
+                                  * temp *)
+                                 let temp_var = (get_temporary_variable fdec None jthres ithfield) in
+                                 let temp_lv = (lvalify_varinfo temp_var) in
+                                 let init_instr = Set(temp_lv, zero64Uexp, locUnknown) in
+                                 let stmt_init = (mkStmt (Instr [init_instr])) in
+                                 let assgn_lhs = (add_field_to_lval lv ithfieldinfo) in
+                                 let assgn_rhs = (expify_lval (lvalify_varinfo temp_var)) in
+                                 let assgn_instr = Set(assgn_lhs, assgn_rhs, locUnknown) in
+                                 let stmt_assgn = (mkStmt (Instr [assgn_instr])) in
+                                 let stmt_demarsh =
+                                   (unified_dfs temp_lv jthres fdec fdec2
+                                      ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                                      marshaling gen_kern) in
+                                 m_dm_stmts := (List.append !m_dm_stmts
+                                                  (List.append (stmt_init::stmt_demarsh) [stmt_assgn]));
+                               end;
+                             end;
+                           done;
+                         end
+                         else begin (* Not a void pointer type *)
+                           let m_dm_v_stmts =
+                             (generate_unified_m_dm fdec lv (Some(ithfieldinfo))
+                                ithfieldtyp m_dm_buf m_dm_off fdec2 ptg resfld resform
+                                stkdpth marshaling gen_kern) in
+                           if (List.length m_dm_v_stmts) <> 0
+                           then begin
+                             m_dm_stmts := (List.append !m_dm_stmts m_dm_v_stmts);
+                           end
+                           else begin
+                             (* Cannot marshal/demarshal this field type. Simply call marsh/demarsh
+                              * function recursively, and generate an assignment. If the address
+                              * of a field is taken, then we call it on another variable.*)
+                             if ((Marshal_dri.is_field_addr_taken ithfieldinfo) = true) ||
+                               ((Marshannot_dri.is_storeoffset ithfieldtyp) = true)
+                             then begin
+                               let new_lval = add_field_to_lval lv ithfieldinfo in
+                               let namehint = "STRUCTADDRX" ^ (makevarname (lval_tostring new_lval)) in
+                               let var_type = TPtr (ithfieldtyp,[]) in
+                               let addrof_lhs_var = get_local_variable fdec
+                                                       var_type namehint in
+                               let addrof_lhs = lvalify_varinfo addrof_lhs_var in
+                               let addrof_rhs = mkAddrOf new_lval in
+                               let addrof_set = Set(addrof_lhs, addrof_rhs, locUnknown) in
+                               let stmt_setaddrof = mkStmt (Instr [addrof_set]) in
+                               let star_addrof = mkMem (expify_lval addrof_lhs) NoOffset in
+                               let stmt_m_dm =
+                                 unified_dfs star_addrof ithfieldtyp fdec fdec2
+                                   ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                                   marshaling gen_kern in
+                               if (List.length stmt_m_dm) <> 0 then
+                                 m_dm_stmts := !m_dm_stmts @ [stmt_setaddrof]
+                               else
+                                 remove_local_variable fdec var_type namehint;
+                               m_dm_stmts := !m_dm_stmts @ stmt_m_dm;
+                             end else begin
+                               let new_lval = (add_field_to_lval lv ithfieldinfo) in
+                               let stmt_m_dm =
+                                 (unified_dfs new_lval ithfieldtyp fdec fdec2
+                                    ptg resfld resform m_dm_buf m_dm_off (stkdpth + 1)
+                                    marshaling gen_kern) in
+                               m_dm_stmts := (List.append !m_dm_stmts stmt_m_dm);
+                             end;
+                           end;
+                         end;
+                       end;
+                   | None -> ()
+                );
+            done;
+
+            if (!ptg_recursive = true) then begin
+              (pop_marshstack());
+              (infomsg ["Popping from stack:"; (lval_tostring lv);
+                        (typ_tostring_noattr lvtyp)]);
+            end;
+            (* If we had a recursive field access, then we must embed the statements
+             * that we just generated within a SENTINEL-guarded while loop *)
+            if (!ptg_recursive = true) && (is_recaccess() = true)
+            then begin
+              if marshaling then (infomsg ["Found recursive access"; fdec.svar.vname; fdec2.svar.vname]);
+
+              let ret_stmts = ref [] in
+              (* 1. Generate a statement to save the state of the LV. I automatically
+               * generate a save statement for the POINTER to the LV type, as this is
+               * the common case. The validity of this needs to be checked on a per-case
+               * basis. We do this only if we need to restore the state later *)
+              let undereflvopt = (underef_lval lv) in
+              let stsv_var = ref dummyFunDec.svar in
+              (match undereflvopt with
+                 | Some(_) ->
+                     let stsvname = "svdst" ^ (makevarname (lval_tostring lv)) in
+                     let stsvtyp = (TPtr(lvtyp, [])) in
+                     let addroflv = (mkAddrOf lv) in
+                     stsv_var := (get_local_variable fdec stsvtyp stsvname);
+                     let stsv_set = Set((lvalify_varinfo !stsv_var), addroflv, locUnknown) in
+                     let stmt_stsv_set = (mkStmt (Instr [stsv_set])) in
+                     ret_stmts := (List.append !ret_stmts [stmt_stsv_set]);
+                 | None ->
+                     (* Even in this case, let's generate a statement to save state *)
+                     let stsvname = "svdst" ^ (makevarname (lval_tostring lv)) in
+                     let stsvtyp = (TPtr(lvtyp, [])) in
+                     let addroflv = (mkAddrOf lv) in
+                     stsv_var := (get_local_variable fdec stsvtyp stsvname);
+                     let stsv_set = Set((lvalify_varinfo !stsv_var), addroflv, locUnknown) in
+                     let stmt_stsv_set = (mkStmt (Instr [stsv_set])) in
+                     (addwarn ["You might need to replace"; (lval_tostring lv); "with"; !stsv_var.vname]);
+                     ret_stmts := (List.append !ret_stmts [stmt_stsv_set]);
+              );
+              (* 2. Generate the statements to marshal/demarshal the fields: Done above already. *)
+              (* 3. Embed (2) in a loop. Also update the state (dummy inserted) *)
+              (* 3.1. Create a dummy variable to represent the sentinel *)
+              let sntname = "SENTINEL" ^ (makevarname (lval_tostring lv)) in
+              (*(Printf.fprintf stderr "%s\n" sntname);*)
+              let snt_var = get_local_variable fdec intType sntname in
+              let snt_init = Set((lvalify_varinfo snt_var), (Cil.integer 1), locUnknown) in
+              let stmt_snt_init = (mkStmt (Instr [snt_init])) in
+              (* 3.2. Create the conditional to break out of the loop *)
+              let snt_exp = expify_lval (lvalify_varinfo snt_var) in
+              (* 3.3. The last statement in the loop should be the update of the
+               * SENTINEL. We generate one that sets the SENTINEL to 0 *)
+              let snt_reset = Set((lvalify_varinfo snt_var), zero, locUnknown) in
+              let stmt_snt_reset = (mkStmt (Instr [snt_reset])) in
+              (* 3.4. Create the loop itself. *)
+              let loop_body = List.append !m_dm_stmts [stmt_snt_reset] in
+              let stmts_loop = mkWhile ~guard:(snt_exp) ~body:(loop_body) in
+              ret_stmts := List.append !ret_stmts [stmt_snt_init];
+              ret_stmts := List.append !ret_stmts stmts_loop;
+              (* 4. Follow it up with a statement to restore the state of the LV *)
+              (match undereflvopt with
+                 | Some(undereflv) ->
+                     let stsv_exp = (expify_lval (lvalify_varinfo !stsv_var)) in
+                     let stsv_restore = Set(undereflv, stsv_exp, locUnknown) in
+                     let stmt_stsv_restore = (mkStmt (Instr [stsv_restore])) in
+                     ret_stmts := (List.append !ret_stmts [stmt_stsv_restore]);
+                 | None -> ((* No need to restore state in this case *));
+              );
+              (clear_recaccess());
+              !ret_stmts;
+            end
+            else begin
+              !m_dm_stmts;
+            end;
+          end
+        else
+          begin
+            (* This is IOMEM structure, which means we don't marshal its contents *)
+            !m_dm_stmts;
+          end
+      end
+      else begin
+        (* This case is not supported. Raise a warning *)
+        if (isFunctionType lvtyp) then begin
+          (* (addwarn ["Function type not marshaled/demarshaled:"; (lval_tostring lv);
+             (typ_tostring_noattr lvtyp); fdec.svar.vname; fdec2.svar.vname]) *)
+          ();
+        end else begin
+          let what_we_are_doing = (if marshaling then "marshaling" else "demarshaling") in
+          (addwarn ["This case is currently not supported in "; what_we_are_doing; ":";
+                    (lval_tostring lv); (typ_tostring_noattr lvtyp); fdec.svar.vname;
+                    fdec2.svar.vname]);
+        end;
+        [];
+      end;
+    end (* Else case of infinite loop warning *)
+  end
+
+(*---------------------------------------------------------------------------*)
+(** Splitting algorithm implementation
+ * This takes a file as input, and outputs a modification of the file, based
+ * upon which portion is being generated (kernel or user portion). The idea
+ * is that this analysis must be run twice: once to obtain the kernel portion,
+ * which is the master and once to obtain the user portion, which is the slave.
+ *)
+(** splitter_unified
+ * Main steps:
+ * (1) To generate stubs for functions that are marked as kernel functions.
+ * (2) For functions that lack a fundec, generate a function body: This is
+ *     done separately in the function get_new_fundecs
+*)
+(**
+ * Considers those functions that have the kern annotation.  For
+ * those such functions that have fundecs, their function bodies are
+ * replaced by a call to the function in the master.  For those such
+ * functions that do not have fundecs, a function body is
+ * genenerated calling the function in the kernel (with an
+ * appropriate extern statement generated.  *)
+(*---------------------------------------------------------------------------*)
+(** splitter_unified: This generates the master or slave,
+ *  i.e., code to execute on the kernel or user side. *)
+class splitter_unified = object (self)
+  inherit nopCilVisitor
+  (** A list of marshwrap functions that have been added *)
+  val mutable marshwrap_funcs : fundec list = [];
+  (** A list of datastructure-specific functions that have been added *)
+  val mutable ds_funcs : fundec list = [];
+  (** A list of functions to make NoStorage *)
+  val mutable nostorage_funcs : fundec list = [];
+  (** A temporary varinfo, storing the name of the marshaling buffer *)
+  val mutable curr_marshbuf : lval option = None;
+  (** A temporary varinfo.  When generating the master, it
+   *  stores the name of the current marshaling buffer offset.
+   * When generating the slave, it stores the size of the marshaling
+   * buffer.
+   *)
+  val mutable curr_marshoff : lval option = None;
+  (** A temporary variable, storing the current ptg *)
+  val mutable curr_ptg: (string, (typ * string * string)) Hashtbl.t
+    = (Hashtbl.create 5);
+  (** A temporary variable, storing the current set of globals accessed *)
+  val mutable curr_globs : varinfo list = [];
+  (** A temporary variable, storing the current resfld *)
+  val mutable curr_resfld: (string, (typ * fieldinfo * typ)) Hashtbl.t
+    = (Hashtbl.create 5);
+  (** A temporary variable, storing the current resform *)
+  val mutable curr_resform: (string, (int * varinfo * typ)) Hashtbl.t
+    = (Hashtbl.create 5);
+  (** A list of non-interface functions with "kern" or "user" annotations.
+   *  When generating the master, it contains those with "user" annotations.
+   *  When generating the slave, it contains those with "kern" annotations. *)
+  val mutable non_interface_functions: (string, fundec) Hashtbl.t
+    = (Hashtbl.create 5);
+
+  (** A list of functions whose addresses are taken. We must register these
+      with the object tracker.  Includes only those functions for which
+      we've encountered a function _definition_, e.g. the body.
+  *)
+  val mutable fn_addr_taken_defn : fundec list = [];
+  (** A list of functions whose addresses are taken, but for which all we've
+      observed is the _declaration_ (e.g. prototype) and not the body.
+      This list may include some functions already present in the previous
+      list, like those that have both a prototype and body.  If we're taking
+      the address of a function that has only a prototype, then we need to
+      supply the body.  Happens in the user-half with kernel functions.
+  *)
+  val mutable fn_addr_taken_decl : varinfo list = [];
+
+  (** True if we are generating master code, false if we are generating slave *)
+  val mutable gen_kern : bool = true;
+
+  method get_curr_marshbuf () : lval =
+    begin
+      match curr_marshbuf with
+        | Some(marshbuf) -> marshbuf
+        | None -> fatal ["no marshbuf found"]
+    end
+          
+  method get_curr_marshoff () : lval =
+    begin
+      match curr_marshoff with
+        | Some(marshoff) -> marshoff
+        | None -> fatal ["no marshoff found"]
+    end
+
+  (* call_m_dm_in_stub: This function simply generates the temporary variables,
+   * finds the list of fields to be marshaled by querying the points-to
+   * graph, and calls the DFS based marshaler. Varinfos other than those
+   * obtained from the arguments of the functions that need to be marshaled
+   * are passed as a list. The marshaling parameter is true if we are generating
+   * marshaling code, false otherwise.
+   *)
+  method call_m_dm_in_stub
+    (f_curr: fundec)  (* May be a marsh/demarsh stub.  Should have name prefix *)
+    (vl: varinfo list)
+    (marshaling: bool)
+    : stmt list =
+    begin
+      let stripped_name = strip_stub_prefix f_curr.svar.vname in
+      let ret_stmts = ref [] in
+
+      (* If we're marshaling, we are filling a buffer.  If we are demarshaling,
+         we are worrying about the offset in the existing buffer. *)
+      let buf_var = get_local_variable f_curr voidPtrType "_buf_" in
+      let off_var = get_local_variable f_curr intType "_off_" in
+      curr_marshbuf <- Some(lvalify_varinfo buf_var);
+      curr_marshoff <- Some(lvalify_varinfo off_var);
+
+      (* Insert a statement initializing marsh buf / off *)
+      let stmts_init = self#stubgen_init_vars_alt f_curr buf_var off_var marshaling in
+      ret_stmts := List.append !ret_stmts stmts_init;
+
+      let ptg = ref curr_ptg in
+      if marshaling then begin
+        (* The initial malloc of marshoff must happen in fill_m_dm *)
+        (* Get the flattened points-to graph to tell us what to marshal/demarshal *)
+        ptg := Marshal_dri.get_flattened_ptg stripped_name false;
+        Printf.fprintf stderr "stub::::: %s %d\n" f_curr.svar.vname (Hashtbl.length !ptg);
+        curr_ptg <- !ptg;
+        (* Get the globals accessed *)
+        curr_globs <- Marshal_dri.get_globals_accessed stripped_name;
+        curr_globs <- remove_repeats curr_globs;
+      end;
+
+      (* Now send the roots to the DFS-based marshaler *)
+      (* Return variable information is stored in vl *)
+      let formal_filter elt =
+        if elt.vname = "_buf_" || elt.vname = "rqarg" then false else true in
+      let modified_formals = List.filter formal_filter f_curr.sformals in
+      let roots = curr_globs @ modified_formals @ vl in
+      let resfld = (if marshaling then (Marshal_dri.get_resolved_fields())
+                    else curr_resfld) in
+      let resform = (if marshaling then (Marshal_dri.get_resolved_formals())
+                     else curr_resform) in
+      if marshaling then begin
+        curr_resfld <- resfld;
+        curr_resform <- resform;
+      end;
+
+      for i = 0 to (List.length roots) - 1 do
+        let ith = (List.nth roots i) in
+        let ithlv = (lvalify_varinfo ith) in
+        let ithtyp = (ith.vtype) in
+        let marsh_stmts = unified_dfs ithlv ithtyp f_curr f_curr
+          !ptg resfld resform buf_var off_var 0
+          marshaling gen_kern in
+        ret_stmts := List.append !ret_stmts marsh_stmts;
+      done;
+
+      if marshaling then
+        begin
+          let rqarg_init_stmts = self#stubgen_rqarg_init_stmts f_curr in
+          ret_stmts := List.append !ret_stmts rqarg_init_stmts;
+        end;
+      !ret_stmts;
+    end
+
+  (** stubgen_marsh:  Generates code for marshaling stub *)
+  method stubgen_marsh_funs (f: fundec) : stmt list =
+    begin
+      (* 0. See if this function can be handled *)
+      let (_,_,isvararg,_) = (splitFunctionType f.svar.vtype) in
+      if (isvararg = true)
+      then (fatal [f.svar.vname; "VARARGS not supported in stubgen_funs for fn:" ^ f.svar.vname]);
+
+      let marshaling_code = self#call_m_dm_in_stub f [] true in
+
+      (* Make sure all formal parameters have names.  Sometimes,
+         the function prototype is provided without variable names--
+         in these cases, we make some up. *)
+      ensure_formals_have_names f;
+      marshaling_code;
+    end
+
+  method stubgen_demarsh_funs (f: fundec) : stmt list =
+    begin
+      let (stmt_ret, demarshlist) = self#stubgen_demarsh_retstmt f in
+      let demarshaling_code = self#call_m_dm_in_stub f demarshlist false in
+      
+      (* Make sure all formal parameters have names.  Sometimes,
+         the function prototype is provided without variable names--
+         in these cases, we make some up. *)
+      ensure_formals_have_names f;
+      demarshaling_code @ [stmt_ret];
+    end
+
+  method stubgen_init_vars_main
+    (f: fundec) : stmt list =
+    begin
+      (* Insert a statement initializing (de)marsh(buf/off) *)
+      let init_rhs = zero64Uexp in
+      let var_buf = get_local_variable f voidPtrType "_buf_" in
+      let var_off = get_local_variable f intType "_off_" in
+      let var_buf_lval = lvalify_varinfo var_buf in
+      let var_off_lval = lvalify_varinfo var_off in
+      let init_buf_set = mkStmt(Instr([Set(var_buf_lval, init_rhs, locUnknown)])) in
+      let init_off_set = mkStmt(Instr([Set(var_off_lval, init_rhs, locUnknown)])) in
+      [init_buf_set; init_off_set]
+    end
+
+  method stubgen_init_vars_alt
+    (f: fundec)
+    (buf_var : varinfo)
+    (off_var : varinfo)
+    (marshaling: bool) : stmt list =
+    begin
+      (* Insert a statement initializing (de)marsh(buf/off) *)
+      let init_rhs = zero64Uexp in
+      let var_buf_lval = lvalify_varinfo buf_var in
+      let var_off_lval = lvalify_varinfo off_var in
+      let init_stmts =
+        if marshaling then
+          let init_buf = Instr ([Set(var_buf_lval, init_rhs, locUnknown)]) in
+          [mkStmt init_buf]
+        else
+          let rqarg_varinfo = get_formal_variable f "rqarg" in
+          let rqarg_lval = lvalify_varinfo rqarg_varinfo in
+          let rqarg_varinfo_deref = mkMem (expify_lval rqarg_lval) NoOffset in
+          let rqarg_buf_lval = add_field_to_lval rqarg_varinfo_deref reqargs_data in
+          let instr_set_data = Set (var_buf_lval,
+                                    expify_lval (rqarg_buf_lval),
+                                    locUnknown) in
+          let stmt_setdatarqarg = mkStmtOneInstr instr_set_data in
+          [stmt_setdatarqarg]
+      in
+
+      let ret_stmts = 
+        [mkStmt(Instr([Set(var_off_lval, init_rhs, locUnknown)]))]
+        @ init_stmts
+      in
+      ret_stmts;
+    end
+
+  method stubgen_m_dm_call (f: fundec) (m_dm_func : fundec) : stmt list =
+    begin
+      let rqarg_vi = get_local_variable f struct_reqargs_typ "rqarg" in
+      let rqarg_lval = lvalify_varinfo rqarg_vi in
+      let rqarg_param = mkAddrOf rqarg_lval in
+      let remainder_of_params = expify_formals (make_params f) in
+      let params = [rqarg_param] @ remainder_of_params in
+      let (stmt_list, vi_option) = self#gen_marshwrap_call
+        params m_dm_func.svar.vname m_dm_func.svar.vtype m_dm_func in
+      stmt_list;
+    end
+
+  method stubgen_rqarg_init_stmts (f: fundec) : stmt list =
+    begin
+      (* Create a new local variable rqarg of type req_args *)
+      let rqarg_varinfo = get_formal_variable f "rqarg" in
+      let rqarg_lval = lvalify_varinfo rqarg_varinfo in
+      let rqarg_varinfo_deref = mkMem (expify_lval rqarg_lval) NoOffset in
+
+      (* Get the ID of the function to be called, and assign it to rqarg *)
+      let tgt_funcid = get_function_id (strip_stub_prefix f.svar.vname) in
+      let tgt_funcid_exp = integer tgt_funcid in
+      let instr_set_id = Set (add_field_to_lval rqarg_varinfo_deref reqargs_funcid,
+                              tgt_funcid_exp, locUnknown) in
+      let stmt_setrqargfuncid = mkStmtOneInstr instr_set_id in
+
+      (* Get the buffer that stores the data *)
+      let curr_marshbuf_lval = self#get_curr_marshbuf () in
+      let curr_marshbuf_exp = expify_lval curr_marshbuf_lval in
+      let instr_set_data = Set (add_field_to_lval rqarg_varinfo_deref reqargs_data,
+                                curr_marshbuf_exp, locUnknown) in
+      let stmt_setrqargdata = mkStmtOneInstr instr_set_data in
+
+      (* Get the length of the buffer *)
+      let curr_marshoff_lval =
+        match curr_marshoff with
+          | Some(marshoff) -> marshoff;
+          | None -> fatal ["no marshoff found"];
+      in
+      let curr_marshoff_exp = expify_lval curr_marshoff_lval in
+      let instr_set_marshoff = Set (add_field_to_lval rqarg_varinfo_deref reqargs_length,
+                                    curr_marshoff_exp, locUnknown) in
+      let stmt_setrqarglength = mkStmtOneInstr instr_set_marshoff in
+
+      [stmt_setrqargfuncid; stmt_setrqargdata; stmt_setrqarglength];
+    end
+
+  method stubgen_switch_stmts (f: fundec) : stmt list =
+    begin
+      (* Create a new local variable rqarg of type req_args *)
+      let rqarg_typ = struct_reqargs_typ in
+      let rqarg_varinfo = get_local_variable f rqarg_typ "rqarg" in
+
+      (* Get the current marshaling buffer *)
+      let curr_marshbuf_lval = self#get_curr_marshbuf () in
+
+      (* Create a call to unblock_user_thread/disp_kern *)
+      let rqarg_lval = lvalify_varinfo rqarg_varinfo in
+      let rqarg_exp = mkAddrOf rqarg_lval in
+      let argslist = [rqarg_exp] in
+
+      (* <The following code uses unlock_user_thread or disp_kern to
+         call a function in the user and is the function that must be
+         used with two address spaces> *)
+      let switch_func = if gen_kern then get_unblock_user_thread_fundec () else get_disp_kern_fundec () in
+      let switch_func_expr = expify_fundec switch_func in
+      let call_switch_func = Call(None, switch_func_expr, argslist, locUnknown) in
+      let stmt_call_switch_func = mkStmt (Instr [call_switch_func]) in
+
+      (* Fetch the value of rqarg.data into the marshaling buffer *)
+      let rqargdata_lval = Var(rqarg_varinfo), Field(reqargs_data, NoOffset) in
+      let instr_getrqargdata = Set (curr_marshbuf_lval, (expify_lval rqargdata_lval), locUnknown) in
+      let stmt_getrqargdata = mkStmtOneInstr instr_getrqargdata in
+
+      (* Fetch the value of rqarg.length *)
+      let curr_marshoff_lval = self#get_curr_marshoff () in
+      let rqargoff_lval = Var(rqarg_varinfo), Field(reqargs_length, NoOffset) in
+      let instr_getrqargoff = Set (curr_marshoff_lval, (expify_lval rqargoff_lval), locUnknown) in
+      let stmt_getrqargoff = mkStmtOneInstr instr_getrqargoff in
+
+      (* Save all the statements *)
+      [stmt_call_switch_func; stmt_getrqargdata; stmt_getrqargoff];
+    end
+
+  method stubgen_demarsh_retstmt (f: fundec) : (stmt * varinfo list) =
+    begin
+      (* Create a new variable of the appropriate type and add it to f's slocals *)
+      (* Also create the "extra" varinfo list for demarshaling *)
+      let (ret_var_type,_,isvararg,_) = splitFunctionType f.svar.vtype in
+      let (ret_var, demarshlist) =
+        (match ret_var_type with
+           | TVoid(_) ->
+               (mkStmt (Return(None, locUnknown)), []);
+           | _ ->
+               let ret_var_varinfo = get_local_variable f ret_var_type "_retval_" in
+               let ret_lval = Var(ret_var_varinfo),NoOffset in
+               let ret_stmt = mkStmt (Return(Some (expify_lval ret_lval), locUnknown)) in
+               (ret_stmt, [ret_var_varinfo])
+        )
+      in
+      (ret_var, demarshlist);
+    end
+
+  method stubgen_sym_replay
+    (f: fundec)
+    (stmts_marshal_switch: stmt list)
+    : stmt list =
+    begin
+      let buffer_var = self#get_curr_marshbuf () in
+      let off_var = self#get_curr_marshoff () in
+
+      let check_buffer_retvar = Some(buffer_var) in
+      let check_buffer_fundec = emptyFunction "get_function_buffer" in
+      let check_buffer_exp = expify_fundec check_buffer_fundec in
+      let check_buffer_argument = expify_fundec f in
+      let check_buffer_arguments = [check_buffer_argument] in
+      let check_buffer_instr = Call(check_buffer_retvar,
+                                    check_buffer_exp,
+                                    check_buffer_arguments,
+                                    locUnknown) in
+      let check_buffer_call = Instr([check_buffer_instr]) in
+      let check_buffer_stmt = mkStmt check_buffer_call in
+
+      let reg_fundec = emptyFunction "register_function_buffer" in
+      let reg_exp = expify_fundec reg_fundec in
+      let reg_argument1 = expify_fundec f in
+      let reg_argument2 = mkAddrOf buffer_var in
+      let reg_argument3 = expify_lval off_var in
+      let reg_arguments = [reg_argument1; reg_argument2; reg_argument3] in
+      let reg_instr = Call(None,
+                           reg_exp,
+                           reg_arguments,
+                           locUnknown) in
+      let reg_call = Instr([reg_instr]) in
+      let reg_stmt = mkStmt reg_call in
+
+      (*let reg_buf_free_stmt = gen_marshbuf_free "DEMARSHBUF_FREE" buffer_var in*)
+      let true_block_stmts = stmts_marshal_switch @ [reg_stmt] in
+      let true_block = mkBlock true_block_stmts in
+      let false_block_stmts = [check_buffer_stmt] in
+      let false_block = mkBlock false_block_stmts in
+      let if_stmt = gen_disp_kern_allowed f true_block false_block in
+      let all_stmts = if_stmt in
+      all_stmts;
+    end
+      
+  (** stubgen_funs: Stub generation *)
+  method stubgen_funs
+    (f: fundec)
+    (marshstub : fundec)
+    (demarshstub: fundec) :
+    stmt list =
+    begin
+      (* See if this function can be handled *)
+      let (_,_,isvararg,_) = (splitFunctionType f.svar.vtype) in
+      if (isvararg = true)
+      then (fatal [f.svar.vname; "VARARGS not supported in stubgen_funs for fn:" ^ f.svar.vname]);
+      
+      (* Make sure all formal parameters have names.  Sometimes,
+         the function prototype is provided without variable names--
+         in these cases, we make some up. *)
+      ensure_formals_have_names f;
+
+      (* Write some initial statements for the kernel -- sync *)
+      let init_kernel_stmts = 
+        if gen_kern then 
+          [generate_sync_call "ACQUIRE_REC_LOCK"]
+        else
+          []
+      in
+
+      (* Initialize the marshaling variables *)
+      (* Create and Initialize _off_ and _buf_ *)
+      let stmts_init = self#stubgen_init_vars_main f in
+      
+      (* Marshal everything *)
+      (* Transfer control *)
+      let stmts_marshal = self#stubgen_m_dm_call f marshstub in
+      let stmts_switch = self#stubgen_switch_stmts f in
+      let stmts_marshal_switch = stmts_marshal @ stmts_switch in
+
+      let stmts_composite_marshal_switch =
+        if gen_kern then
+          stmts_marshal_switch
+        else
+          self#stubgen_sym_replay f stmts_marshal_switch
+      in
+
+      (* Demarshal everything *)
+      let stmts_demarshal = self#stubgen_m_dm_call f demarshstub in
+      
+      (* Create the code to free the marshaling buffer *)
+      let free_after_demarsh_stmts = 
+        let demarshbuf = self#get_curr_marshbuf () in
+        [gen_marshbuf_free "DEMARSHBUF_FREE" demarshbuf]
+      in
+         
+      (* Create the list of statements to return *)
+      let final_kernel_stmts = 
+        if gen_kern then
+          [generate_sync_call "UP_MARSH_SEM"; generate_sync_call "RELEASE_REC_LOCK"]
+        else
+          []
+      in
+      let (stmt_ret, _) = self#stubgen_demarsh_retstmt f in
+      let ret_stmts =
+        init_kernel_stmts
+        @ stmts_init
+        @ stmts_composite_marshal_switch
+        @ stmts_demarshal
+        @ free_after_demarsh_stmts
+        @ final_kernel_stmts
+        @ [stmt_ret] in
+      ret_stmts;
+    end
+      
+  (* In a marshwrap function, this code generates the actual call to the function
+     being wrapped.  This call takes place between the demarshaling code at the
+     start of the function, and the marshaling code at the end of the function.
+  *)
+  method gen_marshwrap_call
+    (callargs : exp list)
+    (fdec_name : string)
+    (fdec_type : typ)
+    (marshwrap_func : fundec) : (stmt list * varinfo option) =
+    let marshwrap_stmts = ref [] in
+
+    (* Generate the return value stuff *)
+    let (ret_var_type,_,_,_) = splitFunctionType fdec_type in
+    let (ret_varinfo_opt, ret_var_opt) =
+      match ret_var_type with
+        | TVoid(_) -> None, None;
+        | _ ->
+            let ret_var_varinfo = get_local_variable marshwrap_func ret_var_type "_retval_" in
+            (* Initialize any new pointer variables to NULL *)
+            if isPointerType ret_var_varinfo.vtype then begin
+              let retvar_init = Set((lvalify_varinfo ret_var_varinfo), zero64Uexp, locUnknown) in
+              let stmt_retvar_init = mkStmt (Instr [retvar_init]) in
+              marshwrap_stmts := List.append !marshwrap_stmts [stmt_retvar_init];
+            end;
+            Some(ret_var_varinfo), Some (Var(ret_var_varinfo),NoOffset);
+    in
+    (* First generate the function call to the original C function.
+       This function call gets added to the trueblock of the if statement.
+    *)
+    let callfdec_fundec = emptyFunction fdec_name in
+    let callfdec_func = expify_fundec callfdec_fundec in
+    let callfdec = Call(ret_var_opt, callfdec_func, callargs, locUnknown) in
+    let stmt_callfdec = mkStmt (Instr [callfdec]) in
+    marshwrap_stmts := List.append !marshwrap_stmts [stmt_callfdec];
+    (!marshwrap_stmts, ret_varinfo_opt);
+
+  (** add_marshwrap_function: Add a marshaling wrapper for "interface"
+   * functions that are implemented in the user space, or a marshaling
+   * wrapper for functions with no fundec defined in the kernel.
+   *)
+  method add_marshwrap_function
+    (fdec_fundec_opt : fundec option)
+    (vinfo_opt : varinfo option)
+      : fundec =
+    begin
+      let stmts = ref [] in
+      let newroots = ref [] in
+      let callargs = ref [] in
+      let (name, marshwrap_funcname, marshwrap_func, fdec, fdec_typ, nofundec) =
+        match fdec_fundec_opt with
+          | None ->
+              (match vinfo_opt with
+                 | None ->
+                     fatal ["Error add_marshwrap_function, specify one of the two params"]
+                 | Some (vinfo) ->
+                     let marshwrap_funcname = marshwrap_prefix ^ vinfo.vname in
+                     let marshwrap_func = emptyFunction marshwrap_funcname in
+                     let stripped_name = strip_stub_prefix vinfo.vname in
+                     (stripped_name, marshwrap_funcname, marshwrap_func,
+                      marshwrap_func, vinfo.vtype, true)
+              );
+          | Some (fdec_fundec) ->
+              (match vinfo_opt with
+                 | None ->
+                     let marshwrap_funcname = marshwrap_prefix ^ fdec_fundec.svar.vname in
+                     let marshwrap_func = emptyFunction marshwrap_funcname in
+                     let stripped_name = strip_stub_prefix fdec_fundec.svar.vname in
+                     (stripped_name, marshwrap_funcname, marshwrap_func,
+                      fdec_fundec, fdec_fundec.svar.vtype, false)
+                 | Some (vinfo) ->
+                     fatal ["Error add_marshwrap_function, specify one of the two params"]
+              );
+      in
+      let marshwrap_rettyp = TVoid([]) in
+      let marshwrap_typsig = TFun(marshwrap_rettyp, Some([]), false, []) in
+      (setFunctionType marshwrap_func marshwrap_typsig);
+      (* Add __MARSH_WRAP__ function parameters *)
+      let marshwrap_arg_buf = makeFormalVar marshwrap_func "_buf_" voidPtrType in
+      let marshwrap_arg_ret = makeFormalVar marshwrap_func "_ret_" 
+        (TPtr (TComp(struct_marshret_compinfo, []), []))
+      in
+      (* 1. Create a new local variable to store offsets *)
+      let offvar = (makeLocalVar marshwrap_func "_off_" intType) in
+      (* 1.1. Create a new local variable of type struct marshret_struct *)
+      (*let marshwrap_ret = (makeLocalVar marshwrap_func "_ret_" marshwrap_rettyp) in*)
+      (* 2. Create an initialization for this variable *)
+      let init_offvar_lhs = (lvalify_varinfo offvar) in
+      let init_offvar_rhs = zero64Sexp in
+      let init_offvar = Set(init_offvar_lhs, init_offvar_rhs, locUnknown) in
+      let stmt_init_offvar = (mkStmt (Instr [init_offvar])) in
+      stmts := (List.append !stmts [stmt_init_offvar]);
+      (* 3. Demarsh the roots *)
+      (* 3.1 Get the ptg *)
+      let ptg = Marshal_dri.get_flattened_ptg name false in
+      (Printf.fprintf stderr "marshwrap::::: %s %d\n" name (Hashtbl.length ptg));
+      let resfld = (Marshal_dri.get_resolved_fields()) in
+      let resform = (Marshal_dri.get_resolved_formals()) in
+      let globs = (Marshal_dri.get_globals_accessed name) in
+      let globs = (remove_repeats globs) in
+      (* 3.2 Demarsh globals first *)
+      for i = 0 to (List.length globs) - 1 do
+        let ith = (List.nth globs i) in
+        newroots := (List.append !newroots [ith]);
+        let ithlv = (lvalify_varinfo ith) in
+        (* Use the marshbuf formal param during demarshaling *)
+        stmts := (List.append !stmts
+                    (unified_dfs ithlv ith.vtype marshwrap_func fdec
+                       ptg resfld resform marshwrap_arg_buf offvar 0
+                       false gen_kern));
+      done;
+      (* 3.3 For each formal variable of fdec, create a new local variable the
+         new function. *)
+      if nofundec = false then
+        let roots = fdec.sformals in
+        for i = 0 to (List.length roots) - 1 do
+          let ith = List.nth roots i in
+          let newvar = makeLocalVar marshwrap_func ith.vname ith.vtype in
+          (* Initialize any new pointer variables to NULL *)
+          if (isPointerType newvar.vtype) then begin
+            let newvar_init = Set((lvalify_varinfo newvar), zero64Uexp, locUnknown) in
+            let  stmt_newvar_init = (mkStmt (Instr [newvar_init])) in
+            stmts := (List.append !stmts [stmt_newvar_init]);
+          end;
+          newroots := (List.append !newroots [newvar]);
+          callargs := (List.append !callargs [newvar]);
+          let newvarlv = (lvalify_varinfo newvar) in
+          let newvartyp = (newvar.vtype) in
+          (* Use the marshbuf formal param during demarshaling *)
+          stmts := (List.append !stmts
+                      (unified_dfs newvarlv newvartyp marshwrap_func fdec
+                         ptg resfld resform marshwrap_arg_buf offvar 0
+                         false gen_kern));
+        done;
+      else
+        begin
+          (* In this case, we don't have any varinfos, so we have to construct
+             them on the basis of the type definition *)
+          let (_,argsopt,_,_) = splitFunctionType fdec_typ in
+          let roots = Cil.argsToList argsopt in
+          for i = 0 to (List.length roots) - 1 do
+            let formalname = ref "" in
+            let (ithstr,ithtyp,ithattr) = (List.nth roots i) in
+            formalname := ithstr;
+            if (String.compare !formalname "") = 0
+            then formalname := ("arg" ^ (itoa i));
+            let newvar = (makeLocalVar marshwrap_func !formalname ithtyp) in
+            (* Initialize any new pointer variables to NULL *)
+            if (isPointerType newvar.vtype) then begin
+              let newvar_init = Set((lvalify_varinfo newvar), zero64Uexp, locUnknown) in
+              let stmt_newvar_init = (mkStmt (Instr [newvar_init])) in
+              stmts := (List.append !stmts [stmt_newvar_init]);
+            end;
+            newroots := (List.append !newroots [newvar]);
+            callargs := (List.append !callargs [newvar]);
+            let newvarlv = (lvalify_varinfo newvar) in
+            let newvartyp = (newvar.vtype) in
+            (* Use the marshbuf formal param during demarshaling *)
+            stmts := (List.append !stmts
+                        (unified_dfs newvarlv newvartyp marshwrap_func marshwrap_func
+                           ptg resfld resform marshwrap_arg_buf offvar 0
+                           false gen_kern));
+          done;
+        end;
+
+      let marshwrap_arg_buf_lval = lvalify_varinfo marshwrap_arg_buf in
+      let free_after_demarsh = gen_marshbuf_free "DEMARSHBUF_FREE2" marshwrap_arg_buf_lval in
+      stmts := List.append !stmts [free_after_demarsh];
+      (* 4. Call the function itself over here. *)
+      let argslist = expify_formals !callargs in
+      let (stmts_new, retval_vi_opt) = self#gen_marshwrap_call
+        argslist name fdec_typ marshwrap_func in
+      stmts := List.append !stmts stmts_new;
+      (match retval_vi_opt with
+         | None -> ()
+         | Some (retval_vi) -> newroots := List.append !newroots [retval_vi]
+      );
+      (* 4.1 Call interrupt handlers *)
+      if gen_kern = false then 
+        stmts := List.append !stmts (gen_call_interrupt_handlers ());
+
+      (* 5. Initialize the offset once again *)
+      stmts := List.append !stmts [stmt_init_offvar];
+
+      (* 6. Generate the marshaling code here. We've added the globals and
+       * the return variable to newroots, so they will be automatically
+       * marshaled at this point. *)
+      for i = 0 to (List.length !newroots) - 1 do
+        let ith = (List.nth !newroots i) in
+        let ithlv = (lvalify_varinfo ith) in
+        let ithtyp = (ith.vtype) in
+        (* Marshal here *)
+        stmts := List.append !stmts
+          (unified_dfs ithlv ithtyp marshwrap_func fdec
+             ptg resfld resform marshwrap_arg_buf offvar 0
+             true gen_kern);
+      done;
+      (* 7. The return value is the structure marshret_struct. Initialize it
+         appropriately at this point and return it. *)
+      let star_marshwrap_arg_ret = (Mem((expify_lval (lvalify_varinfo marshwrap_arg_ret)))) in
+
+      (* 7.1 Do _ret_->buf = _buf_. *)
+      let marshwrap_arg_buf_exp = expify_lval (lvalify_varinfo marshwrap_arg_buf) in
+      let buffield = marshret_buf in
+      let star_marshwrap_arg_ret_buf = (star_marshwrap_arg_ret, Field(buffield, NoOffset)) in
+      let stmt_setbuf = mkStmtOneInstr (Set (star_marshwrap_arg_ret_buf, marshwrap_arg_buf_exp, locUnknown)) in
+
+      let offvar_exp = expify_lval (lvalify_varinfo offvar) in
+      let lenfield = marshret_len in
+      let star_marshwrap_arg_ret_len = (star_marshwrap_arg_ret, Field(lenfield, NoOffset)) in
+      let stmt_setlen = (mkStmtOneInstr (Set (star_marshwrap_arg_ret_len, offvar_exp, locUnknown))) in
+
+      stmts := List.append !stmts [stmt_setbuf; stmt_setlen];
+
+      (*
+        let free_after_marsh = (gen_marshbuf_free "MARSHBUF_FREE" marshwrap_arg_buf) in
+        stmts := (List.append !stmts [free_after_marsh]);
+      *)
+      marshwrap_func.svar.vstorage <- Static;
+      marshwrap_func.sbody.bstmts <- !stmts;
+      marshwrap_func;
+    end
+
+  method generate_stub_triplet
+    (base_name : string)
+    (fn_type : typ) :
+    global list =
+    begin
+      let new_marshstub_name = stubmarsh_prefix ^ base_name in
+      let new_demarshstub_name = stubdemarsh_prefix ^ base_name in
+      let new_classicstub_name = base_name in
+      
+      let new_marshstub = generate_empty_stub new_marshstub_name fn_type 2 in
+      let new_demarshstub = generate_empty_stub new_demarshstub_name fn_type 3 in
+      let new_classicstub = generate_empty_stub new_classicstub_name fn_type 1 in
+      
+      Printf.fprintf stderr "Adding fundec for %s\n" new_marshstub_name;
+      let new_marsh_stmts = self#stubgen_marsh_funs new_marshstub in
+      new_marshstub.sbody.bstmts <- new_marsh_stmts;
+      
+      Printf.fprintf stderr "Adding fundec for %s\n" new_demarshstub_name;
+      let new_demarsh_stmts = self#stubgen_demarsh_funs new_demarshstub in
+      new_demarshstub.sbody.bstmts <- new_demarsh_stmts;
+      
+      Printf.fprintf stderr "Adding fundec for %s\n" new_classicstub_name;
+      let new_classic_stmts = self#stubgen_funs new_classicstub new_marshstub new_demarshstub in
+      new_classicstub.sbody.bstmts <- new_classic_stmts;
+      
+      let new_marshglobal = GFun(new_marshstub, locUnknown) in
+      let new_demarshglobal = GFun(new_demarshstub, locUnknown) in
+      let new_classicglobal = GFun(new_classicstub, locUnknown) in
+      [new_marshglobal; new_demarshglobal; new_classicglobal];
+    end
+
+
+  (* User mode specific.
+   * Creates new fundecs for functions that are called in the slave (user
+   * daemon), but do not have fundecs. The transformation is as follows:
+   * For each function USER_FOO called in the user-daemon:
+   *      XFORM := ADD a body of the form USER_FOO(X) { FOO(X) },
+   * and to add this to the globals of the file. This method just creates
+   * the toplevel fundec for the function without the fundec, and calls
+   * user_stubgen to generate the body. *)
+  method user_add_new_fundecs
+    (globals : global list) : global list =
+    begin
+      let new_stubs = list_bindings funcs_with_no_fundecs in
+      (* For each function that is called, but does not have a fundec, create a
+         fundec for that function with the same type signature *)
+      let new_globals = ref [] in
+      for i = 0 to (List.length new_stubs) - 1 do
+        let ith = List.nth new_stubs i in
+        let base_name = ith.vname in
+        (* Don't add anything if the function is on our list
+           of those not to bother with, e.g. sprintf
+        *)
+        if (should_split nonstubbed_functions base_name) = true then
+          new_globals := !new_globals @ (self#generate_stub_triplet base_name ith.vtype);
+      done;
+
+      globals @ !new_globals;
+    end
+
+  method kernel_add_new_fundecs (globals : global list) : global list =
+    begin
+      let new_globals = ref [] in
+      for i = 0 to (List.length globals) - 1 do
+        let ith = List.nth globals i in
+        match ith with
+          | GFun (fdec, _) ->
+              if (is_interface_function interface_functions fdec.svar.vname) = false then
+                new_globals := !new_globals @ [ith]
+              else
+                begin
+                  if (should_split nonstubbed_functions fdec.svar.vname) = true then
+                    new_globals := !new_globals @ (self#generate_stub_triplet fdec.svar.vname fdec.svar.vtype);
+                  Printf.fprintf stderr "Deleting interface function %s\n" fdec.svar.vname;
+                end
+          | _ -> new_globals := !new_globals @ [ith];
+      done;
+      
+      !new_globals;
+    end
+
+  (** We also need a vinst to consider functions that are called but that
+   * don't have a fundec - because they do not have an implementation here,
+   * e.g., things like _spin_lock, _spin_lock_irqsave etc., that are
+   * implemented elsewhere in the kernel. These are "extern" functions.
+   * This is used only in user-space.
+   *)
+  method vinst (i: instr) : instr list visitAction =
+    begin
+      if (gen_kern = false) then
+        (match i with
+           | Call(_,callexpr,argslist,_) ->
+               (match callexpr with
+                  | Lval(Var(vi), NoOffset) ->
+                      (* Previously we forced all functions on boundaries to be
+                         static? In user mode, this doesn't seem like it matters--
+                         who cares if we're exporting symbols?
+
+                         Making these static causes problems with Java code,
+                         since we really want to be able to access pretty much
+                         everything from Java, and if some things are static,
+                         the Java code is effectively locked out.
+                      *)
+                      if (should_split nonstubbed_functions vi.vname) = true then
+                        vi.vstorage <- Static;
+                      
+                      add_if called_fun_varinfo vi 1;
+                      DoChildren;
+                  | _ -> DoChildren;
+               );
+           | _ -> DoChildren;
+        )
+      else
+        DoChildren;
+    end
+
+  (** Used to find functions implemented in the kernel
+      whose addresses are taken in the user.  We need to provide stub
+      functions for these. and register them in the OT.
+  *)
+  method vglob (g: global) : global list visitAction =
+    begin
+      (match g with
+         | GVarDecl(vi, _) ->
+             (match vi.vtype with
+                | TFun (a1, a2, a3, a4) ->
+                    if (vi.vaddrof = true) then
+                      begin
+                        fn_addr_taken_decl <- (List.append fn_addr_taken_decl [vi]);
+                      end;
+                | _ -> ();
+             );
+         | GFun(fdec, _) ->
+             if (fdec.svar.vaddrof) then
+               fn_addr_taken_defn <- (List.append fn_addr_taken_defn [fdec]);
+         | _ -> ();
+      );
+         DoChildren;
+    end
+
+  (** Main visitor method for same_address_space xform that visits each
+   * function. Leaves functions in kernel space untouched. User functions
+   * are stubbed. Formally, the transformation that the kernel vfunc
+   * implements is:
+   *
+   * if foo has "kern" annotation
+   *      XFORM := foo(X){Body} -> foo(X){Body}
+   * if foo has "user" annotation
+   *      XFORM := foo(X){Body} -> foo(X){return __stub__foo(X)}
+   *
+   * For user-mode vfunc, the transformation is:
+   * if foo has "kern" annotation
+   *     XFORM := __stub__foo(X){Body} -> __stub__foo(X){call foo}
+   * if foo has "user" annotation
+   *     XFORM := __stub__foo(X){Body} -> __stub__foo(X){Body}
+   * For "user" annotation functions that are interface functions,
+   *     __stub__foo(X){body} ADD __marshwrap__foo(X){demarsh,call,marsh}
+   *)
+  method vfunc (f: fundec) : fundec visitAction =
+    begin
+      (* This code must only run on non-prefixed functions,
+         i.e. ones we didn't generate
+      *)
+      let (prefix, base_name) = strip_stub_prefix_pair f.svar.vname in
+      if (String.compare prefix "") != 0 then
+        begin
+          Printf.fprintf stderr "vfunc on \"%s\", \"%s\", \"%s\"\n" prefix base_name f.svar.vname;
+          fatal ["Fatal error!"];
+        end;
+
+      (* Formerly done in a separate pass.  We'll use varinfo_fundec
+       * in later steps.  Obtains a varinfo->fundec mapping. Useful to
+       * find which variables have fundecs and which do not *)
+      if (gen_kern = false) then
+        add_if varinfo_fundec f.svar f;
+
+      (* Check and split *)
+      if (should_split nonstubbed_functions f.svar.vname) = true then
+        let annot = 
+          try
+            Hashtbl.find annotations f.svar.vname
+          with Not_found -> fatal ["Fatal error in vfunc in splitter_kern"];
+        in
+        let basic_annot_name = if gen_kern then "kern" else "user" in
+        if annot = basic_annot_name then
+          begin
+            (* kern: If the kernel function is an interface function and could be
+               called by the user-space, do not make it static. Otherwise, make it
+               static. Leave untouched otherwise. *)
+            (* user: If it is an interface function, do not make it static. *)
+            if (is_interface_function interface_functions f.svar.vname) = true then
+              begin
+                Printf.fprintf stderr "adding %s to interface\n" f.svar.vname;
+                nostorage_funcs <- add_to_list f nostorage_funcs;
+                (* Only add marshwraps for non-vararg functions *)
+                let result = self#add_marshwrap_function (Some (f)) None in
+                marshwrap_funcs <- add_to_list result marshwrap_funcs;
+              end;
+            DoChildren;
+          end
+        else
+          begin
+            (* Interface functions that are implemented in the user-level
+               are stubbed. The stub name should be made static. *)
+            (* annot = kern: Change function body to have a call to the function in the
+             * kernel side *)
+            (* annot = user: Generate stub. *)
+            if (is_interface_function interface_functions f.svar.vname) = false then
+              Hashtbl.add non_interface_functions f.svar.vname f
+            else
+              if gen_kern = false then
+                begin
+                  (* If its address is taken, it should not be a static function *)
+                  if (f.svar.vaddrof = true)
+                  then nostorage_funcs <- add_to_list f nostorage_funcs;
+                end;
+            DoChildren;
+          end;
+      else
+        DoChildren;
+    end;
+
+  (****************************************************************************)
+  (* In this section we have the code for adding per-datastructure marshaling
+     functions.  The idea behind these functions is the following:
+     In user mode, we have a stub.  This stub takes one parameter:  the data
+     structure we want to marshal, e.g. netdevice.
+     In kernel mode, we have another stub.  This stub demarshals everything
+     into kernel memory.
+
+     These functions do NOT perform control transfer!  They only
+     marshal/demarshal the data structure in question.
+  *)
+  (* Generate a function to marshal each interesting datastructure.
+   * Interesting data structures include any that we already access
+   * from user mode. *)
+  method add_sync_functions (f: file) : unit =
+    let ptg = Marshal_dri.get_flattened_ptg "perform_full_sync" true in
+    let datastructure_list : (string * typ) list ref = ref [("blah", TVoid([]))] in
+    let datastructure_elt (ptgnode_key : string) (ptgnode_value : (typ * string * string)) =
+      let (ds_typ,_,_) = ptgnode_value in
+      let already_exists = List.mem (ptgnode_key, ds_typ) !datastructure_list in
+      let ds_typ_str = ptgnode_key in
+      if already_exists = false then
+        begin
+          datastructure_list := !datastructure_list @ [ds_typ_str, ds_typ];
+          Printf.fprintf stderr "Type: %s\n" ptgnode_key;
+        end
+    in
+    Hashtbl.iter datastructure_elt ptg;
+    (* At this point, the datastructure_list contains a bunch of
+       strings representing the type of interest, as well as
+       the typs themselves.
+    *)
+    (* The next task is to create a pair of function bodies,
+       one for marshaling data from user to kernel, and one for
+       kernel to user.
+    *)
+    let add_functions (ds_typ_str, ds_typ) =
+      (* Add a single function body *)
+      let add_one_function name ds_typ m_dm =
+        let fn_typ = TFun (TVoid ([]), None, false, []) in
+        let vi = makeGlobalVar name fn_typ in
+        let newmarshwrap = self#add_ds_function vi ds_typ m_dm in
+        ds_funcs <- add_to_list newmarshwrap ds_funcs
+      in
+      if gen_kern then
+        begin
+          add_one_function (makevarname ("ds_from_user_" ^ ds_typ_str)) ds_typ false;
+          add_one_function (makevarname ("ds_to_user_" ^ ds_typ_str)) ds_typ true;
+        end
+      else
+        begin
+          add_one_function (makevarname ("ds_from_kern_" ^ ds_typ_str)) ds_typ false;
+          add_one_function (makevarname ("ds_to_kern_" ^ ds_typ_str)) ds_typ true;
+        end
+    in
+    List.iter add_functions !datastructure_list;
+
+  (**
+   * add_ds_function:  Add datastructure-specific function.
+   * The purpose of this function is to either marshl or demarshal
+   * a specific data structure.
+   *
+   * Note that the current implementation generates a standalone block
+   * of marshaling code.  This is no good in the case that one data
+   * structure contains a pointer to another data structure, e.g.
+   * a net_device pointing to an rtl8139_private, or whatever, because
+   * large chunks of the marshaling code will be redundant.
+   *
+   * I think the eventual goal here is to generate marshaling code like
+   * this:
+   * - Two functions per data structure, one for marshaling and one for
+   *   demarshaling.
+   * - Call the datastructure-specific function for any members contained
+   *   within the outer structure.
+   * - Add dynamic recursion detection:  This is important!  If we call
+   *   other datastructure-specific marshaling functions recursively,
+   *   then the static recursion detection is inadequate.
+   *
+   *   This dynamic recursion detection would have to take place in both
+   *   user mode and kernel mode to work, because both sides would have
+   *   to know when they've already seen a given pointer.
+   * - After the previous three bullets are implemented, then it would
+   *   be necessary to change the existing code generation routines
+   *   in order to call these functions instead of generating the full
+   *   set of marshaling code.
+   *)
+  method add_ds_function
+    (vinfo : varinfo)
+    (ds_typ : typ)
+    (m_dm : bool) : fundec =
+    begin
+      let stmts = ref [] in
+      let name = strip_stub_prefix vinfo.vname in
+      let marshwrap_funcname = vinfo.vname in
+      let marshwrap_func = emptyFunction marshwrap_funcname in
+      let marshwrap_buf = makeFormalVar marshwrap_func "_buf_" (TPtr (voidPtrType, [])) in
+      let marshwrap_off = makeFormalVar marshwrap_func "orig_off" (TPtr (intType, [])) in
+      let ds_arg = makeFormalVar marshwrap_func "data" (TPtr ((TPtr (ds_typ, [])), [])) in
+
+      (* Set up the dereferenced copies of each of the variables. *)
+      let deref_marshwrap_buf = makeLocalVar marshwrap_func "_deref_buf_" voidPtrType in
+      let deref_ds_arg = makeLocalVar marshwrap_func "deref_data" (TPtr (ds_typ, [])) in
+      let offvar = makeLocalVar marshwrap_func "_off_" intType in
+
+      let init_var lhs rhs =
+        begin
+          let init_var_lhs = lhs in
+          let init_var_rhs = rhs in
+          let init_var = Set(init_var_lhs, init_var_rhs, locUnknown) in
+          let stmt_init_var = mkStmt (Instr [init_var]) in
+          stmts := List.append !stmts [stmt_init_var];
+        end
+      in
+      let viAddrOfToLval vi = mkMem (expify_lval (lvalify_varinfo vi)) NoOffset in
+      let viAddrOfToExp vi = expify_lval (viAddrOfToLval vi) in
+      init_var (lvalify_varinfo deref_marshwrap_buf) (viAddrOfToExp marshwrap_buf);
+      init_var (lvalify_varinfo deref_ds_arg) (viAddrOfToExp ds_arg);
+      init_var (lvalify_varinfo offvar) (viAddrOfToExp marshwrap_off);
+
+      (* 3. Demarsh the roots *)
+      (* 3.1 Get the ptg *)
+      let ptg = Marshal_dri.get_flattened_ptg name true in
+      Printf.fprintf stderr "marshwrap::::: %s %d\n" name (Hashtbl.length ptg);
+      let resfld = Marshal_dri.get_resolved_fields() in
+      let resform = Marshal_dri.get_resolved_formals() in
+
+      let newvarlv = lvalify_varinfo deref_ds_arg in
+      let newvartyp = deref_ds_arg.vtype in
+      (* Use the marshbuf formal param during demarshaling *)
+      let m_dm_stmts = unified_dfs newvarlv newvartyp marshwrap_func marshwrap_func
+        ptg resfld resform deref_marshwrap_buf offvar 0 m_dm gen_kern in
+      stmts := List.append !stmts m_dm_stmts;
+
+      (* Set orig_off and _buf_ so caller knows where we're at *)
+      init_var (viAddrOfToLval marshwrap_off) (expify_lval (lvalify_varinfo offvar));
+      init_var (viAddrOfToLval marshwrap_buf) (expify_lval (lvalify_varinfo deref_marshwrap_buf));
+
+      marshwrap_func.sbody.bstmts <- !stmts;
+      marshwrap_func;
+    end
+
+  (* Top-level function for the kernel *)
+  method top_level_kernel (f: file) : unit =
+    begin
+      gen_kern <- true;
+
+      visitCilFile (self :> cilVisitor) f;
+      for i = 0 to (List.length nostorage_funcs) - 1 do
+        let ith = (List.nth nostorage_funcs i) in
+        ith.svar.vstorage <- NoStorage;
+      done;
+
+      f.globals <- self#kernel_add_new_fundecs f.globals;
+
+      (* Add a prototype for the unblock_user_thread function *)
+      let unblock_ut_fundec = get_unblock_user_thread_fundec() in
+      let unblock_ut_varinfo = unblock_ut_fundec.svar in
+      f.globals <-
+        List.append [GVarDecl((unblock_ut_varinfo),locUnknown)] f.globals;
+      (* Add a declaration for the req_args structure that we defined *)
+      f.globals <-
+        List.append [GCompTag(struct_reqargs_compinfo,locUnknown)] f.globals;
+      (* Add a declaration for the marshret structure that we defined *)
+      f.globals <-
+        List.append [GCompTag(struct_marshret_compinfo,locUnknown)] f.globals;
+
+      (* Add a marshwrap function for nofundec functions. Exclude VARARG
+         fucntions from this, as they have a different function for marshwrap
+         generation. *)
+      let nofundecs = list_bindings funcs_with_no_fundecs in
+      for i = 0 to (List.length nofundecs) - 1 do
+        let ith = (List.nth nofundecs i) in
+        if (is_interface_function interface_functions ith.vname) = false then
+          add_if interface_functions ith.vname true;
+        let newmarshwrap = self#add_marshwrap_function None (Some (ith)) in
+        (* Without this test, we get code for sprintf.  sprintf
+           is a kernel function, and we don't a fundec.
+           It's also listed in our "no stub" table.
+        *)
+        if (should_split nonstubbed_functions ith.vname) = true then
+          marshwrap_funcs <- add_to_list newmarshwrap marshwrap_funcs;
+      done;
+
+      (* Add functions for marshaling individual data structures *)
+      (*self#add_sync_functions f;*)
+
+      (* Add all marshwrap functions to globals *)
+      for i = 0 to (List.length marshwrap_funcs) - 1 do
+        let ith = (List.nth marshwrap_funcs i) in
+        f.globals <- List.append f.globals [GFun(ith,locUnknown)];
+      done;
+
+      (* Add all data-structure specific functions to globals *)
+      for i = 0 to (List.length ds_funcs) - 1 do
+        let ith = (List.nth ds_funcs i) in
+        f.globals <- List.append f.globals [GFun(ith,locUnknown)];
+      done;
+
+      (* Generate the disploop function *)
+      let disploop = gen_disploop gen_kern marshwrap_funcs in
+      f.globals <- List.append f.globals [GFun(disploop,locUnknown)];
+
+      (* Generate the registration function *)
+      let registerfn = gen_registerfn fn_addr_taken_defn fn_addr_taken_decl in
+      f.globals <- List.append f.globals [GFun(registerfn,locUnknown)];
+
+      (* Generate the list of globals to be registered *)
+      let globals_to_register = get_globals_to_register f.globals in
+      let registerglob = gen_registerglob globals_to_register in
+      f.globals <- List.append f.globals [GFun(registerglob,locUnknown)];
+
+      (* NOTE: The following is an optimization that removes unwanted stubs
+       * i.e., those that are never called, from the kernel.
+       *)
+      (* Remove the non_interface_functions from the kernel's code *)
+      let newglobals = ref [] in
+      for i = 0 to (List.length f.globals) - 1 do
+        let ith = (List.nth f.globals i) in
+        match ith with
+          | GVarDecl(vi,_) ->
+              begin
+                match vi.vtype with
+                  | TFun(_,_,_,_) ->
+                      (try
+                         ignore (Hashtbl.find non_interface_functions vi.vname);
+                         Printf.fprintf stderr "removing %s from kern\n" vi.vname;
+                       with Not_found -> (newglobals := (List.append !newglobals [ith])));
+                  | _ -> newglobals := List.append !newglobals [ith];
+              end
+          | GFun(fdec,_) ->
+              (try
+                 ignore (Hashtbl.find non_interface_functions fdec.svar.vname);
+                 Printf.fprintf stderr "removing %s from kern\n" fdec.svar.vname;
+               with Not_found -> (newglobals := (List.append !newglobals [ith])));
+          | _ -> newglobals := List.append !newglobals [ith];
+      done;
+      f.globals <- !newglobals;
+    end
+
+  (** Top-level function to implement user pass 2 *)
+  method top_level_user (f: file) : unit =
+    begin
+      gen_kern <- false;
+
+      (* Delete all non-stub function bodies.  By definition, they should not
+         be defined, as we are defining them ourselves *)
+      f.globals <- delete_nonstubs
+        f.globals
+        nonstubbed_functions
+        nonstubbed_functions_delete_proto;
+
+      visitCilFile (self :> cilVisitor) f;
+
+      f.globals <- self#user_add_new_fundecs f.globals;
+
+      for i = 0 to (List.length nostorage_funcs) - 1 do
+        let ith = List.nth nostorage_funcs i in
+        ith.svar.vstorage <- NoStorage;
+      done;
+
+      (* Add a prototype for the disp_kern function *)
+      let disp_kern_fundec = get_disp_kern_fundec() in
+      let disp_kern_varinfo = disp_kern_fundec.svar in
+      f.globals <-
+        List.append [GVarDecl((disp_kern_varinfo),locUnknown)] f.globals;
+      (* Add a declaration for the req_args structure that we defined *)
+      (* Not sure if we need this declaration in the user-daemon, but it's
+         harmless to have it there, so put it anyway *)
+      f.globals <-
+        List.append [GCompTag(struct_reqargs_compinfo,locUnknown)] f.globals;
+      (* Add a declaration for the marshret structure that we defined *)
+      f.globals <-
+        List.append [GCompTag(struct_marshret_compinfo,locUnknown)] f.globals;
+
+      (* Add all marshwrap functions to globals *)
+      for i = 0 to (List.length marshwrap_funcs) - 1 do
+        let ith = List.nth marshwrap_funcs i in
+        f.globals <- List.append f.globals [GFun(ith,locUnknown)];
+      done;
+      (* Add all data-structure specific functions to globals *)
+      for i = 0 to (List.length ds_funcs) - 1 do
+        let ith = List.nth ds_funcs i in
+        f.globals <- List.append f.globals [GFun(ith,locUnknown)];
+      done;
+      (* Add the dispatch loop function *)
+      let disploop = gen_disploop gen_kern marshwrap_funcs in
+      f.globals <- List.append f.globals [GFun(disploop,locUnknown)];
+      (* Add the function registration function *)
+      let registerfn = gen_registerfn fn_addr_taken_defn fn_addr_taken_decl in
+      f.globals <- List.append f.globals [GFun(registerfn,locUnknown)];
+      (* Add the bodies of functions whose addresses are taken but for which
+         we don't have a definition, e.g. kernel functions *)
+      let kernel_fn_dummies = gen_dummy_bodies interface_functions fn_addr_taken_defn fn_addr_taken_decl in
+      f.globals <- List.append f.globals kernel_fn_dummies;
+      (* Generate the list of globals to be registered *)
+      let globals_to_register = get_globals_to_register f.globals in
+      let registerglob = gen_registerglob globals_to_register in
+      f.globals <- List.append f.globals [GFun(registerglob,locUnknown)];
+      (* Previously, we thought that globals that have the GLOBREG annotation
+         must not be externs in slave *)
+      (* In fact, it seems as though no globals in the slave should have
+         extern *)
+      f.globals <- make_globals_nonextern f.globals;
+    end
+end
+
+(*---------------------------------------------------------------------------*)
+(** make_constants_modifiable:
+ * This is a transformation that converts constant arguments in function calls
+ * notably string constants, into calls with variables instead. The variables
+ * are new globals, and are intialized with the string constant. This
+ * transformation allows us to write into these globals without suffering a
+ * segmentation fault
+ *)
+class modif_const = object (self)
+  inherit nopCilVisitor
+  val mutable added_globals : global list = [];
+
+  method replace_strconst_with_global (s: string) : varinfo =
+    begin
+      let varinitinfo : initinfo = { init = None; } in
+      let newglobnm = "str_" ^
+        (Int64.to_string (Int64.of_int (Hashtbl.hash s))) in
+      let strlen = ((String.length s) + 1) in
+      let globtyp = (create_array_typ (TInt(IChar, [])) strlen) in
+      let newglob = (get_global_variable globtyp newglobnm) in
+      let varinit = (SingleInit(Const(CStr(s)))) in
+      varinitinfo.init <- Some(varinit);
+      added_globals <-
+        (List.append added_globals [GVar(newglob,varinitinfo,locUnknown)]);
+      newglob;
+    end
+
+  method analyze_expr_for_constants (e: exp) : exp =
+    begin
+      match e with
+        | Const(con) ->
+            (match con with
+               | CStr(constr) ->
+                   let newglob = (self#replace_strconst_with_global constr) in
+                   expify_lval (lvalify_varinfo newglob);
+               | _ -> e;
+            );
+        | SizeOfE(e') ->
+            SizeOfE(self#analyze_expr_for_constants e');
+        | AlignOfE(e') ->
+            AlignOfE(self#analyze_expr_for_constants e');
+        | UnOp(op,e',t) ->
+            UnOp(op, (self#analyze_expr_for_constants e'), t);
+        | BinOp(op,e1,e2,t) ->
+            BinOp(op, (self#analyze_expr_for_constants e1),
+                  (self#analyze_expr_for_constants e2), t);
+        | CastE(t,e') ->
+            CastE(t,(self#analyze_expr_for_constants e'));
+        | _ -> e;
+    end
+
+  (* Visit each Call and Set instruction and replace string constants
+   * with a newly manufactured global *)
+  method vinst (i: instr) : instr list visitAction =
+    match i with
+      | Call(lvopt, callexp, argslist, loc) ->
+          let newargslist = ref [] in
+          for i = 0 to (List.length argslist) - 1 do
+            let ith = (List.nth argslist i) in
+            let newith = (self#analyze_expr_for_constants ith) in
+            newargslist := (List.append !newargslist [newith]);
+          done;
+          let newcall = Call(lvopt, callexp, !newargslist, loc) in
+          ChangeTo([newcall]);
+      | Set(lv, e, loc) ->
+          let newe = (self#analyze_expr_for_constants e) in
+          let newset = Set(lv, newe, loc) in
+          ChangeTo([newset]);
+      | _ -> DoChildren;
+
+  (* Visit each global initializer and replace string constants with
+   * newly manufactured globals *)
+  method handleinit(i: init) : init =
+    match i with
+      | SingleInit(e) ->
+          let newe = (self#analyze_expr_for_constants e) in
+          SingleInit(newe);
+      | CompoundInit(t, il) ->
+          let newil = ref [] in
+          for i = 0 to (List.length il) - 1 do
+            let ith = (List.nth il i) in
+            let (off, oldi) = ith in
+            let newi = (self#handleinit oldi) in
+            newil := (List.append !newil [(off, newi)]);
+          done;
+          CompoundInit(t, !newil);
+
+  method vinit (v: varinfo) (o: offset) (i: init) : init visitAction =
+    ChangeTo((self#handleinit i));
+
+  (* Top level *)
+  method top_level (f: file) : unit =
+    begin
+      (visitCilFile (self :> cilVisitor) f);
+      added_globals <- (remove_repeats added_globals);
+      f.globals <- (List.append added_globals f.globals);
+    end
+end
+
+
+(*---------------------------------------------------------------------------*)
+(** Main function to call the splitter. *)
+let do_splitting (f: file)
+    (annot_file: string)
+    (java_input: string)
+    (dowhat: string) : unit =
+  begin
+    populate_annotations annotations annot_file;
+    if (java_input <> "sym") then
+      java_funcs := populate_java_funcs java_input;
+    populate_nonstubbed_functions
+      nonstubbed_functions nonstubbed_functions_delete_proto;
+    populate_interface_functions
+      f annotations funcs_with_no_fundecs interface_functions;
+
+    (* Transform all string constants into modifiable variables *)
+    let obj_modif_const: modif_const = new modif_const in
+    obj_modif_const#top_level f;
+
+    match dowhat with
+      | "produce-kern" ->
+          initialize_nooks true;
+          let obj_kern : splitter_unified = new splitter_unified in
+          obj_kern#top_level_kernel f;
+          infomsg ["Produced kernel side of the split."];
+      | "produce-user" ->
+          initialize_nooks false;
+          (* Pass 2: Stub functions that appear in the kernel and that are
+             implemented in this file *)
+          let obj_user : splitter_unified = new splitter_unified in
+          obj_user#top_level_user f;
+          infomsg ["Produced user side of the split"];
+      | _ -> fatal ["Unknown parameter"];
+  end

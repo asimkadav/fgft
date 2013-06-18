@@ -1,0 +1,20 @@
+An issue arose when we were testing our marshaler on a 
+microbenchmark. The problem happens when a function is 
+called with constant (read-only) data.
+
+Consider a function foo that processes a char * string
+passed to it as argument. The formal parameter to foo is
+not a constant. So foo looks like:
+
+void foo(char *string) {
+	Process string appropriately;
+}
+
+Now, suppose that foo is a function for which we've to
+generate marshaling/unmarshaling code.  
+
+stub_foo(char *string) {
+	marshal 'string' into 'buf'
+	call a wrapper to foo that will demarshal 'buf', and
+	call foo on the 
+}
