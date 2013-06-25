@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/psmousebase/psmousebase-sfi.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/psmousebase/psmousebase-sfi.ko /scratch/sym/ipc_drivers/psmousebase/psmousebase-sfi.o /scratch/sym/ipc_drivers/psmousebase/psmousebase-sfi.mod.o

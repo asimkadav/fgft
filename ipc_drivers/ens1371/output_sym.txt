@@ -1,0 +1,2166 @@
+Preprocessing ens1371.merged.sym.c
+gcc -D_GNUCC -E -DCIL=1 ens1371.merged.sym.c -o ./ens1371.merged.sym.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./ens1371.merged.sym.cil.c --verbose --commPrintLnSparse --docarb --sfireads --sfiwrites --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons false --dowhat normal-user ens1371.all_annots.txt ens1371.entry_points.txt ./ens1371.merged.sym.i
+Frontc is parsing ./ens1371.merged.sym.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:107: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:109: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:111: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:115: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:123: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:125: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:466: Warning: /scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:466: CIL only supports attribute((alias)) for functions.
+
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:1681: Warning: CALL in constant
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:2095: Warning: Return statement without a value in function returning int 
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:2097: Warning: Body of function ens1371_checkpoint falls-through. Adding a return statement
+/scratch/sym/ipc_drivers/ens1371/ens1371_annotated.c:2121: Warning: Body of function ens1371_restore falls-through. Adding a return statement
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: snd_ensoniq_playback1_close
+                     ::::::::::odftPerforimg heapify snd_ensoniq_playback1_closescanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(1)...
+****** ISOLATING :::: snd_ens1373_spdif_info
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_infoscanning globals(1)...
+****** ISOLATING :::: snd_ens1373_spdif_default_get
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_default_getscanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: snd_ens1373_spdif_mask_get
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_mask_getscanning globals(1)...
+****** ISOLATING :::: snd_ens1373_spdif_stream_get
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_stream_getscanning globals(1)...
+****** ISOLATING :::: snd_ens1373_spdif_stream_put
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_stream_putscanning globals(1)...
+****** ISOLATING :::: snd_es1371_spdif_get
+                     ::::::::::odftPerforimg heapify snd_es1371_spdif_getscanning globals(1)...
+****** ISOLATING :::: snd_es1371_spdif_put
+                     ::::::::::odftPerforimg heapify snd_es1371_spdif_putscanning globals(1)...
+****** ISOLATING :::: snd_es1373_rear_get
+                     ::::::::::odftPerforimg heapify snd_es1373_rear_getscanning globals(1)...
+****** ISOLATING :::: snd_es1373_rear_put
+                     ::::::::::odftPerforimg heapify snd_es1373_rear_putscanning globals(1)...
+****** ISOLATING :::: snd_es1373_line_get
+                     ::::::::::odftPerforimg heapify snd_es1373_line_getscanning globals(1)...
+****** ISOLATING :::: snd_es1373_line_put
+                     ::::::::::odftPerforimg heapify snd_es1373_line_putscanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: snd_ensoniq_proc_read
+                     ::::::::::odftPerforimg heapify snd_ensoniq_proc_readscanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: snd_ensoniq_midi_output_trigger
+                     ::::::::::odftPerforimg heapify snd_ensoniq_midi_output_triggerscanning globals(1)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(2)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+skipped generating err
+                        reports.
+
+====================Hardware dependence bugs======================
+
+ Infinite polling: 3.
+ Unsafe static array deference: 0
+ Dynamic array deference: 0
+ Unsafe halt code:  0
+ Missing error report on device failure: 0
+ Missing error report on device timeout: 9
+ Existing device failures reported: 0
+ Other(ignore)dma 4.
+
+====================Detailed Summary(with line numbers)=================
+ Missing timeout:527 
+ Missing timeout:556 
+ Missing timeout:629 
+ Missing timeout:635 
+ Missing timeout:661 
+ Missing timeout:670 
+ Missing timeout:676 
+ Missing timeout:686 
+ Missing timeout:691 
+ Infinite Loop:2252 
+ Infinite Loop:2264 
+ Infinite Loop:2380 
+
+
+Note: When CIL cannot compute line numbers: Line numbers show up as -1.
+
+
+FAULTINJECTION - NOt perforfming FIAbout to call sfi with kernel parameter 0...
+Performing sfi wth gen_kern 0..
+Activating sfi for fn:snd_ensoniq_playback1_close.
+Activating sfi for fn:snd_ens1373_spdif_info.
+Activating sfi for fn:snd_ens1373_spdif_default_get.
+Activating sfi for fn:snd_ens1373_spdif_mask_get.
+Activating sfi for fn:snd_ens1373_spdif_stream_get.
+Activating sfi for fn:snd_ens1373_spdif_stream_put.
+Activating sfi for fn:snd_es1371_spdif_get.
+Activating sfi for fn:snd_es1371_spdif_put.
+Activating sfi for fn:snd_es1373_rear_get.
+Activating sfi for fn:snd_es1373_rear_put.
+Activating sfi for fn:snd_es1373_line_get.
+Activating sfi for fn:snd_es1373_line_put.
+Activating sfi for fn:snd_ensoniq_proc_read.
+Activating sfi for fn:snd_ensoniq_midi_output_trigger.
+Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating user-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+currently analyzing: inb
+currently analyzing: inl
+currently analyzing: outb
+currently analyzing: outl
+currently analyzing: kmalloc
+currently analyzing: kzalloc
+currently analyzing: cond_resched
+currently analyzing: dev_name
+currently analyzing: dev_get_drvdata
+currently analyzing: dev_set_drvdata
+currently analyzing: pci_get_drvdata
+currently analyzing: pci_set_drvdata
+currently analyzing: pci_name
+currently analyzing: gameport_register_port
+currently analyzing: gameport_allocate_port
+currently analyzing: gameport_set_name
+currently analyzing: snd_power_change_state
+currently analyzing: bytes_to_frames
+currently analyzing: frames_to_bytes
+currently analyzing: snd_pcm_lib_buffer_bytes
+currently analyzing: snd_pcm_lib_period_bytes
+currently analyzing: snd_pcm_trigger_done
+currently analyzing: hw_param_interval
+currently analyzing: snd_info_set_text_ops
+currently analyzing: MICRODRIVERS__DUMMY
+currently analyzing: MICRODRIVERS__MODIF_kmem_cache_zalloc
+currently analyzing: MICRODRIVERS__MODIF__spin_lock_irqsave
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock_irqrestore
+currently analyzing: MICRODRIVERS__MODIF_pci_disable_device
+currently analyzing: MICRODRIVERS__MODIF_pci_set_master
+currently analyzing: MICRODRIVERS__MODIF___release_region
+currently analyzing: MICRODRIVERS__MODIF___spin_lock_init
+currently analyzing: MICRODRIVERS__MODIF___request_region
+currently analyzing: MICRODRIVERS__MODIF_pci_enable_device
+currently analyzing: MICRODRIVERS__MODIF_pci_unregister_driver
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock
+currently analyzing: MICRODRIVERS__MODIF__spin_lock
+currently analyzing: MICRODRIVERS__MODIF__spin_lock_bh
+currently analyzing: MICRODRIVERS__MODIF___pci_register_driver
+currently analyzing: MICRODRIVERS__MODIF_request_irq
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock_bh
+currently analyzing: MICRODRIVERS__MODIF__spin_lock_irq
+currently analyzing: MICRODRIVERS__MODIF_mutex_unlock
+currently analyzing: MICRODRIVERS__MODIF_mutex_lock
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock_irq
+currently analyzing: MICRODRIVERS__MODIF___wake_up
+currently analyzing: MICRODRIVERS__MODIF_pci_release_regions
+currently analyzing: MICRODRIVERS__MODIF_free_irq
+currently analyzing: MICRODRIVERS__MODIF_pci_set_power_state
+currently analyzing: MICRODRIVERS__MODIF_pci_save_state
+currently analyzing: MICRODRIVERS__MODIF_pci_restore_state
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_read_config_byte
+currently analyzing: MICRODRIVERS__MODIF___mutex_init
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_read_config_word
+currently analyzing: MICRODRIVERS__MODIF_pci_request_regions
+currently analyzing: MICRODRIVERS__MODIF_device_create_file
+currently analyzing: MICRODRIVERS__MODIF_hrtimer_get_res
+currently analyzing: MICRODRIVERS__MODIF_create_proc_entry
+currently analyzing: MICRODRIVERS__MODIF_proc_symlink
+currently analyzing: MICRODRIVERS__MODIF_logWrite
+currently analyzing: MICRODRIVERS__MODIF_logRead
+currently analyzing: MICRODRIVERS__MODIF_logStackFrame
+currently analyzing: MICRODRIVERS__MODIF_logAlloc
+currently analyzing: snd_es1371_wait_src_ready
+currently analyzing: snd_es1371_src_read
+currently analyzing: snd_es1371_src_write
+currently analyzing: snd_es1371_codec_write
+currently analyzing: snd_es1371_codec_read
+currently analyzing: snd_es1371_codec_wait
+currently analyzing: snd_es1371_adc_rate
+currently analyzing: snd_es1371_dac1_rate
+currently analyzing: snd_es1371_dac2_rate
+currently analyzing: snd_ensoniq_trigger
+currently analyzing: snd_ensoniq_hw_params
+currently analyzing: snd_ensoniq_hw_free
+currently analyzing: snd_ensoniq_playback1_prepare
+currently analyzing: snd_ensoniq_playback2_prepare
+currently analyzing: snd_ensoniq_capture_prepare
+currently analyzing: snd_ensoniq_playback1_pointer
+currently analyzing: snd_ensoniq_playback2_pointer
+currently analyzing: snd_ensoniq_capture_pointer
+currently analyzing: snd_ensoniq_playback1_open
+currently analyzing: snd_ensoniq_playback2_open
+currently analyzing: snd_ensoniq_capture_open
+currently analyzing: snd_ensoniq_playback1_close
+currently analyzing: snd_ensoniq_playback2_close
+currently analyzing: snd_ensoniq_capture_close
+currently analyzing: snd_ensoniq_pcm
+currently analyzing: snd_ensoniq_pcm2
+currently analyzing: snd_ens1373_spdif_info
+currently analyzing: snd_ens1373_spdif_default_get
+currently analyzing: snd_ens1373_spdif_default_put
+currently analyzing: snd_ens1373_spdif_mask_get
+currently analyzing: snd_ens1373_spdif_stream_get
+currently analyzing: snd_ens1373_spdif_stream_put
+currently analyzing: snd_es1371_spdif_get
+currently analyzing: snd_es1371_spdif_put
+currently analyzing: snd_es1373_rear_get
+currently analyzing: snd_es1373_rear_put
+currently analyzing: snd_es1373_line_get
+currently analyzing: snd_es1373_line_put
+currently analyzing: snd_ensoniq_mixer_free_ac97
+currently analyzing: es1371_quirk_lookup
+currently analyzing: snd_ensoniq_1371_mixer
+currently analyzing: snd_ensoniq_get_joystick_port
+currently analyzing: snd_ensoniq_create_gameport
+currently analyzing: snd_ensoniq_free_gameport
+currently analyzing: snd_ensoniq_proc_read
+currently analyzing: snd_ensoniq_proc_init
+currently analyzing: snd_ensoniq_free
+currently analyzing: snd_ensoniq_dev_free
+currently analyzing: snd_ensoniq_chip_init
+currently analyzing: snd_ensoniq_suspend
+currently analyzing: ens1371_checkpoint
+currently analyzing: ens1371_restore
+currently analyzing: snd_ensoniq_resume
+currently analyzing: snd_ensoniq_create
+currently analyzing: snd_ensoniq_midi_interrupt
+currently analyzing: snd_ensoniq_midi_input_open
+currently analyzing: snd_ensoniq_midi_input_close
+currently analyzing: snd_ensoniq_midi_output_open
+currently analyzing: snd_ensoniq_midi_output_close
+currently analyzing: snd_ensoniq_midi_input_trigger
+currently analyzing: snd_ensoniq_midi_output_trigger
+currently analyzing: snd_ensoniq_midi
+currently analyzing: snd_audiopci_interrupt
+currently analyzing: snd_audiopci_probe
+currently analyzing: snd_audiopci_remove
+currently analyzing: alsa_card_ens137x_init
+currently analyzing: alsa_card_ens137x_exit
+currently analyzing: init_module
+currently analyzing: cleanup_module
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+ modif: Using non-conservative analysis for kernel fn:  snd_card_register
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_hw_constraint_ratnums
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_set_sync
+ modif: Using supplied modif for internal kernel fn:  _spin_lock_irq
+ modif: Using supplied modif for internal kernel fn:  mutex_unlock
+ modif: Using supplied modif for internal kernel fn:  printk
+ modif: Using supplied modif for internal kernel fn:  _cond_resched
+ modif: Using non-conservative analysis for kernel fn:  mutex_trylock
+ modif: Using supplied modif for internal kernel fn:  snd_pcm_format_width
+ modif: Using supplied modif for internal kernel fn:  _spin_unlock_irq
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_transmit
+ modif: Using supplied modif for internal kernel fn:  logWrite
+ modif: Using supplied modif for internal kernel fn:  sprintf
+ modif: Using supplied modif for internal kernel fn:  _spin_lock
+ modif: Using supplied modif for internal kernel fn:  _spin_unlock
+ modif: Using non-conservative analysis for kernel fn:  snd_ac97_suspend
+ modif: Using supplied modif for internal kernel fn:  __wake_up
+ modif: Using non-conservative analysis for kernel fn:  snd_card_proc_new
+ modif: Using supplied modif for internal kernel fn:  pci_disable_device
+ modif: Using supplied modif for internal kernel fn:  synchronize_irq
+ modif: Using supplied modif for internal kernel fn:  pci_release_regions
+ modif: Using supplied modif for internal kernel fn:  free_irq
+ modif: Using non-conservative analysis for kernel fn:  gameport_unregister_port
+ modif: Using supplied modif for internal kernel fn:  __release_region
+ modif: Using supplied modif for internal kernel fn:  pci_set_power_state
+ modif: Using supplied modif for internal kernel fn:  kfree
+ modif: Using supplied modif for internal kernel fn:  __builtin_prefetch
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_hw_constraint_ratdens
+ modif: Using supplied modif for internal kernel fn:  __kmalloc
+ modif: Using non-conservative analysis for kernel fn:  pci_choose_state
+ modif: Using supplied modif for internal kernel fn:  pci_unregister_driver
+ modif: Using non-conservative analysis for kernel fn:  snd_ac97_resume
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_suspend_all
+ modif: Using supplied modif for internal kernel fn:  pci_restore_state
+ modif: Using non-conservative analysis for kernel fn:  mutex_lock_nested
+ modif: Using supplied modif for internal kernel fn:  __const_udelay
+ modif: Using supplied modif for internal kernel fn:  pci_save_state
+ modif: Using supplied modif for internal kernel fn:  pci_set_master
+ modif: Using non-conservative analysis for kernel fn:  snd_card_disconnect
+ modif: Using supplied modif for internal kernel fn:  pci_enable_device
+ modif: Using non-conservative analysis for kernel fn:  snd_device_new
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_receive
+ modif: Using supplied modif for internal kernel fn:  logRead
+ modif: Using supplied modif for internal kernel fn:  logStackVar
+ modif: Using supplied modif for internal kernel fn:  logStackFrame
+ modif: Using non-conservative analysis for kernel fn:  snd_pci_quirk_lookup
+ modif: Using non-conservative analysis for kernel fn:  snd_ctl_add
+ modif: Using non-conservative analysis for kernel fn:  snd_ac97_mixer
+ modif: Using non-conservative analysis for kernel fn:  snd_ac97_bus
+ modif: Using non-conservative analysis for kernel fn:  snd_ctl_new1
+ modif: Using supplied modif for internal kernel fn:  memset
+ modif: Using non-conservative analysis for kernel fn:  snd_card_free
+ modif: Using supplied modif for internal kernel fn:  strcpy
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_new
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_set_ops
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_lib_preallocate_pages_for_all
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_set_ops
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_new
+ modif: Using supplied modif for internal kernel fn:  __request_region
+ modif: Using non-conservative analysis for kernel fn:  __gameport_register_port
+ modif: Using supplied modif for internal kernel fn:  strlcpy
+ modif: Using non-conservative analysis for kernel fn:  gameport_set_phys
+ modif: Using supplied modif for internal kernel fn:  request_irq
+ modif: Using supplied modif for internal kernel fn:  __spin_lock_init
+ modif: Using supplied modif for internal kernel fn:  __mutex_init
+ modif: Using supplied modif for internal kernel fn:  pci_request_regions
+ modif: Using non-conservative analysis for kernel fn:  snd_card_new
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_period_elapsed
+ modif: Using supplied modif for internal kernel fn:  __pci_register_driver
+ modif: Using supplied modif for internal kernel fn:  _spin_unlock_irqrestore
+ modif: Using supplied modif for internal kernel fn:  _spin_lock_irqsave
+ modif: Using non-conservative analysis for kernel fn:  snd_iprintf
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_lib_free_pages
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_lib_malloc_pages
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  168 74
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct ensoniq  -> u]
+
+=======================================================
+** Reading entry points from file ens1371.entry_points.txt **
+snd_audiopci_interrupt
+snd_audiopci_remove
+snd_audiopci_probe
+init_module
+cleanup_module
+snd_ensoniq_resume
+** Reading file ens1371.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+is_override_interface: pci_unregister_driver 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_pcm2 0
+Asim disabled interface function.
+is_override_interface: pci_set_power_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: gameport_register_port 0
+Asim disabled interface function.
+is_override_interface: hw_param_interval 1
+is_override_interface: MICRODRIVERS__MODIF_create_proc_entry 0
+is_override_interface: alsa_card_ens137x_exit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_unlock_irqrestore 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_card_new 1
+is_override_interface: pci_get_drvdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_playback1_prepare 1
+is_override_interface: snd_rawmidi_set_ops 1
+is_override_interface: snd_es1371_spdif_get 0
+is_override_interface: pci_name 0
+Asim disabled interface function.
+is_override_interface: outb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: kzalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_logStackFrame 0
+is_override_interface: synchronize_irq 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__DUMMY 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __release_region 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_midi_input_close 0
+is_override_interface: pci_release_regions 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF__spin_lock_irq 0
+is_override_interface: printk 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dev_name 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___pci_register_driver 0
+is_override_interface: snd_ensoniq_chip_init 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_info_set_text_ops 1
+is_override_interface: MICRODRIVERS__MODIF__spin_lock_irqsave 0
+is_override_interface: snd_pcm_lib_malloc_pages 1
+is_override_interface: snd_ensoniq_hw_free 1
+is_override_interface: gameport_unregister_port 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_set_power_state 0
+is_override_interface: snd_pcm_trigger_done 1
+is_override_interface: snd_ensoniq_mixer_free_ac97 0
+is_override_interface: snd_ensoniq_playback1_open 1
+is_override_interface: logStackVar 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_es1373_rear_get 0
+is_override_interface: _spin_lock_irqsave 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: kmalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___mutex_init 0
+is_override_interface: _spin_lock_irq 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ens1373_spdif_stream_get 0
+is_override_interface: snd_es1371_codec_write 0
+is_override_interface: es1371_quirk_lookup 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ac97_bus 1
+is_override_interface: cleanup_module 0
+is_override_interface: MICRODRIVERS__MODIF_pci_release_regions 0
+is_override_interface: snd_iprintf 1
+is_override_interface: dev_get_drvdata 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_midi_output_open 0
+is_override_interface: inl 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __wake_up 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_logWrite 0
+is_override_interface: snd_es1373_line_put 0
+is_override_interface: snd_ensoniq_hw_params 1
+is_override_interface: pci_request_regions 0
+Asim disabled interface function.
+is_override_interface: snd_ens1373_spdif_default_get 0
+is_override_interface: snd_ensoniq_create_gameport 0
+Asim disabled interface function.
+is_override_interface: pci_choose_state 0
+Asim disabled interface function.
+is_override_interface: frames_to_bytes 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_device_create_file 0
+is_override_interface: snd_es1371_dac2_rate 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_lock 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_new 1
+is_override_interface: snd_card_proc_new 1
+is_override_interface: snd_pcm_lib_free_pages 1
+is_override_interface: gameport_set_name 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_lib_preallocate_pages_for_all 1
+is_override_interface: inb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_audiopci_remove 0
+is_override_interface: bytes_to_frames 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_logAlloc 0
+is_override_interface: snd_ens1373_spdif_info 0
+is_override_interface: memset 0
+Asim disabled interface function.
+is_override_interface: ens1371_restore 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_read_config_byte 0
+is_override_interface: MICRODRIVERS__MODIF_pci_request_regions 0
+is_override_interface: snd_ensoniq_midi 0
+Asim disabled interface function.
+is_override_interface: __gameport_register_port 0
+Asim disabled interface function.
+is_override_interface: snd_es1371_codec_wait 0
+is_override_interface: gameport_set_phys 0
+Asim disabled interface function.
+is_override_interface: alsa_card_ens137x_init 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_restore_state 0
+is_override_interface: snd_pcm_suspend_all 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_trigger 1
+is_override_interface: snd_ensoniq_free_gameport 0
+Asim disabled interface function.
+is_override_interface: mutex_lock_nested 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_midi_input_open 0
+is_override_interface: snd_es1371_src_write 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_unlock_irq 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_hw_constraint_ratdens 1
+is_override_interface: snd_ctl_new1 1
+is_override_interface: pci_restore_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_pcm 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___spin_lock_init 0
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_read_config_word 0
+is_override_interface: MICRODRIVERS__MODIF_pci_unregister_driver 0
+is_override_interface: snd_ensoniq_midi_output_trigger 0
+is_override_interface: snd_rawmidi_receive 1
+is_override_interface: MICRODRIVERS__MODIF_pci_disable_device 0
+is_override_interface: snd_ensoniq_playback1_close 0
+is_override_interface: __mutex_init 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_set_master 0
+is_override_interface: logStackFrame 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_module 0
+is_override_interface: _spin_unlock 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: strcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_es1371_dac1_rate 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pci_enable_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_new 1
+is_override_interface: __kmalloc 0
+Asim disabled interface function.
+is_override_interface: snd_pci_quirk_lookup 1
+is_override_interface: snd_ensoniq_proc_read 0
+is_override_interface: free_irq 0
+Asim disabled interface function.
+is_override_interface: pci_disable_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_midi_input_trigger 0
+is_override_interface: strlcpy 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_midi_output_close 0
+is_override_interface: mutex_unlock 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_save_state 0
+is_override_interface: pci_set_master 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_es1371_codec_read 0
+Asim disabled interface function.
+is_override_interface: snd_es1373_line_get 0
+is_override_interface: _cond_resched 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_request_irq 0
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock_irq 0
+is_override_interface: snd_ens1373_spdif_mask_get 0
+is_override_interface: snd_pcm_lib_period_bytes 1
+is_override_interface: snd_ctl_add 1
+is_override_interface: MICRODRIVERS__MODIF_proc_symlink 0
+is_override_interface: __const_udelay 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock_irqrestore 0
+is_override_interface: request_irq 0
+Asim disabled interface function.
+is_override_interface: __pci_register_driver 0
+Asim disabled interface function.
+is_override_interface: pci_set_drvdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: logRead 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ac97_mixer 1
+is_override_interface: snd_ac97_resume 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_es1371_spdif_put 0
+is_override_interface: pci_save_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_create 0
+Asim disabled interface function.
+is_override_interface: snd_card_free 1
+is_override_interface: MICRODRIVERS__MODIF_hrtimer_get_res 0
+is_override_interface: snd_ensoniq_playback2_pointer 1
+is_override_interface: snd_pcm_format_width 1
+is_override_interface: MICRODRIVERS__MODIF__spin_lock_bh 0
+is_override_interface: snd_pcm_period_elapsed 1
+is_override_interface: __spin_lock_init 0
+Asim disabled interface function.
+is_override_interface: snd_es1371_src_read 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_audiopci_interrupt 1
+is_override_interface: MICRODRIVERS__MODIF_logRead 0
+is_override_interface: snd_ensoniq_1371_mixer 0
+Asim disabled interface function.
+is_override_interface: ens1371_checkpoint 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock 0
+is_override_interface: MICRODRIVERS__MODIF__spin_lock 0
+is_override_interface: snd_es1371_wait_src_ready 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_capture_open 1
+is_override_interface: __request_region 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_capture_close 1
+is_override_interface: snd_ensoniq_playback2_prepare 0
+is_override_interface: mutex_trylock 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_set_ops 1
+is_override_interface: MICRODRIVERS__MODIF___release_region 0
+is_override_interface: MICRODRIVERS__MODIF_mutex_unlock 0
+is_override_interface: snd_es1373_rear_put 0
+is_override_interface: snd_audiopci_probe 0
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock_bh 0
+is_override_interface: MICRODRIVERS__MODIF_free_irq 0
+is_override_interface: snd_ens1373_spdif_stream_put 0
+is_override_interface: snd_card_disconnect 1
+is_override_interface: dev_set_drvdata 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___wake_up 0
+is_override_interface: snd_ensoniq_free 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_lib_buffer_bytes 1
+is_override_interface: snd_ensoniq_midi_interrupt 0
+Asim disabled interface function.
+is_override_interface: snd_ens1373_spdif_default_put 0
+is_override_interface: snd_device_new 1
+is_override_interface: kfree 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_resume 0
+is_override_interface: cond_resched 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_capture_pointer 1
+is_override_interface: snd_ensoniq_suspend 0
+is_override_interface: gameport_allocate_port 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_playback2_open 1
+is_override_interface: __builtin_prefetch 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___request_region 0
+is_override_interface: snd_ensoniq_get_joystick_port 0
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_dev_free 0
+is_override_interface: MICRODRIVERS__MODIF_mutex_lock 0
+is_override_interface: snd_ensoniq_playback2_close 1
+is_override_interface: snd_ensoniq_proc_init 0
+Asim disabled interface function.
+is_override_interface: snd_power_change_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_enable_device 0
+is_override_interface: snd_ac97_suspend 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_kmem_cache_zalloc 0
+is_override_interface: snd_es1371_adc_rate 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_playback1_pointer 1
+is_override_interface: sprintf 0
+Asim disabled interface function.
+is_override_interface: logWrite 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_transmit 1
+is_override_interface: outl 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ensoniq_capture_prepare 1
+is_override_interface: snd_pcm_set_sync 1
+is_override_interface: snd_pcm_hw_constraint_ratnums 1
+is_override_interface: snd_card_register 1
+Interface function pci_unregister_driver: Annotation is kern
+Interface function pci_set_power_state: Annotation is kern
+Interface function _spin_unlock_irqrestore: Annotation is kern
+Interface function snd_card_new: Annotation is kern
+Interface function snd_rawmidi_set_ops: Annotation is kern
+Interface function snd_es1371_spdif_get: Annotation is user
+Interface function synchronize_irq: Annotation is kern
+Interface function __release_region: Annotation is kern
+Interface function pci_release_regions: Annotation is kern
+Interface function printk: Annotation is kern
+Interface function snd_pcm_lib_malloc_pages: Annotation is kern
+Interface function gameport_unregister_port: Annotation is kern
+Interface function snd_es1373_rear_get: Annotation is user
+Interface function logStackVar: Annotation is user
+Interface function _spin_lock_irqsave: Annotation is kern
+Interface function snd_ens1373_spdif_stream_get: Annotation is user
+Interface function _spin_lock_irq: Annotation is kern
+Interface function snd_ac97_bus: Annotation is kern
+Interface function snd_iprintf: Annotation is kern
+Interface function snd_es1373_line_put: Annotation is user
+Interface function __wake_up: Annotation is kern
+Interface function pci_request_regions: Annotation is kern
+Interface function snd_ens1373_spdif_default_get: Annotation is user
+Interface function pci_choose_state: Annotation is kern
+Interface function _spin_lock: Annotation is kern
+Interface function snd_pcm_new: Annotation is kern
+Interface function snd_card_proc_new: Annotation is kern
+Interface function snd_pcm_lib_free_pages: Annotation is kern
+Interface function snd_pcm_lib_preallocate_pages_for_all: Annotation is kern
+Interface function snd_ens1373_spdif_info: Annotation is user
+Interface function memset: Annotation is kern
+Interface function __gameport_register_port: Annotation is kern
+Interface function gameport_set_phys: Annotation is kern
+Interface function snd_pcm_suspend_all: Annotation is kern
+Interface function mutex_lock_nested: Annotation is kern
+Interface function _spin_unlock_irq: Annotation is kern
+Interface function snd_pcm_hw_constraint_ratdens: Annotation is kern
+Interface function snd_ctl_new1: Annotation is kern
+Interface function pci_restore_state: Annotation is kern
+Interface function snd_ensoniq_midi_output_trigger: Annotation is user
+Interface function snd_rawmidi_receive: Annotation is kern
+Interface function snd_ensoniq_playback1_close: Annotation is user
+Interface function __mutex_init: Annotation is kern
+Interface function logStackFrame: Annotation is user
+Interface function _spin_unlock: Annotation is kern
+Interface function strcpy: Annotation is kern
+Interface function pci_enable_device: Annotation is kern
+Interface function snd_rawmidi_new: Annotation is kern
+Interface function snd_ensoniq_proc_read: Annotation is user
+Interface function __kmalloc: Annotation is kern
+Interface function snd_pci_quirk_lookup: Annotation is kern
+Interface function free_irq: Annotation is kern
+Interface function pci_disable_device: Annotation is kern
+Interface function strlcpy: Annotation is kern
+Interface function mutex_unlock: Annotation is kern
+Interface function pci_set_master: Annotation is kern
+Interface function snd_es1373_line_get: Annotation is user
+Interface function snd_ens1373_spdif_mask_get: Annotation is user
+Interface function _cond_resched: Annotation is kern
+Interface function snd_ctl_add: Annotation is kern
+Interface function __const_udelay: Annotation is kern
+Interface function request_irq: Annotation is kern
+Interface function __pci_register_driver: Annotation is kern
+Interface function logRead: Annotation is user
+Interface function snd_ac97_mixer: Annotation is kern
+Interface function snd_ac97_resume: Annotation is kern
+Interface function snd_es1371_spdif_put: Annotation is user
+Interface function pci_save_state: Annotation is kern
+Interface function snd_card_free: Annotation is kern
+Interface function snd_pcm_format_width: Annotation is kern
+Interface function snd_pcm_period_elapsed: Annotation is kern
+Interface function __spin_lock_init: Annotation is kern
+Interface function __request_region: Annotation is kern
+Interface function mutex_trylock: Annotation is kern
+Interface function snd_pcm_set_ops: Annotation is kern
+Interface function snd_es1373_rear_put: Annotation is user
+Interface function snd_ens1373_spdif_stream_put: Annotation is user
+Interface function snd_card_disconnect: Annotation is kern
+Interface function snd_device_new: Annotation is kern
+Interface function kfree: Annotation is kern
+Interface function __builtin_prefetch: Annotation is kern
+Interface function snd_ac97_suspend: Annotation is kern
+Interface function sprintf: Annotation is kern
+Interface function logWrite: Annotation is user
+Interface function snd_rawmidi_transmit: Annotation is kern
+Interface function snd_pcm_set_sync: Annotation is kern
+Interface function snd_pcm_hw_constraint_ratnums: Annotation is kern
+Interface function snd_card_register: Annotation is kern
+kernel function proto: logRead
+kernel function proto: logWrite
+kernel function proto: logStackFrame
+kernel function proto: logStackVar
+kernel function proto: logAlloc
+kernel function proto: logFree
+kernel function proto: __builtin_prefetch
+Considering function body for deletion: inb
+Considering function body for deletion: inl
+Considering function body for deletion: outb
+Considering function body for deletion: outl
+kernel function proto: sprintf
+  deleting proto sprintf
+kernel function proto: printk
+kernel function proto: memset
+kernel function proto: strcpy
+kernel function proto: strlcpy
+kernel function proto: __spin_lock_init
+kernel function proto: _spin_lock
+kernel function proto: _spin_lock_irq
+kernel function proto: _spin_lock_irqsave
+kernel function proto: _spin_unlock
+kernel function proto: _spin_unlock_irq
+kernel function proto: _spin_unlock_irqrestore
+kernel function proto: __const_udelay
+kernel function proto: kfree
+  deleting proto kfree
+kernel function proto: __kmalloc
+Considering function body for deletion: kmalloc
+Considering function body for deletion: kzalloc
+Considering function body for deletion: cond_resched
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: dev_name
+Considering function body for deletion: dev_get_drvdata
+Considering function body for deletion: dev_set_drvdata
+Considering function body for deletion: pci_get_drvdata
+Considering function body for deletion: pci_set_drvdata
+Considering function body for deletion: pci_name
+Considering function body for deletion: gameport_register_port
+Considering function body for deletion: gameport_allocate_port
+Considering function body for deletion: gameport_set_name
+Considering function body for deletion: snd_power_change_state
+Considering function body for deletion: bytes_to_frames
+Considering function body for deletion: frames_to_bytes
+Considering function body for deletion: snd_pcm_lib_buffer_bytes
+Considering function body for deletion: snd_pcm_lib_period_bytes
+Considering function body for deletion: snd_pcm_trigger_done
+Considering function body for deletion: hw_param_interval
+kernel function proto: snd_iprintf
+Considering function body for deletion: snd_info_set_text_ops
+Considering function body for deletion: MICRODRIVERS__DUMMY
+Considering function body for deletion: MICRODRIVERS__MODIF_kmem_cache_zalloc
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock_irqsave
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock_irqrestore
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_disable_device
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_master
+Considering function body for deletion: MICRODRIVERS__MODIF___release_region
+Considering function body for deletion: MICRODRIVERS__MODIF___spin_lock_init
+Considering function body for deletion: MICRODRIVERS__MODIF___request_region
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_enable_device
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_unregister_driver
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock_bh
+Considering function body for deletion: MICRODRIVERS__MODIF___pci_register_driver
+Considering function body for deletion: MICRODRIVERS__MODIF_request_irq
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock_bh
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock_irq
+Considering function body for deletion: MICRODRIVERS__MODIF_mutex_unlock
+Considering function body for deletion: MICRODRIVERS__MODIF_mutex_lock
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock_irq
+Considering function body for deletion: MICRODRIVERS__MODIF___wake_up
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_release_regions
+Considering function body for deletion: MICRODRIVERS__MODIF_free_irq
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_power_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_save_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_restore_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_read_config_byte
+Considering function body for deletion: MICRODRIVERS__MODIF___mutex_init
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_read_config_word
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_request_regions
+Considering function body for deletion: MICRODRIVERS__MODIF_device_create_file
+Considering function body for deletion: MICRODRIVERS__MODIF_hrtimer_get_res
+Considering function body for deletion: MICRODRIVERS__MODIF_create_proc_entry
+Considering function body for deletion: MICRODRIVERS__MODIF_proc_symlink
+Considering function body for deletion: MICRODRIVERS__MODIF_logWrite
+Considering function body for deletion: MICRODRIVERS__MODIF_logRead
+Considering function body for deletion: MICRODRIVERS__MODIF_logStackFrame
+Considering function body for deletion: MICRODRIVERS__MODIF_logAlloc
+Considering function body for deletion: snd_es1371_wait_src_ready
+Considering function body for deletion: snd_es1371_src_read
+Considering function body for deletion: snd_es1371_src_write
+Considering function body for deletion: snd_es1371_codec_write
+Considering function body for deletion: snd_es1371_codec_read
+Considering function body for deletion: snd_es1371_codec_wait
+Considering function body for deletion: snd_es1371_adc_rate
+Considering function body for deletion: snd_es1371_dac1_rate
+Considering function body for deletion: snd_es1371_dac2_rate
+Considering function body for deletion: snd_ensoniq_trigger
+Considering function body for deletion: snd_ensoniq_hw_params
+Considering function body for deletion: snd_ensoniq_hw_free
+Considering function body for deletion: snd_ensoniq_playback1_prepare
+Considering function body for deletion: snd_ensoniq_playback2_prepare
+Considering function body for deletion: snd_ensoniq_capture_prepare
+Considering function body for deletion: snd_ensoniq_playback1_pointer
+Considering function body for deletion: snd_ensoniq_playback2_pointer
+Considering function body for deletion: snd_ensoniq_capture_pointer
+Considering function body for deletion: snd_ensoniq_playback1_open
+Considering function body for deletion: snd_ensoniq_playback2_open
+Considering function body for deletion: snd_ensoniq_capture_open
+Considering function body for deletion: snd_ensoniq_playback1_close
+Considering function body for deletion: snd_ensoniq_playback2_close
+Considering function body for deletion: snd_ensoniq_capture_close
+Considering function body for deletion: snd_ensoniq_pcm
+Considering function body for deletion: snd_ensoniq_pcm2
+Considering function body for deletion: snd_ens1373_spdif_info
+Considering function body for deletion: snd_ens1373_spdif_default_get
+Considering function body for deletion: snd_ens1373_spdif_default_put
+Considering function body for deletion: snd_ens1373_spdif_mask_get
+Considering function body for deletion: snd_ens1373_spdif_stream_get
+Considering function body for deletion: snd_ens1373_spdif_stream_put
+Considering function body for deletion: snd_es1371_spdif_get
+Considering function body for deletion: snd_es1371_spdif_put
+Considering function body for deletion: snd_es1373_rear_get
+Considering function body for deletion: snd_es1373_rear_put
+Considering function body for deletion: snd_es1373_line_get
+Considering function body for deletion: snd_es1373_line_put
+Considering function body for deletion: snd_ensoniq_mixer_free_ac97
+Considering function body for deletion: es1371_quirk_lookup
+Considering function body for deletion: snd_ensoniq_1371_mixer
+Considering function body for deletion: snd_ensoniq_get_joystick_port
+Considering function body for deletion: snd_ensoniq_create_gameport
+Considering function body for deletion: snd_ensoniq_free_gameport
+Considering function body for deletion: snd_ensoniq_proc_read
+Considering function body for deletion: snd_ensoniq_proc_init
+Considering function body for deletion: snd_ensoniq_free
+Considering function body for deletion: snd_ensoniq_dev_free
+Considering function body for deletion: snd_ensoniq_chip_init
+Considering function body for deletion: snd_ensoniq_suspend
+Considering function body for deletion: ens1371_checkpoint
+Considering function body for deletion: ens1371_restore
+Considering function body for deletion: snd_ensoniq_resume
+Considering function body for deletion: snd_ensoniq_create
+Considering function body for deletion: snd_ensoniq_midi_interrupt
+Considering function body for deletion: snd_ensoniq_midi_input_open
+Considering function body for deletion: snd_ensoniq_midi_input_close
+Considering function body for deletion: snd_ensoniq_midi_output_open
+Considering function body for deletion: snd_ensoniq_midi_output_close
+Considering function body for deletion: snd_ensoniq_midi_input_trigger
+Considering function body for deletion: snd_ensoniq_midi_output_trigger
+Considering function body for deletion: snd_ensoniq_midi
+Considering function body for deletion: snd_audiopci_interrupt
+Considering function body for deletion: snd_audiopci_probe
+Considering function body for deletion: snd_audiopci_remove
+Considering function body for deletion: alsa_card_ens137x_init
+Considering function body for deletion: alsa_card_ens137x_exit
+Considering function body for deletion: init_module
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: cleanup_module
+Global to register: ioport_resource
+Global to register: __this_module
+Global to register: index
+Global to register: id
+Global to register: enable
+Global to register: joystick_port
+Global to register: spdif
+Global to register: lineio
+Global to register: __param_arr_index
+Global to register: __param_str_index
+Global to register: __param_arr_id
+Global to register: __param_str_id
+Global to register: __param_arr_enable
+Global to register: __param_str_enable
+Global to register: __param_arr_joystick_port
+Global to register: __param_str_joystick_port
+Global to register: __param_arr_spdif
+Global to register: __param_str_spdif
+Global to register: __param_arr_lineio
+Global to register: __param_str_lineio
+Global to register: snd_audiopci_ids
+Global to register: es1371_dac_clock
+Global to register: snd_es1371_hw_constraints_dac_clock
+Global to register: es1371_adc_clock
+Global to register: snd_es1371_hw_constraints_adc_clock
+Global to register: snd_ensoniq_sample_shift
+Global to register: snd_ensoniq_playback1_ops
+Global to register: snd_ensoniq_playback2_ops
+Global to register: snd_ensoniq_capture_ops
+Global to register: snd_es1371_mixer_spdif
+Global to register: snd_ens1373_rear
+Global to register: snd_ens1373_line
+Global to register: es1371_spdif_present
+Global to register: ens1373_line_quirk
+Global to register: ops
+Global to register: es1371_amplifier_hack
+Global to register: es1371_ac97_reset_hack
+Global to register: ops___0
+Global to register: __key___4
+Global to register: __key___5
+Global to register: snd_ensoniq_midi_output
+Global to register: snd_ensoniq_midi_input
+Global to register: driver
+Function/global mapping MICRODRIVERS__DUMMY -> 1000
+Function/global mapping MICRODRIVERS__MODIF___mutex_init -> 1001
+Function/global mapping MICRODRIVERS__MODIF___pci_register_driver -> 1002
+Function/global mapping MICRODRIVERS__MODIF___release_region -> 1003
+Function/global mapping MICRODRIVERS__MODIF___request_region -> 1004
+Function/global mapping MICRODRIVERS__MODIF___spin_lock_init -> 1005
+Function/global mapping MICRODRIVERS__MODIF___wake_up -> 1006
+Function/global mapping MICRODRIVERS__MODIF__spin_lock -> 1007
+Function/global mapping MICRODRIVERS__MODIF__spin_lock_bh -> 1008
+Function/global mapping MICRODRIVERS__MODIF__spin_lock_irq -> 1009
+Function/global mapping MICRODRIVERS__MODIF__spin_lock_irqsave -> 1010
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock -> 1011
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock_bh -> 1012
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock_irq -> 1013
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock_irqrestore -> 1014
+Function/global mapping MICRODRIVERS__MODIF_create_proc_entry -> 1015
+Function/global mapping MICRODRIVERS__MODIF_device_create_file -> 1016
+Function/global mapping MICRODRIVERS__MODIF_free_irq -> 1017
+Function/global mapping MICRODRIVERS__MODIF_hrtimer_get_res -> 1018
+Function/global mapping MICRODRIVERS__MODIF_kmem_cache_zalloc -> 1019
+Function/global mapping MICRODRIVERS__MODIF_logAlloc -> 1020
+Function/global mapping MICRODRIVERS__MODIF_logRead -> 1021
+Function/global mapping MICRODRIVERS__MODIF_logStackFrame -> 1022
+Function/global mapping MICRODRIVERS__MODIF_logWrite -> 1023
+Function/global mapping MICRODRIVERS__MODIF_mutex_lock -> 1024
+Function/global mapping MICRODRIVERS__MODIF_mutex_unlock -> 1025
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_read_config_byte -> 1026
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_read_config_word -> 1027
+Function/global mapping MICRODRIVERS__MODIF_pci_disable_device -> 1028
+Function/global mapping MICRODRIVERS__MODIF_pci_enable_device -> 1029
+Function/global mapping MICRODRIVERS__MODIF_pci_release_regions -> 1030
+Function/global mapping MICRODRIVERS__MODIF_pci_request_regions -> 1031
+Function/global mapping MICRODRIVERS__MODIF_pci_restore_state -> 1032
+Function/global mapping MICRODRIVERS__MODIF_pci_save_state -> 1033
+Function/global mapping MICRODRIVERS__MODIF_pci_set_master -> 1034
+Function/global mapping MICRODRIVERS__MODIF_pci_set_power_state -> 1035
+Function/global mapping MICRODRIVERS__MODIF_pci_unregister_driver -> 1036
+Function/global mapping MICRODRIVERS__MODIF_proc_symlink -> 1037
+Function/global mapping MICRODRIVERS__MODIF_request_irq -> 1038
+Function/global mapping __builtin_prefetch -> 1039
+Function/global mapping __const_udelay -> 1040
+Function/global mapping __gameport_register_port -> 1041
+Function/global mapping __key___4 -> 1042
+Function/global mapping __key___5 -> 1043
+Function/global mapping __kmalloc -> 1044
+Function/global mapping __mutex_init -> 1045
+Function/global mapping __param_arr_enable -> 1046
+Function/global mapping __param_arr_id -> 1047
+Function/global mapping __param_arr_index -> 1048
+Function/global mapping __param_arr_joystick_port -> 1049
+Function/global mapping __param_arr_lineio -> 1050
+Function/global mapping __param_arr_spdif -> 1051
+Function/global mapping __param_str_enable -> 1052
+Function/global mapping __param_str_id -> 1053
+Function/global mapping __param_str_index -> 1054
+Function/global mapping __param_str_joystick_port -> 1055
+Function/global mapping __param_str_lineio -> 1056
+Function/global mapping __param_str_spdif -> 1057
+Function/global mapping __pci_register_driver -> 1058
+Function/global mapping __release_region -> 1059
+Function/global mapping __request_region -> 1060
+Function/global mapping __spin_lock_init -> 1061
+Function/global mapping __this_module -> 1062
+Function/global mapping __wake_up -> 1063
+Function/global mapping _cond_resched -> 1064
+Function/global mapping _spin_lock -> 1065
+Function/global mapping _spin_lock_irq -> 1066
+Function/global mapping _spin_lock_irqsave -> 1067
+Function/global mapping _spin_unlock -> 1068
+Function/global mapping _spin_unlock_irq -> 1069
+Function/global mapping _spin_unlock_irqrestore -> 1070
+Function/global mapping alsa_card_ens137x_exit -> 1071
+Function/global mapping alsa_card_ens137x_init -> 1072
+Function/global mapping bytes_to_frames -> 1073
+Function/global mapping cleanup_module -> 1074
+Function/global mapping cond_resched -> 1075
+Function/global mapping dev_get_drvdata -> 1076
+Function/global mapping dev_name -> 1077
+Function/global mapping dev_set_drvdata -> 1078
+Function/global mapping driver -> 1079
+Function/global mapping enable -> 1080
+Function/global mapping ens1371_checkpoint -> 1081
+Function/global mapping ens1371_restore -> 1082
+Function/global mapping ens1373_line_quirk -> 1083
+Function/global mapping es1371_ac97_reset_hack -> 1084
+Function/global mapping es1371_adc_clock -> 1085
+Function/global mapping es1371_amplifier_hack -> 1086
+Function/global mapping es1371_dac_clock -> 1087
+Function/global mapping es1371_quirk_lookup -> 1088
+Function/global mapping es1371_spdif_present -> 1089
+Function/global mapping frames_to_bytes -> 1090
+Function/global mapping free_irq -> 1091
+Function/global mapping gameport_allocate_port -> 1092
+Function/global mapping gameport_register_port -> 1093
+Function/global mapping gameport_set_name -> 1094
+Function/global mapping gameport_set_phys -> 1095
+Function/global mapping gameport_unregister_port -> 1096
+Function/global mapping heapifyfree -> 1097
+Function/global mapping heapifymalloc -> 1098
+Function/global mapping hw_param_interval -> 1099
+Function/global mapping id -> 1100
+Function/global mapping inb -> 1101
+Function/global mapping index -> 1102
+Function/global mapping init_module -> 1103
+Function/global mapping inl -> 1104
+Function/global mapping ioport_resource -> 1105
+Function/global mapping joystick_port -> 1106
+Function/global mapping kfree -> 1107
+Function/global mapping kmalloc -> 1108
+Function/global mapping kzalloc -> 1109
+Function/global mapping lineio -> 1110
+Function/global mapping logAlloc -> 1111
+Function/global mapping logFree -> 1112
+Function/global mapping logRead -> 1113
+Function/global mapping logSfiFrame -> 1114
+Function/global mapping logStackFrame -> 1115
+Function/global mapping logStackVar -> 1116
+Function/global mapping logWrite -> 1117
+Function/global mapping memset -> 1118
+Function/global mapping mutex_lock_nested -> 1119
+Function/global mapping mutex_trylock -> 1120
+Function/global mapping mutex_unlock -> 1121
+Function/global mapping ops -> 1122
+Function/global mapping ops___0 -> 1123
+Function/global mapping outb -> 1124
+Function/global mapping outl -> 1125
+Function/global mapping param_array_get -> 1126
+Function/global mapping param_array_set -> 1127
+Function/global mapping param_get_bool -> 1128
+Function/global mapping param_get_charp -> 1129
+Function/global mapping param_get_int -> 1130
+Function/global mapping param_set_bool -> 1131
+Function/global mapping param_set_charp -> 1132
+Function/global mapping param_set_int -> 1133
+Function/global mapping pci_choose_state -> 1134
+Function/global mapping pci_disable_device -> 1135
+Function/global mapping pci_enable_device -> 1136
+Function/global mapping pci_get_drvdata -> 1137
+Function/global mapping pci_name -> 1138
+Function/global mapping pci_release_regions -> 1139
+Function/global mapping pci_request_regions -> 1140
+Function/global mapping pci_restore_state -> 1141
+Function/global mapping pci_save_state -> 1142
+Function/global mapping pci_set_drvdata -> 1143
+Function/global mapping pci_set_master -> 1144
+Function/global mapping pci_set_power_state -> 1145
+Function/global mapping pci_unregister_driver -> 1146
+Function/global mapping printk -> 1147
+Function/global mapping request_irq -> 1148
+Function/global mapping snd_ac97_bus -> 1149
+Function/global mapping snd_ac97_mixer -> 1150
+Function/global mapping snd_ac97_resume -> 1151
+Function/global mapping snd_ac97_suspend -> 1152
+Function/global mapping snd_audiopci_ids -> 1153
+Function/global mapping snd_audiopci_interrupt -> 1154
+Function/global mapping snd_audiopci_probe -> 1155
+Function/global mapping snd_audiopci_remove -> 1156
+Function/global mapping snd_card_disconnect -> 1157
+Function/global mapping snd_card_free -> 1158
+Function/global mapping snd_card_new -> 1159
+Function/global mapping snd_card_proc_new -> 1160
+Function/global mapping snd_card_register -> 1161
+Function/global mapping snd_ctl_add -> 1162
+Function/global mapping snd_ctl_boolean_mono_info -> 1163
+Function/global mapping snd_ctl_new1 -> 1164
+Function/global mapping snd_device_new -> 1165
+Function/global mapping snd_ens1373_line -> 1166
+Function/global mapping snd_ens1373_rear -> 1167
+Function/global mapping snd_ens1373_spdif_default_get -> 1168
+Function/global mapping snd_ens1373_spdif_default_put -> 1169
+Function/global mapping snd_ens1373_spdif_info -> 1170
+Function/global mapping snd_ens1373_spdif_mask_get -> 1171
+Function/global mapping snd_ens1373_spdif_stream_get -> 1172
+Function/global mapping snd_ens1373_spdif_stream_put -> 1173
+Function/global mapping snd_ensoniq_1371_mixer -> 1174
+Function/global mapping snd_ensoniq_capture_close -> 1175
+Function/global mapping snd_ensoniq_capture_open -> 1176
+Function/global mapping snd_ensoniq_capture_ops -> 1177
+Function/global mapping snd_ensoniq_capture_pointer -> 1178
+Function/global mapping snd_ensoniq_capture_prepare -> 1179
+Function/global mapping snd_ensoniq_chip_init -> 1180
+Function/global mapping snd_ensoniq_create -> 1181
+Function/global mapping snd_ensoniq_create_gameport -> 1182
+Function/global mapping snd_ensoniq_dev_free -> 1183
+Function/global mapping snd_ensoniq_free -> 1184
+Function/global mapping snd_ensoniq_free_gameport -> 1185
+Function/global mapping snd_ensoniq_get_joystick_port -> 1186
+Function/global mapping snd_ensoniq_hw_free -> 1187
+Function/global mapping snd_ensoniq_hw_params -> 1188
+Function/global mapping snd_ensoniq_midi -> 1189
+Function/global mapping snd_ensoniq_midi_input -> 1190
+Function/global mapping snd_ensoniq_midi_input_close -> 1191
+Function/global mapping snd_ensoniq_midi_input_open -> 1192
+Function/global mapping snd_ensoniq_midi_input_trigger -> 1193
+Function/global mapping snd_ensoniq_midi_interrupt -> 1194
+Function/global mapping snd_ensoniq_midi_output -> 1195
+Function/global mapping snd_ensoniq_midi_output_close -> 1196
+Function/global mapping snd_ensoniq_midi_output_open -> 1197
+Function/global mapping snd_ensoniq_midi_output_trigger -> 1198
+Function/global mapping snd_ensoniq_mixer_free_ac97 -> 1199
+Function/global mapping snd_ensoniq_pcm -> 1200
+Function/global mapping snd_ensoniq_pcm2 -> 1201
+Function/global mapping snd_ensoniq_playback1_close -> 1202
+Function/global mapping snd_ensoniq_playback1_open -> 1203
+Function/global mapping snd_ensoniq_playback1_ops -> 1204
+Function/global mapping snd_ensoniq_playback1_pointer -> 1205
+Function/global mapping snd_ensoniq_playback1_prepare -> 1206
+Function/global mapping snd_ensoniq_playback2_close -> 1207
+Function/global mapping snd_ensoniq_playback2_open -> 1208
+Function/global mapping snd_ensoniq_playback2_ops -> 1209
+Function/global mapping snd_ensoniq_playback2_pointer -> 1210
+Function/global mapping snd_ensoniq_playback2_prepare -> 1211
+Function/global mapping snd_ensoniq_proc_init -> 1212
+Function/global mapping snd_ensoniq_proc_read -> 1213
+Function/global mapping snd_ensoniq_resume -> 1214
+Function/global mapping snd_ensoniq_sample_shift -> 1215
+Function/global mapping snd_ensoniq_suspend -> 1216
+Function/global mapping snd_ensoniq_trigger -> 1217
+Function/global mapping snd_es1371_adc_rate -> 1218
+Function/global mapping snd_es1371_codec_read -> 1219
+Function/global mapping snd_es1371_codec_wait -> 1220
+Function/global mapping snd_es1371_codec_write -> 1221
+Function/global mapping snd_es1371_dac1_rate -> 1222
+Function/global mapping snd_es1371_dac2_rate -> 1223
+Function/global mapping snd_es1371_hw_constraints_adc_clock -> 1224
+Function/global mapping snd_es1371_hw_constraints_dac_clock -> 1225
+Function/global mapping snd_es1371_mixer_spdif -> 1226
+Function/global mapping snd_es1371_spdif_get -> 1227
+Function/global mapping snd_es1371_spdif_put -> 1228
+Function/global mapping snd_es1371_src_read -> 1229
+Function/global mapping snd_es1371_src_write -> 1230
+Function/global mapping snd_es1371_wait_src_ready -> 1231
+Function/global mapping snd_es1373_line_get -> 1232
+Function/global mapping snd_es1373_line_put -> 1233
+Function/global mapping snd_es1373_rear_get -> 1234
+Function/global mapping snd_es1373_rear_put -> 1235
+Function/global mapping snd_info_set_text_ops -> 1236
+Function/global mapping snd_iprintf -> 1237
+Function/global mapping snd_pci_quirk_lookup -> 1238
+Function/global mapping snd_pcm_format_width -> 1239
+Function/global mapping snd_pcm_hw_constraint_ratdens -> 1240
+Function/global mapping snd_pcm_hw_constraint_ratnums -> 1241
+Function/global mapping snd_pcm_lib_buffer_bytes -> 1242
+Function/global mapping snd_pcm_lib_free_pages -> 1243
+Function/global mapping snd_pcm_lib_ioctl -> 1244
+Function/global mapping snd_pcm_lib_malloc_pages -> 1245
+Function/global mapping snd_pcm_lib_period_bytes -> 1246
+Function/global mapping snd_pcm_lib_preallocate_pages_for_all -> 1247
+Function/global mapping snd_pcm_new -> 1248
+Function/global mapping snd_pcm_period_elapsed -> 1249
+Function/global mapping snd_pcm_set_ops -> 1250
+Function/global mapping snd_pcm_set_sync -> 1251
+Function/global mapping snd_pcm_suspend_all -> 1252
+Function/global mapping snd_pcm_trigger_done -> 1253
+Function/global mapping snd_power_change_state -> 1254
+Function/global mapping snd_rawmidi_new -> 1255
+Function/global mapping snd_rawmidi_receive -> 1256
+Function/global mapping snd_rawmidi_set_ops -> 1257
+Function/global mapping snd_rawmidi_transmit -> 1258
+Function/global mapping spdif -> 1259
+Function/global mapping sprintf -> 1260
+Function/global mapping stackguard_get_ra -> 1261
+Function/global mapping stackguard_pop -> 1262
+Function/global mapping stackguard_push -> 1263
+Function/global mapping stackguard_set_ra -> 1264
+Function/global mapping stackguard_stack -> 1265
+Function/global mapping str_1012473204 -> 1266
+Function/global mapping str_1025924976 -> 1267
+Function/global mapping str_1034057403 -> 1268
+Function/global mapping str_1035699315 -> 1269
+Function/global mapping str_1039574295 -> 1270
+Function/global mapping str_108773245 -> 1271
+Function/global mapping str_112964058 -> 1272
+Function/global mapping str_130227268 -> 1273
+Function/global mapping str_173238353 -> 1274
+Function/global mapping str_182023070 -> 1275
+Function/global mapping str_182023141 -> 1276
+Function/global mapping str_188578368 -> 1277
+Function/global mapping str_212077587 -> 1278
+Function/global mapping str_212077948 -> 1279
+Function/global mapping str_212077949 -> 1280
+Function/global mapping str_216941979 -> 1281
+Function/global mapping str_218451996 -> 1282
+Function/global mapping str_2219 -> 1283
+Function/global mapping str_228836090 -> 1284
+Function/global mapping str_229248278 -> 1285
+Function/global mapping str_235265470 -> 1286
+Function/global mapping str_238696912 -> 1287
+Function/global mapping str_265323660 -> 1288
+Function/global mapping str_270898770 -> 1289
+Function/global mapping str_270906351 -> 1290
+Function/global mapping str_271048946 -> 1291
+Function/global mapping str_294126970 -> 1292
+Function/global mapping str_297936691 -> 1293
+Function/global mapping str_298879367 -> 1294
+Function/global mapping str_367676234 -> 1295
+Function/global mapping str_368086832 -> 1296
+Function/global mapping str_375887647 -> 1297
+Function/global mapping str_395763820 -> 1298
+Function/global mapping str_417657113 -> 1299
+Function/global mapping str_42111 -> 1300
+Function/global mapping str_42459933 -> 1301
+Function/global mapping str_445311958 -> 1302
+Function/global mapping str_542964445 -> 1303
+Function/global mapping str_543407206 -> 1304
+Function/global mapping str_54849971 -> 1305
+Function/global mapping str_603776742 -> 1306
+Function/global mapping str_604382372 -> 1307
+Function/global mapping str_629286318 -> 1308
+Function/global mapping str_679919104 -> 1309
+Function/global mapping str_711075343 -> 1310
+Function/global mapping str_712681085 -> 1311
+Function/global mapping str_722882140 -> 1312
+Function/global mapping str_722885693 -> 1313
+Function/global mapping str_738175023 -> 1314
+Function/global mapping str_741517731 -> 1315
+Function/global mapping str_744380086 -> 1316
+Function/global mapping str_784473421 -> 1317
+Function/global mapping str_784473757 -> 1318
+Function/global mapping str_784540269 -> 1319
+Function/global mapping str_784561127 -> 1320
+Function/global mapping str_794415929 -> 1321
+Function/global mapping str_796733679 -> 1322
+Function/global mapping str_810807268 -> 1323
+Function/global mapping str_845284242 -> 1324
+Function/global mapping str_87276860 -> 1325
+Function/global mapping str_878364613 -> 1326
+Function/global mapping str_8982834 -> 1327
+Function/global mapping str_912128440 -> 1328
+Function/global mapping str_913711678 -> 1329
+Function/global mapping str_9379010 -> 1330
+Function/global mapping str_941290500 -> 1331
+Function/global mapping str_941294053 -> 1332
+Function/global mapping str_947039464 -> 1333
+Function/global mapping str_947043017 -> 1334
+Function/global mapping str_948573379 -> 1335
+Function/global mapping str_964300407 -> 1336
+Function/global mapping str_964303960 -> 1337
+Function/global mapping str_969183744 -> 1338
+Function/global mapping str_980588047 -> 1339
+Function/global mapping str_98566182 -> 1340
+Function/global mapping str_993283191 -> 1341
+Function/global mapping str_993283210 -> 1342
+Function/global mapping str_993283229 -> 1343
+Function/global mapping str_993283248 -> 1344
+Function/global mapping strcpy -> 1345
+Function/global mapping strlcpy -> 1346
+Function/global mapping synchronize_irq -> 1347
+adding snd_ensoniq_playback1_close to interface
+asim get globals for snd_ensoniq_playback1_close.
+adding snd_ens1373_spdif_info to interface
+asim get globals for snd_ens1373_spdif_info.
+adding snd_ens1373_spdif_default_get to interface
+asim get globals for snd_ens1373_spdif_default_get.
+adding snd_ens1373_spdif_mask_get to interface
+asim get globals for snd_ens1373_spdif_mask_get.
+adding snd_ens1373_spdif_stream_get to interface
+asim get globals for snd_ens1373_spdif_stream_get.
+adding snd_ens1373_spdif_stream_put to interface
+asim get globals for snd_ens1373_spdif_stream_put.
+adding snd_es1371_spdif_get to interface
+asim get globals for snd_es1371_spdif_get.
+adding snd_es1371_spdif_put to interface
+asim get globals for snd_es1371_spdif_put.
+adding snd_es1373_rear_get to interface
+asim get globals for snd_es1373_rear_get.
+adding snd_es1373_rear_put to interface
+asim get globals for snd_es1373_rear_put.
+adding snd_es1373_line_get to interface
+asim get globals for snd_es1373_line_get.
+adding snd_es1373_line_put to interface
+asim get globals for snd_es1373_line_put.
+adding snd_ensoniq_proc_read to interface
+asim get globals for snd_ensoniq_proc_read.
+adding snd_ensoniq_midi_output_trigger to interface
+asim get globals for snd_ensoniq_midi_output_trigger.
+execution_mode_map
+pci_unregister_driver      default_mode
+pci_set_power_state      default_mode
+_spin_unlock_irqrestore      default_mode
+snd_card_new      default_mode
+snd_rawmidi_set_ops      default_mode
+snd_es1371_spdif_get      symexec_na
+synchronize_irq      default_mode
+__release_region      default_mode
+pci_release_regions      default_mode
+printk      default_mode
+snd_pcm_lib_malloc_pages      default_mode
+gameport_unregister_port      default_mode
+snd_es1373_rear_get      symexec_na
+logStackVar      symexec_na
+_spin_lock_irqsave      default_mode
+snd_ens1373_spdif_stream_get      symexec_na
+_spin_lock_irq      default_mode
+snd_ac97_bus      default_mode
+snd_iprintf      default_mode
+snd_es1373_line_put      symexec_na
+__wake_up      default_mode
+pci_request_regions      default_mode
+snd_ens1373_spdif_default_get      symexec_na
+pci_choose_state      default_mode
+_spin_lock      default_mode
+snd_pcm_new      default_mode
+snd_card_proc_new      default_mode
+snd_pcm_lib_free_pages      default_mode
+snd_pcm_lib_preallocate_pages_for_all      default_mode
+snd_ens1373_spdif_info      symexec_na
+memset      default_mode
+__gameport_register_port      default_mode
+gameport_set_phys      default_mode
+snd_pcm_suspend_all      default_mode
+mutex_lock_nested      default_mode
+_spin_unlock_irq      default_mode
+snd_pcm_hw_constraint_ratdens      default_mode
+snd_ctl_new1      default_mode
+pci_restore_state      default_mode
+snd_ensoniq_midi_output_trigger      symexec_na
+snd_rawmidi_receive      default_mode
+snd_ensoniq_playback1_close      symexec_na
+__mutex_init      default_mode
+logStackFrame      symexec_na
+_spin_unlock      default_mode
+strcpy      default_mode
+pci_enable_device      default_mode
+snd_rawmidi_new      default_mode
+snd_ensoniq_proc_read      symexec_na
+__kmalloc      default_mode
+snd_pci_quirk_lookup      default_mode
+free_irq      default_mode
+pci_disable_device      default_mode
+strlcpy      default_mode
+mutex_unlock      default_mode
+pci_set_master      default_mode
+snd_es1373_line_get      symexec_na
+snd_ens1373_spdif_mask_get      symexec_na
+_cond_resched      default_mode
+snd_ctl_add      default_mode
+__const_udelay      default_mode
+request_irq      default_mode
+__pci_register_driver      default_mode
+logRead      symexec_na
+snd_ac97_mixer      default_mode
+snd_ac97_resume      default_mode
+snd_es1371_spdif_put      symexec_na
+pci_save_state      default_mode
+snd_card_free      default_mode
+snd_pcm_format_width      default_mode
+snd_pcm_period_elapsed      default_mode
+__spin_lock_init      default_mode
+__request_region      default_mode
+mutex_trylock      default_mode
+snd_pcm_set_ops      default_mode
+snd_es1373_rear_put      symexec_na
+snd_ens1373_spdif_stream_put      symexec_na
+snd_card_disconnect      default_mode
+snd_device_new      default_mode
+kfree      default_mode
+__builtin_prefetch      default_mode
+snd_ac97_suspend      default_mode
+sprintf      default_mode
+logWrite      symexec_na
+snd_rawmidi_transmit      default_mode
+snd_pcm_set_sync      default_mode
+snd_pcm_hw_constraint_ratnums      default_mode
+snd_card_register      default_mode
+Adding fundec for MARSH___STUB__pci_unregister_driver
+Adding fundec for DEMARSH_STUB__pci_unregister_driver
+Adding fundec for pci_unregister_driver
+Processing pci_unregister_driver.
+Adding fundec for MARSH___STUB__pci_set_power_state
+Adding fundec for DEMARSH_STUB__pci_set_power_state
+Adding fundec for pci_set_power_state
+Processing pci_set_power_state.
+Adding fundec for MARSH___STUB__snd_card_new
+Adding fundec for DEMARSH_STUB__snd_card_new
+Adding fundec for snd_card_new
+Processing snd_card_new.
+Adding fundec for MARSH___STUB__snd_rawmidi_set_ops
+Adding fundec for DEMARSH_STUB__snd_rawmidi_set_ops
+Adding fundec for snd_rawmidi_set_ops
+Processing snd_rawmidi_set_ops.
+Adding fundec for MARSH___STUB__synchronize_irq
+Adding fundec for DEMARSH_STUB__synchronize_irq
+Adding fundec for synchronize_irq
+Processing synchronize_irq.
+Adding fundec for MARSH___STUB____release_region
+Adding fundec for DEMARSH_STUB____release_region
+Adding fundec for __release_region
+Processing __release_region.
+Adding fundec for MARSH___STUB__pci_release_regions
+Adding fundec for DEMARSH_STUB__pci_release_regions
+Adding fundec for pci_release_regions
+Processing pci_release_regions.
+Adding fundec for MARSH___STUB__snd_pcm_lib_malloc_pages
+Adding fundec for DEMARSH_STUB__snd_pcm_lib_malloc_pages
+Adding fundec for snd_pcm_lib_malloc_pages
+Processing snd_pcm_lib_malloc_pages.
+Adding fundec for MARSH___STUB__gameport_unregister_port
+Adding fundec for DEMARSH_STUB__gameport_unregister_port
+Adding fundec for gameport_unregister_port
+Processing gameport_unregister_port.
+Adding fundec for MARSH___STUB__snd_ac97_bus
+Adding fundec for DEMARSH_STUB__snd_ac97_bus
+Adding fundec for snd_ac97_bus
+Processing snd_ac97_bus.
+Adding fundec for MARSH___STUB____wake_up
+Adding fundec for DEMARSH_STUB____wake_up
+Adding fundec for __wake_up
+Processing __wake_up.
+Adding fundec for MARSH___STUB__pci_request_regions
+Adding fundec for DEMARSH_STUB__pci_request_regions
+Adding fundec for pci_request_regions
+Processing pci_request_regions.
+Adding fundec for MARSH___STUB__pci_choose_state
+Adding fundec for DEMARSH_STUB__pci_choose_state
+Adding fundec for pci_choose_state
+Processing pci_choose_state.
+Adding fundec for MARSH___STUB__snd_pcm_new
+Adding fundec for DEMARSH_STUB__snd_pcm_new
+Adding fundec for snd_pcm_new
+Processing snd_pcm_new.
+Adding fundec for MARSH___STUB__snd_card_proc_new
+Adding fundec for DEMARSH_STUB__snd_card_proc_new
+Adding fundec for snd_card_proc_new
+Processing snd_card_proc_new.
+Adding fundec for MARSH___STUB__snd_pcm_lib_free_pages
+Adding fundec for DEMARSH_STUB__snd_pcm_lib_free_pages
+Adding fundec for snd_pcm_lib_free_pages
+Processing snd_pcm_lib_free_pages.
+Adding fundec for MARSH___STUB__snd_pcm_lib_preallocate_pages_for_all
+Adding fundec for DEMARSH_STUB__snd_pcm_lib_preallocate_pages_for_all
+Adding fundec for snd_pcm_lib_preallocate_pages_for_all
+Processing snd_pcm_lib_preallocate_pages_for_all.
+Adding fundec for MARSH___STUB____gameport_register_port
+Adding fundec for DEMARSH_STUB____gameport_register_port
+Adding fundec for __gameport_register_port
+Processing __gameport_register_port.
+Adding fundec for MARSH___STUB__gameport_set_phys
+Adding fundec for DEMARSH_STUB__gameport_set_phys
+Adding fundec for gameport_set_phys
+Processing gameport_set_phys.
+Adding fundec for MARSH___STUB__snd_pcm_suspend_all
+Adding fundec for DEMARSH_STUB__snd_pcm_suspend_all
+Adding fundec for snd_pcm_suspend_all
+Processing snd_pcm_suspend_all.
+Adding fundec for MARSH___STUB__mutex_lock_nested
+Adding fundec for DEMARSH_STUB__mutex_lock_nested
+Adding fundec for mutex_lock_nested
+Processing mutex_lock_nested.
+Adding fundec for MARSH___STUB__snd_pcm_hw_constraint_ratdens
+Adding fundec for DEMARSH_STUB__snd_pcm_hw_constraint_ratdens
+Adding fundec for snd_pcm_hw_constraint_ratdens
+Processing snd_pcm_hw_constraint_ratdens.
+Adding fundec for MARSH___STUB__snd_ctl_new1
+Adding fundec for DEMARSH_STUB__snd_ctl_new1
+Adding fundec for snd_ctl_new1
+Processing snd_ctl_new1.
+Adding fundec for MARSH___STUB__pci_restore_state
+Adding fundec for DEMARSH_STUB__pci_restore_state
+Adding fundec for pci_restore_state
+Processing pci_restore_state.
+Adding fundec for MARSH___STUB__snd_rawmidi_receive
+Adding fundec for DEMARSH_STUB__snd_rawmidi_receive
+Adding fundec for snd_rawmidi_receive
+Processing snd_rawmidi_receive.
+Adding fundec for MARSH___STUB____mutex_init
+Adding fundec for DEMARSH_STUB____mutex_init
+Adding fundec for __mutex_init
+Processing __mutex_init.
+Adding fundec for MARSH___STUB__pci_enable_device
+Adding fundec for DEMARSH_STUB__pci_enable_device
+Adding fundec for pci_enable_device
+Processing pci_enable_device.
+Adding fundec for MARSH___STUB__snd_rawmidi_new
+Adding fundec for DEMARSH_STUB__snd_rawmidi_new
+Adding fundec for snd_rawmidi_new
+Processing snd_rawmidi_new.
+Adding fundec for MARSH___STUB__snd_pci_quirk_lookup
+Adding fundec for DEMARSH_STUB__snd_pci_quirk_lookup
+Adding fundec for snd_pci_quirk_lookup
+Processing snd_pci_quirk_lookup.
+Adding fundec for MARSH___STUB__free_irq
+Adding fundec for DEMARSH_STUB__free_irq
+Adding fundec for free_irq
+Processing free_irq.
+Adding fundec for MARSH___STUB__pci_disable_device
+Adding fundec for DEMARSH_STUB__pci_disable_device
+Adding fundec for pci_disable_device
+Processing pci_disable_device.
+Adding fundec for MARSH___STUB__mutex_unlock
+Adding fundec for DEMARSH_STUB__mutex_unlock
+Adding fundec for mutex_unlock
+Processing mutex_unlock.
+Adding fundec for MARSH___STUB__pci_set_master
+Adding fundec for DEMARSH_STUB__pci_set_master
+Adding fundec for pci_set_master
+Processing pci_set_master.
+Adding fundec for MARSH___STUB___cond_resched
+Adding fundec for DEMARSH_STUB___cond_resched
+Adding fundec for _cond_resched
+Processing _cond_resched.
+Adding fundec for MARSH___STUB__snd_ctl_add
+Adding fundec for DEMARSH_STUB__snd_ctl_add
+Adding fundec for snd_ctl_add
+Processing snd_ctl_add.
+Adding fundec for MARSH___STUB__request_irq
+Adding fundec for DEMARSH_STUB__request_irq
+Adding fundec for request_irq
+Processing request_irq.
+Adding fundec for MARSH___STUB____pci_register_driver
+Adding fundec for DEMARSH_STUB____pci_register_driver
+Adding fundec for __pci_register_driver
+Processing __pci_register_driver.
+Adding fundec for MARSH___STUB__snd_ac97_mixer
+Adding fundec for DEMARSH_STUB__snd_ac97_mixer
+Adding fundec for snd_ac97_mixer
+Processing snd_ac97_mixer.
+Adding fundec for MARSH___STUB__snd_ac97_resume
+Adding fundec for DEMARSH_STUB__snd_ac97_resume
+Adding fundec for snd_ac97_resume
+Processing snd_ac97_resume.
+Adding fundec for MARSH___STUB__pci_save_state
+Adding fundec for DEMARSH_STUB__pci_save_state
+Adding fundec for pci_save_state
+Processing pci_save_state.
+Adding fundec for MARSH___STUB__snd_card_free
+Adding fundec for DEMARSH_STUB__snd_card_free
+Adding fundec for snd_card_free
+Processing snd_card_free.
+Adding fundec for MARSH___STUB__snd_pcm_format_width
+Adding fundec for DEMARSH_STUB__snd_pcm_format_width
+Adding fundec for snd_pcm_format_width
+Processing snd_pcm_format_width.
+Adding fundec for MARSH___STUB__snd_pcm_period_elapsed
+Adding fundec for DEMARSH_STUB__snd_pcm_period_elapsed
+Adding fundec for snd_pcm_period_elapsed
+Processing snd_pcm_period_elapsed.
+Adding fundec for MARSH___STUB____request_region
+Adding fundec for DEMARSH_STUB____request_region
+Adding fundec for __request_region
+Processing __request_region.
+Adding fundec for MARSH___STUB__mutex_trylock
+Adding fundec for DEMARSH_STUB__mutex_trylock
+Adding fundec for mutex_trylock
+Processing mutex_trylock.
+Adding fundec for MARSH___STUB__snd_pcm_set_ops
+Adding fundec for DEMARSH_STUB__snd_pcm_set_ops
+Adding fundec for snd_pcm_set_ops
+Processing snd_pcm_set_ops.
+Adding fundec for MARSH___STUB__snd_card_disconnect
+Adding fundec for DEMARSH_STUB__snd_card_disconnect
+Adding fundec for snd_card_disconnect
+Processing snd_card_disconnect.
+Adding fundec for MARSH___STUB__snd_device_new
+Adding fundec for DEMARSH_STUB__snd_device_new
+Adding fundec for snd_device_new
+Processing snd_device_new.
+Adding fundec for MARSH___STUB__snd_ac97_suspend
+Adding fundec for DEMARSH_STUB__snd_ac97_suspend
+Adding fundec for snd_ac97_suspend
+Processing snd_ac97_suspend.
+Adding fundec for MARSH___STUB__snd_rawmidi_transmit
+Adding fundec for DEMARSH_STUB__snd_rawmidi_transmit
+Adding fundec for snd_rawmidi_transmit
+Processing snd_rawmidi_transmit.
+Adding fundec for MARSH___STUB__snd_pcm_set_sync
+Adding fundec for DEMARSH_STUB__snd_pcm_set_sync
+Adding fundec for snd_pcm_set_sync
+Processing snd_pcm_set_sync.
+Adding fundec for MARSH___STUB__snd_pcm_hw_constraint_ratnums
+Adding fundec for DEMARSH_STUB__snd_pcm_hw_constraint_ratnums
+Adding fundec for snd_pcm_hw_constraint_ratnums
+Processing snd_pcm_hw_constraint_ratnums.
+Adding fundec for MARSH___STUB__snd_card_register
+Adding fundec for DEMARSH_STUB__snd_card_register
+Adding fundec for snd_card_register
+Processing snd_card_register.
+gen_registerfn: snd_ensoniq_playback1_close
+gen_registerfn: snd_ens1373_spdif_info
+gen_registerfn: snd_ens1373_spdif_default_get
+gen_registerfn: snd_ens1373_spdif_mask_get
+gen_registerfn: snd_ens1373_spdif_stream_get
+gen_registerfn: snd_ens1373_spdif_stream_put
+gen_registerfn: snd_es1371_spdif_get
+gen_registerfn: snd_es1371_spdif_put
+gen_registerfn: snd_es1373_rear_get
+gen_registerfn: snd_es1373_rear_put
+gen_registerfn: snd_es1373_line_get
+gen_registerfn: snd_es1373_line_put
+gen_registerfn: snd_ensoniq_proc_read
+gen_registerfn: snd_ensoniq_midi_output_trigger
+dummy function param_set_int
+dummy function param_get_int
+dummy function param_set_charp
+dummy function param_get_charp
+dummy function param_set_bool
+dummy function param_get_bool
+dummy function param_array_set
+dummy function param_array_get
+dummy function snd_ctl_boolean_mono_info
+dummy function snd_pcm_lib_ioctl
+Removing unused temporaries
+ Produced user side of the split
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  168 74
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct ensoniq  -> u]
+
+[CHECK]: Assuming standard scalar pointer for id
+ Function: MARSH___STUB__snd_card_new
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for id
+ Function: DEMARSH_STUB__snd_card_new
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal private_data of MARSH___STUB__snd_ac97_bus does not resolve!
+[CHECK]: Formal private_data of DEMARSH_STUB__snd_ac97_bus does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__snd_ac97_bus private_data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal key of MARSH___STUB____wake_up does not resolve!
+[CHECK]: Formal key of DEMARSH_STUB____wake_up does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB____wake_up key Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for 
+ Function: MARSH___STUB__pci_request_regions
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for 
+ Function: DEMARSH_STUB__pci_request_regions
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for id
+ Function: MARSH___STUB__snd_pcm_new
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for id
+ Function: DEMARSH_STUB__snd_pcm_new
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB__snd_card_proc_new
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB__snd_card_proc_new
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal data of MARSH___STUB__snd_pcm_lib_preallocate_pages_for_all does not resolve!
+[CHECK]: Formal data of DEMARSH_STUB__snd_pcm_lib_preallocate_pages_for_all does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__snd_pcm_lib_preallocate_pages_for_all data Fix this, or you'll have memory corruption at runtime
+[CHECK]: VARARGS not supported in stubgen_marsh_funs for fn: MARSH___STUB__gameport_set_phys ; any varargs are not marshaled
+[CHECK]: Assuming standard scalar pointer for fmt
+ Function: MARSH___STUB__gameport_set_phys
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for fmt
+ Function: DEMARSH_STUB__gameport_set_phys
+
+Variable type: char const   *
+No offset
+[CHECK]: VARARGS not supported in stubgen_marsh_funs for fn: gameport_set_phys ; any varargs are not marshaled
+[CHECK]: Formal private_data of MARSH___STUB__snd_ctl_new1 does not resolve!
+[CHECK]: Formal private_data of DEMARSH_STUB__snd_ctl_new1 does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__snd_ctl_new1 private_data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: MARSH___STUB__snd_rawmidi_receive
+
+Variable type: unsigned char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: DEMARSH_STUB__snd_rawmidi_receive
+
+Variable type: unsigned char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB____mutex_init
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB____mutex_init
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for id
+ Function: MARSH___STUB__snd_rawmidi_new
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for id
+ Function: DEMARSH_STUB__snd_rawmidi_new
+
+Variable type: char *
+No offset
+[CHECK]: Formal  of MARSH___STUB__free_irq does not resolve!
+[CHECK]: Formal  of DEMARSH_STUB__free_irq does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__free_irq  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for 
+ Function: MARSH___STUB__request_irq
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal  of MARSH___STUB__request_irq does not resolve!
+[CHECK]: Assuming standard scalar pointer for 
+ Function: DEMARSH_STUB__request_irq
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal  of DEMARSH_STUB__request_irq does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__request_irq  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for *
+ Function: MARSH___STUB____pci_register_driver
+Structure name: pci_driver, Field name: name
+Exp type: 
+No offset
+[CHECK]: Assuming standard scalar pointer for ->name
+ Function: MARSH___STUB____pci_register_driver
+
+Exp type: 
+Structure name: pci_driver, Field name: name
+[CHECK]: Assuming standard scalar pointer for mod_name
+ Function: MARSH___STUB____pci_register_driver
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for *
+ Function: DEMARSH_STUB____pci_register_driver
+Structure name: pci_driver, Field name: name
+Exp type: 
+No offset
+[CHECK]: Assuming standard scalar pointer for ->name
+ Function: DEMARSH_STUB____pci_register_driver
+
+Exp type: 
+Structure name: pci_driver, Field name: name
+[CHECK]: Assuming standard scalar pointer for mod_name
+ Function: DEMARSH_STUB____pci_register_driver
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB____request_region
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB____request_region
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal device_data of MARSH___STUB__snd_device_new does not resolve!
+[CHECK]: Formal device_data of DEMARSH_STUB__snd_device_new does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__snd_device_new device_data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: MARSH___STUB__snd_rawmidi_transmit
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: DEMARSH_STUB__snd_rawmidi_transmit
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Converting to NoStorage disp_kern
+[CHECK]: Converting to NoStorage ioport_resource
+[CHECK]: Converting to NoStorage param_set_int
+[CHECK]: Converting to NoStorage param_get_int
+[CHECK]: Converting to NoStorage param_set_charp
+[CHECK]: Converting to NoStorage param_get_charp
+[CHECK]: Converting to NoStorage param_set_bool
+[CHECK]: Converting to NoStorage param_get_bool
+[CHECK]: Converting to NoStorage param_array_set
+[CHECK]: Converting to NoStorage param_array_get
+[CHECK]: Converting to NoStorage __this_module
+[CHECK]: Converting to NoStorage snd_ctl_boolean_mono_info
+[CHECK]: Converting to NoStorage snd_pcm_lib_ioctl
+=======================================================
+#### Total execution time: 1.541765
+printing file ./ens1371.merged.sym.cil.c
+****** ISOLATING :::: snd_ensoniq_playback1_close
+                     ::::::::::odftPerforimg heapify snd_ensoniq_playback1_close****** ISOLATING :::: snd_ens1373_spdif_info
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_info****** ISOLATING :::: snd_ens1373_spdif_default_get
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_default_get****** ISOLATING :::: snd_ens1373_spdif_mask_get
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_mask_get****** ISOLATING :::: snd_ens1373_spdif_stream_get
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_stream_get****** ISOLATING :::: snd_ens1373_spdif_stream_put
+                     ::::::::::odftPerforimg heapify snd_ens1373_spdif_stream_put****** ISOLATING :::: snd_es1371_spdif_get
+                     ::::::::::odftPerforimg heapify snd_es1371_spdif_get****** ISOLATING :::: snd_es1371_spdif_put
+                     ::::::::::odftPerforimg heapify snd_es1371_spdif_put****** ISOLATING :::: snd_es1373_rear_get
+                     ::::::::::odftPerforimg heapify snd_es1373_rear_get****** ISOLATING :::: snd_es1373_rear_put
+                     ::::::::::odftPerforimg heapify snd_es1373_rear_put****** ISOLATING :::: snd_es1373_line_get
+                     ::::::::::odftPerforimg heapify snd_es1373_line_get****** ISOLATING :::: snd_es1373_line_put
+                     ::::::::::odftPerforimg heapify snd_es1373_line_put****** ISOLATING :::: snd_ensoniq_proc_read
+                     ::::::::::odftPerforimg heapify snd_ensoniq_proc_read****** ISOLATING :::: snd_ensoniq_midi_output_trigger
+                     ::::::::::odftPerforimg heapify snd_ensoniq_midi_output_triggerticks 3 newstmt 0 mem bugs 0 hlt 0 ret 0 rtc 9 pk 0 dma 4.
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=713.51MB, max=32.51MB, minor=712.61MB, major=40.35MB, promoted=39.46MB
+    minor collections=2719  major collections=15 compactions=0
+Preprocessing ./ens1371.merged.sym.cil.c
+gcc -D_GNUCC -E ./ens1371.merged.sym.cil.c -o ./ens1371.merged.sym.cil.i

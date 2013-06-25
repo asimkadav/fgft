@@ -1,0 +1,5881 @@
+Preprocessing usb-audio.merged.c
+gcc -D_GNUCC -E -DCIL=1 usb-audio.merged.c -o /tmp/cil-y6GuMaPg.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-CTwdyki2.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots usb-audio.entry_points.txt /tmp/cil-y6GuMaPg.i
+Frontc is parsing /tmp/cil-y6GuMaPg.i
+Converting CABS->CIL
+usb-audio.merged.c:11021: Warning: usb-audio.merged.c:11021: CIL only supports attribute((alias)) for functions.
+
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+ROOT 3 failed: sizeof(index) / sizeof(index[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(index[0])
+ROOT 3 failed: index
+ROOT 3 failed: __param_str_index
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(id) / sizeof(id[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_charp
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_charp
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(id[0])
+ROOT 3 failed: id
+ROOT 3 failed: __param_str_id
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(enable) / sizeof(enable[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_bool
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_bool
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(enable[0])
+ROOT 3 failed: enable
+ROOT 3 failed: __param_str_enable
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(vid) / sizeof(vid[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(vid[0])
+ROOT 3 failed: vid
+ROOT 3 failed: __param_str_vid
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(pid) / sizeof(pid[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(pid[0])
+ROOT 3 failed: pid
+ROOT 3 failed: __param_str_pid
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_nrpacks
+ROOT 3 failed: 420U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_async_unlink
+ROOT 3 failed: 292U
+ROOT 2: param_set_bool
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_bool
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(device_setup) / sizeof(device_setup[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(device_setup[0])
+ROOT 3 failed: device_setup
+ROOT 3 failed: __param_str_device_setup
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_ignore_ctl_error
+ROOT 3 failed: 292U
+ROOT 2: param_set_bool
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_bool
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: snd_usbmidi_us122l_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_us122l_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_standard_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_standard_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_output_standard_packet
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_midiman_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_standard_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_output_midiman_packet
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_maudio_broken_running_status_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_standard_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_output_standard_packet
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_cme_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_standard_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_output_standard_packet
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_emagic_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_emagic_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_emagic_init_out
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_emagic_finish_out
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_novation_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_novation_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_raw_input
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 2: snd_usbmidi_raw_output
+ROOT 5 failed: struct usb_protocol_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 5 failed: struct mutex 
+ROOT 5 failed: struct mutex 
+ROOT 5 failed: struct mutex 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: register_mutex
+ROOT 5 failed: struct mutex 
+ROOT 5 failed: struct mutex 
+ROOT 2: prepare_nodata_playback_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_playback_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_playback_sync_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_playback_sync_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_capture_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_capture_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_capture_sync_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_capture_sync_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_nodata_playback_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_playback_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_playback_sync_urb_hs
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_playback_sync_urb_hs
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_capture_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_capture_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: prepare_capture_sync_urb_hs
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: retire_capture_sync_urb
+ROOT 5 failed: struct snd_urb_ops  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 3 failed: 590099U
+ROOT 3 failed: 0ULL
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1048576
+ROOT 3 failed: 64
+ROOT 3 failed: 524288
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0UL
+ROOT 2: snd_usb_playback_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_playback_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_pcm_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_pcm_playback_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_pcm_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_pcm_get_vmalloc_page
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usb_capture_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_capture_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_pcm_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_pcm_capture_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_usb_pcm_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_pcm_get_vmalloc_page
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "Creative Labs"
+ROOT 3 failed: "Sound Blaster MP3+"
+ROOT 3 failed: -2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Logitech, Inc."
+ROOT 3 failed: "QuickCam Pro 9000"
+ROOT 3 failed: -2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UX256"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MU1000"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MU2000"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MU500"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UW500"
+ROOT 3 failed: 3
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF6"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF7"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF8"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UX96"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UX16"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "EOS BX"
+ROOT 3 failed: 3
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UC-MX"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UC-KX"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "S08"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CLP-150"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CLP-170"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "P-250"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "TYROS"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PF-500"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "S90"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF-R"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MDP-5"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-204"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-206"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-208"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-210"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PSR-1100"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PSR-2100"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CLP-175"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PSR-K1"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "EZ-J24"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "EZ-250i"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF ES 6"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF ES 7"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "MOTIF ES 8"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-301"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-303"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-305"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-307"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-309"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CVP-309GP"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PSR-1500"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PSR-3000"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "ELS-01/01C"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PSR-295/293"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DGX-205/203"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DGX-305"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DGX-505"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DGP-7"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DGP-5"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "CS1D"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DSP1D"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DME32"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DM2000"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "02R96"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "ACU16-C"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "NHB32-C"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DM1000"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "01V96"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "SPX2000"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "PM5D"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DME64N"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DME24N"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "DTX"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Yamaha"
+ROOT 3 failed: "UB99"
+ROOT 3 failed: -1
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 2
+ROOT 3 failed: 4U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)9
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 44100U
+ROOT 3 failed: 44100U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 2
+ROOT 3 failed: 2U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)128
+ROOT 3 failed: (unsigned char)129
+ROOT 3 failed: (unsigned char)5
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 44100U
+ROOT 3 failed: 44100U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 7
+ROOT 3 failed: 7
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 2: __constr_expr_96
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 12
+ROOT 2: __constr_expr_97
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_98
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "UA-100"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_95
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 15
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_101
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-4"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_100
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 63
+ROOT 3 failed: 63
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_104
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SC-8850"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_103
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 5
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_107
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "U-8"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_106
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_110
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-2"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_109
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 19
+ROOT 3 failed: 19
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_113
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SC-8820"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_112
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_116
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "PC-300"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_115
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_119
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-1"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_118
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 19
+ROOT 3 failed: 19
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_122
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SK-500"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_121
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 32
+ROOT 3 failed: 2U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 44100U
+ROOT 3 failed: 44100U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 32
+ROOT 3 failed: 2U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)129
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 44100U
+ROOT 3 failed: 44100U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 7
+ROOT 3 failed: 7
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 2: __constr_expr_125
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 12
+ROOT 2: __constr_expr_126
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_127
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SC-D70"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_124
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-5"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_129
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "XV-5050"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_131
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 511
+ROOT 3 failed: 511
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-880"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_133
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 15
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_136
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "SD-90"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_135
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_139
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "MMP-2"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_138
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "V-SYNTH"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_141
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 63
+ROOT 3 failed: 63
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-550"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_143
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 32
+ROOT 3 failed: 2U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 44100U
+ROOT 3 failed: 44100U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 32
+ROOT 3 failed: 2U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 2
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)130
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 44100U
+ROOT 3 failed: 44100U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 12
+ROOT 2: __constr_expr_146
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [5]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 12
+ROOT 2: __constr_expr_147
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [5]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_148
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [5]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-20"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_145
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 7
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "SD-20"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_150
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 15
+ROOT 3 failed: 15
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "SD-80"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_152
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-700"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_154
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "XV-2020"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_156
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 7
+ROOT 3 failed: 7
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "VariOS"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_158
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 7
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "PCR"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_160
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "Digital Piano"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_162
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "BOSS"
+ROOT 3 failed: "GS-10"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 2: __constr_expr_164
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "GI-20"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_166
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "RS-70"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_168
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 13
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 13
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_171
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "UA-1000"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_170
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_173
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 7
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_175
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "PCR-A"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_177
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 7
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "PCR-A"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_179
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-3FX"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_181
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-1SX"
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "EXR Series"
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 3
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "PCR-1"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_185
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SP-606"
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_187
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "FANTOM-X"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_189
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-25"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_191
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "BOSS"
+ROOT 3 failed: "DR-880"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_193
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 3 failed: "Roland"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_195
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 14
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 14
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_198
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "UA-101"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_197
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "G-70"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_200
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "PC-50"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_202
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-1EX"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_204
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 15
+ROOT 3 failed: 15
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UM-3EX"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_206
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-4FX"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_208
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "Juno-G"
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_210
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_213
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SH-201"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_212
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_216
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Roland"
+ROOT 3 failed: "SonicCell"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_215
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_219
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [4]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_218
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 15
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "EDIROL"
+ROOT 3 failed: "UA-25EX"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 3 failed: __constr_expr_221
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "Hercules"
+ROOT 3 failed: "DJ Console (WE)"
+ROOT 3 failed: 4
+ROOT 3 failed: 3
+ROOT 2: __constr_expr_223
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "MidiSport 2x2"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_225
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "MidiSport 1x1"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_227
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "Keystation"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_229
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 15
+ROOT 3 failed: 15
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "MidiSport 4x4"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_231
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 511
+ROOT 3 failed: 511
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "MidiSport 8x8"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_233
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 511
+ROOT 3 failed: 511
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "MidiSport 8x8"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_235
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 15
+ROOT 3 failed: 3
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "MidiSport 2x4"
+ROOT 3 failed: -1
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_237
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 7
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_240
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [11]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "Quattro"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 2: __constr_expr_239
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "AudioPhile"
+ROOT 3 failed: 6
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_242
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "Ozone"
+ROOT 3 failed: 3
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_244
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 7
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_247
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [11]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "M-Audio"
+ROOT 3 failed: "OmniStudio"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 2: __constr_expr_246
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 11
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 5
+ROOT 2: __constr_expr_250
+ROOT 5 failed: struct snd_usb_audio_quirk  const  [5]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 2: __constr_expr_249
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: "Casio"
+ROOT 3 failed: "PL-40R"
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: "Casio"
+ROOT 3 failed: "Keyboard"
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 7
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "MOTU"
+ROOT 3 failed: "Fastlane"
+ROOT 3 failed: -1
+ROOT 3 failed: 1
+ROOT 2: __constr_expr_254
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 33023
+ROOT 3 failed: 33023
+ROOT 3 failed: "Emagic"
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 8
+ROOT 2: __constr_expr_256
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 33023
+ROOT 3 failed: 33023
+ROOT 3 failed: "Emagic"
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 8
+ROOT 2: __constr_expr_258
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 32783
+ROOT 3 failed: 32771
+ROOT 3 failed: "Emagic"
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 8
+ROOT 2: __constr_expr_260
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: "TerraTec"
+ROOT 3 failed: "PHASE 26"
+ROOT 3 failed: 3
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: "TerraTec"
+ROOT 3 failed: "PHASE 26"
+ROOT 3 failed: 3
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: "TerraTec"
+ROOT 3 failed: "PHASE 26"
+ROOT 3 failed: 3
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: "Miditech"
+ROOT 3 failed: "Play\'n Roll"
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: 0
+ROOT 3 failed: "Stanton"
+ROOT 3 failed: "ScratchAmp"
+ROOT 3 failed: -2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Stanton"
+ROOT 3 failed: "ScratchAmp"
+ROOT 3 failed: -2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Novation"
+ROOT 3 failed: "ReMOTE Audio/XStation"
+ROOT 3 failed: 4
+ROOT 3 failed: 6
+ROOT 3 failed: 0
+ROOT 3 failed: "Novation"
+ROOT 3 failed: "Speedio"
+ROOT 3 failed: 3
+ROOT 3 failed: 6
+ROOT 3 failed: 0
+ROOT 3 failed: "Novation"
+ROOT 3 failed: "ReMOTE25"
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: 0
+ROOT 3 failed: "Rane"
+ROOT 3 failed: "SL-1"
+ROOT 3 failed: -2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: 0
+ROOT 3 failed: "Miditech"
+ROOT 3 failed: "Midistart-2"
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: -1
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 1054
+ROOT 3 failed: 12304
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_0
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1054
+ROOT 3 failed: 16130
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 1054
+ROOT 3 failed: 16132
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 1054
+ROOT 3 failed: 16138
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 387
+ROOT 3 failed: 1133
+ROOT 3 failed: 2128
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 387
+ROOT 3 failed: 1133
+ROOT 3 failed: 2222
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 387
+ROOT 3 failed: 1133
+ROOT 3 failed: 2246
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 387
+ROOT 3 failed: 1133
+ROOT 3 failed: 2288
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 387
+ROOT 3 failed: 1133
+ROOT 3 failed: 2293
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 387
+ROOT 3 failed: 1133
+ROOT 3 failed: 2294
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 1133
+ROOT 3 failed: 2448
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_1
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4096
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_2
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4097
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_3
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4098
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_4
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4099
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_5
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1177
+ROOT 3 failed: 4100
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_6
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4101
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_7
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4102
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_8
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4103
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_9
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4104
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_10
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4105
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_11
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1177
+ROOT 3 failed: 4106
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_12
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4108
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_13
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4109
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_14
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4110
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_15
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4111
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_16
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4112
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_17
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4113
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_18
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4114
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_19
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4115
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_20
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4116
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_21
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4117
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_22
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4118
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_23
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4119
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_24
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4120
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_25
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4121
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_26
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4122
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_27
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4123
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_28
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4124
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_29
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4125
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_30
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4126
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_31
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4127
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_32
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4128
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_33
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4129
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_34
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4130
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_35
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4131
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_36
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4132
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_37
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4133
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_38
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4134
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_39
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4135
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_40
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4136
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_41
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4137
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_42
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4138
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_43
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4139
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_44
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4142
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_45
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4144
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_46
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4145
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_47
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4146
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_48
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4147
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_49
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4148
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_50
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4149
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_51
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4150
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_52
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4151
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_53
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4152
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_54
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4153
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_55
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4154
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_56
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4155
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_57
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4156
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_58
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4157
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_59
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4158
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_60
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4159
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_61
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4160
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_62
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4161
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_63
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4162
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_64
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4163
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_65
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4164
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_66
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4165
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_67
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1177
+ROOT 3 failed: 4174
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_68
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4175
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_69
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4176
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_70
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4177
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_71
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 4178
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_72
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 8192
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_73
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 8193
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_74
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 8194
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_75
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20480
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_76
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20481
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_77
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20482
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_78
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20483
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_79
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20484
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_80
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20485
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_81
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20486
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_82
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20487
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_83
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20488
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_84
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20489
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_85
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20490
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_86
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20491
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_87
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20492
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_88
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20493
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_89
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20494
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_90
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 20495
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_91
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 28672
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_92
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1177
+ROOT 3 failed: 28688
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_93
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_94
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_99
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 3
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_102
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 4
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_105
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 5
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_108
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 7
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_111
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 8
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_114
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 9
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_117
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 11
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_120
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 12
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_123
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 16
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_128
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 18
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_130
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 20
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_132
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 22
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_134
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 27
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_137
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 29
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_140
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 35
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_142
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 37
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_144
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 39
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_149
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 41
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_151
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1410
+ROOT 3 failed: 43
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_153
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 45
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_155
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 47
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_157
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 51
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_159
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 55
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_161
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1410
+ROOT 3 failed: 59
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_163
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 64
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_165
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 66
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_167
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 68
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_169
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 71
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_172
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 72
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_174
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 76
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_176
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 77
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_178
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 80
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_180
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 82
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_182
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 96
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_183
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 101
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_184
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1410
+ROOT 3 failed: 106
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_186
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 109
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_188
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1410
+ROOT 3 failed: 116
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_190
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 117
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_192
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1410
+ROOT 3 failed: 122
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_194
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 125
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_196
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 128
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_199
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 139
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_201
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 150
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_203
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 154
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_205
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 163
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_207
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 166
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_209
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 173
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_211
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 194
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_214
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1410
+ROOT 3 failed: 218
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_217
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1410
+ROOT 3 failed: 230
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_220
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1784
+ROOT 3 failed: 45056
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_222
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 4098
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_224
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 4113
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_226
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 4117
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_228
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 4129
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_230
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 15
+ROOT 3 failed: 1891
+ROOT 3 failed: 4145
+ROOT 3 failed: 256
+ROOT 3 failed: 265
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_232
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 4147
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_234
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 4161
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_236
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 8193
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_238
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 8195
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_241
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 8200
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_243
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 1891
+ROOT 3 failed: 8205
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_245
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1891
+ROOT 3 failed: 8217
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_248
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1999
+ROOT 3 failed: 26625
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_251
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 1999
+ROOT 3 failed: 26626
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_252
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 35
+ROOT 3 failed: 2045
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 2
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_253
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 2154
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_255
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 2154
+ROOT 3 failed: 2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_257
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 2154
+ROOT 3 failed: 3
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_259
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 3277
+ROOT 3 failed: 18
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_261
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 3277
+ROOT 3 failed: 19
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_262
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 3277
+ROOT 3 failed: 20
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_263
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 3277
+ROOT 3 failed: 53
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_264
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 4157
+ROOT 3 failed: 256
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_265
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 4157
+ROOT 3 failed: 257
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_266
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 4661
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_267
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 4661
+ROOT 3 failed: 2
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_268
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 131
+ROOT 3 failed: 4661
+ROOT 3 failed: 18017
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 255
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_269
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 5093
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_270
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 18258
+ROOT 3 failed: 17
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_271
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 3
+ROOT 3 failed: 28932
+ROOT 3 failed: 8706
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_272
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 384
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 3
+ROOT 3 failed: (unsigned char)0
+ROOT 2: __constr_expr_273
+ROOT 5 failed: struct usb_device_id [190]
+ROOT 3 failed: 384
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned short)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "snd-usb-audio"
+ROOT 2: usb_audio_probe
+ROOT 2: usb_audio_disconnect
+ROOT 3 failed: 0
+ROOT 2: usb_audio_suspend
+ROOT 2: usb_audio_resume
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: usb_audio_ids
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 32
+ROOT 3 failed: 2U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (short)0
+ROOT 3 failed: 3
+ROOT 2: ua700_ep
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (signed char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (short)0
+ROOT 3 failed: 3
+ROOT 2: uaxx_ep
+ROOT 5 failed: struct snd_usb_audio_quirk  const  
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 10
+ROOT 3 failed: 0U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 5 failed: struct audioformat  const  
+ROOT 3 failed: 10
+ROOT 3 failed: 0U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0U
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 2: snd_usb_audio_dev_free
+ROOT 5 failed: struct snd_device_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_output_open
+ROOT 5 failed: struct snd_rawmidi_ops 
+ROOT 2: snd_usbmidi_output_close
+ROOT 5 failed: struct snd_rawmidi_ops 
+ROOT 2: snd_usbmidi_output_trigger
+ROOT 5 failed: struct snd_rawmidi_ops 
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_input_open
+ROOT 5 failed: struct snd_rawmidi_ops 
+ROOT 2: snd_usbmidi_input_close
+ROOT 5 failed: struct snd_rawmidi_ops 
+ROOT 2: snd_usbmidi_input_trigger
+ROOT 5 failed: struct snd_rawmidi_ops 
+ROOT 3 failed: 0
+ROOT 3 failed: 1410 << 16
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 3
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 3
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 3
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part C"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 3
+ROOT 3 failed: (short)3
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part D"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 3
+ROOT 3 failed: (short)4
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI 1"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 3
+ROOT 3 failed: (short)5
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI 2"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 4
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 4
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 7
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 7
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 7
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 11
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 11
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 11
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 12
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 12
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: (((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 12
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 20
+ROOT 3 failed: (short)8
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 22
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: ((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 22
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: ((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 22
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI 1"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 22
+ROOT 3 failed: (short)3
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI 2"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 35
+ROOT 3 failed: (short)5
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 39
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: ((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 39
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)64
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: ((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 39
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 41
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part A"
+ROOT 3 failed: ((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 41
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)128
+ROOT 3 failed: "%s Part B"
+ROOT 3 failed: ((((((1 << 1) | (1 << 2)) | (1 << 6)) | (1 << 3)) | (1 << 4)) | (1 << 16)) | (1 << 18)
+ROOT 3 failed: (1410 << 16) | 41
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI 1"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 41
+ROOT 3 failed: (short)3
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI 2"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 43
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 43
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 47
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 47
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s External MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 47
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Sync"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 51
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 51
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s 1"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 51
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s 2"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 59
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 59
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 68
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 68
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1410 << 16) | 72
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 72
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s 1"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 72
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s 2"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 77
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 77
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s 1"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 77
+ROOT 3 failed: (short)2
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s 2"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (1410 << 16) | 154
+ROOT 3 failed: (short)3
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1891 << 16) | 4145
+ROOT 3 failed: (short)8
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (1891 << 16) | 4147
+ROOT 3 failed: (short)8
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Control"
+ROOT 3 failed: (1 << 1) | (1 << 16)
+ROOT 3 failed: (2045 << 16) | 1
+ROOT 3 failed: (short)0
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI A"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (2045 << 16) | 1
+ROOT 3 failed: (short)1
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s MIDI B"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (2154 << 16) | 1
+ROOT 3 failed: (short)8
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Broadcast"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (2154 << 16) | 2
+ROOT 3 failed: (short)8
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Broadcast"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: (2154 << 16) | 3
+ROOT 3 failed: (short)4
+ROOT 3 failed: (short)0
+ROOT 3 failed: "%s Broadcast"
+ROOT 3 failed: ((1 << 1) | (1 << 16)) | (1 << 19)
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_usbmidi_get_port_info
+ROOT 5 failed: struct snd_rawmidi_global_ops 
+ROOT 2: snd_usb_create_midi_interface
+ROOT 5 failed: struct kernel_symbol  const  
+ROOT 3 failed: __kstrtab_snd_usb_create_midi_interface
+ROOT 2: snd_usbmidi_input_stop
+ROOT 5 failed: struct kernel_symbol  const  
+ROOT 3 failed: __kstrtab_snd_usbmidi_input_stop
+ROOT 2: snd_usbmidi_input_start
+ROOT 5 failed: struct kernel_symbol  const  
+ROOT 3 failed: __kstrtab_snd_usbmidi_input_start
+ROOT 2: snd_usbmidi_disconnect
+ROOT 5 failed: struct kernel_symbol  const  
+ROOT 3 failed: __kstrtab_snd_usbmidi_disconnect
+ROOT 3 failed: (1054 << 16) | 12288
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 2
+ROOT 3 failed: 1
+ROOT 3 failed: 18
+ROOT 3 failed: 19
+ROOT 3 failed: (1054 << 16) | 12320
+ROOT 3 failed: 2
+ROOT 3 failed: 1
+ROOT 3 failed: 6
+ROOT 3 failed: 6
+ROOT 3 failed: 18
+ROOT 3 failed: 19
+ROOT 3 failed: (1054 << 16) | 12352
+ROOT 3 failed: 2
+ROOT 3 failed: 2
+ROOT 3 failed: 6
+ROOT 3 failed: 6
+ROOT 3 failed: 2
+ROOT 3 failed: 28305
+ROOT 3 failed: 2
+ROOT 3 failed: "PCM Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: "Digital In"
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: "Line Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 10
+ROOT 3 failed: "Mic Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: "Capture Input Source"
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: "Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 17
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 17
+ROOT 3 failed: "Channel Routing"
+ROOT 3 failed: 2
+ROOT 3 failed: 18
+ROOT 3 failed: "Tone Control - Bass"
+ROOT 3 failed: 3
+ROOT 3 failed: 18
+ROOT 3 failed: "Tone Control - Treble"
+ROOT 3 failed: 5
+ROOT 3 failed: 18
+ROOT 3 failed: "Master Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 21
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 22
+ROOT 3 failed: "Digital Out Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 23
+ROOT 3 failed: "Digital Out1 Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 25
+ROOT 3 failed: "IEC958 Optical Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 26
+ROOT 3 failed: "IEC958 Optical Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 27
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 29
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: "Capture Input Source"
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: "Master Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 10
+ROOT 3 failed: "Mic Boost"
+ROOT 3 failed: 7
+ROOT 3 failed: 11
+ROOT 3 failed: "Line Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: "Digital In Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 14
+ROOT 3 failed: "Line Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: "Digital In Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: "Line Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: "What-U-Hear Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: "Line Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 13
+ROOT 3 failed: "Digital In Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 14
+ROOT 3 failed: "Capture Source"
+ROOT 3 failed: 0
+ROOT 3 failed: 17
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 18
+ROOT 3 failed: "Master Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 21
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 22
+ROOT 3 failed: "Digital Out Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 23
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 27
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 28
+ROOT 3 failed: "Speaker Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 29
+ROOT 3 failed: "Digital Out Source"
+ROOT 3 failed: 0
+ROOT 3 failed: 30
+ROOT 3 failed: "Headphone Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 31
+ROOT 3 failed: "Headphone Source"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 14
+ROOT 3 failed: 3
+ROOT 3 failed: __constr_expr_0___0
+ROOT 3 failed: 29
+ROOT 3 failed: 3
+ROOT 3 failed: __constr_expr_1___0
+ROOT 3 failed: 31
+ROOT 3 failed: 2
+ROOT 3 failed: __constr_expr_2___0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5
+ROOT 3 failed: "Mic Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: "Master"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Line Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: "Line Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 7
+ROOT 3 failed: "Master Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 10
+ROOT 3 failed: "Line Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 7
+ROOT 3 failed: "Master Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 8
+ROOT 3 failed: "Capture Source"
+ROOT 3 failed: 0
+ROOT 3 failed: 9
+ROOT 3 failed: "Master Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 10
+ROOT 3 failed: "Mic Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 11
+ROOT 3 failed: "Line Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: "IEC958 In Capture"
+ROOT 3 failed: 0
+ROOT 3 failed: 13
+ROOT 3 failed: "Mic Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 14
+ROOT 3 failed: "Line Playback"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (1054 << 16) | 12288
+ROOT 3 failed: extigy_map
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: (1054 << 16) | 12304
+ROOT 3 failed: mp3plus_map
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (1054 << 16) | 12320
+ROOT 3 failed: audigy2nx_map
+ROOT 3 failed: audigy2nx_selectors
+ROOT 3 failed: 0
+ROOT 3 failed: (1054 << 16) | 12352
+ROOT 3 failed: live24ext_map
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (1784 << 16) | 45056
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: (1784 << 16) | 53250
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: (2235 << 16) | 9986
+ROOT 3 failed: linex_map
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: (2706 << 16) | 145
+ROOT 3 failed: maya44_map
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (3141 << 16) | 4440
+ROOT 3 failed: justlink_map
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: (3277 << 16) | 40
+ROOT 3 failed: aureon_51_2_map
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 768
+ROOT 3 failed: "Output"
+ROOT 3 failed: 769
+ROOT 3 failed: "Speaker"
+ROOT 3 failed: 770
+ROOT 3 failed: "Headphone"
+ROOT 3 failed: 771
+ROOT 3 failed: "HMD Audio"
+ROOT 3 failed: 772
+ROOT 3 failed: "Desktop Speaker"
+ROOT 3 failed: 773
+ROOT 3 failed: "Room Speaker"
+ROOT 3 failed: 774
+ROOT 3 failed: "Com Speaker"
+ROOT 3 failed: 775
+ROOT 3 failed: "LFE"
+ROOT 3 failed: 1536
+ROOT 3 failed: "External In"
+ROOT 3 failed: 1537
+ROOT 3 failed: "Analog In"
+ROOT 3 failed: 1538
+ROOT 3 failed: "Digital In"
+ROOT 3 failed: 1539
+ROOT 3 failed: "Line"
+ROOT 3 failed: 1540
+ROOT 3 failed: "Legacy In"
+ROOT 3 failed: 1541
+ROOT 3 failed: "IEC958 In"
+ROOT 3 failed: 1542
+ROOT 3 failed: "1394 DA Stream"
+ROOT 3 failed: 1543
+ROOT 3 failed: "1394 DV Stream"
+ROOT 3 failed: 1792
+ROOT 3 failed: "Embedded"
+ROOT 3 failed: 1793
+ROOT 3 failed: "Noise Source"
+ROOT 3 failed: 1794
+ROOT 3 failed: "Equalization Noise"
+ROOT 3 failed: 1795
+ROOT 3 failed: "CD"
+ROOT 3 failed: 1796
+ROOT 3 failed: "DAT"
+ROOT 3 failed: 1797
+ROOT 3 failed: "DCC"
+ROOT 3 failed: 1798
+ROOT 3 failed: "MiniDisk"
+ROOT 3 failed: 1799
+ROOT 3 failed: "Analog Tape"
+ROOT 3 failed: 1800
+ROOT 3 failed: "Phonograph"
+ROOT 3 failed: 1801
+ROOT 3 failed: "VCR Audio"
+ROOT 3 failed: 1802
+ROOT 3 failed: "Video Disk Audio"
+ROOT 3 failed: 1803
+ROOT 3 failed: "DVD Audio"
+ROOT 3 failed: 1804
+ROOT 3 failed: "TV Tuner Audio"
+ROOT 3 failed: 1805
+ROOT 3 failed: "Satellite Rec Audio"
+ROOT 3 failed: 1806
+ROOT 3 failed: "Cable Tuner Audio"
+ROOT 3 failed: 1807
+ROOT 3 failed: "DSS Audio"
+ROOT 3 failed: 1808
+ROOT 3 failed: "Radio Receiver"
+ROOT 3 failed: 1809
+ROOT 3 failed: "Radio Transmitter"
+ROOT 3 failed: 1810
+ROOT 3 failed: "Multi-Track Recorder"
+ROOT 3 failed: 1811
+ROOT 3 failed: "Synthesizer"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "Mute"
+ROOT 3 failed: 1U
+ROOT 3 failed: "Volume"
+ROOT 3 failed: 4U
+ROOT 3 failed: "Tone Control - Bass"
+ROOT 3 failed: 2U
+ROOT 3 failed: "Tone Control - Mid"
+ROOT 3 failed: 2U
+ROOT 3 failed: "Tone Control - Treble"
+ROOT 3 failed: 2U
+ROOT 3 failed: "Graphic Equalizer"
+ROOT 3 failed: 2U
+ROOT 3 failed: "Auto Gain Control"
+ROOT 3 failed: 0U
+ROOT 3 failed: "Delay Control"
+ROOT 3 failed: 5U
+ROOT 3 failed: "Bass Boost"
+ROOT 3 failed: 0U
+ROOT 3 failed: "Loudness"
+ROOT 3 failed: 0U
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: ""
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: mixer_ctl_feature_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: mixer_ctl_feature_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: mixer_ctl_feature_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0UL
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: ""
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: mixer_ctl_feature_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: mixer_ctl_procunit_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: mixer_ctl_procunit_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0UL
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Mode Select"
+ROOT 3 failed: 3
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Mode Select"
+ROOT 3 failed: 3
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Spaciousness"
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Level"
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: "Time"
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: "Delay"
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Level"
+ROOT 3 failed: 3
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: "Rate"
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: "Depth"
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "Ratio"
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: "Max Amp"
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: "Threshold"
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: 5
+ROOT 3 failed: "Attack Time"
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: "Release Time"
+ROOT 3 failed: 5
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Up Down"
+ROOT 3 failed: updown_proc_info
+ROOT 3 failed: 2
+ROOT 3 failed: "Dolby Prologic"
+ROOT 3 failed: prologic_proc_info
+ROOT 3 failed: 3
+ROOT 3 failed: "3D Stereo Extender"
+ROOT 3 failed: threed_enh_proc_info
+ROOT 3 failed: 4
+ROOT 3 failed: "Reverb"
+ROOT 3 failed: reverb_proc_info
+ROOT 3 failed: 5
+ROOT 3 failed: "Chorus"
+ROOT 3 failed: chorus_proc_info
+ROOT 3 failed: 6
+ROOT 3 failed: "DCR"
+ROOT 3 failed: dcr_proc_info
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: "Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: default_value_info
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: ""
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: mixer_ctl_selector_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: mixer_ctl_selector_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: mixer_ctl_selector_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0UL
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "CMSS LED Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_audigy2nx_led_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_audigy2nx_led_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 0UL
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Power LED Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_audigy2nx_led_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_audigy2nx_led_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 1UL
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Dolby Digital LED Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_audigy2nx_led_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_audigy2nx_led_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 2UL
+ROOT 3 failed: 4
+ROOT 3 failed: "dig in "
+ROOT 3 failed: 7
+ROOT 3 failed: "line in"
+ROOT 3 failed: 19
+ROOT 3 failed: "spk out"
+ROOT 3 failed: 20
+ROOT 3 failed: "hph out"
+ROOT 3 failed: -1
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: "line in"
+ROOT 3 failed: 3
+ROOT 3 failed: "hph out"
+ROOT 3 failed: 0
+ROOT 3 failed: "RC     "
+ROOT 3 failed: -1
+ROOT 3 failed: 0
+ROOT 2: snd_usb_mixer_dev_free
+ROOT 5 failed: struct snd_device_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+usb_audio_disconnect disconnect_usb
+usb_audio_resume resume_usb
+usb_audio_probe probe_usb
+init_module init_module
+cleanup_module cleanup_module
+=======================================================
+=======================================================
+#### Total execution time: 0.500923
+printing file /tmp/cil-CTwdyki2.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=317.73MB, max=17.27MB, minor=317.56MB, major=18.71MB, promoted=18.54MB
+    minor collections=1211  major collections=12 compactions=0
+Preprocessing /tmp/cil-CTwdyki2.cil.c
+gcc -D_GNUCC -E /tmp/cil-CTwdyki2.cil.c -o /tmp/cil-kBvNaL9M.cil.i

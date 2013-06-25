@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/r8169/r8169-stub.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/r8169/r8169-stub.ko /scratch/sym/ipc_drivers/r8169/r8169-stub.o /scratch/sym/ipc_drivers/r8169/r8169-stub.mod.o

@@ -1,0 +1,3 @@
+psmouse_interrupt interrupt
+init_module init_module
+cleanup_module cleanup_module

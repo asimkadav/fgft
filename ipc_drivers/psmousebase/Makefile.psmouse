@@ -1,0 +1,338 @@
+# One important thing to note about this makefile:
+# This makefile can be called both from the user daemon
+# makefile, and from the kernel build system.
+
+# UMCC = the compiler we're going to use, either GCC or LLVM
+ifndef UMCC
+   $(error "Failure to define UMCC")
+endif
+
+# Optimization settings?
+ifndef EXTRA_FLAGS
+   $(error "Failure to define EXTRA_FLAGS")
+endif
+
+# The name of the driver, e.g. 8139too, ca0106 etc.
+ifndef DRIVER_NAME
+   $(error "Failure to define DRIVER_NAME")
+endif
+
+# A list of driver source files.
+ifndef DRIVER_SRC
+   $(error "Failure to define DRIVER_SRC")
+endif
+
+# Conservative marshaling?
+ifndef BECONS
+    $(error "Failure to define BECONS")
+endif
+
+.PHONY: all
+.PHONY: print_msgs
+.PHONY: clean
+
+# Here, we simply rewrite the source file list with the extension .o
+DRIVER_OBJ=$(DRIVER_SRC:.c=.o)
+
+# This is simply a macro that deletes some generated files.
+DELETE_KERN_BLD_FILES = rm -f $(BUILD_MERGED); rm -f $(BUILD_KERNEL)
+
+# Build the driver.
+all: $(DRIVER_NAME).sym.o $(DRIVER_NAME)-stub.ko $(DRIVER_NAME).test print_msgs $(DRIVER_NAME)-sfi.ko
+	@echo "All done"
+	$(DELETE_KERN_BLD_FILES)
+
+# As a general comment, getting dependencies correct in this
+# makefile has proven to be rather complicated.  By and large,
+# the dependencies do work out, but I don't understand myself
+# all of the nuances of which ones don't.
+
+# If you're ever in doubt, do a "make clean" followed by a "make."
+# The make.sh script automatically does a make clean.
+
+# Test for existence of .ko and .c
+# TODO:  This test is insufficient, since if we modify the main driver file,
+# then we still don't rebuild it because we think everything exists.
+ifneq ($(KERNELRELEASE),)
+# Along with this branch, we are being called from the kernel build system.
+# Relative to kernel build directory, e.g. compiled_images/wherever
+BUILD_MERGED:=$(wildcard ../../ipc_drivers/$(DRIVER_NAME)/build_merged.$(DRIVER_NAME).tmp)
+BUILD_KERNEL:=$(wildcard ../../ipc_drivers/$(DRIVER_NAME)/build_kernel.$(DRIVER_NAME).tmp)
+else
+# Along this branch, we are being called from the user daemon makefile.
+# Relative to our directory, ipc_drivers/driver_name
+BUILD_MERGED:=$(wildcard build_merged.$(DRIVER_NAME).tmp)
+BUILD_KERNEL:=$(wildcard build_kernel.$(DRIVER_NAME).tmp)
+endif
+
+# Note: "merged" refers to the preprocessed annotated driver file.
+# Note: "kernel" refers to the file containing kernel stubs.
+
+ifneq "$(BUILD_MERGED)" ""
+    # Merged does not exist
+    # Set up the appropriate variables for the kernel build system.
+    obj-m = $(DRIVER_NAME).o
+    $(DRIVER_NAME)-objs := $(DRIVER_OBJ)
+endif
+
+ifneq "$(BUILD_KERNEL)" ""
+    # -stub.ko does not exist
+    obj-m = $(DRIVER_NAME)-stub.o $(DRIVER_NAME)-sfi.o 
+    $(DRIVER_NAME)-stub-objs := $(DRIVER_NAME).kernel.o
+	$(DRIVER_NAME)-sfi-objs := $(DRIVER_NAME).sym.o ../../common/wrappers_nooks.o ../../common/wrappers_sfi.o
+endif
+
+# Along this branch, we create the merged source file.
+# The merged source file is simply a preprocessed copy of the annotated driver.
+# We just use cilly to do it.  Nothing fancy.
+#$(DRIVER_NAME).merged.c: export INCLUDE_THIS=-DWRAPPERS_SYM_DRIVER_STEP1 -DMJR_IPC -include "../../common/wrappers_sym.h" $(DEFINE_USE_KLEE)
+$(DRIVER_NAME).merged.c: export HOSTCC=cilly --merge --save-temps --commPrintLn $(EXTRA_CILLY_FLAGS) $(INCLUDE_THIS)
+$(DRIVER_NAME).merged.c: export CC=cilly --merge --save-temps --commPrintLn $(EXTRA_CILLY_FLAGS) $(INCLUDE_THIS)
+$(DRIVER_NAME).merged.c: export LD=cilly --merge --save-temps --commPrintLn $(EXTRA_CILLY_FLAGS) $(INCLUDE_THIS)
+$(DRIVER_NAME).merged.c: export AS=cilly --mode=AR --merge --save-temps --commPrintLn $(EXTRA_CILLY_FLAGS) $(INCLUDE_THIS)
+$(DRIVER_NAME).merged.c: export EXTRA_CFLAGS += -g -Wall -Wno-attributes $(INCLUDE_THIS) -Wno-unknown-pragmas 
+$(DRIVER_NAME).merged.c: $(DRIVER_SRC) modif_annots.h
+	@echo "Executing merged ================================================"
+	$(DELETE_KERN_BLD_FILES)
+	@echo $(HOSTCC)
+	@echo $(CC)
+        # The touch command is used to play some dependency games with make.
+	touch build_merged.$(DRIVER_NAME).tmp
+	-$(MAKE) -C $(DRIVER_KERNEL_ANNOTATED_PATH) \
+		M=`pwd` \
+		V=1 \
+		HOSTCC="$(HOSTCC)" \
+		CC="$(CC)" \
+		LD="$(LD)" \
+		AS="$(AS)" \
+		EXTRA_CFLAGS="$(EXTRA_CFLAGS)" \
+		modules > $(OUTPUT_MERGED) 2>&1
+        # Note: The preceding "make" command is expected to fail!
+        # It is probably OK to ignore it in most circumstances.  Sometimes
+        # it may fail for an important reason, but some immediately subsequent
+        # step will fail too so it should be fairly obvious (i.e. the mv
+        # command below will fail if the make command failed for an important
+        # reason).
+	mv -f ./$(DRIVER_NAME).o $@
+	-rm -f build_merged.$(DRIVER_NAME).tmp
+	-rm -f $(DRIVER_OBJ)
+	-rm -f \.*.cmd
+	-rm -rf ./.tmp_versions
+	-rm -f Module.symvers modules.order
+
+# Once the merged driver file is created, we set up symbolic links
+# These links make it appear as if there is a separate merged copy for
+# each half: the kernel half and the symbolic half.
+# They also make it possible to run this makefile with -j 2.
+$(DRIVER_NAME).merged.kernel.c: $(DRIVER_NAME).merged.c
+	cp $(DRIVER_NAME).merged.c $(DRIVER_NAME).merged.kernel.c
+
+$(DRIVER_NAME).merged.sym.c: $(DRIVER_NAME).merged.c
+	cp $(DRIVER_NAME).merged.c $(DRIVER_NAME).merged.sym.c
+
+# Create the kernel stub module.
+# Note that we are invoking this makefile with the kernel build process.
+$(DRIVER_NAME)-sfi.ko: export EXTRA_CFLAGS += -g -Wall -Wno-attributes -Wno-unknown-pragmas
+$(DRIVER_NAME)-sfi.ko: $(DRIVER_NAME).sym.c ../../common/*.h 
+$(DRIVER_NAME)-stub.ko: export EXTRA_CFLAGS += -g -Wall -Wno-attributes -Wno-unknown-pragmas
+$(DRIVER_NAME)-stub.ko: $(DRIVER_NAME).kernel.c ../../common/*.h
+	@echo "Executing $(DRIVER_NAME)-stub.ko =================================================="
+	touch build_kernel.$(DRIVER_NAME).tmp
+	$(MAKE) -C $(DRIVER_KERNEL_ANNOTATED_PATH) \
+		M=`pwd` \
+		V=1 \
+		EXTRA_CFLAGS="$(EXTRA_CFLAGS)" \
+		modules
+	#rm -f build_kernel.$(DRIVER_NAME).tmp
+#	@echo "Executing $(DRIVER_NAME)-sfi.ko =================================================="
+#	touch build_sfi.$(DRIVER_NAME).tmp
+#	$(MAKE) -C $(DRIVER_KERNEL_ANNOTATED_PATH) \
+		M=`pwd` \
+		V=1 \
+		EXTRA_CFLAGS="$(EXTRA_CFLAGS)" \
+		modules
+#	rm -f build_sfi.$(DRIVER_NAME).tmp
+
+
+$(DRIVER_NAME).entry_points.txt: export CILLY_DONT_COMPILE_AFTER_MERGE=1
+$(DRIVER_NAME).entry_points.txt: export CILLY_DONT_LINK_AFTER_MERGE=1
+$(DRIVER_NAME).entry_points.txt: \
+	DOWHAT="find-roots $@"
+$(DRIVER_NAME).entry_points.txt: $(DRIVER_NAME).merged.c
+        # The idea is to use the root-finding analysis to create
+        # the entry_points file
+        # @echo "current_thread_info kern" > $(DRIVER_NAME).annot.txt
+	@echo "Executing $(DRIVER_NAME).entry_points.txt ========================================="
+	cilly --dodrivers $(DOFUNCPTR) $(DOVOIDPTR) $(DO_DRIVER_TEST) $(EXTRA_CILLY_FLAGS) \
+		--dowhat=$(DOWHAT) $(DRIVER_NAME).merged.c > $(OUTPUT_ENTRY_POINTS) 2>&1
+
+have_file := ($wildcard $(DRIVER_NAME).annot.txt)
+ifeq ($(strip $(have_file)),)
+# Create the list of annotations.  This step is largely a holdover.
+# Driver slicer was designed to allow arbitrary splits between user and kernel mode.
+# However, we are simply moving all code out of the kernel, so we
+# simply supply a blank file.
+$(DRIVER_NAME).annot.txt: export CILLY_DONT_COMPILE_AFTER_MERGE=1
+$(DRIVER_NAME).annot.txt: export CILLY_DONT_LINK_AFTER_MERGE=1
+$(DRIVER_NAME).annot.txt: \
+	DOWHAT="find-roots entry_points.txt"
+$(DRIVER_NAME).annot.txt: $(DRIVER_NAME).merged.c
+	@echo "Executing $(DRIVER_NAME).annot.txt ========================================="
+	@echo "" > $(DRIVER_NAME).annot.txt
+else
+$(DRIVER_NAME).annot.txt:
+	@echo "Executing $(DRIVER_NAME).annot.txt ========================================="
+	@echo "File $(DRIVER_NAME).annot.txt already exists"
+	touch $(DRIVER_NAME).annot.txt
+endif
+
+# See previous comment regarding the blank annotation file.
+# The idea is that every function either present in the driver or
+# called from the driver needs an annotation.
+# This annotation is either "kern" or "user" depending on the
+# final location of the function in question.
+# Because we are moving all driver code out of the kernel,
+# every driver function as an annotation of "user".
+$(DRIVER_NAME).all_annots.txt: export CILLY_DONT_COMPILE_AFTER_MERGE=1
+$(DRIVER_NAME).all_annots.txt: export CILLY_DONT_LINK_AFTER_MERGE=1
+$(DRIVER_NAME).all_annots.txt: \
+	DOWHAT="annot-prop $(DRIVER_NAME).annot.txt ../common/COLORS.txt CG.dot $(DRIVER_NAME).all_annots.txt"
+$(DRIVER_NAME).all_annots.txt: $(DRIVER_NAME).merged.c $(DRIVER_NAME).annot.txt
+	@echo "Executing $(DRIVER_NAME).all_annots.txt =================================================="
+	cilly --dodrivers $(DOFUNCPTR) $(DOVOIDPTR) $(DO_DRIVER_TEST) $(EXTRA_CILLY_FLAGS) \
+		--dowhat=$(DOWHAT) $(DRIVER_NAME).merged.c > $(OUTPUT_ANNOTS) 2>&1
+	echo "logRead user" >> $(DRIVER_NAME).all_annots.txt
+	echo "logAlloc user" >> $(DRIVER_NAME).all_annots.txt
+	echo "logWrite user" >> $(DRIVER_NAME).all_annots.txt
+	echo "logStackFrame user" >> $(DRIVER_NAME).all_annots.txt
+	echo "logStackVar user" >> $(DRIVER_NAME).all_annots.txt
+	echo "stackguard_push user" >> $(DRIVER_NAME).all_annots.txt
+	echo "stackguard_pop user" >> $(DRIVER_NAME).all_annots.txt
+	echo "stackguard_stack user" >> $(DRIVER_NAME).all_annots.txt
+	echo "stackguard_set_ra user" >> $(DRIVER_NAME).all_annots.txt
+	echo "stackguard_get_ra user" >> $(DRIVER_NAME).all_annots.txt
+	echo "heapifymalloc user" >> $(DRIVER_NAME).all_annots.txt
+	echo "heapifyfree user" >> $(DRIVER_NAME).all_annots.txt
+
+# Generate the first half of the split: the kernel mode driver stubs.
+$(DRIVER_NAME).kernel.c: export CILLY_DONT_COMPILE_AFTER_MERGE=1
+$(DRIVER_NAME).kernel.c: export CILLY_DONT_LINK_AFTER_MERGE=1
+$(DRIVER_NAME).kernel.c: \
+	DOWHAT="normal-kern $(DRIVER_NAME).all_annots.txt"
+$(DRIVER_NAME).kernel.c: $(DRIVER_NAME).merged.kernel.c $(DRIVER_NAME).all_annots.txt $(DRIVER_NAME).entry_points.txt
+	@echo "Executing $(DRIVER_NAME).kernel.c =================================================="
+	cilly --save-temps --commPrintLnSparse  $(EXTRA_CILLY_FLAGS) \
+		--docarb --sfireads  --sfiwrites --heapifyAll\
+		--dodrivers $(DOFUNCPTR) $(DOVOIDPTR) $(DO_DRIVER_TEST) --dobecons=$(BECONS) \
+		--dowhat=$(DOWHAT) $(DRIVER_NAME).merged.kernel.c $(DEFINE_USE_KLEE) -o $(DRIVER_NAME).kernel.temp.c \
+		> $(OUTPUT_KERN) 2>&1
+	rm -f $(DRIVER_NAME).merged.kernel.cil.i
+	rm -f $(DRIVER_NAME).merged.kernel.i
+	mv $(DRIVER_NAME).merged.kernel.cil.c $@.temp
+	cat $@.temp | sed -f script-kernel.sed > $@
+	rm -f $@.temp
+
+#generates sfi ready sym half
+#$(DRIVER_NAME).sfi.c: export CILLY_DONT_COMPILE_AFTER_MERGE=1
+#$(DRIVER_NAME).sfi.c: export CILLY_DONT_LINK_AFTER_MERGE=1
+#$(DRIVER_NAME).sfi.c: 
+#	cilly --save-temps --commPrintLn \
+#		  $(DRIVER_NAME).merged.sym.c -o $(DRIVER_NAME).sym.temp.c
+#	cat $(DRIVER_NAME).merged.sym.cil.c > $@
+
+# generates the second half of the split: the symbolic user mode driver code.
+$(DRIVER_NAME).sym.c: export CILLY_DONT_COMPILE_AFTER_MERGE=1
+$(DRIVER_NAME).sym.c: export CILLY_DONT_LINK_AFTER_MERGE=1
+$(DRIVER_NAME).sym.c: \
+	DOWHAT="normal-user $(DRIVER_NAME).all_annots.txt $(DRIVER_NAME).entry_points.txt"
+
+$(DRIVER_NAME).sym.c: $(DRIVER_NAME).merged.sym.c $(DRIVER_NAME).all_annots.txt $(DRIVER_NAME).entry_points.txt 
+	@echo "Executing $(DRIVER_NAME).sym.c =================================================="
+	cilly --save-temps --commPrintLnSparse $(EXTRA_CILLY_FLAGS) \
+		--docarb --sfireads  --sfiwrites --heapifyAll\
+		--dodrivers $(DOFUNCPTR) $(DOVOIDPTR) $(DO_DRIVER_TEST) --dobecons=$(BECONS) \
+		--dowhat=$(DOWHAT) $(DRIVER_NAME).merged.sym.c -o $(DRIVER_NAME).sym.temp.c \
+		> $(OUTPUT_SYM) 2>&1
+	rm -f $(DRIVER_NAME).merged.sym.cil.i
+	rm -f $(DRIVER_NAME).merged.sym.i
+	mv $(DRIVER_NAME).merged.sym.cil.c $@.temp
+	cat $@.temp | sed -f script-sym.sed > $@
+	rm -f $@.temp
+	cat output_sym.txt | grep FAULT
+	#cilly --save-temps --sfireads --sfiwrites $(DRIVER_NAME).sym.c > output_sfi.txt
+	#mv $(DRIVER_NAME).sym.cil.c $(DRIVER_NAME).sym.c
+
+$(OUTPUT_MERGED): $(DRIVER_NAME).merged.c
+	@echo $(FORMAT_DIVIDER)
+	@echo "Merged output:"
+	@echo $(FORMAT_DIVIDER)
+	@cat $(OUTPUT_MERGED)
+	@touch $@
+
+$(OUTPUT_ENTRY_POINTS): $(DRIVER_NAME).entry_points.txt
+	@echo $(FORMAT_DIVIDER)
+	@echo "Entry points output:"
+	@echo $(FORMAT_DIVIDER)
+	@cat $(OUTPUT_ENTRY_POINTS)
+	@touch $@
+
+$(OUTPUT_ANNOTS): $(DRIVER_NAME).all_annots.txt
+	@echo $(FORMAT_DIVIDER)
+	@echo "All annotations output:"
+	@echo $(FORMAT_DIVIDER)
+	@cat $(OUTPUT_ANNOTS)
+	@touch $@
+
+$(OUTPUT_KERN): $(DRIVER_NAME).kernel.c
+	@echo $(FORMAT_DIVIDER)
+	@echo "Kernel driver output:"
+	@echo $(FORMAT_DIVIDER)
+	@cat $(OUTPUT_KERN)
+	@touch $@
+
+$(OUTPUT_SYM): $(DRIVER_NAME).sym.c
+	@echo $(FORMAT_DIVIDER)
+	@echo "Symbolic driver output:"
+	@echo $(FORMAT_DIVIDER)
+	@cat $(OUTPUT_SYM)
+	@touch $@
+
+print_msgs: $(OUTPUT_ENTRY_POINTS) $(OUTPUT_ANNOTS) $(OUTPUT_KERN) $(OUTPUT_SYM)
+
+# Compile the user mode driver code into an object file.
+# This object file will be linked in with the user daemon.
+$(DRIVER_NAME).sym.o: $(DRIVER_NAME).sym.c ../../common/*.h
+	@echo "Executing $(DRIVER_NAME).sym.o =================================================="
+	$(UMCC) $(EXTRA_FLAGS) -Wno-unknown-pragmas \
+		-I$(DRIVER_KERNEL_ANNOTATED_HEADERS) \
+		-c $(DRIVER_NAME).sym.c -o $@
+
+# Generate the "test suite" executable.
+# Note: if this feature turns out to be pointless, we can delete it.
+have_test_file := $(wildcard $(DRIVER_NAME).test.c)
+
+ifeq ($(strip $(have_test_file)),) 
+$(DRIVER_NAME).test:
+	@echo "Not generating $(DRIVER_NAME).test.o file."
+else
+$(DRIVER_NAME).test: $(DRIVER_NAME).test.c
+	@echo "Generating $(DRIVER_NAME).test.o"
+	gcc $(DRIVER_NAME).test.c -o $(DRIVER_NAME).test
+endif
+
+# Remove all temporary intermediate files.
+clean:
+	rm -rf *.o *.ko \.*.o.d \.*cmd \.master* *.i .tmp_versions Module.symvers *.mod.c modules.order
+	rm -f *.tmp
+	rm -f $(DRIVER_NAME).test
+	rm -f Call-graph-DIAGNOSTICS.txt
+	rm -f *.merged.c *.merged.*.c *.cil.c
+	rm -f *.entry_points.txt
+	rm -f *.all_annots.txt
+	rm -f CG.dot
+	rm -f *.sym.c
+	rm -f *.kernel.c
+	rm -f output.txt output_*.txt
+	rm -f *.bc
+	rm -f *.o_trueobjs
+	rm -f print_msgs.txt

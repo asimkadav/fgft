@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/forcedeth/forcedeth-sfi.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/forcedeth/forcedeth-sfi.ko /scratch/sym/ipc_drivers/forcedeth/forcedeth-sfi.o /scratch/sym/ipc_drivers/forcedeth/forcedeth-sfi.mod.o

@@ -1,0 +1,12 @@
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/3f9738f73ad08ef770df64f145007bd27ac2fa16
+
+While ifconfig eth0 up kernel calls open() of 8139 driver(8139too.c).
+In rtl8139_hw_start() of rtl8139_open(), 8139 driver enable RX before
+setting up the DMA buffer address. In this interval where RX was
+enabled and DMA buffer address is not yet set up, any incoming
+broadcast packet would be send to a strange physical address:
+0x003e8800 which is the default value of DMA buffer address.
+Unfortunately, this address is used by Linux kernel. So kernel panics.
+This patch fix it by setting up DMA buffer address before RX enabled
+and everything is fine even under broadcast packets attack.
+

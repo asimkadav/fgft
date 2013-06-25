@@ -1,0 +1,6 @@
+snd_audiopci_interrupt interrupt
+snd_audiopci_remove remove_pci
+snd_audiopci_probe probe_pci
+init_module init_module
+cleanup_module cleanup_module
+snd_ensoniq_resume resume_pci

@@ -1,0 +1,841 @@
+#define MODIFANNOT(X)  MICRODRIVERS__MODIF_ ## X
+#define MODIFIES(var)  MICRODRIVERS__DUMMY((void *) var)
+#define READS(var)     MICRODRIVERS__DUMMY((void *) var)
+#define MODIFIES_ADDROF(var) MICRODRIVERS__DUMMY((void *) &var)
+
+void MICRODRIVERS__DUMMY(void *x) {
+  return;
+}
+
+// Does not modify anything.
+const char *MODIFANNOT(dev_driver_string) (struct device *dev) {
+    return 0;
+}
+
+int MODIFANNOT(pci_bus_write_config_word) (struct pci_bus *bus, unsigned int devfn, int where, u16 val) {
+    return 0;
+}
+
+/* DONE */
+void MODIFANNOT(_spin_lock) (spinlock_t *lock) {
+    return;
+}
+
+/* DONE */
+void MODIFANNOT(__spin_lock_init)
+  (spinlock_t *lock, const char *name, struct lock_class_key *key) {
+  return;
+}
+
+// DONE
+void MODIFANNOT(_spin_lock_irq) (spinlock_t *lock) {
+    return;
+}
+
+/* DONE */
+void MODIFANNOT(_spin_lock_irqsave) (spinlock_t *lock) {
+    return;
+}
+
+/* DONE */
+void MODIFANNOT(_spin_unlock)
+  (spinlock_t *lock) {
+  return;
+}
+
+void MODIFANNOT(_spin_unlock_irq) (spinlock_t *lock) {
+    return;
+}
+
+/* DONE */
+void MODIFANNOT(_spin_unlock_irqrestore)
+  (spinlock_t *lock, unsigned long flags) {
+  return;
+}
+
+void * MODIFANNOT(dma_alloc_coherent)
+    (struct device *dev, size_t size,
+     dma_addr_t *dma_handle, gfp_t flag) {
+    //MODIFIES(dev->dma_mem);
+    MODIFIES(dev->coherent_dma_mask);
+    return 0;
+}
+
+/* DONE */
+void MODIFANNOT(dma_free_coherent)
+    (struct device *dev, size_t size, void *vaddr, dma_addr_t dma_handle) {
+    //MODIFIES(dev->dma_mem);
+    return;
+}
+
+/* TODO */
+void *MODIFANNOT(page_address) (struct page *page) {
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_bus_read_config_byte)
+    (struct pci_bus *bus,
+     unsigned int devfn,
+     int where,
+     u8 *val)
+{
+    MODIFIES(val);
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_bus_read_config_word)
+    (struct pci_bus *bus,
+     unsigned int devfn,
+     int where,
+     u16 *val)
+{
+    MODIFIES(val);
+    return 0;
+}
+
+pci_power_t MODIFANNOT(pci_choose_state)
+    (struct pci_dev *dev,
+     pm_message_t state)
+{
+    return 0;
+}
+
+/* TODO */
+void MODIFANNOT(pci_clear_mwi) (struct pci_dev *dev) {
+    return;
+}
+
+/* DONE */
+void MODIFANNOT(pci_disable_device)
+    (struct pci_dev *dev) {
+    return;
+}
+
+/* TODO */
+int MODIFANNOT(pci_enable_device)
+    (struct pci_dev *dev) {
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_enable_wake)
+    (struct pci_dev *dev,
+     pci_power_t state,
+     int enable)
+{
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(__pci_register_driver)
+    (struct pci_driver *drv, struct module *owner) {
+    MODIFIES(drv->driver.name);
+    MODIFIES(drv->name);
+    MODIFIES(drv->driver.bus);
+    MODIFIES(drv->driver.owner);
+    MODIFIES_ADDROF(drv->dynids.lock);
+    MODIFIES_ADDROF(drv->dynids.list);
+    MODIFIES_ADDROF(drv->driver);
+    MODIFIES(drv->probe);
+
+    return 0;
+}
+
+/* TODO */
+void MODIFANNOT(pci_release_regions)
+    (struct pci_dev *pdev)
+{
+    return;
+}
+
+/* TODO */
+int MODIFANNOT(pci_request_regions)
+    (struct pci_dev *pdev,
+     const char *res_name)
+{
+    MODIFIES(pdev->resource);
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_restore_state)
+    (struct pci_dev *dev)
+{
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_save_state)
+    (struct pci_dev *dev)
+{
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_set_consistent_dma_mask)
+    (struct pci_dev *dev, u64 mask)
+{
+    return 0;
+}
+
+/* TODO */
+int MODIFANNOT(pci_set_dma_mask)
+    (struct pci_dev *dev, u64 mask)
+{
+    return 0;
+}
+
+/* DONE */
+void MODIFANNOT(pci_set_master)
+    (struct pci_dev *dev) {
+    return;
+}
+
+/* TODO */
+int MODIFANNOT(pci_set_mwi) (struct pci_dev *dev)
+{
+    return 0;
+}
+
+/* TODO */
+int  MODIFANNOT(pci_set_power_state)
+    (struct pci_dev *dev,
+     pci_power_t state)
+{
+    return 0;
+}
+
+/* TODO */
+void MODIFANNOT(pci_unregister_driver)
+    (struct pci_driver *drv) {
+    MODIFIES_ADDROF(drv->driver);
+    return;
+}
+
+/* DONE */
+int MODIFANNOT(request_irq)
+    (unsigned int a,
+     irqreturn_t (*handler)(int, void *, struct pt_regs *),
+     unsigned long b, const char * c, void * d) {
+    return 0;
+}
+
+void MODIFANNOT(free_irq)
+    (unsigned int irq , struct net_device *dev )
+{
+    return;
+}
+
+void MODIFANNOT(cancel_rearming_delayed_work)
+    (struct work_struct *work)
+{
+}
+
+int MODIFANNOT(schedule_delayed_work)
+    (struct delayed_work *work,
+     unsigned long delay)
+{
+    MODIFIES(work->work.data.counter);
+    MODIFIES(work->work.entry.next);
+    MODIFIES(work->work.entry.prev);
+    MODIFIES(work->work.func);
+    MODIFIES(work->timer.entry.next);
+    MODIFIES(work->timer.entry.prev);
+    MODIFIES(work->timer.expires);
+    MODIFIES(work->timer.function);
+    MODIFIES(work->timer.data);
+    return 0;
+}
+
+void MODIFANNOT(init_timer)(struct timer_list *timer)
+{
+    // These are marshaled, but it saves modifying timer.h (see e1000)
+    /*MODIFIES(timer->entry.next);
+      MODIFIES(timer->base);*/
+}
+
+void MODIFANNOT(_spin_unlock_bh)(spinlock_t *lock)
+{
+}
+
+void MODIFANNOT(_spin_lock_bh)(spinlock_t *lock)
+{
+}
+
+//
+// Sound driver specific CA0106
+//
+
+// DONE
+void *MODIFANNOT(pci_get_drvdata)(struct pci_dev *pdev) {
+    MODIFIES(pdev->dev.driver_data);
+    return NULL;
+}
+
+// TODO
+void MODIFANNOT(pci_read_config_dword)() {
+    return;
+}
+
+// TODO
+void MODIFANNOT(pci_read_config_word)() {
+    return;
+}
+
+// DONE
+void MODIFANNOT(pci_set_drvdata)(struct pci_dev *pdev, void *data) {
+    MODIFIES(pdev->dev.driver_data);
+    return;
+}
+
+// DONE
+void MODIFANNOT(release_and_free_resource)(struct resource *res) {
+    return;
+}
+
+// TODO, probably doesn't matter
+struct resource *MODIFANNOT(__request_region)(struct resource *parent,
+                                              resource_size_t start, resource_size_t n,
+                                              const char *name, int flags) {
+    
+    return NULL;
+}
+
+// DONE
+int MODIFANNOT(snd_ac97_bus)(struct snd_card *card, int num, struct snd_ac97_bus_ops *ops,
+                             void *private_data, struct snd_ac97_bus **rbus) {
+    MODIFIES((*rbus)->card);
+    MODIFIES((*rbus)->num);
+    MODIFIES((*rbus)->ops);
+    MODIFIES((*rbus)->private_data);
+    MODIFIES((*rbus)->clock);
+    MODIFIES((*rbus)->clock);
+    MODIFIES_ADDROF(*rbus);
+    MODIFANNOT(snd_device_new)(NULL, 0, NULL, NULL);
+    return 0;
+}
+
+// DONE
+int MODIFANNOT(snd_ac97_mixer)(struct snd_ac97_bus *bus,
+                               struct snd_ac97_template *template,
+                               struct snd_ac97 **rac97) {
+    MODIFIES_ADDROF(*rac97);
+    MODIFIES((*rac97)->private_data);
+    MODIFIES((*rac97)->private_free);
+    MODIFIES((*rac97)->bus);
+    MODIFIES((*rac97)->pci);
+    MODIFIES((*rac97)->num);
+    MODIFIES((*rac97)->addr);
+    MODIFIES((*rac97)->scaps);
+    MODIFIES((*rac97)->res_table);
+    MODIFIES((*rac97)->id);
+    MODIFIES((*rac97)->ext_id);
+    
+    MODIFIES((*rac97)->ext_mid);
+    MODIFIES((*rac97)->subsystem_vendor);
+    MODIFIES((*rac97)->subsystem_device);
+    MODIFIES((*rac97)->rates);
+    MODIFIES((*rac97)->flags);
+    MODIFIES((*rac97)->build_ops);
+    
+    MODIFIES(template->private_data);
+    MODIFIES(template->private_free);
+    MODIFIES(template->scaps);
+    MODIFIES(template->num);
+    MODIFIES(template->pci);
+    MODIFIES(template->addr);
+    MODIFIES(template->res_table);
+    
+    MODIFIES(bus->card);
+    MODIFIES(bus->codec);
+    MODIFIES(bus->ops);
+    MODIFIES(bus->ops->reset);
+    MODIFIES(bus->ops->wait);
+    MODIFIES(bus->ops->init);
+    return 0;
+}
+
+int MODIFANNOT(snd_card_free)(struct snd_card * card) {
+    /* snd_card_free generated automatically */
+    // MODIFANNOT(current_thread_info);
+    // MODIFANNOT(finish_wait);
+    // MODIFANNOT(prepare_to_wait);
+    // MODIFANNOT(schedule);
+    // MODIFANNOT(snd_card_disconnect);
+    // MODIFANNOT(snd_card_do_free);
+    READS(card);
+    READS(card->files);
+    // READS(card->shutdown_sleep); AUTOTODO
+    return 0;
+}
+
+struct snd_card *MODIFANNOT(snd_card_new)(int  idx,
+                                          char const   * xid,
+                                          struct module * module,
+                                          int  extra_size) {
+    /* snd_card_new generated automatically */
+    // MODIFANNOT(INIT_LIST_HEAD);
+    // MODIFANNOT(__init_rwsem);
+    // MODIFANNOT(__rwlock_init);
+    // MODIFANNOT(__spin_lock_init);
+    // MODIFANNOT(init_waitqueue_head);
+    // MODIFANNOT(kfree);
+    // MODIFANNOT(kzalloc);
+    // MODIFANNOT(module_slot_match);
+    // MODIFANNOT(mutex_lock);
+    // MODIFANNOT(mutex_unlock);
+    // MODIFANNOT(printk);
+    // MODIFANNOT(snd_ctl_create);
+    // MODIFANNOT(snd_device_free_all);
+    // MODIFANNOT(snd_info_card_create);
+    // MODIFANNOT(snd_info_check_reserved_words);
+    // MODIFANNOT(strlcpy);
+    MODIFIES(extra_size);
+    MODIFIES(idx);
+    READS(extra_size);
+    READS(idx);
+    READS(module);
+    READS(xid);
+    return NULL;
+}
+
+int MODIFANNOT(snd_card_proc_new)(struct snd_card * card, char const   * name, struct snd_info_entry ** entryp) {
+    /* snd_card_proc_new generated automatically */
+    // MODIFANNOT(snd_device_new);
+    // MODIFANNOT(snd_info_create_card_entry);
+    // MODIFANNOT(snd_info_free_entry);
+    MODIFIES(*entryp);
+    READS(card);
+    READS(card->proc_root);
+    READS(entryp);
+    READS(name);
+    return 0;
+}
+
+/*
+int MODIFANNOT(snd_card_register)(struct snd_card * card) {
+    return 0;
+    }*/
+
+int MODIFANNOT(snd_info_register)(struct snd_info_entry * entry) {
+    /* snd_info_register generated automatically */
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(list_add_tail);
+    // MODIFANNOT(mutex_lock);
+    // MODIFANNOT(mutex_unlock);
+    // MODIFANNOT(snd_create_proc_entry);
+    MODIFIES(entry->p);
+    //READS((entry->parent)->children); // AUTOTODO
+    READS((entry->parent)->p);
+    READS(entry);
+    //READS(entry->list); // AUTOTODO
+    READS(entry->mode);
+    READS(entry->module);
+    READS(entry->name);
+    READS(entry->parent);
+    READS(entry->size);
+    return 0;
+}
+
+int MODIFANNOT(init_info_for_card)(struct snd_card * card) {
+    /* init_info_for_card generated automatically */
+    // MODIFANNOT(snd_info_card_register);
+    // MODIFANNOT(snd_info_create_card_entry);
+    // MODIFANNOT(snd_info_free_entry);
+    MODIFANNOT(snd_info_register)(NULL);
+    MODIFIES(card->proc_id);
+    READS(card);
+    READS(card->proc_root);
+    return 0;
+}
+/*
+int MODIFANNOT(snd_card_register)(struct snd_card * card) {
+    // snd_card_register generated automatically
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(choose_default_id);
+    MODIFANNOT(init_info_for_card)(NULL);
+    // MODIFANNOT(mutex_lock);
+    // MODIFANNOT(mutex_unlock);
+    // MODIFANNOT(snd_device_register_all);
+    // Missed call *snd_mixer_oss_notify_callback
+    READS(card);
+    READS(card->id[0]);
+    READS(card->number);
+    return 0;
+    }*/
+
+int MODIFANNOT(snd_ctl_add)(struct snd_card * card, struct snd_kcontrol * kcontrol) {
+    /* snd_ctl_add generated automatically */
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(down_write);
+    // MODIFANNOT(list_add_tail);
+    // MODIFANNOT(snd_ctl_find_hole);
+    // MODIFANNOT(snd_ctl_find_id);
+    // MODIFANNOT(snd_ctl_free_one);
+    // MODIFANNOT(snd_ctl_notify);
+    // MODIFANNOT(up_write);
+    MODIFIES(card->controls_count);
+    MODIFIES(card->last_numid);
+    MODIFIES(kcontrol->id.numid);
+    READS(card);
+    // READS(card->controls); AUTOTODO
+    READS(card->controls_count);
+    // READS(card->controls_rwsem); AUTOTODO
+    READS(card->last_numid);
+    READS(kcontrol);
+    READS(kcontrol->count);
+    // READS(kcontrol->id); AUTOTODO
+    // READS(kcontrol->list); AUTOTODO
+    return 0;
+}
+
+int MODIFANNOT(snd_ctl_add_slave)(struct snd_kcontrol * master, struct snd_kcontrol * slave) {
+    /* snd_ctl_add_slave generated automatically */
+    // MODIFANNOT(__builtin_memcpy);
+    // MODIFANNOT(kzalloc);
+    // MODIFANNOT(list_add_tail);
+    MODIFIES(slave->get);
+    MODIFIES(slave->info);
+    MODIFIES(slave->private_data);
+    MODIFIES(slave->private_free);
+    MODIFIES(slave->put);
+    MODIFIES(slave->tlv.c);
+    // READS(*slave); AUTOTODO
+    READS(master);
+    READS(master->private_data);
+    READS(slave);
+    READS(slave->count);
+    READS(slave->vd);
+    // READS(slave->vd[0]); AUTOTODO
+    READS(slave->vd[0].access);
+    return 0;
+}
+
+struct snd_kcontrol *MODIFANNOT(snd_ctl_find_id)(struct snd_card * card, struct snd_ctl_elem_id * id) {
+    return NULL;
+}
+
+/* AUTOTODO
+struct snd_kcontrol *MODIFANNOT(snd_ctl_find_id)(struct snd_card * card, struct snd_ctl_elem_id * id) {
+    // snd_ctl_find_id generated automatically
+    // MODIFANNOT(__builtin_prefetch);
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(snd_ctl_find_numid);
+    // MODIFANNOT(strncmp);
+    READS(card);
+    // READS(card->controls); AUTOTODO
+    READS(card->controls.next);
+    READS(id);
+    READS(id->device);
+    READS(id->iface);
+    READS(id->index);
+    READS(id->name);
+    READS(id->numid);
+    READS(id->subdevice);
+    return NULL;
+    }*/
+
+struct snd_kcontrol *MODIFANNOT(snd_ctl_make_virtual_master)(char * name, unsigned int const   * tlv) {
+    /* snd_ctl_make_virtual_master generated automatically */
+    // MODIFANNOT(INIT_LIST_HEAD);
+    // MODIFANNOT(__builtin_memcpy);
+    // MODIFANNOT(__memcpy);
+    // MODIFANNOT(kfree);
+    // MODIFANNOT(kzalloc);
+    // MODIFANNOT(memset);
+    // MODIFANNOT(snd_ctl_new1);
+    READS(*(tlv + 0));
+    READS(name);
+    READS(tlv);
+    return NULL;
+}
+
+void MODIFANNOT(snd_ctl_new1)(const struct snd_kcontrol_new *ncontrol,
+                              void *private_data) {
+    MODIFIES(ncontrol->info);
+    MODIFIES(ncontrol->iface);
+    MODIFIES(ncontrol->device);
+    MODIFIES(ncontrol->subdevice);
+    MODIFIES(ncontrol->name);
+    MODIFIES(ncontrol->index);
+    MODIFIES(ncontrol->count);
+    MODIFIES(ncontrol->access);
+    MODIFIES(ncontrol->get);
+    MODIFIES(ncontrol->put);
+    MODIFIES(ncontrol->tlv.p);
+    MODIFIES(ncontrol->private_value);
+    return;
+}
+
+int MODIFANNOT(snd_ctl_remove_id)(struct snd_card * card, struct snd_ctl_elem_id * id) {
+    /* snd_ctl_remove_id generated automatically */
+    // MODIFANNOT(down_write);
+    // MODIFANNOT(snd_ctl_find_id);
+    // MODIFANNOT(snd_ctl_remove);
+    // MODIFANNOT(up_write);
+    READS(card);
+    // READS(card->controls_rwsem); AUTOTODO
+    READS(id);
+    return 0;
+}
+
+int MODIFANNOT(snd_device_new)(struct snd_card * card,
+                               snd_device_type_t  type,
+                               void * device_data,
+                               struct snd_device_ops * ops) {
+    /* snd_device_new generated automatically */
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(kzalloc);
+    // MODIFANNOT(list_add);
+    // MODIFANNOT(printk);
+    READS(card);
+    // READS(card->devices); AUTOTODO
+    READS(device_data);
+    READS(ops);
+    READS(type);
+    return 0;
+}
+
+/*
+int MODIFANNOT(snd_dma_alloc_pages)(int type, struct device *device, size_t size,
+                                    struct snd_dma_buffer *dmab) {
+    MODIFIES_ADDROF(dmab->dev);
+    MODIFIES(dmab->dev.type);
+    MODIFIES(dmab->dev.dev);
+    MODIFIES(dmab->bytes);
+    MODIFIES(dmab->area);
+    MODIFIES(dmab->addr);
+    return 0;
+}
+*/
+
+void MODIFANNOT(snd_dma_free_pages)(struct snd_dma_buffer * dmab) {
+    /* snd_dma_free_pages generated automatically */
+    // MODIFANNOT(printk);
+    // MODIFANNOT(snd_free_dev_pages);
+    // MODIFANNOT(snd_free_pages);
+    // MODIFANNOT(snd_free_sgbuf_pages);
+    READS(dmab);
+    READS(dmab->addr);
+    READS(dmab->area);
+    READS(dmab->bytes);
+    READS(dmab->dev.dev);
+    READS(dmab->dev.type);
+    return;
+}
+
+int MODIFANNOT(snd_info_get_line)(struct snd_info_buffer * buffer,
+                                  char * line,
+                                  int  len) {
+    /* snd_info_get_line generated automatically */
+    MODIFIES(*line);
+    MODIFIES(buffer->curr);
+    MODIFIES(buffer->stop);
+    MODIFIES(len);
+    MODIFIES(line);
+    // READS(*(buffer->buffer + tmp)); // AUTOTODO
+    // READS(*(buffer->buffer + tmp___1)); // AUTOTODO
+    READS(buffer);
+    READS(buffer->buffer);
+    READS(buffer->curr);
+    READS(buffer->error);
+    READS(buffer->size);
+    READS(buffer->stop);
+    READS(len);
+    READS(line);
+    return 0;
+}
+
+void MODIFANNOT(snd_iprintf)() {
+    return;
+}
+
+int MODIFANNOT(snd_pcm_hw_constraint_integer)(struct snd_pcm_runtime * runtime,
+                                              snd_pcm_hw_param_t  var) {
+    /* snd_pcm_hw_constraint_integer generated automatically */
+    // MODIFANNOT(constrs_interval);
+    // MODIFANNOT(snd_interval_setinteger);
+    READS(runtime);
+    // READS(runtime->hw_constraints); AUTOTODO
+    READS(var);
+    return 0;
+}
+
+int MODIFANNOT(snd_pcm_hw_constraint_step)(struct snd_pcm_runtime * runtime,
+                                           unsigned int  cond,
+                                           snd_pcm_hw_param_t  var,
+                                           unsigned long  step) {
+    /* snd_pcm_hw_constraint_step generated automatically */
+    // MODIFANNOT(snd_pcm_hw_rule_add);
+    READS(cond);
+    READS(runtime);
+    READS(step);
+    READS(var);
+    return 0;
+}
+
+void MODIFANNOT(snd_pcm_lib_free_pages)() {
+    return;
+}
+
+void MODIFANNOT(snd_pcm_lib_malloc_pages)() {
+    return;
+}
+
+void MODIFANNOT(snd_pcm_lib_preallocate_pages)() {
+    return;
+}
+
+int MODIFANNOT(snd_pcm_new)(struct snd_card * card,
+                            char * id,
+                            int  device,
+                            int  playback_count,
+                            int  capture_count,
+                            struct snd_pcm ** rpcm) {
+    /* snd_pcm_new generated automatically */
+    // MODIFANNOT(__mutex_init);
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(init_waitqueue_head);
+    // MODIFANNOT(kzalloc);
+    // MODIFANNOT(printk);
+    // MODIFANNOT(snd_device_new);
+    // MODIFANNOT(snd_pcm_free);
+    // MODIFANNOT(snd_pcm_new_stream);
+    // MODIFANNOT(strlcpy);
+    MODIFIES(*rpcm);
+    READS(capture_count);
+    READS(card);
+    READS(device);
+    READS(id);
+    READS(playback_count);
+    READS(rpcm);
+    return 0;
+}
+
+void MODIFANNOT(snd_pcm_period_elapsed)(struct snd_pcm_substream * substream) {
+    /* snd_pcm_period_elapsed generated automatically */
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(_read_lock_irqsave);
+    // MODIFANNOT(_read_unlock_irqrestore);
+    // MODIFANNOT(_spin_lock);
+    // MODIFANNOT(_spin_unlock);
+    // MODIFANNOT(kill_fasync);
+    // MODIFANNOT(snd_pcm_running);
+    // MODIFANNOT(snd_pcm_update_hw_ptr_interrupt);
+    // MODIFANNOT(snd_timer_interrupt);
+    // Missed call *(runtime->transfer_ack_begin)
+    // Missed call *(runtime->transfer_ack_end)
+    READS(substream);
+    READS(substream->runtime);
+    // READS(substream->self_group.lock); AUTOTODO
+    READS(substream->timer);
+    READS(substream->timer_running);
+    return;
+}
+
+void MODIFANNOT(snd_pcm_set_ops)(struct snd_pcm * pcm,
+                                 int  direction,
+                                 struct snd_pcm_ops * ops) {
+    /* snd_pcm_set_ops generated automatically */
+    READS(direction);
+    READS(ops);
+    READS(pcm);
+    READS(pcm->streams);
+    return;
+}
+
+
+void MODIFANNOT(snd_pcm_set_sync)(struct snd_pcm_substream * substream) {
+    /* snd_pcm_set_sync generated automatically */
+    READS(((substream->pcm)->card)->number);
+    READS((substream->pcm)->card);
+    READS(substream);
+    READS(substream->pcm);
+    READS(substream->runtime);
+    return;
+}
+
+int MODIFANNOT(snd_rawmidi_new)(struct snd_card * card,
+                                char * id,
+                                int  device,
+                                int  output_count,
+                                int  input_count,
+                                struct snd_rawmidi ** rrawmidi) {
+    /* snd_rawmidi_new generated automatically */
+    // MODIFANNOT(INIT_LIST_HEAD);
+    // MODIFANNOT(__mutex_init);
+    // MODIFANNOT(__snd_bug_on);
+    // MODIFANNOT(init_waitqueue_head);
+    // MODIFANNOT(kzalloc);
+    // MODIFANNOT(printk);
+    // MODIFANNOT(snd_device_new);
+    // MODIFANNOT(snd_rawmidi_alloc_substreams);
+    // MODIFANNOT(snd_rawmidi_free);
+    // MODIFANNOT(strlcpy);
+    // MODIFIES(*rrawmidi); AUTOTODO
+    READS(card);
+    READS(device);
+    READS(id);
+    READS(input_count);
+    READS(output_count);
+    READS(rrawmidi);
+    return 0;
+}
+
+int MODIFANNOT(snd_rawmidi_receive)(struct snd_rawmidi_substream * substream,
+                                    unsigned char const   * buffer,
+                                    int  count) {
+    /* snd_rawmidi_receive generated automatically */
+    // MODIFANNOT(__builtin_memcpy);
+    // MODIFANNOT(__wake_up);
+    // MODIFANNOT(_spin_lock_irqsave);
+    // MODIFANNOT(_spin_unlock_irqrestore);
+    // MODIFANNOT(snd_rawmidi_ready);
+    // MODIFANNOT(tasklet_schedule);
+    MODIFIES(buffer);
+    MODIFIES(count);
+    MODIFIES(substream->bytes);
+    // READS(*(buffer + 0)); // AUTOTODO
+    READS(buffer);
+    READS(count);
+    READS(substream);
+    READS(substream->bytes);
+    READS(substream->opened);
+    READS(substream->runtime);
+    return 0;
+}
+
+void MODIFANNOT(snd_rawmidi_set_ops)(struct snd_rawmidi * rmidi,
+                                     int  stream,
+                                     struct snd_rawmidi_ops * ops___0) {
+}
+
+/* AUTOTODO
+void MODIFANNOT(snd_rawmidi_set_ops)(struct snd_rawmidi * rmidi,
+                                     int  stream,
+                                     struct snd_rawmidi_ops * ops___0) {
+    /// snd_rawmidi_set_ops generated automatically
+    // MODIFANNOT(__builtin_prefetch);
+    READS(ops___0);
+    READS(rmidi);
+    // READS(rmidi->streams[stream].substreams); // AUTOTODO
+    READS(rmidi->streams[stream].substreams.next);
+    READS(stream);
+    return;
+    }*/
+
+int MODIFANNOT(snd_rawmidi_transmit)(struct snd_rawmidi_substream * substream,
+                                     unsigned char * buffer,
+                                     int  count) {
+    /* snd_rawmidi_transmit generated automatically */
+    // MODIFANNOT(snd_rawmidi_transmit_ack);
+    // MODIFANNOT(snd_rawmidi_transmit_peek);
+    MODIFIES(count);
+    READS(buffer);
+    READS(count);
+    READS(substream);
+    READS(substream->opened);
+    return 0;
+}

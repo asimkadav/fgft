@@ -1,0 +1,14 @@
+logRead user
+logAlloc user
+logFree user
+logWrite user
+logStackFrame user
+logSfiFrame kern
+logStackVar user
+stackguard_push user
+stackguard_pop user
+stackguard_stack user
+stackguard_set_ra user
+stackguard_get_ra user
+heapifymalloc user
+heapifyfree user

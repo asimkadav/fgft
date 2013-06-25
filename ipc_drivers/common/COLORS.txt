@@ -1,0 +1,6 @@
+# Currently using gray for missing colors (i.e., labels for which color map is
+# not defined) and purple for nodes with mixed annotations, so avoid those colors
+
+kern salmon
+
+kern cyan

@@ -1,0 +1,21 @@
+Preprocessing e1000.merged.c
+gcc -D_GNUCC -E -DCIL=1 e1000.merged.c -o /tmp/cil-ld3_j3Pe.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-13aHgAJe.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots e1000.entry_points.txt /tmp/cil-ld3_j3Pe.i
+Frontc is parsing /tmp/cil-ld3_j3Pe.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+=======================================================
+=======================================================
+#### Total execution time: 0.011997
+printing file /tmp/cil-13aHgAJe.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=3.85MB, max=1.02MB, minor=3.82MB, major=0.62MB, promoted=0.59MB
+    minor collections=14  major collections=2 compactions=0
+Preprocessing /tmp/cil-13aHgAJe.cil.c
+gcc -D_GNUCC -E /tmp/cil-13aHgAJe.cil.c -o /tmp/cil-07_Goltk.cil.i

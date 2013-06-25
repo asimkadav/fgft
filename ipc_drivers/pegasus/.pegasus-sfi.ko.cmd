@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/pegasus/pegasus-sfi.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/pegasus/pegasus-sfi.ko /scratch/sym/ipc_drivers/pegasus/pegasus-sfi.o /scratch/sym/ipc_drivers/pegasus/pegasus-sfi.mod.o

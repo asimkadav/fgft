@@ -1,0 +1,30 @@
+Preprocessing e1000.merged.c
+gcc -D_GNUCC -E -DCIL=1 e1000.merged.c -o /tmp/cil-HKaGWRbU.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-gP7SA__w.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat annot-prop e1000.annot.txt ../common/COLORS.txt CG.dot e1000.all_annots.txt /tmp/cil-HKaGWRbU.i
+Frontc is parsing /tmp/cil-HKaGWRbU.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Annotations Using Propagation on Call-Graph
+**************************************************************
+No bugs found.
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+** Reading file e1000.annot.txt **
+** Reading file ../common/COLORS.txt **
+Costgraph has 0 nodes
+Costgraph has 0 edges
+STATS: total=0 total_LOC=0 kern_funcs=0 kern_funcs_LOC=-1
+=======================================================
+=======================================================
+#### Total execution time: 0.011997
+printing file /tmp/cil-gP7SA__w.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=3.91MB, max=1.02MB, minor=3.88MB, major=0.62MB, promoted=0.59MB
+    minor collections=14  major collections=2 compactions=0
+Preprocessing /tmp/cil-gP7SA__w.cil.c
+gcc -D_GNUCC -E /tmp/cil-gP7SA__w.cil.c -o /tmp/cil-HeZwYvXJ.cil.i

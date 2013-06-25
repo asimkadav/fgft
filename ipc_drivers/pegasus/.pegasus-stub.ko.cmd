@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/pegasus/pegasus-stub.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/pegasus/pegasus-stub.ko /scratch/sym/ipc_drivers/pegasus/pegasus-stub.o /scratch/sym/ipc_drivers/pegasus/pegasus-stub.mod.o

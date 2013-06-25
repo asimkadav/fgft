@@ -1,0 +1,104 @@
+gcc -D_GNUCC -E -print-file-name=include
+make[2]: Entering directory `/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase'
+test -e include/linux/autoconf.h -a -e include/config/auto.conf || (		\
+	echo;								\
+	echo "  ERROR: Kernel configuration is invalid.";		\
+	echo "         include/linux/autoconf.h or include/config/auto.conf are missing.";	\
+	echo "         Run 'make oldconfig && make prepare' on kernel src to fix it.";	\
+	echo;								\
+	/bin/false)
+mkdir -p /scratch/sym/ipc_drivers/psmousebase/.tmp_versions ; rm -f /scratch/sym/ipc_drivers/psmousebase/.tmp_versions/*
+
+  WARNING: Symbol version dump /scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/Module.symvers
+           is missing; modules will have no dependencies and modversions.
+
+make -f scripts/Makefile.build obj=/scratch/sym/ipc_drivers/psmousebase
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.psmousebase_annotated.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(psmousebase_annotated)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -c -o /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.psmousebase_annotated.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(psmousebase_annotated) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.c -o ./psmousebase_annotated.i
+Saving source ./psmousebase_annotated.i into /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.alps.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(alps)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -c -o /scratch/sym/ipc_drivers/psmousebase/alps.o /scratch/sym/ipc_drivers/psmousebase/alps.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/alps.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.alps.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(alps) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/alps.c -o ./alps.i
+Saving source ./alps.i into /scratch/sym/ipc_drivers/psmousebase/alps.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.synaptics.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(synaptics)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -c -o /scratch/sym/ipc_drivers/psmousebase/synaptics.o /scratch/sym/ipc_drivers/psmousebase/synaptics.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/synaptics.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.synaptics.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(synaptics) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/synaptics.c -o ./synaptics.i
+Saving source ./synaptics.i into /scratch/sym/ipc_drivers/psmousebase/synaptics.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.lifebook.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(lifebook)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -c -o /scratch/sym/ipc_drivers/psmousebase/lifebook.o /scratch/sym/ipc_drivers/psmousebase/lifebook.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/lifebook.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.lifebook.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(lifebook) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/lifebook.c -o ./lifebook.i
+Saving source ./lifebook.i into /scratch/sym/ipc_drivers/psmousebase/lifebook.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.logips2pp.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(logips2pp)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -c -o /scratch/sym/ipc_drivers/psmousebase/logips2pp.o /scratch/sym/ipc_drivers/psmousebase/logips2pp.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/logips2pp.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.logips2pp.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(logips2pp) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/logips2pp.c -o ./logips2pp.i
+Saving source ./logips2pp.i into /scratch/sym/ipc_drivers/psmousebase/logips2pp.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.trackpoint.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(trackpoint)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -c -o /scratch/sym/ipc_drivers/psmousebase/trackpoint.o /scratch/sym/ipc_drivers/psmousebase/trackpoint.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/trackpoint.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.trackpoint.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(trackpoint) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/trackpoint.c -o ./trackpoint.i
+Saving source ./trackpoint.i into /scratch/sym/ipc_drivers/psmousebase/trackpoint.o
+  cilly --merge --save-temps --commPrintLn --verbose  -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/psmousebase/psmousebase.o /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o /scratch/sym/ipc_drivers/psmousebase/alps.o /scratch/sym/ipc_drivers/psmousebase/synaptics.o /scratch/sym/ipc_drivers/psmousebase/lifebook.o /scratch/sym/ipc_drivers/psmousebase/logips2pp.o /scratch/sym/ipc_drivers/psmousebase/trackpoint.o 
+Linking into library /scratch/sym/ipc_drivers/psmousebase/psmousebase.o
+Turning off warn-is-error flag -Werror
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --verbose --commPrintLn /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o /scratch/sym/ipc_drivers/psmousebase/alps.o /scratch/sym/ipc_drivers/psmousebase/synaptics.o /scratch/sym/ipc_drivers/psmousebase/lifebook.o /scratch/sym/ipc_drivers/psmousebase/logips2pp.o /scratch/sym/ipc_drivers/psmousebase/trackpoint.o --mergedout /scratch/sym/ipc_drivers/psmousebase/psmousebase.o
+Frontc is parsing /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.c:548: Warning: CALL in constant
+/scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.c:855: Warning: CALL in constant
+/scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.c:868: Warning: CALL in constant
+Removing unused temporaries
+Frontc is parsing /scratch/sym/ipc_drivers/psmousebase/alps.o
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/psmousebase/alps.c:258: Warning: CALL in constant
+/scratch/sym/ipc_drivers/psmousebase/alps.c:263: Warning: CALL in constant
+Removing unused temporaries
+Frontc is parsing /scratch/sym/ipc_drivers/psmousebase/synaptics.o
+Converting CABS->CIL
+Removing unused temporaries
+Frontc is parsing /scratch/sym/ipc_drivers/psmousebase/lifebook.o
+Converting CABS->CIL
+Removing unused temporaries
+Frontc is parsing /scratch/sym/ipc_drivers/psmousebase/logips2pp.o
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/psmousebase/logips2pp.c:250: Warning: CALL in constant
+Removing unused temporaries
+Frontc is parsing /scratch/sym/ipc_drivers/psmousebase/trackpoint.o
+Converting CABS->CIL
+Removing unused temporaries
+Pre-merging (0) /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o
+Pre-merging (1) /scratch/sym/ipc_drivers/psmousebase/alps.o
+Pre-merging (2) /scratch/sym/ipc_drivers/psmousebase/synaptics.o
+Pre-merging (3) /scratch/sym/ipc_drivers/psmousebase/lifebook.o
+Pre-merging (4) /scratch/sym/ipc_drivers/psmousebase/logips2pp.o
+Pre-merging (5) /scratch/sym/ipc_drivers/psmousebase/trackpoint.o
+Final merging phase (0): /scratch/sym/ipc_drivers/psmousebase/psmousebase_annotated.o
+Final merging phase (1): /scratch/sym/ipc_drivers/psmousebase/alps.o
+Final merging phase (2): /scratch/sym/ipc_drivers/psmousebase/synaptics.o
+Final merging phase (3): /scratch/sym/ipc_drivers/psmousebase/lifebook.o
+Final merging phase (4): /scratch/sym/ipc_drivers/psmousebase/logips2pp.o
+Final merging phase (5): /scratch/sym/ipc_drivers/psmousebase/trackpoint.o
+printing file /scratch/sym/ipc_drivers/psmousebase/psmousebase.o
+Setting merged output to /scratch/sym/ipc_drivers/psmousebase/psmousebase.o
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=1075.12MB, max=28.44MB, minor=1074.25MB, major=86.07MB, promoted=85.21MB
+    minor collections=4099  major collections=21 compactions=0
+(cat /dev/null;   echo kernel//scratch/sym/ipc_drivers/psmousebase/psmousebase.ko;) > /scratch/sym/ipc_drivers/psmousebase/modules.order
+make -f /scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/scripts/Makefile.modpost
+  scripts/mod/modpost   -i /scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/Module.symvers -I /scratch/sym/ipc_drivers/psmousebase/Module.symvers  -o /scratch/sym/ipc_drivers/psmousebase/Module.symvers -S -K /scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/Module.markers -M /scratch/sym/ipc_drivers/psmousebase/Module.markers -w  -s
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.psmousebase.mod.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas  -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(psmousebase.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(psmousebase)"  -DMODULE -c -o /scratch/sym/ipc_drivers/psmousebase/psmousebase.mod.o /scratch/sym/ipc_drivers/psmousebase/psmousebase.mod.c
+Warning: Unknown argument -Wframe-larger-than=2048
+Preprocessing /scratch/sym/ipc_drivers/psmousebase/psmousebase.mod.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/psmousebase/.psmousebase.mod.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.1.2/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(psmousebase.mod) -DKBUILD_MODNAME=KBUILD_STR(psmousebase) -DMODULE -DCIL=1 /scratch/sym/ipc_drivers/psmousebase/psmousebase.mod.c -o ./psmousebase.mod.i
+gcc: /scratch/sym/ipc_drivers/psmousebase/psmousebase.mod.c: No such file or directory
+gcc: no input files
+make[3]: *** [/scratch/sym/ipc_drivers/psmousebase/psmousebase.mod.o] Error 1
+make[2]: *** [modules] Error 2
+make[2]: Leaving directory `/scratch/sym/annotated/linux-2.6.29-ipc-psmousebase'

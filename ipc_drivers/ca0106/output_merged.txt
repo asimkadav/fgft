@@ -1,0 +1,5 @@
+make[2]: Entering directory `/scratch/sym/annotated/linux-2.6.29-ipc-ca0106'
+Makefile:529: /scratch/sym/annotated/linux-2.6.29-ipc-ca0106/arch/x86/Makefile: No such file or directory
+gcc -D_GNUCC -E -print-file-name=include
+make[2]: *** No rule to make target `/scratch/sym/annotated/linux-2.6.29-ipc-ca0106/arch/x86/Makefile'.  Stop.
+make[2]: Leaving directory `/scratch/sym/annotated/linux-2.6.29-ipc-ca0106'

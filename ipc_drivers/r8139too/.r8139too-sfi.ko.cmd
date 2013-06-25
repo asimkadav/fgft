@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/r8139too/r8139too-sfi.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/r8139too/r8139too-sfi.ko /scratch/sym/ipc_drivers/r8139too/r8139too-sfi.o /scratch/sym/ipc_drivers/r8139too/r8139too-sfi.mod.o

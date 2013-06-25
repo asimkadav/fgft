@@ -1,0 +1,6 @@
+snd_cmipci_remove remove_pci
+snd_cmipci_interrupt interrupt
+snd_cmipci_probe probe_pci
+snd_cmipci_resume resume_pci
+init_module init_module
+cleanup_module cleanup_module

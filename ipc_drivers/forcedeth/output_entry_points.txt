@@ -1,0 +1,546 @@
+Preprocessing forcedeth.merged.c
+gcc -D_GNUCC -E -DCIL=1 forcedeth.merged.c -o /tmp/cil-zICLJWdj.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-DEAs0n4F.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots forcedeth.entry_points.txt /tmp/cil-zICLJWdj.i
+Frontc is parsing /tmp/cil-zICLJWdj.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/forcedeth/forcedeth_annotated.c:6253: Warning: /scratch/sym/ipc_drivers/forcedeth/forcedeth_annotated.c:6253: CIL only supports attribute((alias)) for functions.
+
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [33]
+ROOT 5 failed: struct nv_ethtool_str  const  [4]
+ROOT 5 failed: struct nv_ethtool_str  const  [4]
+ROOT 5 failed: struct nv_ethtool_str  const  [4]
+ROOT 5 failed: struct nv_ethtool_str  const  [4]
+ROOT 3 failed: 8
+ROOT 3 failed: 1
+ROOT 3 failed: 128
+ROOT 3 failed: 60
+ROOT 3 failed: 144
+ROOT 3 failed: 1023
+ROOT 3 failed: 176
+ROOT 3 failed: 4294967295U
+ROOT 3 failed: 316
+ROOT 3 failed: 255
+ROOT 3 failed: 512
+ROOT 3 failed: 30583
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_get_settings
+ROOT 2: nv_set_settings
+ROOT 2: nv_get_drvinfo
+ROOT 2: nv_get_regs_len
+ROOT 2: nv_get_regs
+ROOT 2: nv_get_wol
+ROOT 2: nv_set_wol
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_nway_reset
+ROOT 2: ethtool_op_get_link
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_get_ringparam
+ROOT 2: nv_set_ringparam
+ROOT 2: nv_get_pauseparam
+ROOT 2: nv_set_pauseparam
+ROOT 2: nv_get_rx_csum
+ROOT 2: nv_set_rx_csum
+ROOT 3 failed: 0
+ROOT 2: nv_set_tx_csum
+ROOT 3 failed: 0
+ROOT 2: nv_set_sg
+ROOT 3 failed: 0
+ROOT 2: nv_set_tso
+ROOT 2: nv_self_test
+ROOT 2: nv_get_strings
+ROOT 3 failed: 0
+ROOT 2: nv_get_ethtool_stats
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_get_sset_count
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_open
+ROOT 2: nv_close
+ROOT 2: nv_start_xmit
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_set_multicast
+ROOT 2: nv_set_mac_address
+ROOT 2: eth_validate_addr
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_change_mtu
+ROOT 3 failed: 0
+ROOT 2: nv_tx_timeout
+ROOT 2: nv_get_stats
+ROOT 2: nv_vlan_rx_register
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_poll_controller
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_open
+ROOT 2: nv_close
+ROOT 2: nv_start_xmit_optimized
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_set_multicast
+ROOT 2: nv_set_mac_address
+ROOT 2: eth_validate_addr
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_change_mtu
+ROOT 3 failed: 0
+ROOT 2: nv_tx_timeout
+ROOT 2: nv_get_stats
+ROOT 2: nv_vlan_rx_register
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_poll_controller
+ROOT 3 failed: 4318
+ROOT 3 failed: 451
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 3
+ROOT 3 failed: 4318
+ROOT 3 failed: 102
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 3
+ROOT 3 failed: 4318
+ROOT 3 failed: 214
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 3
+ROOT 3 failed: 4318
+ROOT 3 failed: 134
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 23
+ROOT 3 failed: 4318
+ROOT 3 failed: 140
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 23
+ROOT 3 failed: 4318
+ROOT 3 failed: 230
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 23
+ROOT 3 failed: 4318
+ROOT 3 failed: 223
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 23
+ROOT 3 failed: 4318
+ROOT 3 failed: 86
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 524831
+ROOT 3 failed: 4318
+ROOT 3 failed: 87
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 524831
+ROOT 3 failed: 4318
+ROOT 3 failed: 55
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 524831
+ROOT 3 failed: 4318
+ROOT 3 failed: 56
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 524831
+ROOT 3 failed: 4318
+ROOT 3 failed: 616
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 779
+ROOT 3 failed: 4318
+ROOT 3 failed: 617
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 779
+ROOT 3 failed: 4318
+ROOT 3 failed: 882
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 603647
+ROOT 3 failed: 4318
+ROOT 3 failed: 883
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 603647
+ROOT 3 failed: 4318
+ROOT 3 failed: 997
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 95563
+ROOT 3 failed: 4318
+ROOT 3 failed: 998
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 95563
+ROOT 3 failed: 4318
+ROOT 3 failed: 1006
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 95563
+ROOT 3 failed: 4318
+ROOT 3 failed: 1007
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 95563
+ROOT 3 failed: 4318
+ROOT 3 failed: 1104
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1668431
+ROOT 3 failed: 4318
+ROOT 3 failed: 1105
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1668431
+ROOT 3 failed: 4318
+ROOT 3 failed: 1106
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1668431
+ROOT 3 failed: 4318
+ROOT 3 failed: 1107
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1668431
+ROOT 3 failed: 4318
+ROOT 3 failed: 1356
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1144139
+ROOT 3 failed: 4318
+ROOT 3 failed: 1357
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1144139
+ROOT 3 failed: 4318
+ROOT 3 failed: 1358
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1144139
+ROOT 3 failed: 4318
+ROOT 3 failed: 1359
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1144139
+ROOT 3 failed: 4318
+ROOT 3 failed: 2012
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1176907
+ROOT 3 failed: 4318
+ROOT 3 failed: 2013
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1176907
+ROOT 3 failed: 4318
+ROOT 3 failed: 2014
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1176907
+ROOT 3 failed: 4318
+ROOT 3 failed: 2015
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1176907
+ROOT 3 failed: 4318
+ROOT 3 failed: 1888
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1767771
+ROOT 3 failed: 4318
+ROOT 3 failed: 1889
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1767771
+ROOT 3 failed: 4318
+ROOT 3 failed: 1890
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1767771
+ROOT 3 failed: 4318
+ROOT 3 failed: 1891
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1767771
+ROOT 3 failed: 4318
+ROOT 3 failed: 2736
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1890654
+ROOT 3 failed: 4318
+ROOT 3 failed: 2737
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1890655
+ROOT 3 failed: 4318
+ROOT 3 failed: 2738
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1890655
+ROOT 3 failed: 4318
+ROOT 3 failed: 2739
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1890655
+ROOT 3 failed: 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0UL
+ROOT 3 failed: "forcedeth"
+ROOT 3 failed: pci_tbl
+ROOT 2: nv_probe
+ROOT 2: nv_remove
+ROOT 2: nv_suspend
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: nv_resume
+ROOT 2: nv_shutdown
+ROOT 3 failed: 0
+ROOT 3 failed: __param_str_max_interrupt_work
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_optimization_mode
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_poll_interval
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_msi
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_msix
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_dma_64bit
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_phy_cross
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+nv_set_wol set_wol
+nv_nic_irq_tx interrupt
+nv_get_settings get_settings
+nv_set_sg set_sg
+nv_start_xmit ndo_start_xmit
+nv_get_wol get_wol
+nv_nic_irq_optimized interrupt
+nv_close ndo_stop
+cleanup_module cleanup_module
+nv_get_ethtool_stats get_ethtool_stats
+nv_vlan_rx_register ndo_vlan_rx_register
+nv_poll_controller ndo_poll_controller
+nv_probe probe_pci
+nv_get_ringparam get_ringparam
+nv_set_rx_csum set_rx_csum
+nv_get_regs get_regs
+init_module init_module
+nv_set_pauseparam set_pauseparam
+nv_shutdown shutdown_pci
+nv_get_regs_len get_regs_len
+nv_start_xmit_optimized ndo_start_xmit
+nv_nway_reset nway_reset
+nv_get_drvinfo get_drvinfo
+nv_resume resume_pci
+nv_self_test self_test
+nv_set_mac_address ndo_set_mac_address
+nv_remove remove_pci
+nv_get_pauseparam get_pauseparam
+nv_nic_irq_other interrupt
+nv_set_ringparam set_ringparam
+nv_get_stats ndo_get_stats
+nv_tx_timeout ndo_tx_timeout
+nv_nic_irq_rx interrupt
+nv_set_tso set_tso
+nv_get_strings get_strings
+eth_validate_addr ndo_validate_addr
+nv_nic_irq interrupt
+nv_set_multicast ndo_set_multicast_list
+ethtool_op_get_link get_link
+nv_change_mtu ndo_change_mtu
+nv_get_rx_csum get_rx_csum
+nv_nic_irq_test interrupt
+nv_get_sset_count get_sset_count
+nv_set_settings set_settings
+nv_set_tx_csum set_tx_csum
+nv_open ndo_open
+=======================================================
+=======================================================
+#### Total execution time: 0.873866
+printing file /tmp/cil-DEAs0n4F.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=404.07MB, max=31.49MB, minor=402.85MB, major=34.29MB, promoted=33.06MB
+    minor collections=1538  major collections=13 compactions=0
+Preprocessing /tmp/cil-DEAs0n4F.cil.c
+gcc -D_GNUCC -E /tmp/cil-DEAs0n4F.cil.c -o /tmp/cil-KVkvJCJb.cil.i

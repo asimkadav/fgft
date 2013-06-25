@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/e1000/e1000-sfi.ko := ld -r -m elf_x86_64  --build-id -o /scratch/sym/ipc_drivers/e1000/e1000-sfi.ko /scratch/sym/ipc_drivers/e1000/e1000-sfi.o /scratch/sym/ipc_drivers/e1000/e1000-sfi.mod.o

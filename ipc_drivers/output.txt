@@ -1,0 +1,364 @@
+1 asim ca0106 cmipci common cscope.out e1000 e1000.032812.tgz e1000.041412.tgz e1000-coreiodebug e1000-nocoreio e1000.orig ens1371 forcedeth ko load.sh Makefile make.sh pci_test pegasus pegasus-orig psmousebase r8139too r8169 r8169-load.sh r8169-unload.sh svn-commit.tmp unload.sh unused usb-audio usb-storage usb_test
+Main output: 
+1 asim ca0106 cmipci common cscope.out e1000 e1000.032812.tgz e1000.041412.tgz e1000-coreiodebug e1000-nocoreio e1000.orig ens1371 forcedeth ko load.sh Makefile make.sh output.txt pci_test pegasus pegasus-orig psmousebase r8139too r8169 r8169-load.sh r8169-unload.sh svn-commit.tmp unload.sh unused usb-audio usb-storage usb_test
+make -C ../ipc_drivers/e1000
+make[1]: Entering directory `/scratch/sym/ipc_drivers/e1000'
+Executing merged ================================================
+rm -f ; rm -f 
+cilly --merge --save-temps --commPrintLn --verbose
+cilly --merge --save-temps --commPrintLn --verbose
+touch build_merged.e1000.tmp
+make -C ../../annotated/linux-2.6.29-ipc-e1000 \
+		M=`pwd` \
+		V=1 \
+		HOSTCC="cilly --merge --save-temps --commPrintLn --verbose " \
+		CC="cilly --merge --save-temps --commPrintLn --verbose " \
+		LD="cilly --merge --save-temps --commPrintLn --verbose " \
+		AS="cilly --mode=AR --merge --save-temps --commPrintLn --verbose " \
+		EXTRA_CFLAGS="-g -Wall -Wno-attributes  -Wno-unknown-pragmas " \
+		modules > output_merged.txt 2>&1
+make[1]: [e1000.merged.c] Error 2 (ignored)
+mv -f ./e1000.o e1000.merged.c
+rm -f build_merged.e1000.tmp
+rm -f e1000_ethtool.o e1000_main.o e1000_hw.o
+rm -f \.*.cmd
+rm -rf ./.tmp_versions
+rm -f Module.symvers modules.order
+cp e1000.merged.c e1000.merged.sym.c
+Executing e1000.all_annots.txt ==================================================
+cilly --dodrivers --dofuncptr=false --dovoidptr=false --do-symdriver-test=false --verbose \
+		--dowhat="annot-prop e1000.annot.txt ../common/COLORS.txt CG.dot e1000.all_annots.txt" e1000.merged.c > output_all_annots.txt 2>&1
+echo "logRead user" >> e1000.all_annots.txt
+echo "logAlloc user" >> e1000.all_annots.txt
+echo "logFree user" >> e1000.all_annots.txt
+echo "logWrite user" >> e1000.all_annots.txt
+echo "logStackFrame user" >> e1000.all_annots.txt
+echo "logSfiFrame kern" >> e1000.all_annots.txt
+echo "logStackVar user" >> e1000.all_annots.txt
+echo "stackguard_push user" >> e1000.all_annots.txt
+echo "stackguard_pop user" >> e1000.all_annots.txt
+echo "stackguard_stack user" >> e1000.all_annots.txt
+echo "stackguard_set_ra user" >> e1000.all_annots.txt
+echo "stackguard_get_ra user" >> e1000.all_annots.txt
+echo "heapifymalloc user" >> e1000.all_annots.txt
+echo "heapifyfree user" >> e1000.all_annots.txt
+Executing e1000.entry_points.txt =========================================
+cilly --dodrivers --dofuncptr=false --dovoidptr=false --do-symdriver-test=false --verbose \
+		--dowhat="find-roots e1000.entry_points.txt" e1000.merged.c > output_entry_points.txt 2>&1
+Executing e1000.sym.c ==================================================
+cilly --save-temps --commPrintLnSparse --verbose \
+		--docarb --sfireads  --sfiwrites --heapifyAll\
+		--dodrivers --dofuncptr=false --dovoidptr=false --do-symdriver-test=false --dobecons=false \
+		--dowhat="normal-user e1000.all_annots.txt e1000.entry_points.txt" e1000.merged.sym.c -o e1000.sym.temp.c \
+		> output_sym.txt 2>&1
+rm -f e1000.merged.sym.cil.i
+rm -f e1000.merged.sym.i
+mv e1000.merged.sym.cil.c e1000.sym.c.temp
+cat e1000.sym.c.temp | sed -f script-sym.sed > e1000.sym.c
+rm -f e1000.sym.c.temp
+#cat output_sym.txt | grep FAULT
+#cilly --save-temps --sfireads --sfiwrites e1000.sym.c > output_sfi.txt
+#mv e1000.sym.cil.c e1000.sym.c
+Executing e1000.sym.o ==================================================
+gcc -c -O2 -g -Wall -Wno-attributes   -DENABLE_UPRINTK      -DDISABLE_E1000_CHECKS       -Wno-unknown-pragmas \
+		-I../../annotated/linux-2.6.29-ipc-e1000/include \
+		-c e1000.sym.c -o e1000.sym.o
+../../common/slave_top.h:28: warning: ‘kfree’ defined but not used
+cp e1000.merged.c e1000.merged.kernel.c
+Executing e1000.kernel.c ==================================================
+cilly --save-temps --commPrintLnSparse  --verbose \
+		--docarb --sfireads  --sfiwrites --sfikernel=1 --heapifyAll \
+		--dodrivers --dofuncptr=false --dovoidptr=false --do-symdriver-test=false --dobecons=false \
+		--dowhat="normal-kern e1000.all_annots.txt" e1000.merged.kernel.c  -o e1000.kernel.temp.c \
+		> output_kernel.txt 2>&1
+rm -f e1000.merged.kernel.cil.i
+rm -f e1000.merged.kernel.i
+mv e1000.merged.kernel.cil.c e1000.kernel.c.temp
+cat e1000.kernel.c.temp | sed -f script-kernel.sed > e1000.kernel.c
+rm -f e1000.kernel.c.temp
+Executing e1000-stub.ko ==================================================
+touch build_kernel.e1000.tmp
+make -C ../../annotated/linux-2.6.29-ipc-e1000 \
+		M=`pwd` \
+		V=1 \
+		EXTRA_CFLAGS="-g -Wall -Wno-attributes -Wno-unknown-pragmas" \
+		modules
+make[2]: Entering directory `/scratch/sym/annotated/linux-2.6.29-ipc-e1000'
+test -e include/linux/autoconf.h -a -e include/config/auto.conf || (		\
+	echo;								\
+	echo "  ERROR: Kernel configuration is invalid.";		\
+	echo "         include/linux/autoconf.h or include/config/auto.conf are missing.";	\
+	echo "         Run 'make oldconfig && make prepare' on kernel src to fix it.";	\
+	echo;								\
+	/bin/false)
+mkdir -p /scratch/sym/ipc_drivers/e1000/.tmp_versions ; rm -f /scratch/sym/ipc_drivers/e1000/.tmp_versions/*
+
+  WARNING: Symbol version dump /scratch/sym/annotated/linux-2.6.29-ipc-e1000/Module.symvers
+           is missing; modules will have no dependencies and modversions.
+
+make -f scripts/Makefile.build obj=/scratch/sym/ipc_drivers/e1000
+  gcc -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000.sym.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000.sym)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000_sfi)"  -c -o /scratch/sym/ipc_drivers/e1000/e1000.sym.o /scratch/sym/ipc_drivers/e1000/e1000.sym.c
+/scratch/sym/ipc_drivers/e1000/../../common/slave_top.h:28: warning: ‘kfree’ defined but not used
+  gcc -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000.kernel.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000.kernel)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000_stub)"  -c -o /scratch/sym/ipc_drivers/e1000/e1000.kernel.o /scratch/sym/ipc_drivers/e1000/e1000.kernel.c
+In file included from /scratch/sym/ipc_drivers/e1000/e1000.kernel.c:4:
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:7: warning: type defaults to ‘int’ in declaration of ‘odft_truncate_range_hashtable’
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:8: warning: type defaults to ‘int’ in declaration of ‘odft_ondemand_isolate’
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h: In function ‘logAlloc’:
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:39: warning: ‘return’ with no value, in function returning non-void
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h: In function ‘logFree’:
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:43: warning: ‘return’ with no value, in function returning non-void
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h: At top level:
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:57: warning: parameter names (without types) in function declaration
+In file included from /scratch/sym/ipc_drivers/e1000/e1000.kernel.c:4:
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:141:55: warning: backslash and newline separated by space
+/scratch/sym/ipc_drivers/e1000/../../common/master_top.h:57: warning: ‘kmalloc’ declared ‘static’ but never defined
+  ld -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/e1000/e1000-stub.o /scratch/sym/ipc_drivers/e1000/e1000.kernel.o 
+  ld -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/e1000/e1000-sfi.o /scratch/sym/ipc_drivers/e1000/e1000.sym.o /scratch/sym/ipc_drivers/e1000/../../common/wrappers_nooks.o /scratch/sym/ipc_drivers/e1000/../../common/wrappers_sfi.o /scratch/sym/ipc_drivers/e1000/../../common/wrappers_locks.o 
+(cat /dev/null;   echo kernel//scratch/sym/ipc_drivers/e1000/e1000-stub.ko;   echo kernel//scratch/sym/ipc_drivers/e1000/e1000-sfi.ko;) > /scratch/sym/ipc_drivers/e1000/modules.order
+make -f /scratch/sym/annotated/linux-2.6.29-ipc-e1000/scripts/Makefile.modpost
+  scripts/mod/modpost   -i /scratch/sym/annotated/linux-2.6.29-ipc-e1000/Module.symvers -I /scratch/sym/ipc_drivers/e1000/Module.symvers  -o /scratch/sym/ipc_drivers/e1000/Module.symvers -S -K /scratch/sym/annotated/linux-2.6.29-ipc-e1000/Module.markers -M /scratch/sym/ipc_drivers/e1000/Module.markers -w  -s
+  gcc -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000-sfi.mod.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas  -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000_sfi.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000_sfi)"  -DMODULE -c -o /scratch/sym/ipc_drivers/e1000/e1000-sfi.mod.o /scratch/sym/ipc_drivers/e1000/e1000-sfi.mod.c
+  ld -r -m elf_x86_64  --build-id -o /scratch/sym/ipc_drivers/e1000/e1000-sfi.ko /scratch/sym/ipc_drivers/e1000/e1000-sfi.o /scratch/sym/ipc_drivers/e1000/e1000-sfi.mod.o
+  gcc -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000-stub.mod.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas  -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000_stub.mod)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000_stub)"  -DMODULE -c -o /scratch/sym/ipc_drivers/e1000/e1000-stub.mod.o /scratch/sym/ipc_drivers/e1000/e1000-stub.mod.c
+  ld -r -m elf_x86_64  --build-id -o /scratch/sym/ipc_drivers/e1000/e1000-stub.ko /scratch/sym/ipc_drivers/e1000/e1000-stub.o /scratch/sym/ipc_drivers/e1000/e1000-stub.mod.o
+make[2]: Leaving directory `/scratch/sym/annotated/linux-2.6.29-ipc-e1000'
+#rm -f build_kernel.e1000.tmp
+Not generating e1000.test.o file.
+******************************************************************************
+All annotations output:
+******************************************************************************
+Preprocessing e1000.merged.c
+gcc -D_GNUCC -E -DCIL=1 e1000.merged.c -o /tmp/cil-HKaGWRbU.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-gP7SA__w.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat annot-prop e1000.annot.txt ../common/COLORS.txt CG.dot e1000.all_annots.txt /tmp/cil-HKaGWRbU.i
+Frontc is parsing /tmp/cil-HKaGWRbU.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Annotations Using Propagation on Call-Graph
+**************************************************************
+No bugs found.
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+** Reading file e1000.annot.txt **
+** Reading file ../common/COLORS.txt **
+Costgraph has 0 nodes
+Costgraph has 0 edges
+STATS: total=0 total_LOC=0 kern_funcs=0 kern_funcs_LOC=-1
+=======================================================
+=======================================================
+#### Total execution time: 0.011997
+printing file /tmp/cil-gP7SA__w.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=3.91MB, max=1.02MB, minor=3.88MB, major=0.62MB, promoted=0.59MB
+    minor collections=14  major collections=2 compactions=0
+Preprocessing /tmp/cil-gP7SA__w.cil.c
+gcc -D_GNUCC -E /tmp/cil-gP7SA__w.cil.c -o /tmp/cil-HeZwYvXJ.cil.i
+******************************************************************************
+Kernel driver output:
+******************************************************************************
+Preprocessing e1000.merged.kernel.c
+gcc -D_GNUCC -E -DCIL=1 e1000.merged.kernel.c -o ./e1000.merged.kernel.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./e1000.merged.kernel.cil.c --verbose --commPrintLnSparse --docarb --sfireads --sfiwrites --sfikernel 1 --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons false --dowhat normal-kern e1000.all_annots.txt ./e1000.merged.kernel.i
+SFI**Got kernel param
+            1. (in carb)
+Frontc is parsing ./e1000.merged.kernel.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+No bugs found.
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating kernel-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  0 0
+=======================================================
+** Reading file e1000.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+Function/global mapping heapifyfree -> 1000
+Function/global mapping heapifymalloc -> 1001
+Function/global mapping logAlloc -> 1002
+Function/global mapping logFree -> 1003
+Function/global mapping logRead -> 1004
+Function/global mapping logSfiFrame -> 1005
+Function/global mapping logStackFrame -> 1006
+Function/global mapping logStackVar -> 1007
+Function/global mapping logWrite -> 1008
+Function/global mapping stackguard_get_ra -> 1009
+Function/global mapping stackguard_pop -> 1010
+Function/global mapping stackguard_push -> 1011
+Function/global mapping stackguard_set_ra -> 1012
+Function/global mapping stackguard_stack -> 1013
+execution_mode_map
+Removing unused temporaries
+ Produced kernel side of the split.
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  0 0
+=======================================================
+#### Total execution time: 0.027995
+printing file ./e1000.merged.kernel.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=21.00MB, max=2.03MB, minor=20.97MB, major=2.20MB, promoted=2.17MB
+    minor collections=79  major collections=6 compactions=0
+Preprocessing ./e1000.merged.kernel.cil.c
+gcc -D_GNUCC -E ./e1000.merged.kernel.cil.c -o ./e1000.merged.kernel.cil.i
+******************************************************************************
+Symbolic driver output:
+******************************************************************************
+Preprocessing e1000.merged.sym.c
+gcc -D_GNUCC -E -DCIL=1 e1000.merged.sym.c -o ./e1000.merged.sym.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./e1000.merged.sym.cil.c --verbose --commPrintLnSparse --docarb --sfireads --sfiwrites --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons false --dowhat normal-user e1000.all_annots.txt e1000.entry_points.txt ./e1000.merged.sym.i
+Frontc is parsing ./e1000.merged.sym.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+No bugs found.
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating user-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  0 0
+=======================================================
+** Reading entry points from file e1000.entry_points.txt **
+** Reading file e1000.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+kernel function proto: printk
+Function/global mapping heapifyfree -> 1000
+Function/global mapping heapifymalloc -> 1001
+Function/global mapping logAlloc -> 1002
+Function/global mapping logFree -> 1003
+Function/global mapping logRead -> 1004
+Function/global mapping logSfiFrame -> 1005
+Function/global mapping logStackFrame -> 1006
+Function/global mapping logStackVar -> 1007
+Function/global mapping logWrite -> 1008
+Function/global mapping stackguard_get_ra -> 1009
+Function/global mapping stackguard_pop -> 1010
+Function/global mapping stackguard_push -> 1011
+Function/global mapping stackguard_set_ra -> 1012
+Function/global mapping stackguard_stack -> 1013
+execution_mode_map
+Removing unused temporaries
+ Produced user side of the split
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  0 0
+[CHECK]: Converting to NoStorage disp_kern
+=======================================================
+#### Total execution time: 0.028995
+printing file ./e1000.merged.sym.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=21.17MB, max=2.03MB, minor=21.13MB, major=2.31MB, promoted=2.27MB
+    minor collections=80  major collections=6 compactions=0
+Preprocessing ./e1000.merged.sym.cil.c
+gcc -D_GNUCC -E ./e1000.merged.sym.cil.c -o ./e1000.merged.sym.cil.i
+All done
+rm -f ; rm -f 
+make[1]: Leaving directory `/scratch/sym/ipc_drivers/e1000'
+make -C ../ipc_miscdevice
+make[1]: Entering directory `/scratch/sym/ipc_miscdevice'
+make -C ../compiled_images/2.6.29-tuxedo M=`pwd` modules
+make[2]: Entering directory `/scratch/sym/compiled_images/2.6.29-tuxedo'
+make -C /scratch/sym/linux-2.6.29 O=/scratch/sym/compiled_images/2.6.29-tuxedo/. modules
+  CC [M]  /scratch/sym/ipc_miscdevice/misc.o
+/scratch/sym/ipc_miscdevice/misc.c:28: warning: type defaults to ‘int’ in declaration of ‘__restore_processor_state’
+/scratch/sym/ipc_miscdevice/misc.c:29: warning: type defaults to ‘int’ in declaration of ‘__save_processor_state’
+/scratch/sym/ipc_miscdevice/misc.c: In function ‘mischelp_ioctl’:
+/scratch/sym/ipc_miscdevice/misc.c:126: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘long unsigned int’
+/scratch/sym/ipc_miscdevice/misc.c:131: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘long unsigned int’
+/scratch/sym/ipc_miscdevice/misc.c:137: warning: format ‘%d’ expects type ‘int’, but argument 2 has type ‘long unsigned int’
+/scratch/sym/ipc_miscdevice/misc.c: In function ‘init_module’:
+/scratch/sym/ipc_miscdevice/misc.c:233: warning: passing argument 1 of ‘register_odft_failure_record’ from incompatible pointer type
+/scratch/sym/ipc_miscdevice/misc.h:30: note: expected ‘int (*)(int)’ but argument is of type ‘void * (*)(int)’
+/scratch/sym/ipc_miscdevice/misc.c:234: warning: passing argument 1 of ‘register_odft_mm_failure_record’ from incompatible pointer type
+/scratch/sym/ipc_miscdevice/misc.h:31: note: expected ‘int (*)(int)’ but argument is of type ‘void * (*)(int)’
+/scratch/sym/ipc_miscdevice/misc.c: In function ‘dispatch_user_request’:
+/scratch/sym/ipc_miscdevice/misc.c:423: warning: label ‘release’ defined but not used
+/scratch/sym/ipc_miscdevice/misc.c:330: warning: unused variable ‘retval’
+/scratch/sym/ipc_miscdevice/misc.c: In function ‘disp_user’:
+/scratch/sym/ipc_miscdevice/misc.c:457: warning: ISO C90 forbids mixed declarations and code
+/scratch/sym/ipc_miscdevice/misc.c:488: warning: assignment from incompatible pointer type
+/scratch/sym/ipc_miscdevice/misc.c:517: warning: ISO C90 forbids mixed declarations and code
+/scratch/sym/ipc_miscdevice/misc.c:523: warning: assignment from incompatible pointer type
+/scratch/sym/ipc_miscdevice/misc.c: In function ‘register_miscfn’:
+/scratch/sym/ipc_miscdevice/misc.c:649: warning: ISO C90 forbids mixed declarations and code
+/scratch/sym/ipc_miscdevice/misc.c:650: warning: unused variable ‘fn_addr’
+/scratch/sym/ipc_miscdevice/misc.c:649: warning: unused variable ‘fn_name’
+/scratch/sym/ipc_miscdevice/misc.c: At top level:
+/scratch/sym/ipc_miscdevice/misc.c:54: warning: ‘marsh_buffers’ defined but not used
+  CC [M]  /scratch/sym/ipc_miscdevice/wrappers_misc.o
+  CC [M]  /scratch/sym/ipc_miscdevice/wrappers_nooks.o
+  CC [M]  /scratch/sym/ipc_miscdevice/md_marshaling.o
+In file included from /scratch/sym/ipc_miscdevice/md_marshaling.c:21:
+/scratch/sym/ipc_miscdevice/../common/slave_master_ud_md_marshaling.c: In function ‘ALLOC’:
+/scratch/sym/ipc_miscdevice/../common/slave_master_ud_md_marshaling.c:8: warning: unused variable ‘marshbuf’
+  CC [M]  /scratch/sym/ipc_miscdevice/rec_lock.o
+  CC [M]  /scratch/sym/ipc_miscdevice/nooks/nooks-hash.o
+  CC [M]  /scratch/sym/ipc_miscdevice/nooks/nooks-pool.o
+  CC [M]  /scratch/sym/ipc_miscdevice/nooks/nooks-kern-api.o
+/scratch/sym/ipc_miscdevice/nooks/nooks-kern-api.c:196:5: warning: multi-line comment
+  CC [M]  /scratch/sym/ipc_miscdevice/nooks/nooks-range-query.o
+  CC [M]  /scratch/sym/ipc_miscdevice/hashtable/hashtable.o
+  CC [M]  /scratch/sym/ipc_miscdevice/hashtable/range_tracker.o
+/scratch/sym/ipc_miscdevice/hashtable/range_tracker.c: In function ‘odft_delete_range_hash_byname’:
+/scratch/sym/ipc_miscdevice/hashtable/range_tracker.c:150: warning: control reaches end of non-void function
+/scratch/sym/ipc_miscdevice/hashtable/range_tracker.c: In function ‘odft_delete_range_hash’:
+/scratch/sym/ipc_miscdevice/hashtable/range_tracker.c:134: warning: control reaches end of non-void function
+  CC [M]  /scratch/sym/ipc_miscdevice/hashtable/klog.o
+/scratch/sym/ipc_miscdevice/hashtable/klog.c: In function ‘odft_insert_klog_hash’:
+/scratch/sym/ipc_miscdevice/hashtable/klog.c:92: warning: passing argument 1 of ‘strcpy’ discards qualifiers from pointer target type
+/scratch/sym/linux-2.6.29/include/linux/string.h:22: note: expected ‘char *’ but argument is of type ‘const char *’
+/scratch/sym/ipc_miscdevice/hashtable/klog.c:93: warning: passing argument 1 of ‘strcpy’ discards qualifiers from pointer target type
+/scratch/sym/linux-2.6.29/include/linux/string.h:22: note: expected ‘char *’ but argument is of type ‘const char *’
+/scratch/sym/ipc_miscdevice/hashtable/klog.c: In function ‘odft_free_locks’:
+/scratch/sym/ipc_miscdevice/hashtable/klog.c:217: warning: comparison of distinct pointer types lacks a cast
+/scratch/sym/ipc_miscdevice/hashtable/klog.c:217: warning: passing argument 2 of ‘_spin_unlock_irqrestore’ makes integer from pointer without a cast
+/scratch/sym/linux-2.6.29/include/linux/spinlock_api_smp.h:56: note: expected ‘long unsigned int’ but argument is of type ‘void *’
+/scratch/sym/ipc_miscdevice/hashtable/klog.c: In function ‘odft_delete_klog_hash’:
+/scratch/sym/ipc_miscdevice/hashtable/klog.c:171: warning: control reaches end of non-void function
+  LD [M]  /scratch/sym/ipc_miscdevice/mischelp.o
+  Building modules, stage 2.
+  MODPOST 1 modules
+  CC      /scratch/sym/ipc_miscdevice/mischelp.mod.o
+  LD [M]  /scratch/sym/ipc_miscdevice/mischelp.ko
+make[2]: Leaving directory `/scratch/sym/compiled_images/2.6.29-tuxedo'
+#gcc -c -O2 -g -Wall -Wno-attributes   -DENABLE_UPRINTK      -DDISABLE_E1000_CHECKS       mischelper.c -o mischelper.o
+#gcc mischelper.o -o mischelper
+gcc mischelper.c 
+rm -f mischelper
+mv a.out mischelper
+chmod 555 mischelper
+make[1]: Leaving directory `/scratch/sym/ipc_miscdevice'
+Following should list four files if build was successful.  View output.txt if not.
+-rw-r----- 1 kadav kadav 258K Mar 30 15:46 ../ipc_drivers/e1000/e1000-sfi.ko
+-rw-r----- 1 kadav kadav 166K Mar 30 15:46 ../ipc_drivers/e1000/e1000-stub.ko
+-rw-r----- 1 kadav kadav 935K Mar 30 15:46 ../ipc_miscdevice/mischelp.ko
+#@cat ../ipc_drivers/e1000/output_sym.txt | grep FAULT  

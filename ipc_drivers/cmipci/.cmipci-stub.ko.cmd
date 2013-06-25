@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/cmipci/cmipci-stub.ko := ld -r -m elf_x86_64   -o /scratch/sym/ipc_drivers/cmipci/cmipci-stub.ko /scratch/sym/ipc_drivers/cmipci/cmipci-stub.o /scratch/sym/ipc_drivers/cmipci/cmipci-stub.mod.o

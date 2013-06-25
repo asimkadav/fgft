@@ -1,0 +1,5 @@
+usb_audio_disconnect disconnect_usb
+usb_audio_resume resume_usb
+usb_audio_probe probe_usb
+init_module init_module
+cleanup_module cleanup_module

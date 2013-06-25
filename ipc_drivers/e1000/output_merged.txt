@@ -1,0 +1,51 @@
+gcc -D_GNUCC -E -print-file-name=include
+make[2]: Entering directory `/scratch/sym/annotated/linux-2.6.29-ipc-e1000'
+test -e include/linux/autoconf.h -a -e include/config/auto.conf || (		\
+	echo;								\
+	echo "  ERROR: Kernel configuration is invalid.";		\
+	echo "         include/linux/autoconf.h or include/config/auto.conf are missing.";	\
+	echo "         Run 'make oldconfig && make prepare' on kernel src to fix it.";	\
+	echo;								\
+	/bin/false)
+mkdir -p /scratch/sym/ipc_drivers/e1000/.tmp_versions ; rm -f /scratch/sym/ipc_drivers/e1000/.tmp_versions/*
+
+  WARNING: Symbol version dump /scratch/sym/annotated/linux-2.6.29-ipc-e1000/Module.symvers
+           is missing; modules will have no dependencies and modversions.
+
+make -f scripts/Makefile.build obj=/scratch/sym/ipc_drivers/e1000
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000_ethtool.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000_ethtool)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000)"  -c -o /scratch/sym/ipc_drivers/e1000/e1000_ethtool.o /scratch/sym/ipc_drivers/e1000/e1000_ethtool.c
+Preprocessing /scratch/sym/ipc_drivers/e1000/e1000_ethtool.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000_ethtool.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(e1000_ethtool) -DKBUILD_MODNAME=KBUILD_STR(e1000) -DCIL=1 /scratch/sym/ipc_drivers/e1000/e1000_ethtool.c -o ./e1000_ethtool.i
+Warning: Unknown argument -Wframe-larger-than=2048
+Saving source ./e1000_ethtool.i into /scratch/sym/ipc_drivers/e1000/e1000_ethtool.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000_main.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000_main)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000)"  -c -o /scratch/sym/ipc_drivers/e1000/e1000_main.o /scratch/sym/ipc_drivers/e1000/e1000_main.c
+Preprocessing /scratch/sym/ipc_drivers/e1000/e1000_main.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000_main.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(e1000_main) -DKBUILD_MODNAME=KBUILD_STR(e1000) -DCIL=1 /scratch/sym/ipc_drivers/e1000/e1000_main.c -o ./e1000_main.i
+Warning: Unknown argument -Wframe-larger-than=2048
+Saving source ./e1000_main.i into /scratch/sym/ipc_drivers/e1000/e1000_main.o
+  cilly --merge --save-temps --commPrintLn --verbose  -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000_hw.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude  -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -Wframe-larger-than=2048 -fno-stack-protector -fno-omit-frame-pointer -fno-optimize-sibling-calls -g -Wdeclaration-after-statement -Wno-pointer-sign -fwrapv -fno-dwarf2-cfi-asm -g -Wall -Wno-attributes -Wno-unknown-pragmas -DMODULE -D"KBUILD_STR(s)=#s" -D"KBUILD_BASENAME=KBUILD_STR(e1000_hw)"  -D"KBUILD_MODNAME=KBUILD_STR(e1000)"  -c -o /scratch/sym/ipc_drivers/e1000/e1000_hw.o /scratch/sym/ipc_drivers/e1000/e1000_hw.c
+Preprocessing /scratch/sym/ipc_drivers/e1000/e1000_hw.c
+gcc -D_GNUCC -E -Wp,-MD,/scratch/sym/ipc_drivers/e1000/.e1000_hw.o.d -nostdinc -isystem /usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -Iinclude -I/scratch/sym/annotated/linux-2.6.29-ipc-e1000/arch/x86/include -include include/linux/autoconf.h -D__KERNEL__ -Os -m64 -mtune=generic -mno-red-zone -mcmodel=kernel -maccumulate-outgoing-args -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -pipe -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -Iarch/x86/include/asm/mach-default -g -g -DMODULE -DKBUILD_STR(s)=#s -DKBUILD_BASENAME=KBUILD_STR(e1000_hw) -DKBUILD_MODNAME=KBUILD_STR(e1000) -DCIL=1 /scratch/sym/ipc_drivers/e1000/e1000_hw.c -o ./e1000_hw.i
+Warning: Unknown argument -Wframe-larger-than=2048
+Saving source ./e1000_hw.i into /scratch/sym/ipc_drivers/e1000/e1000_hw.o
+  cilly --merge --save-temps --commPrintLn --verbose  -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/e1000/e1000.o /scratch/sym/ipc_drivers/e1000/e1000_ethtool.o /scratch/sym/ipc_drivers/e1000/e1000_main.o /scratch/sym/ipc_drivers/e1000/e1000_hw.o 
+Linking into library /scratch/sym/ipc_drivers/e1000/e1000.o
+Turning off warn-is-error flag -Werror
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --verbose --commPrintLn /scratch/sym/ipc_drivers/e1000/e1000_ethtool.o /scratch/sym/ipc_drivers/e1000/e1000_main.o /scratch/sym/ipc_drivers/e1000/e1000_hw.o --mergedout /scratch/sym/ipc_drivers/e1000/e1000.o
+Frontc is parsing /scratch/sym/ipc_drivers/e1000/e1000_ethtool.o
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:667: Error: Cannot find field hw
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:667: Error: Expected lval for assignment. Got Const(Int64(0,int,None))
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:788: Warning: CALL in constant
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:1687: Warning: CALL in constant
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:1689: Warning: CALL in constant
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:1988: Warning: CALL in constant
+/scratch/sym/ipc_drivers/e1000/e1000_ethtool.c:2008: Warning: CALL in constant
+Removing unused temporaries
+Frontc is parsing /scratch/sym/ipc_drivers/e1000/e1000_main.o
+Error: There were parsing errors in /scratch/sym/ipc_drivers/e1000/e1000_main.o
+Setting merged output to /scratch/sym/ipc_drivers/e1000/e1000.o
+Fatal error: exception Errormsg.Error
+make[3]: *** [/scratch/sym/ipc_drivers/e1000/e1000.o] Error 2
+make[2]: *** [_module_/scratch/sym/ipc_drivers/e1000] Error 2
+make[2]: Leaving directory `/scratch/sym/annotated/linux-2.6.29-ipc-e1000'

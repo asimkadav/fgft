@@ -1,0 +1,1689 @@
+Preprocessing pegasus.merged.kernel.c
+gcc -D_GNUCC -E -DCIL=1 pegasus.merged.kernel.c -o ./pegasus.merged.kernel.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./pegasus.merged.kernel.cil.c --verbose --commPrintLnSparse --carbflipcount 100000 --carbfaulttype offbyone --docarb --sfireads --sfiwrites --sfikernel 1 --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons true --dowhat normal-kern pegasus.all_annots.txt ./pegasus.merged.kernel.i
+**Got flip 100000 (in carb).
+FAULTINJECTION**Got
+            offbyone. (in carb)
+SFI**Got kernel param
+            1. (in carb)
+Frontc is parsing ./pegasus.merged.kernel.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/pegasus/pegasus_annotated.c:124: Warning: /scratch/sym/ipc_drivers/pegasus/pegasus_annotated.c:124: CIL only supports attribute((alias)) for functions.
+
+/scratch/sym/ipc_drivers/pegasus/pegasus_annotated.c:1593: Warning: Body of function pegasus_checkpoint falls-through. Adding a return statement
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: pegasus_get_wol
+                     ::::::::::odftPerforimg heapify pegasus_get_wolscanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: pegasus_set_settings
+                     ::::::::::odftPerforimg heapify pegasus_set_settingsscanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: pegasus_get_msglevel
+                     ::::::::::odftPerforimg heapify pegasus_get_msglevelscanning globals(1)...
+****** ISOLATING :::: pegasus_set_msglevel
+                     ::::::::::odftPerforimg heapify pegasus_set_msglevelscanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(2)...
+scanning globals(2)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+No bugs found.
+About to call fault injection with offbyone. 
+FAULTINJECTIONPerforming FAULT INJECTION ..
+FAULTINJECTION PASS for fVisitor pegasus_get_wol.
+FAULTINJECTION PASS for fVisitor pegasus_set_settings.
+FAULTINJECTION PASS for fVisitor pegasus_get_msglevel.
+FAULTINJECTION PASS for fVisitor pegasus_set_msglevel.
+About to call sfi with kernel parameter 1...
+Performing sfi wth gen_kern 1..
+Activating sfi for fn:pegasus_get_wol.
+****Doing the kernel part..
+Activating sfi for fn:pegasus_set_settings.
+****Doing the kernel part..
+Activating sfi for fn:pegasus_get_msglevel.
+****Doing the kernel part..
+Activating sfi for fn:pegasus_set_msglevel.
+****Doing the kernel part..
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating kernel-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+currently analyzing: set_bit
+currently analyzing: clear_bit
+currently analyzing: test_and_set_bit
+currently analyzing: test_and_clear_bit
+currently analyzing: constant_test_bit
+currently analyzing: get_current
+currently analyzing: __xchg
+currently analyzing: INIT_LIST_HEAD
+currently analyzing: cancel_delayed_work
+currently analyzing: kmalloc
+currently analyzing: dev_name
+currently analyzing: dev_get_drvdata
+currently analyzing: dev_set_drvdata
+currently analyzing: skb_reserve
+currently analyzing: skb_copy_from_linear_data
+currently analyzing: netdev_get_tx_queue
+currently analyzing: netdev_priv
+currently analyzing: tasklet_schedule
+currently analyzing: netif_tx_start_queue
+currently analyzing: netif_start_queue
+currently analyzing: netif_tx_wake_queue
+currently analyzing: netif_wake_queue
+currently analyzing: netif_tx_stop_queue
+currently analyzing: netif_stop_queue
+currently analyzing: netif_running
+currently analyzing: netif_device_present
+currently analyzing: netif_msg_init
+currently analyzing: usb_get_intfdata
+currently analyzing: usb_set_intfdata
+currently analyzing: usb_make_path
+currently analyzing: usb_register
+currently analyzing: usb_fill_control_urb
+currently analyzing: usb_fill_bulk_urb
+currently analyzing: usb_fill_int_urb
+currently analyzing: __create_pipe
+currently analyzing: Nonstub_sk_buff_get_length
+currently analyzing: __bad_pda_field
+currently analyzing: ctrl_callback
+currently analyzing: get_registers
+currently analyzing: set_registers
+currently analyzing: set_register
+currently analyzing: update_eth_regs_async
+currently analyzing: read_mii_word
+currently analyzing: mdio_read
+currently analyzing: write_mii_word
+currently analyzing: mdio_write
+currently analyzing: read_eprom_word
+currently analyzing: get_node_id
+currently analyzing: set_ethernet_addr
+currently analyzing: reset_mac
+currently analyzing: enable_net_traffic
+currently analyzing: fill_skb_pool
+currently analyzing: free_skb_pool
+currently analyzing: pull_skb
+currently analyzing: read_bulk_callback
+currently analyzing: rx_fixup
+currently analyzing: write_bulk_callback
+currently analyzing: intr_callback
+currently analyzing: pegasus_tx_timeout
+currently analyzing: pegasus_start_xmit
+currently analyzing: pegasus_netdev_stats
+currently analyzing: disable_net_traffic
+currently analyzing: get_interrupt_interval
+currently analyzing: set_carrier
+currently analyzing: free_all_urbs
+currently analyzing: unlink_all_urbs
+currently analyzing: alloc_urbs
+currently analyzing: pegasus_open
+currently analyzing: pegasus_close
+currently analyzing: pegasus_get_drvinfo
+currently analyzing: pegasus_get_wol
+currently analyzing: pegasus_set_wol
+currently analyzing: pegasus_reset_wol
+currently analyzing: pegasus_get_settings
+currently analyzing: pegasus_set_settings
+currently analyzing: pegasus_nway_reset
+currently analyzing: pegasus_get_link
+currently analyzing: pegasus_get_msglevel
+currently analyzing: pegasus_set_msglevel
+currently analyzing: pegasus_ioctl
+currently analyzing: pegasus_set_multicast
+currently analyzing: mii_phy_probe
+currently analyzing: setup_pegasus_II
+currently analyzing: check_carrier
+currently analyzing: pegasus_blacklisted
+currently analyzing: pegasus_dec_workqueue
+currently analyzing: pegasus_probe
+currently analyzing: pegasus_disconnect
+currently analyzing: pegasus_suspend
+currently analyzing: pegasus_resume
+currently analyzing: pegasus_checkpoint
+currently analyzing: pegasus_restore
+currently analyzing: parse_id
+currently analyzing: pegasus_init
+currently analyzing: pegasus_exit
+currently analyzing: init_module
+currently analyzing: cleanup_module
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+ modif: Using supplied modif for internal kernel fn:  capable
+ modif: Using supplied modif for internal kernel fn:  schedule
+ modif: Using supplied modif for internal kernel fn:  __kmalloc
+ modif: Using conservative analysis for kernel fn:  netif_device_detach
+ modif: Using conservative analysis for kernel fn:  usb_submit_urb
+ modif: Using conservative analysis for kernel fn:  dev_driver_string
+ modif: Using supplied modif for internal kernel fn:  __builtin_memcpy
+ modif: Using conservative analysis for kernel fn:  add_wait_queue
+ modif: Using supplied modif for internal kernel fn:  kfree
+ modif: Using conservative analysis for kernel fn:  remove_wait_queue
+ modif: Using supplied modif for internal kernel fn:  printk
+ modif: Using supplied modif for internal kernel fn:  __memcpy
+ modif: Using supplied modif for internal kernel fn:  printk_ratelimit
+ modif: Using conservative analysis for kernel fn:  usb_free_urb
+ modif: Using conservative analysis for kernel fn:  __netif_schedule
+ modif: Using supplied modif for internal kernel fn:  netpoll_trap
+ modif: Using conservative analysis for kernel fn:  usb_get_dev
+ modif: Using conservative analysis for kernel fn:  destroy_workqueue
+ modif: Using supplied modif for internal kernel fn:  logWrite
+ modif: Using conservative analysis for kernel fn:  lockdep_init_map
+ modif: Using conservative analysis for kernel fn:  queue_delayed_work
+ modif: Using conservative analysis for kernel fn:  _spin_lock
+ modif: Using conservative analysis for kernel fn:  _spin_unlock
+ modif: Using conservative analysis for kernel fn:  __tasklet_schedule
+ modif: Using supplied modif for internal kernel fn:  __builtin_expect
+ modif: Using conservative analysis for kernel fn:  netif_rx
+ modif: Using conservative analysis for kernel fn:  eth_type_trans
+ modif: Using conservative analysis for kernel fn:  skb_put
+ modif: Using conservative analysis for kernel fn:  netif_device_attach
+ modif: Using conservative analysis for kernel fn:  kfree_skb
+ modif: Using conservative analysis for kernel fn:  usb_register_driver
+ modif: Using supplied modif for internal kernel fn:  simple_strtoul
+ modif: Using supplied modif for internal kernel fn:  strsep
+ modif: Using supplied modif for internal kernel fn:  logSfiFrame
+ modif: Using supplied modif for internal kernel fn:  logRead
+ modif: Using conservative analysis for kernel fn:  mii_ethtool_sset
+ modif: Using conservative analysis for kernel fn:  netif_carrier_on
+ modif: Using conservative analysis for kernel fn:  del_timer_sync
+ modif: Using conservative analysis for kernel fn:  usb_kill_urb
+ modif: Using conservative analysis for kernel fn:  usb_reset_configuration
+ modif: Using conservative analysis for kernel fn:  netif_carrier_off
+ modif: Using conservative analysis for kernel fn:  __spin_lock_init
+ modif: Using conservative analysis for kernel fn:  usb_unlink_urb
+ modif: Using conservative analysis for kernel fn:  init_waitqueue_head
+ modif: Using conservative analysis for kernel fn:  free_netdev
+ modif: Using supplied modif for internal kernel fn:  strncpy
+ modif: Using supplied modif for internal kernel fn:  snprintf
+ modif: Using conservative analysis for kernel fn:  usb_alloc_urb
+ modif: Using conservative analysis for kernel fn:  dev_alloc_skb
+ modif: Using supplied modif for internal kernel fn:  __const_udelay
+ modif: Using conservative analysis for kernel fn:  unregister_netdev
+ modif: Using conservative analysis for kernel fn:  init_timer
+ modif: Using conservative analysis for kernel fn:  mii_ethtool_gset
+ modif: Using conservative analysis for kernel fn:  tasklet_init
+ modif: Using conservative analysis for kernel fn:  _spin_unlock_irqrestore
+ modif: Using conservative analysis for kernel fn:  _spin_lock_irqsave
+ modif: Using conservative analysis for kernel fn:  usb_deregister
+ modif: Using conservative analysis for kernel fn:  mii_nway_restart
+ modif: Using supplied modif for internal kernel fn:  memset
+ modif: Using conservative analysis for kernel fn:  tasklet_kill
+ modif: Using conservative analysis for kernel fn:  __wake_up
+ modif: Using conservative analysis for kernel fn:  register_netdev
+ modif: Using conservative analysis for kernel fn:  alloc_etherdev_mq
+ modif: Using conservative analysis for kernel fn:  usb_put_dev
+ modif: Using conservative analysis for kernel fn:  mii_link_ok
+ modif: Using conservative analysis for kernel fn:  __create_workqueue_key
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  155 63
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct mii_if_info  -> dev]
+
+=======================================================
+** Reading file pegasus.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+is_override_interface: logSfiFrame 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_checkpoint 0
+Asim disabled interface function.
+is_override_interface: strsep 0
+Asim disabled interface function.
+is_override_interface: netdev_get_tx_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: fill_skb_pool 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_unlock_irqrestore 0
+Asim disabled interface function.
+is_override_interface: pegasus_disconnect 0
+is_override_interface: usb_set_intfdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mdio_read 0
+is_override_interface: setup_pegasus_II 0
+Asim disabled interface function.
+is_override_interface: mii_link_ok 0
+Asim disabled interface function.
+is_override_interface: check_carrier 0
+is_override_interface: cancel_delayed_work 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: Nonstub_sk_buff_get_length 0
+is_override_interface: printk 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dev_name 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: update_eth_regs_async 0
+Asim disabled interface function.
+is_override_interface: pull_skb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_probe 0
+is_override_interface: set_register 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: set_ethernet_addr 0
+Asim disabled interface function.
+is_override_interface: mii_ethtool_sset 0
+Asim disabled interface function.
+is_override_interface: del_timer_sync 0
+Asim disabled interface function.
+is_override_interface: netif_wake_queue 0
+Asim disabled interface function.
+is_override_interface: pegasus_get_settings 0
+is_override_interface: remove_wait_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_lock_irqsave 0
+Asim disabled interface function.
+is_override_interface: kmalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __create_workqueue_key 0
+Asim disabled interface function.
+is_override_interface: constant_test_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_restore 0
+Asim disabled interface function.
+is_override_interface: kfree_skb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_close 0
+is_override_interface: cleanup_module 0
+is_override_interface: netif_device_present 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dev_get_drvdata 0
+Asim disabled interface function.
+is_override_interface: netif_rx 0
+Asim disabled interface function.
+is_override_interface: test_and_set_bit 0
+Asim disabled interface function.
+is_override_interface: intr_callback 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_tx_timeout 0
+is_override_interface: pegasus_nway_reset 0
+is_override_interface: get_registers 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: reset_mac 0
+Asim disabled interface function.
+is_override_interface: pegasus_get_link 0
+is_override_interface: usb_put_dev 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __wake_up 0
+Asim disabled interface function.
+is_override_interface: mdio_write 0
+is_override_interface: read_bulk_callback 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_netdev_stats 0
+is_override_interface: alloc_urbs 0
+Asim disabled interface function.
+is_override_interface: queue_delayed_work 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alloc_etherdev_mq 0
+Asim disabled interface function.
+is_override_interface: register_netdev 0
+Asim disabled interface function.
+is_override_interface: skb_reserve 0
+Asim disabled interface function.
+is_override_interface: get_current 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __builtin_expect 0
+Asim disabled interface function.
+is_override_interface: _spin_lock 0
+Asim disabled interface function.
+is_override_interface: netif_carrier_off 0
+Asim disabled interface function.
+is_override_interface: netif_start_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: strncpy 0
+Asim disabled interface function.
+is_override_interface: schedule 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: netpoll_trap 0
+Asim disabled interface function.
+is_override_interface: ctrl_callback 0
+Asim disabled interface function.
+is_override_interface: eth_type_trans 0
+Asim disabled interface function.
+is_override_interface: parse_id 0
+Asim disabled interface function.
+is_override_interface: skb_copy_from_linear_data 0
+Asim disabled interface function.
+is_override_interface: usb_get_intfdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: printk_ratelimit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: memset 0
+Asim disabled interface function.
+is_override_interface: pegasus_set_multicast 0
+is_override_interface: netdev_priv 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: tasklet_kill 0
+Asim disabled interface function.
+is_override_interface: tasklet_schedule 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_fill_control_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: free_skb_pool 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_kill_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_deregister 0
+Asim disabled interface function.
+is_override_interface: pegasus_reset_wol 0
+Asim disabled interface function.
+is_override_interface: usb_make_path 0
+Asim disabled interface function.
+is_override_interface: clear_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snprintf 0
+Asim disabled interface function.
+is_override_interface: mii_nway_restart 0
+Asim disabled interface function.
+is_override_interface: enable_net_traffic 0
+Asim disabled interface function.
+is_override_interface: __builtin_memcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_set_msglevel 0
+Asim disabled interface function.
+is_override_interface: write_mii_word 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_exit 0
+Asim disabled interface function.
+is_override_interface: init_module 0
+is_override_interface: _spin_unlock 0
+Asim disabled interface function.
+is_override_interface: netif_tx_stop_queue 0
+Asim disabled interface function.
+is_override_interface: read_eprom_word 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __kmalloc 0
+Asim disabled interface function.
+is_override_interface: netif_tx_wake_queue 0
+Asim disabled interface function.
+is_override_interface: usb_fill_int_urb 0
+Asim disabled interface function.
+is_override_interface: usb_fill_bulk_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_submit_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_register_driver 0
+Asim disabled interface function.
+is_override_interface: pegasus_blacklisted 0
+Asim disabled interface function.
+is_override_interface: destroy_workqueue 0
+Asim disabled interface function.
+is_override_interface: __tasklet_schedule 0
+Asim disabled interface function.
+is_override_interface: __netif_schedule 0
+Asim disabled interface function.
+is_override_interface: rx_fixup 0
+is_override_interface: tasklet_init 0
+Asim disabled interface function.
+is_override_interface: skb_put 0
+Asim disabled interface function.
+is_override_interface: mii_ethtool_gset 0
+Asim disabled interface function.
+is_override_interface: init_timer 0
+Asim disabled interface function.
+is_override_interface: unregister_netdev 0
+Asim disabled interface function.
+is_override_interface: pegasus_set_wol 0
+Asim disabled interface function.
+is_override_interface: __const_udelay 0
+Asim disabled interface function.
+is_override_interface: disable_net_traffic 0
+Asim disabled interface function.
+is_override_interface: mii_phy_probe 0
+Asim disabled interface function.
+is_override_interface: dev_alloc_skb 0
+Asim disabled interface function.
+is_override_interface: usb_alloc_urb 0
+Asim disabled interface function.
+is_override_interface: pegasus_get_drvinfo 0
+is_override_interface: pegasus_get_wol 0
+Asim disabled interface function.
+is_override_interface: pegasus_open 0
+is_override_interface: logRead 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: free_netdev 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_waitqueue_head 0
+Asim disabled interface function.
+is_override_interface: netif_stop_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_unlink_urb 0
+Asim disabled interface function.
+is_override_interface: netif_tx_start_queue 0
+Asim disabled interface function.
+is_override_interface: get_interrupt_interval 0
+Asim disabled interface function.
+is_override_interface: __spin_lock_init 0
+Asim disabled interface function.
+is_override_interface: usb_reset_configuration 0
+Asim disabled interface function.
+is_override_interface: netif_msg_init 0
+Asim disabled interface function.
+is_override_interface: add_wait_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_node_id 0
+Asim disabled interface function.
+is_override_interface: test_and_clear_bit 0
+Asim disabled interface function.
+is_override_interface: capable 0
+Asim disabled interface function.
+is_override_interface: __create_pipe 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_get_msglevel 0
+Asim disabled interface function.
+is_override_interface: set_bit 0
+Asim disabled interface function.
+is_override_interface: set_carrier 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: unlink_all_urbs 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_suspend 0
+is_override_interface: dev_set_drvdata 0
+Asim disabled interface function.
+is_override_interface: netif_carrier_on 0
+Asim disabled interface function.
+is_override_interface: simple_strtoul 0
+Asim disabled interface function.
+is_override_interface: pegasus_set_settings 0
+Asim disabled interface function.
+is_override_interface: INIT_LIST_HEAD 0
+Asim disabled interface function.
+is_override_interface: pegasus_init 0
+Asim disabled interface function.
+is_override_interface: __bad_pda_field 0
+Asim disabled interface function.
+is_override_interface: netif_device_attach 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: netif_running 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: kfree 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_register 0
+Asim disabled interface function.
+is_override_interface: usb_free_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_start_xmit 0
+is_override_interface: set_registers 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_resume 0
+is_override_interface: dev_driver_string 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: lockdep_init_map 0
+Asim disabled interface function.
+is_override_interface: __xchg 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: read_mii_word 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: logWrite 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: netif_device_detach 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __memcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_dec_workqueue 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_get_dev 0
+Asim disabled interface function.
+is_override_interface: write_bulk_callback 0
+is_override_interface: free_all_urbs 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pegasus_ioctl 0
+Interface function logSfiFrame: Annotation is kern
+Interface function strsep: Annotation is kern
+Interface function _spin_unlock_irqrestore: Annotation is kern
+Interface function mii_link_ok: Annotation is kern
+Interface function printk: Annotation is kern
+Interface function mii_ethtool_sset: Annotation is kern
+Interface function del_timer_sync: Annotation is kern
+Interface function remove_wait_queue: Annotation is kern
+Interface function _spin_lock_irqsave: Annotation is kern
+Interface function __create_workqueue_key: Annotation is kern
+Interface function kfree_skb: Annotation is kern
+Interface function netif_rx: Annotation is kern
+Interface function usb_put_dev: Annotation is kern
+Interface function __wake_up: Annotation is kern
+Interface function queue_delayed_work: Annotation is kern
+Interface function alloc_etherdev_mq: Annotation is kern
+Interface function register_netdev: Annotation is kern
+Interface function __builtin_expect: Annotation is kern
+Interface function _spin_lock: Annotation is kern
+Interface function netif_carrier_off: Annotation is kern
+Interface function strncpy: Annotation is kern
+Interface function schedule: Annotation is kern
+Interface function netpoll_trap: Annotation is kern
+Interface function eth_type_trans: Annotation is kern
+Interface function printk_ratelimit: Annotation is kern
+Interface function memset: Annotation is kern
+Interface function tasklet_kill: Annotation is kern
+Interface function usb_kill_urb: Annotation is kern
+Interface function usb_deregister: Annotation is kern
+Interface function snprintf: Annotation is kern
+Interface function mii_nway_restart: Annotation is kern
+Interface function pegasus_set_msglevel: Annotation is user
+Interface function __builtin_memcpy: Annotation is kern
+Interface function _spin_unlock: Annotation is kern
+Interface function __kmalloc: Annotation is kern
+Interface function usb_submit_urb: Annotation is kern
+Interface function usb_register_driver: Annotation is kern
+Interface function destroy_workqueue: Annotation is kern
+Interface function __tasklet_schedule: Annotation is kern
+Interface function __netif_schedule: Annotation is kern
+Interface function tasklet_init: Annotation is kern
+Interface function skb_put: Annotation is kern
+Interface function mii_ethtool_gset: Annotation is kern
+Interface function init_timer: Annotation is kern
+Interface function unregister_netdev: Annotation is kern
+Interface function __const_udelay: Annotation is kern
+Interface function pegasus_get_wol: Annotation is user
+Interface function dev_alloc_skb: Annotation is kern
+Interface function usb_alloc_urb: Annotation is kern
+Interface function logRead: Annotation is user
+Interface function free_netdev: Annotation is kern
+Interface function init_waitqueue_head: Annotation is kern
+Interface function usb_unlink_urb: Annotation is kern
+Interface function __spin_lock_init: Annotation is kern
+Interface function usb_reset_configuration: Annotation is kern
+Interface function add_wait_queue: Annotation is kern
+Interface function capable: Annotation is kern
+Interface function pegasus_get_msglevel: Annotation is user
+Interface function netif_carrier_on: Annotation is kern
+Interface function simple_strtoul: Annotation is kern
+Interface function pegasus_set_settings: Annotation is user
+Interface function netif_device_attach: Annotation is kern
+Interface function kfree: Annotation is kern
+Interface function usb_free_urb: Annotation is kern
+Interface function dev_driver_string: Annotation is kern
+Interface function lockdep_init_map: Annotation is kern
+Interface function logWrite: Annotation is user
+Interface function netif_device_detach: Annotation is kern
+Interface function __memcpy: Annotation is kern
+Interface function usb_get_dev: Annotation is kern
+Global to register: __this_module
+Global to register: driver_name
+Global to register: loopback
+Global to register: mii_mode
+Global to register: devid
+Global to register: usb_dev_id
+Global to register: pegasus_ids
+Global to register: __param_str_loopback
+Global to register: __param_str_mii_mode
+Global to register: __param_str_devid
+Global to register: msg_level
+Global to register: __param_str_msg_level
+Global to register: pegasus_netdev_ops
+Global to register: ops
+Global to register: __key___6
+Global to register: __key___7
+Global to register: __key___8
+Global to register: pegasus_netdev_ops
+Global to register: pegasus_driver
+Function/global mapping INIT_LIST_HEAD -> 1000
+Function/global mapping Nonstub_sk_buff_get_length -> 1001
+Function/global mapping __bad_pda_field -> 1002
+Function/global mapping __builtin_expect -> 1003
+Function/global mapping __builtin_memcpy -> 1004
+Function/global mapping __const_udelay -> 1005
+Function/global mapping __create_pipe -> 1006
+Function/global mapping __create_workqueue_key -> 1007
+Function/global mapping __key___6 -> 1008
+Function/global mapping __key___7 -> 1009
+Function/global mapping __key___8 -> 1010
+Function/global mapping __kmalloc -> 1011
+Function/global mapping __memcpy -> 1012
+Function/global mapping __netif_schedule -> 1013
+Function/global mapping __param_str_devid -> 1014
+Function/global mapping __param_str_loopback -> 1015
+Function/global mapping __param_str_mii_mode -> 1016
+Function/global mapping __param_str_msg_level -> 1017
+Function/global mapping __spin_lock_init -> 1018
+Function/global mapping __tasklet_schedule -> 1019
+Function/global mapping __this_module -> 1020
+Function/global mapping __wake_up -> 1021
+Function/global mapping __xchg -> 1022
+Function/global mapping _spin_lock -> 1023
+Function/global mapping _spin_lock_irqsave -> 1024
+Function/global mapping _spin_unlock -> 1025
+Function/global mapping _spin_unlock_irqrestore -> 1026
+Function/global mapping add_wait_queue -> 1027
+Function/global mapping alloc_etherdev_mq -> 1028
+Function/global mapping alloc_urbs -> 1029
+Function/global mapping cancel_delayed_work -> 1030
+Function/global mapping capable -> 1031
+Function/global mapping check_carrier -> 1032
+Function/global mapping cleanup_module -> 1033
+Function/global mapping clear_bit -> 1034
+Function/global mapping constant_test_bit -> 1035
+Function/global mapping ctrl_callback -> 1036
+Function/global mapping default_wake_function -> 1037
+Function/global mapping del_timer_sync -> 1038
+Function/global mapping destroy_workqueue -> 1039
+Function/global mapping dev_alloc_skb -> 1040
+Function/global mapping dev_driver_string -> 1041
+Function/global mapping dev_get_drvdata -> 1042
+Function/global mapping dev_name -> 1043
+Function/global mapping dev_set_drvdata -> 1044
+Function/global mapping devid -> 1045
+Function/global mapping disable_net_traffic -> 1046
+Function/global mapping driver_name -> 1047
+Function/global mapping enable_net_traffic -> 1048
+Function/global mapping eth_type_trans -> 1049
+Function/global mapping fill_skb_pool -> 1050
+Function/global mapping free_all_urbs -> 1051
+Function/global mapping free_netdev -> 1052
+Function/global mapping free_skb_pool -> 1053
+Function/global mapping get_current -> 1054
+Function/global mapping get_interrupt_interval -> 1055
+Function/global mapping get_node_id -> 1056
+Function/global mapping get_registers -> 1057
+Function/global mapping heapifyfree -> 1058
+Function/global mapping heapifymalloc -> 1059
+Function/global mapping init_module -> 1060
+Function/global mapping init_timer -> 1061
+Function/global mapping init_waitqueue_head -> 1062
+Function/global mapping intr_callback -> 1063
+Function/global mapping kfree -> 1064
+Function/global mapping kfree_skb -> 1065
+Function/global mapping kmalloc -> 1066
+Function/global mapping lockdep_init_map -> 1067
+Function/global mapping logAlloc -> 1068
+Function/global mapping logFree -> 1069
+Function/global mapping logRead -> 1070
+Function/global mapping logSfiFrame -> 1071
+Function/global mapping logStackFrame -> 1072
+Function/global mapping logStackVar -> 1073
+Function/global mapping logWrite -> 1074
+Function/global mapping loopback -> 1075
+Function/global mapping mdio_read -> 1076
+Function/global mapping mdio_write -> 1077
+Function/global mapping memset -> 1078
+Function/global mapping mii_ethtool_gset -> 1079
+Function/global mapping mii_ethtool_sset -> 1080
+Function/global mapping mii_link_ok -> 1081
+Function/global mapping mii_mode -> 1082
+Function/global mapping mii_nway_restart -> 1083
+Function/global mapping mii_phy_probe -> 1084
+Function/global mapping msg_level -> 1085
+Function/global mapping netdev_get_tx_queue -> 1086
+Function/global mapping netdev_priv -> 1087
+Function/global mapping netif_carrier_off -> 1088
+Function/global mapping netif_carrier_on -> 1089
+Function/global mapping netif_device_attach -> 1090
+Function/global mapping netif_device_detach -> 1091
+Function/global mapping netif_device_present -> 1092
+Function/global mapping netif_msg_init -> 1093
+Function/global mapping netif_running -> 1094
+Function/global mapping netif_rx -> 1095
+Function/global mapping netif_start_queue -> 1096
+Function/global mapping netif_stop_queue -> 1097
+Function/global mapping netif_tx_start_queue -> 1098
+Function/global mapping netif_tx_stop_queue -> 1099
+Function/global mapping netif_tx_wake_queue -> 1100
+Function/global mapping netif_wake_queue -> 1101
+Function/global mapping netpoll_trap -> 1102
+Function/global mapping ops -> 1103
+Function/global mapping param_get_bool -> 1104
+Function/global mapping param_get_charp -> 1105
+Function/global mapping param_get_int -> 1106
+Function/global mapping param_set_bool -> 1107
+Function/global mapping param_set_charp -> 1108
+Function/global mapping param_set_int -> 1109
+Function/global mapping parse_id -> 1110
+Function/global mapping pegasus_blacklisted -> 1111
+Function/global mapping pegasus_checkpoint -> 1112
+Function/global mapping pegasus_close -> 1113
+Function/global mapping pegasus_dec_workqueue -> 1114
+Function/global mapping pegasus_disconnect -> 1115
+Function/global mapping pegasus_driver -> 1116
+Function/global mapping pegasus_exit -> 1117
+Function/global mapping pegasus_get_drvinfo -> 1118
+Function/global mapping pegasus_get_link -> 1119
+Function/global mapping pegasus_get_msglevel -> 1120
+Function/global mapping pegasus_get_settings -> 1121
+Function/global mapping pegasus_get_wol -> 1122
+Function/global mapping pegasus_ids -> 1123
+Function/global mapping pegasus_init -> 1124
+Function/global mapping pegasus_ioctl -> 1125
+Function/global mapping pegasus_netdev_ops -> 1126
+Function/global mapping pegasus_netdev_stats -> 1127
+Function/global mapping pegasus_nway_reset -> 1128
+Function/global mapping pegasus_open -> 1129
+Function/global mapping pegasus_probe -> 1130
+Function/global mapping pegasus_reset_wol -> 1131
+Function/global mapping pegasus_restore -> 1132
+Function/global mapping pegasus_resume -> 1133
+Function/global mapping pegasus_set_msglevel -> 1134
+Function/global mapping pegasus_set_multicast -> 1135
+Function/global mapping pegasus_set_settings -> 1136
+Function/global mapping pegasus_set_wol -> 1137
+Function/global mapping pegasus_start_xmit -> 1138
+Function/global mapping pegasus_suspend -> 1139
+Function/global mapping pegasus_tx_timeout -> 1140
+Function/global mapping printk -> 1141
+Function/global mapping printk_ratelimit -> 1142
+Function/global mapping pull_skb -> 1143
+Function/global mapping queue_delayed_work -> 1144
+Function/global mapping read_bulk_callback -> 1145
+Function/global mapping read_eprom_word -> 1146
+Function/global mapping read_mii_word -> 1147
+Function/global mapping register_netdev -> 1148
+Function/global mapping remove_wait_queue -> 1149
+Function/global mapping reset_mac -> 1150
+Function/global mapping rx_fixup -> 1151
+Function/global mapping schedule -> 1152
+Function/global mapping set_bit -> 1153
+Function/global mapping set_carrier -> 1154
+Function/global mapping set_ethernet_addr -> 1155
+Function/global mapping set_register -> 1156
+Function/global mapping set_registers -> 1157
+Function/global mapping setup_pegasus_II -> 1158
+Function/global mapping simple_strtoul -> 1159
+Function/global mapping skb_copy_from_linear_data -> 1160
+Function/global mapping skb_put -> 1161
+Function/global mapping skb_reserve -> 1162
+Function/global mapping snprintf -> 1163
+Function/global mapping stackguard_get_ra -> 1164
+Function/global mapping stackguard_pop -> 1165
+Function/global mapping stackguard_push -> 1166
+Function/global mapping stackguard_set_ra -> 1167
+Function/global mapping stackguard_stack -> 1168
+Function/global mapping str_1013614738 -> 1169
+Function/global mapping str_1018892615 -> 1170
+Function/global mapping str_1027755513 -> 1171
+Function/global mapping str_1031835363 -> 1172
+Function/global mapping str_1034283264 -> 1173
+Function/global mapping str_1037626474 -> 1174
+Function/global mapping str_1040083091 -> 1175
+Function/global mapping str_1054827902 -> 1176
+Function/global mapping str_1056700627 -> 1177
+Function/global mapping str_1073140954 -> 1178
+Function/global mapping str_108249514 -> 1179
+Function/global mapping str_113530242 -> 1180
+Function/global mapping str_117673832 -> 1181
+Function/global mapping str_122240323 -> 1182
+Function/global mapping str_133439563 -> 1183
+Function/global mapping str_141382852 -> 1184
+Function/global mapping str_143435015 -> 1185
+Function/global mapping str_155882828 -> 1186
+Function/global mapping str_158874525 -> 1187
+Function/global mapping str_164647790 -> 1188
+Function/global mapping str_189967216 -> 1189
+Function/global mapping str_195784263 -> 1190
+Function/global mapping str_205178036 -> 1191
+Function/global mapping str_224279392 -> 1192
+Function/global mapping str_23139838 -> 1193
+Function/global mapping str_251338940 -> 1194
+Function/global mapping str_26049714 -> 1195
+Function/global mapping str_261621570 -> 1196
+Function/global mapping str_264210946 -> 1197
+Function/global mapping str_277539293 -> 1198
+Function/global mapping str_287529851 -> 1199
+Function/global mapping str_317036294 -> 1200
+Function/global mapping str_324648561 -> 1201
+Function/global mapping str_325828718 -> 1202
+Function/global mapping str_338387808 -> 1203
+Function/global mapping str_351769271 -> 1204
+Function/global mapping str_391880973 -> 1205
+Function/global mapping str_395624645 -> 1206
+Function/global mapping str_409734950 -> 1207
+Function/global mapping str_415276918 -> 1208
+Function/global mapping str_447771747 -> 1209
+Function/global mapping str_454419605 -> 1210
+Function/global mapping str_458961762 -> 1211
+Function/global mapping str_471824126 -> 1212
+Function/global mapping str_483928753 -> 1213
+Function/global mapping str_487462001 -> 1214
+Function/global mapping str_495115408 -> 1215
+Function/global mapping str_503487502 -> 1216
+Function/global mapping str_508169722 -> 1217
+Function/global mapping str_525031460 -> 1218
+Function/global mapping str_527131364 -> 1219
+Function/global mapping str_540048777 -> 1220
+Function/global mapping str_540491538 -> 1221
+Function/global mapping str_566213254 -> 1222
+Function/global mapping str_576350601 -> 1223
+Function/global mapping str_58 -> 1224
+Function/global mapping str_584878261 -> 1225
+Function/global mapping str_613212238 -> 1226
+Function/global mapping str_613477420 -> 1227
+Function/global mapping str_63005898 -> 1228
+Function/global mapping str_630648899 -> 1229
+Function/global mapping str_633726653 -> 1230
+Function/global mapping str_657073029 -> 1231
+Function/global mapping str_681059913 -> 1232
+Function/global mapping str_696858258 -> 1233
+Function/global mapping str_700085773 -> 1234
+Function/global mapping str_704416246 -> 1235
+Function/global mapping str_708942 -> 1236
+Function/global mapping str_709091236 -> 1237
+Function/global mapping str_711243237 -> 1238
+Function/global mapping str_732754884 -> 1239
+Function/global mapping str_73513782 -> 1240
+Function/global mapping str_743713966 -> 1241
+Function/global mapping str_744085427 -> 1242
+Function/global mapping str_744315259 -> 1243
+Function/global mapping str_753272689 -> 1244
+Function/global mapping str_759653456 -> 1245
+Function/global mapping str_771257567 -> 1246
+Function/global mapping str_773416475 -> 1247
+Function/global mapping str_781999019 -> 1248
+Function/global mapping str_803117500 -> 1249
+Function/global mapping str_821638051 -> 1250
+Function/global mapping str_822126901 -> 1251
+Function/global mapping str_825323517 -> 1252
+Function/global mapping str_829744228 -> 1253
+Function/global mapping str_829874220 -> 1254
+Function/global mapping str_833588407 -> 1255
+Function/global mapping str_845634 -> 1256
+Function/global mapping str_853562780 -> 1257
+Function/global mapping str_858287604 -> 1258
+Function/global mapping str_862455493 -> 1259
+Function/global mapping str_86491625 -> 1260
+Function/global mapping str_875381935 -> 1261
+Function/global mapping str_877734310 -> 1262
+Function/global mapping str_899831198 -> 1263
+Function/global mapping str_9060142 -> 1264
+Function/global mapping str_913601298 -> 1265
+Function/global mapping str_959617778 -> 1266
+Function/global mapping str_966202308 -> 1267
+Function/global mapping str_976328029 -> 1268
+Function/global mapping str_984228936 -> 1269
+Function/global mapping str_989893631 -> 1270
+Function/global mapping strncpy -> 1271
+Function/global mapping strsep -> 1272
+Function/global mapping tasklet_init -> 1273
+Function/global mapping tasklet_kill -> 1274
+Function/global mapping tasklet_schedule -> 1275
+Function/global mapping test_and_clear_bit -> 1276
+Function/global mapping test_and_set_bit -> 1277
+Function/global mapping unlink_all_urbs -> 1278
+Function/global mapping unregister_netdev -> 1279
+Function/global mapping update_eth_regs_async -> 1280
+Function/global mapping usb_alloc_urb -> 1281
+Function/global mapping usb_deregister -> 1282
+Function/global mapping usb_dev_id -> 1283
+Function/global mapping usb_fill_bulk_urb -> 1284
+Function/global mapping usb_fill_control_urb -> 1285
+Function/global mapping usb_fill_int_urb -> 1286
+Function/global mapping usb_free_urb -> 1287
+Function/global mapping usb_get_dev -> 1288
+Function/global mapping usb_get_intfdata -> 1289
+Function/global mapping usb_kill_urb -> 1290
+Function/global mapping usb_make_path -> 1291
+Function/global mapping usb_put_dev -> 1292
+Function/global mapping usb_register -> 1293
+Function/global mapping usb_register_driver -> 1294
+Function/global mapping usb_reset_configuration -> 1295
+Function/global mapping usb_set_intfdata -> 1296
+Function/global mapping usb_submit_urb -> 1297
+Function/global mapping usb_unlink_urb -> 1298
+Function/global mapping write_bulk_callback -> 1299
+Function/global mapping write_mii_word -> 1300
+execution_mode_map
+logSfiFrame      default_mode
+strsep      default_mode
+_spin_unlock_irqrestore      default_mode
+mii_link_ok      default_mode
+printk      default_mode
+mii_ethtool_sset      default_mode
+del_timer_sync      default_mode
+remove_wait_queue      default_mode
+_spin_lock_irqsave      default_mode
+__create_workqueue_key      default_mode
+kfree_skb      default_mode
+netif_rx      default_mode
+usb_put_dev      default_mode
+__wake_up      default_mode
+queue_delayed_work      default_mode
+alloc_etherdev_mq      default_mode
+register_netdev      default_mode
+__builtin_expect      default_mode
+_spin_lock      default_mode
+netif_carrier_off      default_mode
+strncpy      default_mode
+schedule      default_mode
+netpoll_trap      default_mode
+eth_type_trans      default_mode
+printk_ratelimit      default_mode
+memset      default_mode
+tasklet_kill      default_mode
+usb_kill_urb      default_mode
+usb_deregister      default_mode
+snprintf      default_mode
+mii_nway_restart      default_mode
+pegasus_set_msglevel      symexec_na
+__builtin_memcpy      default_mode
+_spin_unlock      default_mode
+__kmalloc      default_mode
+usb_submit_urb      default_mode
+usb_register_driver      default_mode
+destroy_workqueue      default_mode
+__tasklet_schedule      default_mode
+__netif_schedule      default_mode
+tasklet_init      default_mode
+skb_put      default_mode
+mii_ethtool_gset      default_mode
+init_timer      default_mode
+unregister_netdev      default_mode
+__const_udelay      default_mode
+pegasus_get_wol      symexec_na
+dev_alloc_skb      default_mode
+usb_alloc_urb      default_mode
+logRead      symexec_na
+free_netdev      default_mode
+init_waitqueue_head      default_mode
+usb_unlink_urb      default_mode
+__spin_lock_init      default_mode
+usb_reset_configuration      default_mode
+add_wait_queue      default_mode
+capable      default_mode
+pegasus_get_msglevel      symexec_na
+netif_carrier_on      default_mode
+simple_strtoul      default_mode
+pegasus_set_settings      symexec_na
+netif_device_attach      default_mode
+kfree      default_mode
+usb_free_urb      default_mode
+dev_driver_string      default_mode
+lockdep_init_map      default_mode
+logWrite      symexec_na
+netif_device_detach      default_mode
+__memcpy      default_mode
+usb_get_dev      default_mode
+Adding fundec for MARSH___STUB__pegasus_get_wol
+Adding fundec for DEMARSH_STUB__pegasus_get_wol
+Adding fundec for pegasus_get_wol
+Processing pegasus_get_wol.
+Deleting interface function odft_sfipegasus_get_wol
+Adding fundec for MARSH___STUB__pegasus_set_settings
+Adding fundec for DEMARSH_STUB__pegasus_set_settings
+Adding fundec for pegasus_set_settings
+Processing pegasus_set_settings.
+Deleting interface function odft_sfipegasus_set_settings
+Adding fundec for MARSH___STUB__pegasus_get_msglevel
+Adding fundec for DEMARSH_STUB__pegasus_get_msglevel
+Adding fundec for pegasus_get_msglevel
+Processing pegasus_get_msglevel.
+Deleting interface function odft_sfipegasus_get_msglevel
+Adding fundec for MARSH___STUB__pegasus_set_msglevel
+Adding fundec for DEMARSH_STUB__pegasus_set_msglevel
+Adding fundec for pegasus_set_msglevel
+Processing pegasus_set_msglevel.
+Deleting interface function odft_sfipegasus_set_msglevel
+asim get globals for logSfiFrame.
+asim get globals for strsep.
+asim get globals for _spin_unlock_irqrestore.
+asim get globals for mii_link_ok.
+asim get globals for printk.
+asim get globals for mii_ethtool_sset.
+asim get globals for del_timer_sync.
+asim get globals for remove_wait_queue.
+asim get globals for _spin_lock_irqsave.
+asim get globals for __create_workqueue_key.
+asim get globals for kfree_skb.
+asim get globals for netif_rx.
+asim get globals for usb_put_dev.
+asim get globals for __wake_up.
+asim get globals for queue_delayed_work.
+asim get globals for alloc_etherdev_mq.
+asim get globals for register_netdev.
+asim get globals for __builtin_expect.
+asim get globals for _spin_lock.
+asim get globals for netif_carrier_off.
+asim get globals for strncpy.
+asim get globals for schedule.
+asim get globals for netpoll_trap.
+asim get globals for eth_type_trans.
+asim get globals for printk_ratelimit.
+asim get globals for memset.
+asim get globals for tasklet_kill.
+asim get globals for usb_kill_urb.
+asim get globals for usb_deregister.
+asim get globals for snprintf.
+asim get globals for mii_nway_restart.
+asim get globals for __builtin_memcpy.
+asim get globals for _spin_unlock.
+asim get globals for __kmalloc.
+asim get globals for usb_submit_urb.
+asim get globals for usb_register_driver.
+asim get globals for destroy_workqueue.
+asim get globals for __tasklet_schedule.
+asim get globals for __netif_schedule.
+asim get globals for tasklet_init.
+asim get globals for skb_put.
+asim get globals for mii_ethtool_gset.
+asim get globals for init_timer.
+asim get globals for unregister_netdev.
+asim get globals for __const_udelay.
+asim get globals for dev_alloc_skb.
+asim get globals for usb_alloc_urb.
+asim get globals for logRead.
+asim get globals for free_netdev.
+asim get globals for init_waitqueue_head.
+asim get globals for usb_unlink_urb.
+asim get globals for __spin_lock_init.
+asim get globals for usb_reset_configuration.
+asim get globals for add_wait_queue.
+asim get globals for capable.
+asim get globals for netif_carrier_on.
+asim get globals for simple_strtoul.
+asim get globals for netif_device_attach.
+asim get globals for kfree.
+asim get globals for usb_free_urb.
+asim get globals for dev_driver_string.
+asim get globals for lockdep_init_map.
+asim get globals for logWrite.
+asim get globals for netif_device_detach.
+asim get globals for __memcpy.
+asim get globals for usb_get_dev.
+Removing unused temporaries
+ Produced kernel side of the split.
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  155 63
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct mii_if_info  -> dev]
+
+[CHECK]: CHECK: PREVIOUSLY FATAL ERROR Field driver_data of struct device  did not resolve in MARSH___STUB__pegasus_set_settings .   This means we have a void * that did not resolve to a type.   Are you using this variable anywhere?  No marshaling code is generated for it.
+[CHECK]: Assuming standard scalar pointer for func
+ Function: __MARSH_WRAP__logSfiFrame
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for *arg0
+ Function: __MARSH_WRAP__strsep
+
+Exp type: arg0
+No offset
+[CHECK]: Assuming standard scalar pointer for arg1
+ Function: __MARSH_WRAP__strsep
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for _retval_
+ Function: __MARSH_WRAP__strsep
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for fmt
+ Function: __MARSH_WRAP__printk
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for *skb
+ Function: __MARSH_WRAP__kfree_skb
+Structure name: sk_buff, Field name: data
+Exp type: skb
+No offset
+[CHECK]: Assuming standard scalar pointer for skb->data
+ Function: __MARSH_WRAP__kfree_skb
+
+Exp type: skb
+Structure name: sk_buff, Field name: data
+[CHECK]: Assuming standard scalar pointer for *skb
+ Function: __MARSH_WRAP__netif_rx
+Structure name: sk_buff, Field name: data
+Exp type: skb
+No offset
+[CHECK]: Assuming standard scalar pointer for skb->data
+ Function: __MARSH_WRAP__netif_rx
+
+Exp type: skb
+Structure name: sk_buff, Field name: data
+[CHECK]: Assuming standard scalar pointer for *(dev->bus)
+ Function: __MARSH_WRAP__usb_put_dev
+Structure name: usb_bus, Field name: bus_name
+Exp type: dev->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for (dev->bus)->bus_name
+ Function: __MARSH_WRAP__usb_put_dev
+
+Exp type: dev->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Formal key of __MARSH_WRAP____wake_up does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP____wake_up key Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for arg0
+ Function: __MARSH_WRAP__strncpy
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for arg1
+ Function: __MARSH_WRAP__strncpy
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for _retval_
+ Function: __MARSH_WRAP__strncpy
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for *skb
+ Function: __MARSH_WRAP__eth_type_trans
+Structure name: sk_buff, Field name: data
+Exp type: skb
+No offset
+[CHECK]: Assuming standard scalar pointer for skb->data
+ Function: __MARSH_WRAP__eth_type_trans
+
+Exp type: skb
+Structure name: sk_buff, Field name: data
+[CHECK]: Formal s of __MARSH_WRAP__memset does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP__memset s Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal _retval_ of __MARSH_WRAP__memset does not resolve!
+[CHECK]: Assuming standard scalar pointer for *((urb->dev)->bus)
+ Function: __MARSH_WRAP__usb_kill_urb
+Structure name: usb_bus, Field name: bus_name
+Exp type: (urb->dev)->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for ((urb->dev)->bus)->bus_name
+ Function: __MARSH_WRAP__usb_kill_urb
+
+Exp type: (urb->dev)->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for *urb
+ Function: __MARSH_WRAP__usb_kill_urb
+Structure name: urb, Field name: setup_packet
+Exp type: urb
+No offset
+[CHECK]: Assuming standard scalar pointer for urb->setup_packet
+ Function: __MARSH_WRAP__usb_kill_urb
+
+Exp type: urb
+Structure name: urb, Field name: setup_packet
+[CHECK]: Assuming standard scalar pointer for buf
+ Function: __MARSH_WRAP__snprintf
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for fmt
+ Function: __MARSH_WRAP__snprintf
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal arg0 of __MARSH_WRAP____builtin_memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP____builtin_memcpy arg0 Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal arg1 of __MARSH_WRAP____builtin_memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP____builtin_memcpy arg1 Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal _retval_ of __MARSH_WRAP____builtin_memcpy does not resolve!
+[CHECK]: Formal _retval_ of __MARSH_WRAP____kmalloc does not resolve!
+[CHECK]: Assuming standard scalar pointer for *((urb->dev)->bus)
+ Function: __MARSH_WRAP__usb_submit_urb
+Structure name: usb_bus, Field name: bus_name
+Exp type: (urb->dev)->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for ((urb->dev)->bus)->bus_name
+ Function: __MARSH_WRAP__usb_submit_urb
+
+Exp type: (urb->dev)->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for *urb
+ Function: __MARSH_WRAP__usb_submit_urb
+Structure name: urb, Field name: setup_packet
+Exp type: urb
+No offset
+[CHECK]: Assuming standard scalar pointer for urb->setup_packet
+ Function: __MARSH_WRAP__usb_submit_urb
+
+Exp type: urb
+Structure name: urb, Field name: setup_packet
+[CHECK]: Assuming standard scalar pointer for *skb
+ Function: __MARSH_WRAP__skb_put
+Structure name: sk_buff, Field name: data
+Exp type: skb
+No offset
+[CHECK]: Assuming standard scalar pointer for skb->data
+ Function: __MARSH_WRAP__skb_put
+
+Exp type: skb
+Structure name: sk_buff, Field name: data
+[CHECK]: Assuming standard scalar pointer for _retval_
+ Function: __MARSH_WRAP__skb_put
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for *_retval_
+ Function: __MARSH_WRAP__dev_alloc_skb
+Structure name: sk_buff, Field name: data
+Exp type: _retval_
+No offset
+[CHECK]: Assuming standard scalar pointer for _retval_->data
+ Function: __MARSH_WRAP__dev_alloc_skb
+
+Exp type: _retval_
+Structure name: sk_buff, Field name: data
+[CHECK]: Assuming standard scalar pointer for *((_retval_->dev)->bus)
+ Function: __MARSH_WRAP__usb_alloc_urb
+Structure name: usb_bus, Field name: bus_name
+Exp type: (_retval_->dev)->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for ((_retval_->dev)->bus)->bus_name
+ Function: __MARSH_WRAP__usb_alloc_urb
+
+Exp type: (_retval_->dev)->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for *_retval_
+ Function: __MARSH_WRAP__usb_alloc_urb
+Structure name: urb, Field name: setup_packet
+Exp type: _retval_
+No offset
+[CHECK]: Assuming standard scalar pointer for _retval_->setup_packet
+ Function: __MARSH_WRAP__usb_alloc_urb
+
+Exp type: _retval_
+Structure name: urb, Field name: setup_packet
+[CHECK]: Formal addr of __MARSH_WRAP__logRead does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP__logRead addr Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for what
+ Function: __MARSH_WRAP__logRead
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for where
+ Function: __MARSH_WRAP__logRead
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for file
+ Function: __MARSH_WRAP__logRead
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for *((urb->dev)->bus)
+ Function: __MARSH_WRAP__usb_unlink_urb
+Structure name: usb_bus, Field name: bus_name
+Exp type: (urb->dev)->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for ((urb->dev)->bus)->bus_name
+ Function: __MARSH_WRAP__usb_unlink_urb
+
+Exp type: (urb->dev)->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for *urb
+ Function: __MARSH_WRAP__usb_unlink_urb
+Structure name: urb, Field name: setup_packet
+Exp type: urb
+No offset
+[CHECK]: Assuming standard scalar pointer for urb->setup_packet
+ Function: __MARSH_WRAP__usb_unlink_urb
+
+Exp type: urb
+Structure name: urb, Field name: setup_packet
+[CHECK]: Assuming standard scalar pointer for name
+ Function: __MARSH_WRAP____spin_lock_init
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for *(dev->bus)
+ Function: __MARSH_WRAP__usb_reset_configuration
+Structure name: usb_bus, Field name: bus_name
+Exp type: dev->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for (dev->bus)->bus_name
+ Function: __MARSH_WRAP__usb_reset_configuration
+
+Exp type: dev->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for arg0
+ Function: __MARSH_WRAP__simple_strtoul
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for *arg1
+ Function: __MARSH_WRAP__simple_strtoul
+
+Exp type: arg1
+No offset
+[CHECK]: Formal arg0 of __MARSH_WRAP__kfree does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP__kfree arg0 Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for *((urb->dev)->bus)
+ Function: __MARSH_WRAP__usb_free_urb
+Structure name: usb_bus, Field name: bus_name
+Exp type: (urb->dev)->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for ((urb->dev)->bus)->bus_name
+ Function: __MARSH_WRAP__usb_free_urb
+
+Exp type: (urb->dev)->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for *urb
+ Function: __MARSH_WRAP__usb_free_urb
+Structure name: urb, Field name: setup_packet
+Exp type: urb
+No offset
+[CHECK]: Assuming standard scalar pointer for urb->setup_packet
+ Function: __MARSH_WRAP__usb_free_urb
+
+Exp type: urb
+Structure name: urb, Field name: setup_packet
+[CHECK]: Assuming standard scalar pointer for _retval_
+ Function: __MARSH_WRAP__dev_driver_string
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: __MARSH_WRAP__lockdep_init_map
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal addr of __MARSH_WRAP__logWrite does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP__logWrite addr Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for what
+ Function: __MARSH_WRAP__logWrite
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for where
+ Function: __MARSH_WRAP__logWrite
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for file
+ Function: __MARSH_WRAP__logWrite
+
+Variable type: char *
+No offset
+[CHECK]: Formal to of __MARSH_WRAP____memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP____memcpy to Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal from of __MARSH_WRAP____memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP____memcpy from Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal _retval_ of __MARSH_WRAP____memcpy does not resolve!
+[CHECK]: Assuming standard scalar pointer for *(dev->bus)
+ Function: __MARSH_WRAP__usb_get_dev
+Structure name: usb_bus, Field name: bus_name
+Exp type: dev->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for (dev->bus)->bus_name
+ Function: __MARSH_WRAP__usb_get_dev
+
+Exp type: dev->bus
+Structure name: usb_bus, Field name: bus_name
+[CHECK]: Assuming standard scalar pointer for *(_retval_->bus)
+ Function: __MARSH_WRAP__usb_get_dev
+Structure name: usb_bus, Field name: bus_name
+Exp type: _retval_->bus
+No offset
+[CHECK]: Assuming standard scalar pointer for (_retval_->bus)->bus_name
+ Function: __MARSH_WRAP__usb_get_dev
+
+Exp type: _retval_->bus
+Structure name: usb_bus, Field name: bus_name
+=======================================================
+#### Total execution time: 2.891560
+printing file ./pegasus.merged.kernel.cil.c
+****** ISOLATING :::: pegasus_get_wol
+                     ::::::::::odftPerforimg heapify pegasus_get_wol****** ISOLATING :::: pegasus_set_settings
+                     ::::::::::odftPerforimg heapify pegasus_set_settings****** ISOLATING :::: pegasus_get_msglevel
+                     ::::::::::odftPerforimg heapify pegasus_get_msglevel****** ISOLATING :::: pegasus_set_msglevel
+                     ::::::::::odftPerforimg heapify pegasus_set_msglevelTimings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=2895.37MB, max=42.66MB, minor=2894.34MB, major=60.06MB, promoted=59.03MB
+    minor collections=11052  major collections=16 compactions=0
+Preprocessing ./pegasus.merged.kernel.cil.c
+gcc -D_GNUCC -E ./pegasus.merged.kernel.cil.c -o ./pegasus.merged.kernel.cil.i

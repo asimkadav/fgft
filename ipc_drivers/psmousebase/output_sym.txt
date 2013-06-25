@@ -1,0 +1,2290 @@
+Preprocessing psmousebase.merged.sym.c
+gcc -D_GNUCC -E -DCIL=1 psmousebase.merged.sym.c -o ./psmousebase.merged.sym.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./psmousebase.merged.sym.cil.c --verbose --commPrintLnSparse --carbflipcount 100000 --carbfaulttype missingassignment --docarb --sfireads --sfiwrites --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons true --dowhat normal-user psmousebase.all_annots.txt psmousebase.entry_points.txt ./psmousebase.merged.sym.i
+**Got flip 100000 (in carb).
+FAULTINJECTION**Got
+            missingassignment. (in carb)
+Frontc is parsing ./psmousebase.merged.sym.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: psmouse_set_resolution
+                     ::::::::::odftPerforimg heapify psmouse_set_resolutionscanning globals(1)...
+****** ISOLATING :::: psmouse_set_rate
+                     ::::::::::odftPerforimg heapify psmouse_set_ratescanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: psmouse_show_int_attr
+                     ::::::::::odftPerforimg heapify psmouse_show_int_attrscanning globals(1)...
+****** ISOLATING :::: psmouse_set_int_attr
+                     ::::::::::odftPerforimg heapify psmouse_set_int_attrscanning globals(1)...
+****** ISOLATING :::: psmouse_attr_show_protocol
+                     ::::::::::odftPerforimg heapify psmouse_attr_show_protocolscanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: psmouse_set_maxproto
+                     ::::::::::odftPerforimg heapify psmouse_set_maxprotoscanning globals(1)...
+****** ISOLATING :::: psmouse_get_maxproto
+                     ::::::::::odftPerforimg heapify psmouse_get_maxprotoscanning globals(2)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+No bugs found.
+About to call fault injection with missingassignment. 
+FAULTINJECTIONPerforming FAULT INJECTION ..
+FAULTINJECTION PASS for fVisitor psmouse_set_resolution.
+FAULTINJECTION PASS for fVisitor psmouse_set_rate.
+FAULTINJECTION PASS for fVisitor psmouse_show_int_attr.
+FAULTINJECTION PASS for fVisitor psmouse_set_int_attr.
+FAULTINJECTION PASS for fVisitor psmouse_attr_show_protocol.
+FAULTINJECTION PASS for fVisitor psmouse_set_maxproto.
+FAULTINJECTION PASS for fVisitor psmouse_get_maxproto.
+About to call sfi with kernel parameter 0...
+Performing sfi wth gen_kern 0..
+Activating sfi for fn:psmouse_set_resolution.
+Activating sfi for fn:psmouse_set_rate.
+Activating sfi for fn:psmouse_show_int_attr.
+Activating sfi for fn:psmouse_set_int_attr.
+Activating sfi for fn:psmouse_attr_show_protocol.
+Activating sfi for fn:psmouse_set_maxproto.
+Activating sfi for fn:psmouse_get_maxproto.
+Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating user-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+currently analyzing: set_bit
+currently analyzing: INIT_LIST_HEAD
+currently analyzing: kmalloc
+currently analyzing: kzalloc
+currently analyzing: dev_get_drvdata
+currently analyzing: dev_set_drvdata
+currently analyzing: input_report_key
+currently analyzing: input_report_rel
+currently analyzing: input_sync
+currently analyzing: serio_register_driver
+currently analyzing: serio_get_drvdata
+currently analyzing: serio_set_drvdata
+currently analyzing: serio_pause_rx
+currently analyzing: serio_continue_rx
+currently analyzing: serio_pin_driver
+currently analyzing: serio_pin_driver_uninterruptible
+currently analyzing: serio_unpin_driver
+currently analyzing: MICRODRIVERS__DUMMY
+currently analyzing: MICRODRIVERS__MODIF_dev_driver_string
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_write_config_word
+currently analyzing: MICRODRIVERS__MODIF__spin_lock
+currently analyzing: MICRODRIVERS__MODIF___spin_lock_init
+currently analyzing: MICRODRIVERS__MODIF__spin_lock_irq
+currently analyzing: MICRODRIVERS__MODIF__spin_lock_irqsave
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock_irq
+currently analyzing: MICRODRIVERS__MODIF__spin_unlock_irqrestore
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_read_config_byte
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_read_config_word
+currently analyzing: MICRODRIVERS__MODIF_pci_clear_mwi
+currently analyzing: MICRODRIVERS__MODIF_request_irq
+currently analyzing: MICRODRIVERS__MODIF_free_irq
+currently analyzing: MICRODRIVERS__MODIF_ps2_command
+currently analyzing: MICRODRIVERS__MODIF_init_timer
+currently analyzing: MICRODRIVERS__MODIF___create_workqueue
+currently analyzing: MICRODRIVERS__MODIF_flush_workqueue
+currently analyzing: MICRODRIVERS__MODIF_destroy_workqueue
+currently analyzing: MICRODRIVERS__MODIF_ps2_cmd_aborted
+currently analyzing: MICRODRIVERS__MODIF_ps2_drain
+currently analyzing: MICRODRIVERS__MODIF_ps2_handle_ack
+currently analyzing: MICRODRIVERS__MODIF_ps2_handle_response
+currently analyzing: MICRODRIVERS__MODIF_ps2_init
+currently analyzing: MICRODRIVERS__MODIF_ps2_sendbyte
+currently analyzing: hgpk_detect
+currently analyzing: hgpk_init
+currently analyzing: touchkit_ps2_detect
+currently analyzing: elantech_init
+currently analyzing: psmouse_process_byte
+currently analyzing: psmouse_queue_work
+currently analyzing: __psmouse_set_state
+currently analyzing: psmouse_set_state
+currently analyzing: psmouse_handle_byte
+currently analyzing: psmouse_interrupt
+currently analyzing: psmouse_sliced_command
+currently analyzing: psmouse_reset
+currently analyzing: genius_detect
+currently analyzing: intellimouse_detect
+currently analyzing: im_explorer_detect
+currently analyzing: thinking_detect
+currently analyzing: ps2bare_detect
+currently analyzing: cortron_detect
+currently analyzing: psmouse_extensions
+currently analyzing: psmouse_protocol_by_type
+currently analyzing: psmouse_protocol_by_name
+currently analyzing: psmouse_probe
+currently analyzing: psmouse_set_resolution
+currently analyzing: psmouse_set_rate
+currently analyzing: psmouse_initialize
+currently analyzing: psmouse_activate
+currently analyzing: psmouse_deactivate
+currently analyzing: psmouse_poll
+currently analyzing: psmouse_resync
+currently analyzing: psmouse_cleanup
+currently analyzing: psmousebase_checkpoint
+currently analyzing: psmousebase_restore
+currently analyzing: psmouse_disconnect
+currently analyzing: psmouse_switch_protocol
+currently analyzing: psmouse_connect
+currently analyzing: psmouse_reconnect
+currently analyzing: psmouse_attr_show_helper
+currently analyzing: psmouse_attr_set_helper
+currently analyzing: psmouse_show_int_attr
+currently analyzing: psmouse_set_int_attr
+currently analyzing: psmouse_attr_show_protocol
+currently analyzing: psmouse_attr_set_protocol
+currently analyzing: psmouse_attr_set_rate
+currently analyzing: psmouse_attr_set_resolution
+currently analyzing: psmouse_set_maxproto
+currently analyzing: psmouse_get_maxproto
+currently analyzing: psmouse_init
+currently analyzing: psmouse_exit
+currently analyzing: init_module
+currently analyzing: cleanup_module
+currently analyzing: input_report_abs
+currently analyzing: input_set_abs_params
+currently analyzing: alps_process_packet
+currently analyzing: alps_process_byte
+currently analyzing: alps_get_model
+currently analyzing: alps_passthrough_mode
+currently analyzing: alps_absolute_mode
+currently analyzing: alps_get_status
+currently analyzing: alps_tap_mode
+currently analyzing: alps_poll
+currently analyzing: alps_hw_init
+currently analyzing: alps_reconnect
+currently analyzing: alps_disconnect
+currently analyzing: alps_init
+currently analyzing: alps_detect
+currently analyzing: clear_bit
+currently analyzing: serio_register_port
+currently analyzing: synaptics_mode_cmd
+currently analyzing: synaptics_detect
+currently analyzing: synaptics_reset
+currently analyzing: synaptics_send_cmd
+currently analyzing: synaptics_model_id
+currently analyzing: synaptics_capability
+currently analyzing: synaptics_identify
+currently analyzing: synaptics_query_hardware
+currently analyzing: synaptics_set_absolute_mode
+currently analyzing: synaptics_set_rate
+currently analyzing: synaptics_pt_write
+currently analyzing: synaptics_is_pt_packet
+currently analyzing: synaptics_pass_pt_packet
+currently analyzing: synaptics_pt_activate
+currently analyzing: synaptics_pt_create
+currently analyzing: synaptics_parse_hw_state
+currently analyzing: synaptics_process_packet
+currently analyzing: synaptics_validate_byte
+currently analyzing: synaptics_detect_pkt_type
+currently analyzing: synaptics_process_byte
+currently analyzing: set_input_params
+currently analyzing: synaptics_disconnect
+currently analyzing: synaptics_reconnect
+currently analyzing: synaptics_init
+currently analyzing: lifebook_set_serio_phys
+currently analyzing: lifebook_set_6byte_proto
+currently analyzing: lifebook_process_byte
+currently analyzing: lifebook_absolute_mode
+currently analyzing: lifebook_relative_mode
+currently analyzing: lifebook_set_resolution
+currently analyzing: lifebook_disconnect
+currently analyzing: lifebook_detect
+currently analyzing: lifebook_create_relative_device
+currently analyzing: lifebook_init
+currently analyzing: ps2pp_process_byte
+currently analyzing: ps2pp_cmd
+currently analyzing: ps2pp_set_smartscroll
+currently analyzing: ps2pp_attr_show_smartscroll
+currently analyzing: ps2pp_attr_set_smartscroll
+currently analyzing: ps2pp_set_resolution
+currently analyzing: ps2pp_disconnect
+currently analyzing: get_model_info
+currently analyzing: ps2pp_set_model_properties
+currently analyzing: ps2pp_init
+currently analyzing: trackpoint_read
+currently analyzing: trackpoint_write
+currently analyzing: trackpoint_toggle_bit
+currently analyzing: trackpoint_show_int_attr
+currently analyzing: trackpoint_set_int_attr
+currently analyzing: trackpoint_set_bit_attr
+currently analyzing: trackpoint_start_protocol
+currently analyzing: trackpoint_sync
+currently analyzing: trackpoint_defaults
+currently analyzing: trackpoint_disconnect
+currently analyzing: trackpoint_reconnect
+currently analyzing: trackpoint_detect
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+ modif: Using supplied modif for internal kernel fn:  ps2_command
+ modif: Using supplied modif for internal kernel fn:  __memcpy
+ modif: Using conservative analysis for kernel fn:  serio_reconnect
+ modif: Using supplied modif for internal kernel fn:  printk
+ modif: Using conservative analysis for kernel fn:  queue_delayed_work
+ modif: Using supplied modif for internal kernel fn:  __builtin_expect
+ modif: Using supplied modif for internal kernel fn:  ps2_cmd_aborted
+ modif: Using supplied modif for internal kernel fn:  ps2_handle_ack
+ modif: Using supplied modif for internal kernel fn:  ps2_handle_response
+ modif: Using conservative analysis for kernel fn:  input_free_device
+ modif: Using conservative analysis for kernel fn:  input_register_device
+ modif: Using conservative analysis for kernel fn:  input_allocate_device
+ modif: Using supplied modif for internal kernel fn:  snprintf
+ modif: Using supplied modif for internal kernel fn:  kfree
+ modif: Using supplied modif for internal kernel fn:  __kmalloc
+ modif: Using supplied modif for internal kernel fn:  logWrite
+ modif: Using supplied modif for internal kernel fn:  sprintf
+ modif: Using conservative analysis for kernel fn:  lockdep_init_map
+ modif: Using supplied modif for internal kernel fn:  strcmp
+ modif: Using conservative analysis for kernel fn:  dmi_check_system
+ modif: Using conservative analysis for kernel fn:  sysfs_create_group
+ modif: Using conservative analysis for kernel fn:  sysfs_remove_group
+ modif: Using conservative analysis for kernel fn:  __serio_register_driver
+ modif: Using supplied modif for internal kernel fn:  strlcpy
+ modif: Using conservative analysis for kernel fn:  __serio_register_port
+ modif: Using conservative analysis for kernel fn:  input_event
+ modif: Using supplied modif for internal kernel fn:  logRead
+ modif: Using supplied modif for internal kernel fn:  logStackVar
+ modif: Using supplied modif for internal kernel fn:  logStackFrame
+ modif: Using supplied modif for internal kernel fn:  _spin_unlock_irq
+ modif: Using supplied modif for internal kernel fn:  _spin_lock_irq
+ modif: Using supplied modif for internal kernel fn:  strict_strtoul
+ modif: Using conservative analysis for kernel fn:  mutex_unlock
+ modif: Using conservative analysis for kernel fn:  mutex_lock_nested
+ modif: Using conservative analysis for kernel fn:  odft_is_self_locked
+ modif: Using conservative analysis for kernel fn:  device_create_file
+ modif: Using supplied modif for internal kernel fn:  memcmp
+ modif: Using supplied modif for internal kernel fn:  ps2_drain
+ modif: Using conservative analysis for kernel fn:  serio_unregister_child_port
+ modif: Using supplied modif for internal kernel fn:  strncmp
+ modif: Using supplied modif for internal kernel fn:  warn_slowpath
+ modif: Using conservative analysis for kernel fn:  input_unregister_device
+ modif: Using supplied modif for internal kernel fn:  memset
+ modif: Using conservative analysis for kernel fn:  serio_interrupt
+ modif: Using supplied modif for internal kernel fn:  ps2_sendbyte
+ modif: Using supplied modif for internal kernel fn:  msleep
+ modif: Using conservative analysis for kernel fn:  device_remove_file
+ modif: Using supplied modif for internal kernel fn:  strlen
+ modif: Using supplied modif for internal kernel fn:  destroy_workqueue
+ modif: Using conservative analysis for kernel fn:  __create_workqueue_key
+ modif: Using supplied modif for internal kernel fn:  init_timer
+ modif: Using supplied modif for internal kernel fn:  ps2_init
+ modif: Using conservative analysis for kernel fn:  serio_open
+ modif: Using conservative analysis for kernel fn:  serio_close
+ modif: Using supplied modif for internal kernel fn:  __builtin_memcpy
+ modif: Using supplied modif for internal kernel fn:  flush_workqueue
+ modif: Using conservative analysis for kernel fn:  mutex_lock_interruptible_nested
+ modif: Using conservative analysis for kernel fn:  serio_unregister_driver
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  188 68
+[CHECK]: recursive annotation:  [struct list_head  -> next]
+
+[CHECK]: recursive annotation:  [struct list_head  -> prev]
+
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct psmouse  -> dev] [struct input_dev  -> dev]
+
+[CHECK]: recursive annotation:  [struct serio  -> dev] [struct psmouse  -> ps2dev] [struct ps2dev  -> serio]
+
+=======================================================
+** Reading entry points from file psmousebase.entry_points.txt **
+psmouse_interrupt
+init_module
+cleanup_module
+** Reading file psmousebase.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+is_override_interface: psmouse_get_maxproto 0
+is_override_interface: alps_absolute_mode 0
+Asim disabled interface function.
+is_override_interface: serio_continue_rx 0
+Asim disabled interface function.
+is_override_interface: psmouse_set_rate 0
+is_override_interface: synaptics_send_cmd 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_set_rate 0
+is_override_interface: serio_pause_rx 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_ps2_cmd_aborted 0
+is_override_interface: synaptics_reset 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_attr_show_helper 0
+is_override_interface: serio_close 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: lifebook_disconnect 0
+is_override_interface: input_report_rel 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: ps2_handle_response 0
+Asim disabled interface function.
+is_override_interface: intellimouse_detect 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: im_explorer_detect 0
+Asim disabled interface function.
+is_override_interface: synaptics_detect 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: kzalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_process_byte 0
+is_override_interface: MICRODRIVERS__DUMMY 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_init 0
+Asim disabled interface function.
+is_override_interface: psmouse_attr_set_helper 0
+is_override_interface: synaptics_identify 0
+Asim disabled interface function.
+is_override_interface: serio_open 0
+Asim disabled interface function.
+is_override_interface: strcmp 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF__spin_lock_irq 0
+is_override_interface: printk 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dmi_check_system 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_ps2_sendbyte 0
+is_override_interface: MICRODRIVERS__MODIF__spin_lock_irqsave 0
+is_override_interface: serio_pin_driver_uninterruptible 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_ps2_drain 0
+is_override_interface: synaptics_model_id 0
+Asim disabled interface function.
+is_override_interface: psmouse_process_byte 0
+is_override_interface: psmouse_protocol_by_name 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_set_int_attr 0
+is_override_interface: alps_hw_init 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_model_info 0
+Asim disabled interface function.
+is_override_interface: logStackVar 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmousebase_restore 0
+Asim disabled interface function.
+is_override_interface: kmalloc 0
+Asim disabled interface function.
+is_override_interface: _spin_lock_irq 0
+Asim disabled interface function.
+is_override_interface: __create_workqueue_key 0
+Asim disabled interface function.
+is_override_interface: serio_register_port 0
+Asim disabled interface function.
+is_override_interface: synaptics_set_absolute_mode 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: trackpoint_detect 0
+Asim disabled interface function.
+is_override_interface: psmouse_attr_set_resolution 0
+is_override_interface: trackpoint_defaults 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_ps2_command 0
+is_override_interface: flush_workqueue 0
+Asim disabled interface function.
+is_override_interface: cleanup_module 0
+is_override_interface: ps2pp_set_smartscroll 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_poll 0
+is_override_interface: dev_get_drvdata 0
+Asim disabled interface function.
+is_override_interface: psmouse_queue_work 0
+Asim disabled interface function.
+is_override_interface: lifebook_init 0
+Asim disabled interface function.
+is_override_interface: serio_unregister_driver 0
+Asim disabled interface function.
+is_override_interface: alps_tap_mode 0
+Asim disabled interface function.
+is_override_interface: trackpoint_start_protocol 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: serio_unpin_driver 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: ps2pp_attr_show_smartscroll 0
+is_override_interface: thinking_detect 0
+Asim disabled interface function.
+is_override_interface: ps2pp_attr_set_smartscroll 0
+is_override_interface: serio_get_drvdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: msleep 0
+Asim disabled interface function.
+is_override_interface: queue_delayed_work 0
+Asim disabled interface function.
+is_override_interface: synaptics_mode_cmd 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: lifebook_set_serio_phys 0
+is_override_interface: ps2_cmd_aborted 0
+Asim disabled interface function.
+is_override_interface: __builtin_expect 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_exit 0
+Asim disabled interface function.
+is_override_interface: lifebook_absolute_mode 0
+Asim disabled interface function.
+is_override_interface: ps2pp_cmd 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: ps2pp_set_model_properties 0
+Asim disabled interface function.
+is_override_interface: trackpoint_set_int_attr 0
+is_override_interface: synaptics_process_byte 0
+is_override_interface: ps2pp_disconnect 0
+is_override_interface: device_create_file 0
+Asim disabled interface function.
+is_override_interface: serio_pin_driver 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mutex_lock_interruptible_nested 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_ps2_init 0
+is_override_interface: alps_process_packet 0
+Asim disabled interface function.
+is_override_interface: memset 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_read_config_byte 0
+is_override_interface: touchkit_ps2_detect 0
+Asim disabled interface function.
+is_override_interface: psmouse_handle_byte 0
+Asim disabled interface function.
+is_override_interface: psmouse_activate 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_disconnect 0
+is_override_interface: strict_strtoul 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: trackpoint_read 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_flush_workqueue 0
+is_override_interface: psmouse_cleanup 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_write_config_word 0
+is_override_interface: mutex_lock_nested 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_set_resolution 0
+Asim disabled interface function.
+is_override_interface: ps2_sendbyte 0
+Asim disabled interface function.
+is_override_interface: lifebook_set_resolution 0
+is_override_interface: _spin_unlock_irq 0
+Asim disabled interface function.
+is_override_interface: clear_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___spin_lock_init 0
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_read_config_word 0
+is_override_interface: snprintf 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: input_allocate_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_get_model 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: memcmp 0
+Asim disabled interface function.
+is_override_interface: synaptics_pt_activate 0
+is_override_interface: MICRODRIVERS__MODIF___create_workqueue 0
+is_override_interface: warn_slowpath 0
+Asim disabled interface function.
+is_override_interface: alps_get_status 0
+Asim disabled interface function.
+is_override_interface: __builtin_memcpy 0
+Asim disabled interface function.
+is_override_interface: trackpoint_disconnect 0
+is_override_interface: logStackFrame 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_module 0
+is_override_interface: ps2bare_detect 0
+Asim disabled interface function.
+is_override_interface: psmouse_probe 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: input_free_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: odft_is_self_locked 0
+Asim disabled interface function.
+is_override_interface: psmouse_switch_protocol 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_passthrough_mode 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: ps2_drain 0
+Asim disabled interface function.
+is_override_interface: synaptics_parse_hw_state 0
+Asim disabled interface function.
+is_override_interface: __kmalloc 0
+Asim disabled interface function.
+is_override_interface: synaptics_init 0
+Asim disabled interface function.
+is_override_interface: trackpoint_set_bit_attr 0
+is_override_interface: input_report_key 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_connect 0
+is_override_interface: ps2_init 0
+Asim disabled interface function.
+is_override_interface: input_unregister_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: strlcpy 0
+Asim disabled interface function.
+is_override_interface: mutex_unlock 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_detect 0
+Asim disabled interface function.
+is_override_interface: destroy_workqueue 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_attr_show_protocol 0
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock_irq 0
+is_override_interface: MICRODRIVERS__MODIF_request_irq 0
+is_override_interface: init_timer 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_init_timer 0
+is_override_interface: strlen 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock_irqrestore 0
+is_override_interface: hgpk_init 0
+Asim disabled interface function.
+is_override_interface: ps2pp_init 0
+Asim disabled interface function.
+is_override_interface: psmouse_init 0
+Asim disabled interface function.
+is_override_interface: logRead 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_extensions 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_ps2_handle_ack 0
+is_override_interface: psmouse_attr_set_protocol 0
+is_override_interface: set_input_params 0
+Asim disabled interface function.
+is_override_interface: genius_detect 0
+Asim disabled interface function.
+is_override_interface: __serio_register_port 0
+Asim disabled interface function.
+is_override_interface: synaptics_disconnect 0
+is_override_interface: psmouse_set_maxproto 0
+is_override_interface: MICRODRIVERS__MODIF_pci_clear_mwi 0
+is_override_interface: MICRODRIVERS__MODIF_ps2_handle_response 0
+is_override_interface: serio_reconnect 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: input_event 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_validate_byte 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: device_remove_file 0
+Asim disabled interface function.
+is_override_interface: elantech_init 0
+Asim disabled interface function.
+is_override_interface: psmousebase_checkpoint 0
+Asim disabled interface function.
+is_override_interface: synaptics_pt_write 0
+is_override_interface: MICRODRIVERS__MODIF__spin_lock 0
+is_override_interface: MICRODRIVERS__MODIF__spin_unlock 0
+is_override_interface: ps2pp_set_resolution 0
+is_override_interface: ps2_handle_ack 0
+Asim disabled interface function.
+is_override_interface: ps2_command 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_resync 0
+is_override_interface: psmouse_poll 0
+is_override_interface: lifebook_process_byte 0
+is_override_interface: input_register_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_free_irq 0
+is_override_interface: psmouse_sliced_command 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: set_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __psmouse_set_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_pass_pt_packet 0
+Asim disabled interface function.
+is_override_interface: serio_interrupt 0
+Asim disabled interface function.
+is_override_interface: synaptics_process_packet 0
+Asim disabled interface function.
+is_override_interface: dev_set_drvdata 0
+Asim disabled interface function.
+is_override_interface: __serio_register_driver 0
+Asim disabled interface function.
+is_override_interface: ps2pp_process_byte 0
+is_override_interface: psmouse_initialize 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: alps_disconnect 0
+is_override_interface: INIT_LIST_HEAD 0
+Asim disabled interface function.
+is_override_interface: serio_set_drvdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_query_hardware 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: trackpoint_write 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_reconnect 0
+is_override_interface: trackpoint_toggle_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_protocol_by_type 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: strncmp 0
+Asim disabled interface function.
+is_override_interface: serio_unregister_child_port 0
+Asim disabled interface function.
+is_override_interface: alps_reconnect 0
+is_override_interface: psmouse_reconnect 0
+is_override_interface: kfree 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_attr_set_rate 0
+is_override_interface: synaptics_detect_pkt_type 0
+Asim disabled interface function.
+is_override_interface: trackpoint_show_int_attr 0
+is_override_interface: input_sync 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_dev_driver_string 0
+is_override_interface: psmouse_deactivate 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_capability 0
+Asim disabled interface function.
+is_override_interface: psmouse_set_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: psmouse_show_int_attr 0
+is_override_interface: input_report_abs 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: synaptics_pt_create 0
+Asim disabled interface function.
+is_override_interface: serio_register_driver 0
+Asim disabled interface function.
+is_override_interface: sysfs_remove_group 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: sysfs_create_group 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: input_set_abs_params 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: lifebook_detect 0
+Asim disabled interface function.
+is_override_interface: lockdep_init_map 0
+Asim disabled interface function.
+is_override_interface: trackpoint_sync 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: hgpk_detect 0
+Asim disabled interface function.
+is_override_interface: psmouse_reset 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: sprintf 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: logWrite 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: lifebook_create_relative_device 0
+Asim disabled interface function.
+is_override_interface: psmouse_interrupt 0
+is_override_interface: __memcpy 0
+Asim disabled interface function.
+is_override_interface: synaptics_is_pt_packet 0
+Asim disabled interface function.
+is_override_interface: lifebook_set_6byte_proto 0
+is_override_interface: lifebook_relative_mode 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_destroy_workqueue 0
+is_override_interface: cortron_detect 0
+is_override_interface: trackpoint_reconnect 0
+Interface function psmouse_get_maxproto: Annotation is user
+Interface function psmouse_set_rate: Annotation is user
+Interface function serio_close: Annotation is kern
+Interface function ps2_handle_response: Annotation is kern
+Interface function serio_open: Annotation is kern
+Interface function strcmp: Annotation is kern
+Interface function printk: Annotation is kern
+Interface function dmi_check_system: Annotation is kern
+Interface function psmouse_set_int_attr: Annotation is user
+Interface function logStackVar: Annotation is user
+Interface function _spin_lock_irq: Annotation is kern
+Interface function __create_workqueue_key: Annotation is kern
+Interface function flush_workqueue: Annotation is kern
+Interface function serio_unregister_driver: Annotation is kern
+Interface function msleep: Annotation is kern
+Interface function queue_delayed_work: Annotation is kern
+Interface function ps2_cmd_aborted: Annotation is kern
+Interface function __builtin_expect: Annotation is kern
+Interface function device_create_file: Annotation is kern
+Interface function mutex_lock_interruptible_nested: Annotation is kern
+Interface function memset: Annotation is kern
+Interface function strict_strtoul: Annotation is kern
+Interface function psmouse_set_resolution: Annotation is user
+Interface function mutex_lock_nested: Annotation is kern
+Interface function ps2_sendbyte: Annotation is kern
+Interface function _spin_unlock_irq: Annotation is kern
+Interface function snprintf: Annotation is kern
+Interface function input_allocate_device: Annotation is kern
+Interface function memcmp: Annotation is kern
+Interface function warn_slowpath: Annotation is kern
+Interface function __builtin_memcpy: Annotation is kern
+Interface function logStackFrame: Annotation is user
+Interface function input_free_device: Annotation is kern
+Interface function odft_is_self_locked: Annotation is kern
+Interface function ps2_drain: Annotation is kern
+Interface function __kmalloc: Annotation is kern
+Interface function ps2_init: Annotation is kern
+Interface function input_unregister_device: Annotation is kern
+Interface function strlcpy: Annotation is kern
+Interface function mutex_unlock: Annotation is kern
+Interface function destroy_workqueue: Annotation is kern
+Interface function psmouse_attr_show_protocol: Annotation is user
+Interface function init_timer: Annotation is kern
+Interface function strlen: Annotation is kern
+Interface function logRead: Annotation is user
+Interface function __serio_register_port: Annotation is kern
+Interface function psmouse_set_maxproto: Annotation is user
+Interface function serio_reconnect: Annotation is kern
+Interface function input_event: Annotation is kern
+Interface function device_remove_file: Annotation is kern
+Interface function ps2_handle_ack: Annotation is kern
+Interface function ps2_command: Annotation is kern
+Interface function input_register_device: Annotation is kern
+Interface function serio_interrupt: Annotation is kern
+Interface function __serio_register_driver: Annotation is kern
+Interface function strncmp: Annotation is kern
+Interface function serio_unregister_child_port: Annotation is kern
+Interface function kfree: Annotation is kern
+Interface function psmouse_show_int_attr: Annotation is user
+Interface function sysfs_remove_group: Annotation is kern
+Interface function sysfs_create_group: Annotation is kern
+Interface function lockdep_init_map: Annotation is kern
+Interface function sprintf: Annotation is kern
+Interface function logWrite: Annotation is user
+Interface function __memcpy: Annotation is kern
+kernel function proto: logRead
+kernel function proto: logWrite
+kernel function proto: logStackFrame
+kernel function proto: logStackVar
+kernel function proto: logAlloc
+kernel function proto: logFree
+kernel function proto: __builtin_memcpy
+kernel function proto: __builtin_expect
+Considering function body for deletion: set_bit
+kernel function proto: warn_slowpath
+kernel function proto: sprintf
+  deleting proto sprintf
+kernel function proto: snprintf
+kernel function proto: printk
+kernel function proto: msleep
+kernel function proto: strlen
+kernel function proto: strncmp
+Considering function body for deletion: INIT_LIST_HEAD
+kernel function proto: _spin_lock_irq
+kernel function proto: _spin_unlock_irq
+kernel function proto: kfree
+  deleting proto kfree
+kernel function proto: __kmalloc
+Considering function body for deletion: kmalloc
+Considering function body for deletion: kzalloc
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: dev_get_drvdata
+Considering function body for deletion: dev_set_drvdata
+Considering function body for deletion: input_report_key
+Considering function body for deletion: input_report_rel
+Considering function body for deletion: input_sync
+Considering function body for deletion: serio_register_driver
+Considering function body for deletion: serio_get_drvdata
+Considering function body for deletion: serio_set_drvdata
+Considering function body for deletion: serio_pause_rx
+Considering function body for deletion: serio_continue_rx
+Considering function body for deletion: serio_pin_driver
+Considering function body for deletion: serio_pin_driver_uninterruptible
+Considering function body for deletion: serio_unpin_driver
+Considering function body for deletion: MICRODRIVERS__DUMMY
+Considering function body for deletion: MICRODRIVERS__MODIF_dev_driver_string
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_write_config_word
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock
+Considering function body for deletion: MICRODRIVERS__MODIF___spin_lock_init
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock_irq
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_lock_irqsave
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock_irq
+Considering function body for deletion: MICRODRIVERS__MODIF__spin_unlock_irqrestore
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_read_config_byte
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_read_config_word
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_clear_mwi
+Considering function body for deletion: MICRODRIVERS__MODIF_request_irq
+Considering function body for deletion: MICRODRIVERS__MODIF_free_irq
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_command
+Considering function body for deletion: MICRODRIVERS__MODIF_init_timer
+Considering function body for deletion: MICRODRIVERS__MODIF___create_workqueue
+Considering function body for deletion: MICRODRIVERS__MODIF_flush_workqueue
+Considering function body for deletion: MICRODRIVERS__MODIF_destroy_workqueue
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_cmd_aborted
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_drain
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_handle_ack
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_handle_response
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_init
+Considering function body for deletion: MICRODRIVERS__MODIF_ps2_sendbyte
+Considering function body for deletion: hgpk_detect
+Considering function body for deletion: hgpk_init
+Considering function body for deletion: touchkit_ps2_detect
+Considering function body for deletion: elantech_init
+Considering function body for deletion: psmouse_process_byte
+Considering function body for deletion: psmouse_queue_work
+Considering function body for deletion: __psmouse_set_state
+Considering function body for deletion: psmouse_set_state
+Considering function body for deletion: psmouse_handle_byte
+Considering function body for deletion: psmouse_interrupt
+Considering function body for deletion: psmouse_sliced_command
+Considering function body for deletion: psmouse_reset
+Considering function body for deletion: genius_detect
+Considering function body for deletion: intellimouse_detect
+Considering function body for deletion: im_explorer_detect
+Considering function body for deletion: thinking_detect
+Considering function body for deletion: ps2bare_detect
+Considering function body for deletion: cortron_detect
+Considering function body for deletion: psmouse_extensions
+Considering function body for deletion: psmouse_protocol_by_type
+Considering function body for deletion: psmouse_protocol_by_name
+Considering function body for deletion: psmouse_probe
+Considering function body for deletion: psmouse_set_resolution
+Considering function body for deletion: psmouse_set_rate
+Considering function body for deletion: psmouse_initialize
+Considering function body for deletion: psmouse_activate
+Considering function body for deletion: psmouse_deactivate
+Considering function body for deletion: psmouse_poll
+Considering function body for deletion: psmouse_resync
+Considering function body for deletion: psmouse_cleanup
+Considering function body for deletion: psmousebase_checkpoint
+Considering function body for deletion: psmousebase_restore
+Considering function body for deletion: psmouse_disconnect
+Considering function body for deletion: psmouse_switch_protocol
+Considering function body for deletion: psmouse_connect
+Considering function body for deletion: psmouse_reconnect
+Considering function body for deletion: psmouse_attr_show_helper
+Considering function body for deletion: psmouse_attr_set_helper
+Considering function body for deletion: psmouse_show_int_attr
+Considering function body for deletion: psmouse_set_int_attr
+Considering function body for deletion: psmouse_attr_show_protocol
+Considering function body for deletion: psmouse_attr_set_protocol
+Considering function body for deletion: psmouse_attr_set_rate
+Considering function body for deletion: psmouse_attr_set_resolution
+Considering function body for deletion: psmouse_set_maxproto
+Considering function body for deletion: psmouse_get_maxproto
+Considering function body for deletion: psmouse_init
+Considering function body for deletion: psmouse_exit
+Considering function body for deletion: init_module
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: cleanup_module
+kernel function proto: __memcpy
+Considering function body for deletion: input_report_abs
+Considering function body for deletion: input_set_abs_params
+Considering function body for deletion: alps_process_packet
+Considering function body for deletion: alps_process_byte
+Considering function body for deletion: alps_get_model
+Considering function body for deletion: alps_passthrough_mode
+Considering function body for deletion: alps_absolute_mode
+Considering function body for deletion: alps_get_status
+Considering function body for deletion: alps_tap_mode
+Considering function body for deletion: alps_poll
+Considering function body for deletion: alps_hw_init
+Considering function body for deletion: alps_reconnect
+Considering function body for deletion: alps_disconnect
+Considering function body for deletion: alps_init
+Considering function body for deletion: alps_detect
+Considering function body for deletion: clear_bit
+kernel function proto: memset
+kernel function proto: strlcpy
+Considering function body for deletion: serio_register_port
+Considering function body for deletion: synaptics_mode_cmd
+Considering function body for deletion: synaptics_detect
+Considering function body for deletion: synaptics_reset
+Considering function body for deletion: synaptics_send_cmd
+Considering function body for deletion: synaptics_model_id
+Considering function body for deletion: synaptics_capability
+Considering function body for deletion: synaptics_identify
+Considering function body for deletion: synaptics_query_hardware
+Considering function body for deletion: synaptics_set_absolute_mode
+Considering function body for deletion: synaptics_set_rate
+Considering function body for deletion: synaptics_pt_write
+Considering function body for deletion: synaptics_is_pt_packet
+Considering function body for deletion: synaptics_pass_pt_packet
+Considering function body for deletion: synaptics_pt_activate
+Considering function body for deletion: synaptics_pt_create
+Considering function body for deletion: synaptics_parse_hw_state
+Considering function body for deletion: synaptics_process_packet
+Considering function body for deletion: synaptics_validate_byte
+Considering function body for deletion: synaptics_detect_pkt_type
+Considering function body for deletion: synaptics_process_byte
+Considering function body for deletion: set_input_params
+Considering function body for deletion: synaptics_disconnect
+Considering function body for deletion: synaptics_reconnect
+Considering function body for deletion: synaptics_init
+kernel function proto: strcmp
+Considering function body for deletion: lifebook_set_serio_phys
+Considering function body for deletion: lifebook_set_6byte_proto
+Considering function body for deletion: lifebook_process_byte
+Considering function body for deletion: lifebook_absolute_mode
+Considering function body for deletion: lifebook_relative_mode
+Considering function body for deletion: lifebook_set_resolution
+Considering function body for deletion: lifebook_disconnect
+Considering function body for deletion: lifebook_detect
+Considering function body for deletion: lifebook_create_relative_device
+Considering function body for deletion: lifebook_init
+Considering function body for deletion: ps2pp_process_byte
+Considering function body for deletion: ps2pp_cmd
+Considering function body for deletion: ps2pp_set_smartscroll
+Considering function body for deletion: ps2pp_attr_show_smartscroll
+Considering function body for deletion: ps2pp_attr_set_smartscroll
+Considering function body for deletion: ps2pp_set_resolution
+Considering function body for deletion: ps2pp_disconnect
+Considering function body for deletion: get_model_info
+Considering function body for deletion: ps2pp_set_model_properties
+Considering function body for deletion: ps2pp_init
+Considering function body for deletion: trackpoint_read
+Considering function body for deletion: trackpoint_write
+Considering function body for deletion: trackpoint_toggle_bit
+Considering function body for deletion: trackpoint_show_int_attr
+Considering function body for deletion: trackpoint_set_int_attr
+Considering function body for deletion: trackpoint_set_bit_attr
+Considering function body for deletion: trackpoint_start_protocol
+Considering function body for deletion: trackpoint_sync
+Considering function body for deletion: trackpoint_defaults
+Considering function body for deletion: trackpoint_disconnect
+Considering function body for deletion: trackpoint_reconnect
+Considering function body for deletion: trackpoint_detect
+Global to register: __this_module
+Global to register: psmouse_max_proto
+Global to register: __param_str_proto
+Global to register: psmouse_resolution
+Global to register: __param_str_resolution
+Global to register: psmouse_rate
+Global to register: __param_str_rate
+Global to register: psmouse_smartscroll
+Global to register: __param_str_smartscroll
+Global to register: psmouse_resetafter
+Global to register: __param_str_resetafter
+Global to register: psmouse_resync_time
+Global to register: __param_str_resync_time
+Global to register: psmouse_attr_protocol
+Global to register: psmouse_attr_rate
+Global to register: psmouse_attr_resolution
+Global to register: psmouse_attr_resetafter
+Global to register: psmouse_attr_resync_time
+Global to register: psmouse_attributes
+Global to register: psmouse_attribute_group
+Global to register: psmouse_mutex
+Global to register: seq
+Global to register: psmouse_protocols
+Global to register: params
+Global to register: rates
+Global to register: __key___3
+Global to register: psmouse_serio_ids
+Global to register: psmouse_drv
+Global to register: __key___4
+Global to register: alps_model_data
+Global to register: rates___0
+Global to register: newabs_mask
+Global to register: newabs_rel_mask
+Global to register: newabs_rslt
+Global to register: oldabs_mask
+Global to register: oldabs_rslt
+Global to register: lifebook_dmi_table
+Global to register: params___0
+Global to register: psmouse_attr_smartscroll
+Global to register: ps2pp_list
+Global to register: trackpoint_attr_sensitivity
+Global to register: psmouse_attr_sensitivity
+Global to register: trackpoint_attr_speed
+Global to register: psmouse_attr_speed
+Global to register: trackpoint_attr_inertia
+Global to register: psmouse_attr_inertia
+Global to register: trackpoint_attr_reach
+Global to register: psmouse_attr_reach
+Global to register: trackpoint_attr_draghys
+Global to register: psmouse_attr_draghys
+Global to register: trackpoint_attr_mindrag
+Global to register: psmouse_attr_mindrag
+Global to register: trackpoint_attr_thresh
+Global to register: psmouse_attr_thresh
+Global to register: trackpoint_attr_upthresh
+Global to register: psmouse_attr_upthresh
+Global to register: trackpoint_attr_ztime
+Global to register: psmouse_attr_ztime
+Global to register: trackpoint_attr_jenks
+Global to register: psmouse_attr_jenks
+Global to register: trackpoint_attr_press_to_select
+Global to register: psmouse_attr_press_to_select
+Global to register: trackpoint_attr_skipback
+Global to register: psmouse_attr_skipback
+Global to register: trackpoint_attr_ext_dev
+Global to register: psmouse_attr_ext_dev
+Global to register: trackpoint_attrs
+Global to register: trackpoint_attr_group
+Function/global mapping INIT_LIST_HEAD -> 1000
+Function/global mapping MICRODRIVERS__DUMMY -> 1001
+Function/global mapping MICRODRIVERS__MODIF___create_workqueue -> 1002
+Function/global mapping MICRODRIVERS__MODIF___spin_lock_init -> 1003
+Function/global mapping MICRODRIVERS__MODIF__spin_lock -> 1004
+Function/global mapping MICRODRIVERS__MODIF__spin_lock_irq -> 1005
+Function/global mapping MICRODRIVERS__MODIF__spin_lock_irqsave -> 1006
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock -> 1007
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock_irq -> 1008
+Function/global mapping MICRODRIVERS__MODIF__spin_unlock_irqrestore -> 1009
+Function/global mapping MICRODRIVERS__MODIF_destroy_workqueue -> 1010
+Function/global mapping MICRODRIVERS__MODIF_dev_driver_string -> 1011
+Function/global mapping MICRODRIVERS__MODIF_flush_workqueue -> 1012
+Function/global mapping MICRODRIVERS__MODIF_free_irq -> 1013
+Function/global mapping MICRODRIVERS__MODIF_init_timer -> 1014
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_read_config_byte -> 1015
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_read_config_word -> 1016
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_write_config_word -> 1017
+Function/global mapping MICRODRIVERS__MODIF_pci_clear_mwi -> 1018
+Function/global mapping MICRODRIVERS__MODIF_ps2_cmd_aborted -> 1019
+Function/global mapping MICRODRIVERS__MODIF_ps2_command -> 1020
+Function/global mapping MICRODRIVERS__MODIF_ps2_drain -> 1021
+Function/global mapping MICRODRIVERS__MODIF_ps2_handle_ack -> 1022
+Function/global mapping MICRODRIVERS__MODIF_ps2_handle_response -> 1023
+Function/global mapping MICRODRIVERS__MODIF_ps2_init -> 1024
+Function/global mapping MICRODRIVERS__MODIF_ps2_sendbyte -> 1025
+Function/global mapping MICRODRIVERS__MODIF_request_irq -> 1026
+Function/global mapping __builtin_expect -> 1027
+Function/global mapping __builtin_memcpy -> 1028
+Function/global mapping __create_workqueue_key -> 1029
+Function/global mapping __key___3 -> 1030
+Function/global mapping __key___4 -> 1031
+Function/global mapping __kmalloc -> 1032
+Function/global mapping __memcpy -> 1033
+Function/global mapping __param_str_proto -> 1034
+Function/global mapping __param_str_rate -> 1035
+Function/global mapping __param_str_resetafter -> 1036
+Function/global mapping __param_str_resolution -> 1037
+Function/global mapping __param_str_resync_time -> 1038
+Function/global mapping __param_str_smartscroll -> 1039
+Function/global mapping __psmouse_set_state -> 1040
+Function/global mapping __serio_register_driver -> 1041
+Function/global mapping __serio_register_port -> 1042
+Function/global mapping __this_module -> 1043
+Function/global mapping _spin_lock_irq -> 1044
+Function/global mapping _spin_unlock_irq -> 1045
+Function/global mapping alps_absolute_mode -> 1046
+Function/global mapping alps_detect -> 1047
+Function/global mapping alps_disconnect -> 1048
+Function/global mapping alps_get_model -> 1049
+Function/global mapping alps_get_status -> 1050
+Function/global mapping alps_hw_init -> 1051
+Function/global mapping alps_init -> 1052
+Function/global mapping alps_model_data -> 1053
+Function/global mapping alps_passthrough_mode -> 1054
+Function/global mapping alps_poll -> 1055
+Function/global mapping alps_process_byte -> 1056
+Function/global mapping alps_process_packet -> 1057
+Function/global mapping alps_reconnect -> 1058
+Function/global mapping alps_tap_mode -> 1059
+Function/global mapping cleanup_module -> 1060
+Function/global mapping clear_bit -> 1061
+Function/global mapping cortron_detect -> 1062
+Function/global mapping destroy_workqueue -> 1063
+Function/global mapping dev_get_drvdata -> 1064
+Function/global mapping dev_set_drvdata -> 1065
+Function/global mapping device_create_file -> 1066
+Function/global mapping device_remove_file -> 1067
+Function/global mapping dmi_check_system -> 1068
+Function/global mapping elantech_init -> 1069
+Function/global mapping flush_workqueue -> 1070
+Function/global mapping genius_detect -> 1071
+Function/global mapping get_model_info -> 1072
+Function/global mapping heapifyfree -> 1073
+Function/global mapping heapifymalloc -> 1074
+Function/global mapping hgpk_detect -> 1075
+Function/global mapping hgpk_init -> 1076
+Function/global mapping im_explorer_detect -> 1077
+Function/global mapping init_module -> 1078
+Function/global mapping init_timer -> 1079
+Function/global mapping input_allocate_device -> 1080
+Function/global mapping input_event -> 1081
+Function/global mapping input_free_device -> 1082
+Function/global mapping input_register_device -> 1083
+Function/global mapping input_report_abs -> 1084
+Function/global mapping input_report_key -> 1085
+Function/global mapping input_report_rel -> 1086
+Function/global mapping input_set_abs_params -> 1087
+Function/global mapping input_sync -> 1088
+Function/global mapping input_unregister_device -> 1089
+Function/global mapping intellimouse_detect -> 1090
+Function/global mapping kfree -> 1091
+Function/global mapping kmalloc -> 1092
+Function/global mapping kzalloc -> 1093
+Function/global mapping lifebook_absolute_mode -> 1094
+Function/global mapping lifebook_create_relative_device -> 1095
+Function/global mapping lifebook_detect -> 1096
+Function/global mapping lifebook_disconnect -> 1097
+Function/global mapping lifebook_dmi_table -> 1098
+Function/global mapping lifebook_init -> 1099
+Function/global mapping lifebook_process_byte -> 1100
+Function/global mapping lifebook_relative_mode -> 1101
+Function/global mapping lifebook_set_6byte_proto -> 1102
+Function/global mapping lifebook_set_resolution -> 1103
+Function/global mapping lifebook_set_serio_phys -> 1104
+Function/global mapping lockdep_init_map -> 1105
+Function/global mapping logAlloc -> 1106
+Function/global mapping logFree -> 1107
+Function/global mapping logRead -> 1108
+Function/global mapping logSfiFrame -> 1109
+Function/global mapping logStackFrame -> 1110
+Function/global mapping logStackVar -> 1111
+Function/global mapping logWrite -> 1112
+Function/global mapping memcmp -> 1113
+Function/global mapping memset -> 1114
+Function/global mapping msleep -> 1115
+Function/global mapping mutex_lock_interruptible_nested -> 1116
+Function/global mapping mutex_lock_nested -> 1117
+Function/global mapping mutex_unlock -> 1118
+Function/global mapping newabs_mask -> 1119
+Function/global mapping newabs_rel_mask -> 1120
+Function/global mapping newabs_rslt -> 1121
+Function/global mapping odft_is_self_locked -> 1122
+Function/global mapping oldabs_mask -> 1123
+Function/global mapping oldabs_rslt -> 1124
+Function/global mapping param_get_bool -> 1125
+Function/global mapping param_get_uint -> 1126
+Function/global mapping param_set_bool -> 1127
+Function/global mapping param_set_uint -> 1128
+Function/global mapping params -> 1129
+Function/global mapping params___0 -> 1130
+Function/global mapping printk -> 1131
+Function/global mapping ps2_cmd_aborted -> 1132
+Function/global mapping ps2_command -> 1133
+Function/global mapping ps2_drain -> 1134
+Function/global mapping ps2_handle_ack -> 1135
+Function/global mapping ps2_handle_response -> 1136
+Function/global mapping ps2_init -> 1137
+Function/global mapping ps2_sendbyte -> 1138
+Function/global mapping ps2bare_detect -> 1139
+Function/global mapping ps2pp_attr_set_smartscroll -> 1140
+Function/global mapping ps2pp_attr_show_smartscroll -> 1141
+Function/global mapping ps2pp_cmd -> 1142
+Function/global mapping ps2pp_disconnect -> 1143
+Function/global mapping ps2pp_init -> 1144
+Function/global mapping ps2pp_list -> 1145
+Function/global mapping ps2pp_process_byte -> 1146
+Function/global mapping ps2pp_set_model_properties -> 1147
+Function/global mapping ps2pp_set_resolution -> 1148
+Function/global mapping ps2pp_set_smartscroll -> 1149
+Function/global mapping psmouse_activate -> 1150
+Function/global mapping psmouse_attr_draghys -> 1151
+Function/global mapping psmouse_attr_ext_dev -> 1152
+Function/global mapping psmouse_attr_inertia -> 1153
+Function/global mapping psmouse_attr_jenks -> 1154
+Function/global mapping psmouse_attr_mindrag -> 1155
+Function/global mapping psmouse_attr_press_to_select -> 1156
+Function/global mapping psmouse_attr_protocol -> 1157
+Function/global mapping psmouse_attr_rate -> 1158
+Function/global mapping psmouse_attr_reach -> 1159
+Function/global mapping psmouse_attr_resetafter -> 1160
+Function/global mapping psmouse_attr_resolution -> 1161
+Function/global mapping psmouse_attr_resync_time -> 1162
+Function/global mapping psmouse_attr_sensitivity -> 1163
+Function/global mapping psmouse_attr_set_helper -> 1164
+Function/global mapping psmouse_attr_set_protocol -> 1165
+Function/global mapping psmouse_attr_set_rate -> 1166
+Function/global mapping psmouse_attr_set_resolution -> 1167
+Function/global mapping psmouse_attr_show_helper -> 1168
+Function/global mapping psmouse_attr_show_protocol -> 1169
+Function/global mapping psmouse_attr_skipback -> 1170
+Function/global mapping psmouse_attr_smartscroll -> 1171
+Function/global mapping psmouse_attr_speed -> 1172
+Function/global mapping psmouse_attr_thresh -> 1173
+Function/global mapping psmouse_attr_upthresh -> 1174
+Function/global mapping psmouse_attr_ztime -> 1175
+Function/global mapping psmouse_attribute_group -> 1176
+Function/global mapping psmouse_attributes -> 1177
+Function/global mapping psmouse_cleanup -> 1178
+Function/global mapping psmouse_connect -> 1179
+Function/global mapping psmouse_deactivate -> 1180
+Function/global mapping psmouse_disconnect -> 1181
+Function/global mapping psmouse_drv -> 1182
+Function/global mapping psmouse_exit -> 1183
+Function/global mapping psmouse_extensions -> 1184
+Function/global mapping psmouse_get_maxproto -> 1185
+Function/global mapping psmouse_handle_byte -> 1186
+Function/global mapping psmouse_init -> 1187
+Function/global mapping psmouse_initialize -> 1188
+Function/global mapping psmouse_interrupt -> 1189
+Function/global mapping psmouse_max_proto -> 1190
+Function/global mapping psmouse_mutex -> 1191
+Function/global mapping psmouse_poll -> 1192
+Function/global mapping psmouse_probe -> 1193
+Function/global mapping psmouse_process_byte -> 1194
+Function/global mapping psmouse_protocol_by_name -> 1195
+Function/global mapping psmouse_protocol_by_type -> 1196
+Function/global mapping psmouse_protocols -> 1197
+Function/global mapping psmouse_queue_work -> 1198
+Function/global mapping psmouse_rate -> 1199
+Function/global mapping psmouse_reconnect -> 1200
+Function/global mapping psmouse_reset -> 1201
+Function/global mapping psmouse_resetafter -> 1202
+Function/global mapping psmouse_resolution -> 1203
+Function/global mapping psmouse_resync -> 1204
+Function/global mapping psmouse_resync_time -> 1205
+Function/global mapping psmouse_serio_ids -> 1206
+Function/global mapping psmouse_set_int_attr -> 1207
+Function/global mapping psmouse_set_maxproto -> 1208
+Function/global mapping psmouse_set_rate -> 1209
+Function/global mapping psmouse_set_resolution -> 1210
+Function/global mapping psmouse_set_state -> 1211
+Function/global mapping psmouse_show_int_attr -> 1212
+Function/global mapping psmouse_sliced_command -> 1213
+Function/global mapping psmouse_smartscroll -> 1214
+Function/global mapping psmouse_switch_protocol -> 1215
+Function/global mapping psmousebase_checkpoint -> 1216
+Function/global mapping psmousebase_restore -> 1217
+Function/global mapping queue_delayed_work -> 1218
+Function/global mapping rates -> 1219
+Function/global mapping rates___0 -> 1220
+Function/global mapping seq -> 1221
+Function/global mapping serio_close -> 1222
+Function/global mapping serio_continue_rx -> 1223
+Function/global mapping serio_get_drvdata -> 1224
+Function/global mapping serio_interrupt -> 1225
+Function/global mapping serio_open -> 1226
+Function/global mapping serio_pause_rx -> 1227
+Function/global mapping serio_pin_driver -> 1228
+Function/global mapping serio_pin_driver_uninterruptible -> 1229
+Function/global mapping serio_reconnect -> 1230
+Function/global mapping serio_register_driver -> 1231
+Function/global mapping serio_register_port -> 1232
+Function/global mapping serio_set_drvdata -> 1233
+Function/global mapping serio_unpin_driver -> 1234
+Function/global mapping serio_unregister_child_port -> 1235
+Function/global mapping serio_unregister_driver -> 1236
+Function/global mapping set_bit -> 1237
+Function/global mapping set_input_params -> 1238
+Function/global mapping snprintf -> 1239
+Function/global mapping sprintf -> 1240
+Function/global mapping stackguard_get_ra -> 1241
+Function/global mapping stackguard_pop -> 1242
+Function/global mapping stackguard_push -> 1243
+Function/global mapping stackguard_set_ra -> 1244
+Function/global mapping stackguard_stack -> 1245
+Function/global mapping str_0 -> 1246
+Function/global mapping str_1010884528 -> 1247
+Function/global mapping str_1013043182 -> 1248
+Function/global mapping str_1017698982 -> 1249
+Function/global mapping str_1023639894 -> 1250
+Function/global mapping str_1031719054 -> 1251
+Function/global mapping str_1044724246 -> 1252
+Function/global mapping str_1050144493 -> 1253
+Function/global mapping str_1050151853 -> 1254
+Function/global mapping str_1052497969 -> 1255
+Function/global mapping str_10840589 -> 1256
+Function/global mapping str_11013887 -> 1257
+Function/global mapping str_110221080 -> 1258
+Function/global mapping str_118047708 -> 1259
+Function/global mapping str_119286224 -> 1260
+Function/global mapping str_124740196 -> 1261
+Function/global mapping str_128276866 -> 1262
+Function/global mapping str_140626898 -> 1263
+Function/global mapping str_142045592 -> 1264
+Function/global mapping str_14548643 -> 1265
+Function/global mapping str_15267 -> 1266
+Function/global mapping str_15552 -> 1267
+Function/global mapping str_15586355 -> 1268
+Function/global mapping str_15590 -> 1269
+Function/global mapping str_15793603 -> 1270
+Function/global mapping str_16734883 -> 1271
+Function/global mapping str_171666755 -> 1272
+Function/global mapping str_173267101 -> 1273
+Function/global mapping str_187222440 -> 1274
+Function/global mapping str_188112229 -> 1275
+Function/global mapping str_189760183 -> 1276
+Function/global mapping str_195539842 -> 1277
+Function/global mapping str_197364336 -> 1278
+Function/global mapping str_200191798 -> 1279
+Function/global mapping str_215909707 -> 1280
+Function/global mapping str_218997622 -> 1281
+Function/global mapping str_221391155 -> 1282
+Function/global mapping str_221608524 -> 1283
+Function/global mapping str_236819496 -> 1284
+Function/global mapping str_24323315 -> 1285
+Function/global mapping str_245692261 -> 1286
+Function/global mapping str_25550113 -> 1287
+Function/global mapping str_260425477 -> 1288
+Function/global mapping str_262748659 -> 1289
+Function/global mapping str_26595480 -> 1290
+Function/global mapping str_268995351 -> 1291
+Function/global mapping str_27684 -> 1292
+Function/global mapping str_301601544 -> 1293
+Function/global mapping str_307711519 -> 1294
+Function/global mapping str_307711520 -> 1295
+Function/global mapping str_320736607 -> 1296
+Function/global mapping str_332938523 -> 1297
+Function/global mapping str_34346614 -> 1298
+Function/global mapping str_35399249 -> 1299
+Function/global mapping str_358533959 -> 1300
+Function/global mapping str_360606437 -> 1301
+Function/global mapping str_36735500 -> 1302
+Function/global mapping str_37228 -> 1303
+Function/global mapping str_376268180 -> 1304
+Function/global mapping str_380817653 -> 1305
+Function/global mapping str_384033014 -> 1306
+Function/global mapping str_384189395 -> 1307
+Function/global mapping str_385727219 -> 1308
+Function/global mapping str_39677390 -> 1309
+Function/global mapping str_403177438 -> 1310
+Function/global mapping str_405065312 -> 1311
+Function/global mapping str_411456915 -> 1312
+Function/global mapping str_412173691 -> 1313
+Function/global mapping str_421260424 -> 1314
+Function/global mapping str_429751348 -> 1315
+Function/global mapping str_434472304 -> 1316
+Function/global mapping str_434643244 -> 1317
+Function/global mapping str_434738890 -> 1318
+Function/global mapping str_43793156 -> 1319
+Function/global mapping str_440620529 -> 1320
+Function/global mapping str_461899299 -> 1321
+Function/global mapping str_466443422 -> 1322
+Function/global mapping str_474479501 -> 1323
+Function/global mapping str_474874 -> 1324
+Function/global mapping str_48484082 -> 1325
+Function/global mapping str_488213612 -> 1326
+Function/global mapping str_488282298 -> 1327
+Function/global mapping str_48996679 -> 1328
+Function/global mapping str_490918915 -> 1329
+Function/global mapping str_533384369 -> 1330
+Function/global mapping str_53613786 -> 1331
+Function/global mapping str_536282345 -> 1332
+Function/global mapping str_540929980 -> 1333
+Function/global mapping str_541045427 -> 1334
+Function/global mapping str_543324020 -> 1335
+Function/global mapping str_572528806 -> 1336
+Function/global mapping str_579626 -> 1337
+Function/global mapping str_585544529 -> 1338
+Function/global mapping str_593046695 -> 1339
+Function/global mapping str_600255105 -> 1340
+Function/global mapping str_603215579 -> 1341
+Function/global mapping str_604279769 -> 1342
+Function/global mapping str_626734451 -> 1343
+Function/global mapping str_629972820 -> 1344
+Function/global mapping str_632067631 -> 1345
+Function/global mapping str_642703443 -> 1346
+Function/global mapping str_658966400 -> 1347
+Function/global mapping str_669717307 -> 1348
+Function/global mapping str_705283662 -> 1349
+Function/global mapping str_705599013 -> 1350
+Function/global mapping str_706554 -> 1351
+Function/global mapping str_707067097 -> 1352
+Function/global mapping str_709202683 -> 1353
+Function/global mapping str_709466 -> 1354
+Function/global mapping str_7096282 -> 1355
+Function/global mapping str_709875 -> 1356
+Function/global mapping str_722666407 -> 1357
+Function/global mapping str_730272386 -> 1358
+Function/global mapping str_731306984 -> 1359
+Function/global mapping str_731419387 -> 1360
+Function/global mapping str_738322 -> 1361
+Function/global mapping str_747748554 -> 1362
+Function/global mapping str_761787 -> 1363
+Function/global mapping str_766615943 -> 1364
+Function/global mapping str_767616905 -> 1365
+Function/global mapping str_768901977 -> 1366
+Function/global mapping str_769605543 -> 1367
+Function/global mapping str_774488393 -> 1368
+Function/global mapping str_784851325 -> 1369
+Function/global mapping str_791712760 -> 1370
+Function/global mapping str_791712761 -> 1371
+Function/global mapping str_797604288 -> 1372
+Function/global mapping str_80031588 -> 1373
+Function/global mapping str_812672849 -> 1374
+Function/global mapping str_819248 -> 1375
+Function/global mapping str_819620768 -> 1376
+Function/global mapping str_839122464 -> 1377
+Function/global mapping str_84203302 -> 1378
+Function/global mapping str_877329080 -> 1379
+Function/global mapping str_887671200 -> 1380
+Function/global mapping str_898632330 -> 1381
+Function/global mapping str_9228869 -> 1382
+Function/global mapping str_9228977 -> 1383
+Function/global mapping str_931209414 -> 1384
+Function/global mapping str_942823456 -> 1385
+Function/global mapping str_95278588 -> 1386
+Function/global mapping str_957027776 -> 1387
+Function/global mapping str_965002357 -> 1388
+Function/global mapping str_974116503 -> 1389
+Function/global mapping str_987425018 -> 1390
+Function/global mapping str_991534108 -> 1391
+Function/global mapping str_992268699 -> 1392
+Function/global mapping str_992291005 -> 1393
+Function/global mapping str_998105566 -> 1394
+Function/global mapping str_998620162 -> 1395
+Function/global mapping strcmp -> 1396
+Function/global mapping strict_strtoul -> 1397
+Function/global mapping strlcpy -> 1398
+Function/global mapping strlen -> 1399
+Function/global mapping strncmp -> 1400
+Function/global mapping synaptics_capability -> 1401
+Function/global mapping synaptics_detect -> 1402
+Function/global mapping synaptics_detect_pkt_type -> 1403
+Function/global mapping synaptics_disconnect -> 1404
+Function/global mapping synaptics_identify -> 1405
+Function/global mapping synaptics_init -> 1406
+Function/global mapping synaptics_is_pt_packet -> 1407
+Function/global mapping synaptics_mode_cmd -> 1408
+Function/global mapping synaptics_model_id -> 1409
+Function/global mapping synaptics_parse_hw_state -> 1410
+Function/global mapping synaptics_pass_pt_packet -> 1411
+Function/global mapping synaptics_process_byte -> 1412
+Function/global mapping synaptics_process_packet -> 1413
+Function/global mapping synaptics_pt_activate -> 1414
+Function/global mapping synaptics_pt_create -> 1415
+Function/global mapping synaptics_pt_write -> 1416
+Function/global mapping synaptics_query_hardware -> 1417
+Function/global mapping synaptics_reconnect -> 1418
+Function/global mapping synaptics_reset -> 1419
+Function/global mapping synaptics_send_cmd -> 1420
+Function/global mapping synaptics_set_absolute_mode -> 1421
+Function/global mapping synaptics_set_rate -> 1422
+Function/global mapping synaptics_validate_byte -> 1423
+Function/global mapping sysfs_create_group -> 1424
+Function/global mapping sysfs_remove_group -> 1425
+Function/global mapping thinking_detect -> 1426
+Function/global mapping touchkit_ps2_detect -> 1427
+Function/global mapping trackpoint_attr_draghys -> 1428
+Function/global mapping trackpoint_attr_ext_dev -> 1429
+Function/global mapping trackpoint_attr_group -> 1430
+Function/global mapping trackpoint_attr_inertia -> 1431
+Function/global mapping trackpoint_attr_jenks -> 1432
+Function/global mapping trackpoint_attr_mindrag -> 1433
+Function/global mapping trackpoint_attr_press_to_select -> 1434
+Function/global mapping trackpoint_attr_reach -> 1435
+Function/global mapping trackpoint_attr_sensitivity -> 1436
+Function/global mapping trackpoint_attr_skipback -> 1437
+Function/global mapping trackpoint_attr_speed -> 1438
+Function/global mapping trackpoint_attr_thresh -> 1439
+Function/global mapping trackpoint_attr_upthresh -> 1440
+Function/global mapping trackpoint_attr_ztime -> 1441
+Function/global mapping trackpoint_attrs -> 1442
+Function/global mapping trackpoint_defaults -> 1443
+Function/global mapping trackpoint_detect -> 1444
+Function/global mapping trackpoint_disconnect -> 1445
+Function/global mapping trackpoint_read -> 1446
+Function/global mapping trackpoint_reconnect -> 1447
+Function/global mapping trackpoint_set_bit_attr -> 1448
+Function/global mapping trackpoint_set_int_attr -> 1449
+Function/global mapping trackpoint_show_int_attr -> 1450
+Function/global mapping trackpoint_start_protocol -> 1451
+Function/global mapping trackpoint_sync -> 1452
+Function/global mapping trackpoint_toggle_bit -> 1453
+Function/global mapping trackpoint_write -> 1454
+Function/global mapping warn_slowpath -> 1455
+adding psmouse_set_resolution to interface
+asim get globals for psmouse_set_resolution.
+adding psmouse_set_rate to interface
+asim get globals for psmouse_set_rate.
+adding psmouse_show_int_attr to interface
+asim get globals for psmouse_show_int_attr.
+adding psmouse_set_int_attr to interface
+asim get globals for psmouse_set_int_attr.
+adding psmouse_attr_show_protocol to interface
+asim get globals for psmouse_attr_show_protocol.
+adding psmouse_set_maxproto to interface
+asim get globals for psmouse_set_maxproto.
+adding psmouse_get_maxproto to interface
+asim get globals for psmouse_get_maxproto.
+execution_mode_map
+psmouse_get_maxproto      symexec_na
+psmouse_set_rate      symexec_na
+serio_close      default_mode
+ps2_handle_response      default_mode
+serio_open      default_mode
+strcmp      default_mode
+printk      default_mode
+dmi_check_system      default_mode
+psmouse_set_int_attr      symexec_na
+logStackVar      symexec_na
+_spin_lock_irq      default_mode
+__create_workqueue_key      default_mode
+flush_workqueue      default_mode
+serio_unregister_driver      default_mode
+msleep      default_mode
+queue_delayed_work      default_mode
+ps2_cmd_aborted      default_mode
+__builtin_expect      default_mode
+device_create_file      default_mode
+mutex_lock_interruptible_nested      default_mode
+memset      default_mode
+strict_strtoul      default_mode
+psmouse_set_resolution      symexec_na
+mutex_lock_nested      default_mode
+ps2_sendbyte      default_mode
+_spin_unlock_irq      default_mode
+snprintf      default_mode
+input_allocate_device      default_mode
+memcmp      default_mode
+warn_slowpath      default_mode
+__builtin_memcpy      default_mode
+logStackFrame      symexec_na
+input_free_device      default_mode
+odft_is_self_locked      default_mode
+ps2_drain      default_mode
+__kmalloc      default_mode
+ps2_init      default_mode
+input_unregister_device      default_mode
+strlcpy      default_mode
+mutex_unlock      default_mode
+destroy_workqueue      default_mode
+psmouse_attr_show_protocol      symexec_na
+init_timer      default_mode
+strlen      default_mode
+logRead      symexec_na
+__serio_register_port      default_mode
+psmouse_set_maxproto      symexec_na
+serio_reconnect      default_mode
+input_event      default_mode
+device_remove_file      default_mode
+ps2_handle_ack      default_mode
+ps2_command      default_mode
+input_register_device      default_mode
+serio_interrupt      default_mode
+__serio_register_driver      default_mode
+strncmp      default_mode
+serio_unregister_child_port      default_mode
+kfree      default_mode
+psmouse_show_int_attr      symexec_na
+sysfs_remove_group      default_mode
+sysfs_create_group      default_mode
+lockdep_init_map      default_mode
+sprintf      default_mode
+logWrite      symexec_na
+__memcpy      default_mode
+Adding fundec for MARSH___STUB__serio_close
+Adding fundec for DEMARSH_STUB__serio_close
+Adding fundec for serio_close
+Processing serio_close.
+Adding fundec for MARSH___STUB__ps2_handle_response
+Adding fundec for DEMARSH_STUB__ps2_handle_response
+Adding fundec for ps2_handle_response
+Processing ps2_handle_response.
+Adding fundec for MARSH___STUB__serio_open
+Adding fundec for DEMARSH_STUB__serio_open
+Adding fundec for serio_open
+Processing serio_open.
+Adding fundec for MARSH___STUB__dmi_check_system
+Adding fundec for DEMARSH_STUB__dmi_check_system
+Adding fundec for dmi_check_system
+Processing dmi_check_system.
+Adding fundec for MARSH___STUB____create_workqueue_key
+Adding fundec for DEMARSH_STUB____create_workqueue_key
+Adding fundec for __create_workqueue_key
+Processing __create_workqueue_key.
+Adding fundec for MARSH___STUB__flush_workqueue
+Adding fundec for DEMARSH_STUB__flush_workqueue
+Adding fundec for flush_workqueue
+Processing flush_workqueue.
+Adding fundec for MARSH___STUB__serio_unregister_driver
+Adding fundec for DEMARSH_STUB__serio_unregister_driver
+Adding fundec for serio_unregister_driver
+Processing serio_unregister_driver.
+Adding fundec for MARSH___STUB__queue_delayed_work
+Adding fundec for DEMARSH_STUB__queue_delayed_work
+Adding fundec for queue_delayed_work
+Processing queue_delayed_work.
+Adding fundec for MARSH___STUB__ps2_cmd_aborted
+Adding fundec for DEMARSH_STUB__ps2_cmd_aborted
+Adding fundec for ps2_cmd_aborted
+Processing ps2_cmd_aborted.
+Adding fundec for MARSH___STUB__device_create_file
+Adding fundec for DEMARSH_STUB__device_create_file
+Adding fundec for device_create_file
+Processing device_create_file.
+Adding fundec for MARSH___STUB__mutex_lock_interruptible_nested
+Adding fundec for DEMARSH_STUB__mutex_lock_interruptible_nested
+Adding fundec for mutex_lock_interruptible_nested
+Processing mutex_lock_interruptible_nested.
+Adding fundec for MARSH___STUB__strict_strtoul
+Adding fundec for DEMARSH_STUB__strict_strtoul
+Adding fundec for strict_strtoul
+Processing strict_strtoul.
+Adding fundec for MARSH___STUB__mutex_lock_nested
+Adding fundec for DEMARSH_STUB__mutex_lock_nested
+Adding fundec for mutex_lock_nested
+Processing mutex_lock_nested.
+Adding fundec for MARSH___STUB__ps2_sendbyte
+Adding fundec for DEMARSH_STUB__ps2_sendbyte
+Adding fundec for ps2_sendbyte
+Processing ps2_sendbyte.
+Adding fundec for MARSH___STUB__input_allocate_device
+Adding fundec for DEMARSH_STUB__input_allocate_device
+Adding fundec for input_allocate_device
+Processing input_allocate_device.
+Adding fundec for MARSH___STUB__memcmp
+Adding fundec for DEMARSH_STUB__memcmp
+Adding fundec for memcmp
+Processing memcmp.
+Adding fundec for MARSH___STUB__input_free_device
+Adding fundec for DEMARSH_STUB__input_free_device
+Adding fundec for input_free_device
+Processing input_free_device.
+Adding fundec for MARSH___STUB__odft_is_self_locked
+Adding fundec for DEMARSH_STUB__odft_is_self_locked
+Adding fundec for odft_is_self_locked
+Processing odft_is_self_locked.
+Adding fundec for MARSH___STUB__ps2_drain
+Adding fundec for DEMARSH_STUB__ps2_drain
+Adding fundec for ps2_drain
+Processing ps2_drain.
+Adding fundec for MARSH___STUB__ps2_init
+Adding fundec for DEMARSH_STUB__ps2_init
+Adding fundec for ps2_init
+Processing ps2_init.
+Adding fundec for MARSH___STUB__input_unregister_device
+Adding fundec for DEMARSH_STUB__input_unregister_device
+Adding fundec for input_unregister_device
+Processing input_unregister_device.
+Adding fundec for MARSH___STUB__mutex_unlock
+Adding fundec for DEMARSH_STUB__mutex_unlock
+Adding fundec for mutex_unlock
+Processing mutex_unlock.
+Adding fundec for MARSH___STUB__destroy_workqueue
+Adding fundec for DEMARSH_STUB__destroy_workqueue
+Adding fundec for destroy_workqueue
+Processing destroy_workqueue.
+Adding fundec for MARSH___STUB__init_timer
+Adding fundec for DEMARSH_STUB__init_timer
+Adding fundec for init_timer
+Processing init_timer.
+Adding fundec for MARSH___STUB____serio_register_port
+Adding fundec for DEMARSH_STUB____serio_register_port
+Adding fundec for __serio_register_port
+Processing __serio_register_port.
+Adding fundec for MARSH___STUB__serio_reconnect
+Adding fundec for DEMARSH_STUB__serio_reconnect
+Adding fundec for serio_reconnect
+Processing serio_reconnect.
+Adding fundec for MARSH___STUB__input_event
+Adding fundec for DEMARSH_STUB__input_event
+Adding fundec for input_event
+Processing input_event.
+Adding fundec for MARSH___STUB__device_remove_file
+Adding fundec for DEMARSH_STUB__device_remove_file
+Adding fundec for device_remove_file
+Processing device_remove_file.
+Adding fundec for MARSH___STUB__ps2_handle_ack
+Adding fundec for DEMARSH_STUB__ps2_handle_ack
+Adding fundec for ps2_handle_ack
+Processing ps2_handle_ack.
+Adding fundec for MARSH___STUB__ps2_command
+Adding fundec for DEMARSH_STUB__ps2_command
+Adding fundec for ps2_command
+Processing ps2_command.
+Adding fundec for MARSH___STUB__input_register_device
+Adding fundec for DEMARSH_STUB__input_register_device
+Adding fundec for input_register_device
+Processing input_register_device.
+Adding fundec for MARSH___STUB__serio_interrupt
+Adding fundec for DEMARSH_STUB__serio_interrupt
+Adding fundec for serio_interrupt
+Processing serio_interrupt.
+Adding fundec for MARSH___STUB____serio_register_driver
+Adding fundec for DEMARSH_STUB____serio_register_driver
+Adding fundec for __serio_register_driver
+Processing __serio_register_driver.
+Adding fundec for MARSH___STUB__serio_unregister_child_port
+Adding fundec for DEMARSH_STUB__serio_unregister_child_port
+Adding fundec for serio_unregister_child_port
+Processing serio_unregister_child_port.
+Adding fundec for MARSH___STUB__sysfs_remove_group
+Adding fundec for DEMARSH_STUB__sysfs_remove_group
+Adding fundec for sysfs_remove_group
+Processing sysfs_remove_group.
+Adding fundec for MARSH___STUB__sysfs_create_group
+Adding fundec for DEMARSH_STUB__sysfs_create_group
+Adding fundec for sysfs_create_group
+Processing sysfs_create_group.
+Adding fundec for MARSH___STUB__lockdep_init_map
+Adding fundec for DEMARSH_STUB__lockdep_init_map
+Adding fundec for lockdep_init_map
+Processing lockdep_init_map.
+gen_registerfn: psmouse_set_resolution
+gen_registerfn: psmouse_set_rate
+gen_registerfn: psmouse_show_int_attr
+gen_registerfn: psmouse_set_int_attr
+gen_registerfn: psmouse_attr_show_protocol
+gen_registerfn: psmouse_set_maxproto
+gen_registerfn: psmouse_get_maxproto
+dummy function param_set_uint
+dummy function param_get_uint
+dummy function param_set_bool
+dummy function param_get_bool
+Removing unused temporaries
+ Produced user side of the split
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  188 68
+[CHECK]: recursive annotation:  [struct list_head  -> next]
+
+[CHECK]: recursive annotation:  [struct list_head  -> prev]
+
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct psmouse  -> dev] [struct input_dev  -> dev]
+
+[CHECK]: recursive annotation:  [struct serio  -> dev] [struct psmouse  -> ps2dev] [struct ps2dev  -> serio]
+
+[CHECK]: Formal offset of psmouse_show_int_attr does not resolve!
+[CHECK]: Assuming standard scalar pointer for buf
+ Function: __MARSH_WRAP__psmouse_show_int_attr
+
+Variable type: char * __attribute__((__blob__(4))) 
+No offset
+[CHECK]: Formal offset of psmouse_set_int_attr does not resolve!
+[CHECK]: Assuming standard scalar pointer for buf
+ Function: __MARSH_WRAP__psmouse_set_int_attr
+
+Variable type: char const   * __attribute__((__blob__(4))) 
+No offset
+[CHECK]: Assuming standard scalar pointer for psmouse_protocols[idx_arr04]
+ Function: __MARSH_WRAP__psmouse_attr_show_protocol
+Structure name: psmouse_protocol, Field name: name
+Variable type: struct psmouse_protocol  const  [12]
+
+[CHECK]: Assuming standard scalar pointer for *STRUCTADDRXpsmouse_protocolsidx_arr04name
+ Function: __MARSH_WRAP__psmouse_attr_show_protocol
+
+Exp type: STRUCTADDRXpsmouse_protocolsidx_arr04name
+No offset
+[CHECK]: Formal data of psmouse_attr_show_protocol does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  __MARSH_WRAP__psmouse_attr_show_protocol data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for buf
+ Function: __MARSH_WRAP__psmouse_attr_show_protocol
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for psmouse_protocols[idx_arr04]
+ Function: __MARSH_WRAP__psmouse_set_maxproto
+Structure name: psmouse_protocol, Field name: alias
+Variable type: struct psmouse_protocol  const  [12]
+
+[CHECK]: Assuming standard scalar pointer for psmouse_protocols[idx_arr04].alias
+ Function: __MARSH_WRAP__psmouse_set_maxproto
+
+Variable type: struct psmouse_protocol  const  [12]
+
+[CHECK]: Assuming standard scalar pointer for psmouse_protocols[idx_arr04]
+ Function: __MARSH_WRAP__psmouse_set_maxproto
+Structure name: psmouse_protocol, Field name: name
+Variable type: struct psmouse_protocol  const  [12]
+
+[CHECK]: Assuming standard scalar pointer for *STRUCTADDRXpsmouse_protocolsidx_arr04name
+ Function: __MARSH_WRAP__psmouse_set_maxproto
+
+Exp type: STRUCTADDRXpsmouse_protocolsidx_arr04name
+No offset
+[CHECK]: Assuming standard scalar pointer for val
+ Function: __MARSH_WRAP__psmouse_set_maxproto
+
+Variable type: char const   *
+No offset
+[CHECK]: CHECK: PREVIOUSLY FATAL ERROR Field arg of union __anonunion____missing_field_name_100  did not resolve in psmouse_set_maxproto .   This means we have a void * that did not resolve to a type.   Are you using this variable anywhere?  No marshaling code is generated for it.
+[CHECK]: Assuming standard scalar pointer for psmouse_protocols[idx_arr04]
+ Function: __MARSH_WRAP__psmouse_get_maxproto
+Structure name: psmouse_protocol, Field name: name
+Variable type: struct psmouse_protocol  const  [12]
+
+[CHECK]: Assuming standard scalar pointer for *STRUCTADDRXpsmouse_protocolsidx_arr04name
+ Function: __MARSH_WRAP__psmouse_get_maxproto
+
+Exp type: STRUCTADDRXpsmouse_protocolsidx_arr04name
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: __MARSH_WRAP__psmouse_get_maxproto
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB____create_workqueue_key
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for lock_name
+ Function: MARSH___STUB____create_workqueue_key
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB____create_workqueue_key
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for lock_name
+ Function: DEMARSH_STUB____create_workqueue_key
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for 
+ Function: MARSH___STUB__strict_strtoul
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for 
+ Function: MARSH___STUB__strict_strtoul
+
+Variable type: unsigned long *
+No offset
+[CHECK]: Assuming standard scalar pointer for 
+ Function: DEMARSH_STUB__strict_strtoul
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for 
+ Function: DEMARSH_STUB__strict_strtoul
+
+Variable type: unsigned long *
+No offset
+[CHECK]: Formal cs of MARSH___STUB__memcmp does not resolve!
+[CHECK]: Formal ct of MARSH___STUB__memcmp does not resolve!
+[CHECK]: Formal cs of DEMARSH_STUB__memcmp does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__memcmp cs Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal ct of DEMARSH_STUB__memcmp does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__memcmp ct Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for param
+ Function: MARSH___STUB__ps2_command
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for param
+ Function: DEMARSH_STUB__ps2_command
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for mod_name
+ Function: MARSH___STUB____serio_register_driver
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for mod_name
+ Function: DEMARSH_STUB____serio_register_driver
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB__lockdep_init_map
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB__lockdep_init_map
+
+Variable type: char const   *
+No offset
+[CHECK]: Converting to NoStorage disp_kern
+[CHECK]: Converting to NoStorage param_set_uint
+[CHECK]: Converting to NoStorage param_get_uint
+[CHECK]: Converting to NoStorage param_set_bool
+[CHECK]: Converting to NoStorage param_get_bool
+[CHECK]: Converting to NoStorage jiffies
+[CHECK]: Converting to NoStorage __this_module
+=======================================================
+#### Total execution time: 3.075531
+printing file ./psmousebase.merged.sym.cil.c
+****** ISOLATING :::: psmouse_set_resolution
+                     ::::::::::odftPerforimg heapify psmouse_set_resolution****** ISOLATING :::: psmouse_set_rate
+                     ::::::::::odftPerforimg heapify psmouse_set_rate****** ISOLATING :::: psmouse_show_int_attr
+                     ::::::::::odftPerforimg heapify psmouse_show_int_attr****** ISOLATING :::: psmouse_set_int_attr
+                     ::::::::::odftPerforimg heapify psmouse_set_int_attr****** ISOLATING :::: psmouse_attr_show_protocol
+                     ::::::::::odftPerforimg heapify psmouse_attr_show_protocol****** ISOLATING :::: psmouse_set_maxproto
+                     ::::::::::odftPerforimg heapify psmouse_set_maxproto****** ISOLATING :::: psmouse_get_maxproto
+                     ::::::::::odftPerforimg heapify psmouse_get_maxprotoTimings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=2749.26MB, max=28.44MB, minor=2748.80MB, major=52.73MB, promoted=52.27MB
+    minor collections=10493  major collections=17 compactions=0
+Preprocessing ./psmousebase.merged.sym.cil.c
+gcc -D_GNUCC -E ./psmousebase.merged.sym.cil.c -o ./psmousebase.merged.sym.cil.i

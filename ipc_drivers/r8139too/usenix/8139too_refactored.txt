@@ -1,0 +1,42 @@
+=====================================
+This patch is the result of an automatic spatch transformation to convert
+all ndo_start_xmit() return values of 0 to NETDEV_TX_OK.
+
+Some occurences are missed by the automatic conversion, those will be
+handled in a seperate patch.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/6ed106549d17474ca17a16057f4c0ed4eba5a7ca
+=====================================
+alloc_etherdev() used to install a default implementation of this
+operation, but it must now be explicitly installed in struct
+
+net_device_ops.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/635ecaa70e862f85f652581305fe0074810893be
+=====================================
+Only files where David Miller is the primary git-signer.
+wireless, wimax, ixgbe, etc are not modified.
+
+Compile tested x86 allyesconfig only
+Not all files compiled (not x86 compatible)
+
+Added a few > 80 column lines, which I ignored.
+Existing checkpatch complaints ignored.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/8e95a2026f3b43f7c3d676adaccd2de9532e8dcc
+=====================================
+Use DEFINE_PCI_DEVICE_TABLE() so we get place PCI ids table into correct section
+in every case.
+
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/a3aa18842a5303fc28fcc4d57dbd16618bd830a0
+=====================================
+NOTE: we only use print_hex_dump since the other changes require a new kernel.
+
+Add #define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
+Remove #define PFX
+Use pr_<level>
+Use netdev_<level>
+Use netif_<level>
+Convert formats like %8.8 to %08
+Remove periods from formats
+Coalesce long formats
+Use print_hex_dump
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/497159aff6c81b61fe88463a64e7dad6f86297e3
+=====================================

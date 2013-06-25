@@ -1,0 +1,146 @@
+.hwstart.c
+8139too: fix HW initial flow
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3f9738f73ad08ef770df64f145007bd27ac2fa16
+
+.mac_addr.c
+8139too: allow to set mac address on running device 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bda6a15a0d283d531b865fb7c596bb3ff258e87e
+
+.cb_ref.c
+8139too: use err.h macros
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=85920d43bd5ae8a96f434704438b57c0b8c31198
+"Compile tested only"
+
+.convert_nops.c
+8139: convert to net_device_ops 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=48dfcde46ef23cfad1e0c0f13d4eae15c7f46efc
+
+.netstats.c
+8139too: use netstats in net_device structure
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=e1eac92e4cea32b5254d0b835de16d11e589502c
+
+.trans_start.c
+8139too: don't set trans_start in start_xmit routine - collateral evolution
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=1ae5dc342ac78d7a42965fd1f323815f6f5ef2c1#patch10
+
+
+
+
+Possible reversions:
+
+Revert "veth: prevent oops caused by netdev destructor"
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=11687a1099583273a8a98ec42af62b5bb5a69e45
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ae0e8e82205c903978a79ebf5e31c670b61fa5b4
+
+[SCSI] cnic: fix error: implicit declaration of function `__symbol_get' 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bc3bf8fd330ce981ce632a1a4a283eee46838f32
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7cbdca23c8a4e6d007b62c9136ba0e5f86e069d0
+
+
+
+
+Other reversions that don't work so well:
+
+Revert "skge: fix ram buffer size calculation" 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=279e1dab949d33737557babfe9f74e0b74fbe39a
+This one has some kind of write ordering issue.  The problem only occurs during
+data transfers of 50MB/s or more.  The patch incorrectly changed the order in
+which some writes to the device occur.
+
+
+sky2: revert config space change 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=a40ccc6868943e74ec12f26a266ce1d0373b2b32
+Original patch removed a bunch of device write operations to make PCI config
+space read-only.  This had some unintentended effect.
+
+
+sky2: revert shutdown changes 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=3d1454dd93e84ad1394b6b1646f13795e9f6928e
+Patch removed some device read/write operations that "broke shutdown" on some
+systems.
+
+Revert "sky2: remove check for PCI wakeup setting from BIOS"
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=be63a21c9573fbf88106ff0f030da5974551257b
+Some BIOS's break if Wake On Lan is enabled, and the machine can't boot. Better
+to have some user's have to call ethtool to enable WOL than to break a single
+user's boot.
+
+sky2: revert to access PCI config via device space
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=b32f40c4853cdbe3d722a959fb0dd1ea048b50d0
+"Performance" optimization which also "avoids issues with MMCONFIG etc."
+
+Revert "[netdrvr e100] experiment with doing RX in a similar manner to eepro100" 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=ca93ca428b8e09973f19e2725bf19cb3f1836034
+"Unfortunately the hardware doesn't work exactly like this and therefore this
+patch actually breaks e100. Reverting the change brings it back to the
+previously known good state for 2.6.22."
+
+
+r8169: revert 7da97ec96a0934319c7fbedd3d38baf533e20640 (bis repetita) 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=50d84c2dc00e48ff9ba018ed0dd23276cf79e566
+Screws up the hardware (requires cold-restart)
+
+r8169: revert part of 6dccd16b7c2703e8bbf8bca62b5cf248332afbe2 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=c946b3047205d7e107be16885bbb42ab9f10350a
+Performance regression for some chips
+
+r8169: revert bogus BMCR reset 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=9e0db8ef4a8c8fd6f3a506259975d7f8db962421
+Screws up hardware
+
+
+Revert "r8169: mac address change support" 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=209ad53bc19667a128d9c51beba873a5c62bff6e
+Original patch adds some hw writes, but these break some normal use cases.
+
+
+Revert "[BNX2]: Seems to not need net/tcp.h" 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=de081fa517fed81b0369f2e90ca87c30182879c8
+Driver did not compile after original patch was applied
+
+Revert "net: ifb error path loop fix"
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=bcdddfb66cc998252d34758ce4109cedc0d24a5c
+Original code was convoluted and the patch author was confused.  Executing this
+code might have revealed the problem.  This driver is not for real hardware
+(ifb.c)
+
+[PATCH] sky2: revert IRQ dance on suspend/resume 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=4cbf2aa35e1c189db234190fefc6c83b139ef963
+Original patch was fine, a bit messy, but they didn't want to deal with this
+problem this way.
+
+
+[PATCH] sky2: revert pci express extensions 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=7bd656d12119708b37414bf909ab2995473da818
+Original patch writes different stuff to HW.
+
+
+[PATCH] forcedeth: fix multi irq issues 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=84b3932bf0fd8cdc8c75a5be77e1dded1e6479c6
+Original patch does "request_irq" twice, accidentally, and then only frees it
+once.  When the driver is unloaded, one IRQ line remains active, and this causes
+crashes.
+
+
+[PATCH] via-rhine: revert "change mdelay to msleep and remove from ISR path" 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=38bb6b288bf4fb954a3793e57c7339774c842a54
+msleep vs. mdelay.  This one could theoretically be checkable via symbolic
+execution.  The problem is the call stack netdev_ioctl -> generic_mii_ioctl ->
+mdio_read -> rhine_disable_linkmon -> msleep(1); (vs. mdelay(1)).  Since
+netdev_ioctl grabs a spinlock, the msleep will fail, but mdelay is OK.
+
+
+[TG3]: Revert "Speed up SRAM access" 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=758a613936223699f99081fc75eff7cf67b208f6
+Hardware misbehaves w/ original patch
+
+
+e100: revert CPU cycle saver microcode, it causes severe problems 
+http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=875521ddccfa90d519cf31dfc8aa472f7f6325bb
+Unclear as to the problem
+
+
+Notes:
+ - revert "r8169: read MAC address from EEPROM on init (2nd attempt)"
+   * Interesting because it's hardware-specific.
+   * Bug is not fail-stop, so symexec wouldn't pick it up.

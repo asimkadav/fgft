@@ -1,0 +1,38 @@
+alloc_etherdev() used to install default implementations of these
+operations, but they must now be explicitly installed in struct
+net_device_ops.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/240c102d9c54fee7fdc87a4ef2fabc7eb539e00a
+==============================
+This patch is the result of an automatic spatch transformation to convert
+all ndo_start_xmit() return values of 0 to NETDEV_TX_OK.
+
+Some occurences are missed by the automatic conversion, those will be
+handled in a seperate patch.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/6ed106549d17474ca17a16057f4c0ed4eba5a7ca
+==============================
+alloc_etherdev() used to install a default implementation of this
+operation, but it must now be explicitly installed in struct
+net_device_ops.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/635ecaa70e862f85f652581305fe0074810893be
+==============================
+No need to put ethtool_ops in data, they should be const.
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/0fc0b732eaa38beb93a6fb62f77c7bd9622c76ec
+==============================
+Use kmemdup when some other buffer is immediately copied into the
+allocated region.
+
+A simplified version of the semantic patch that makes this change is as
+follows: (http://coccinelle.lip6.fr/)
+
+// <smpl>
+@@
+expression from,to,size,flag;
+statement S;
+@@
+
+-  to = \(kmalloc\|kzalloc\)(size,flag);
++  to = kmemdup(from,size,flag);
+   if (to==NULL || ...) S
+-  memcpy(to, from, size);
+// </smpl>
+http://mrenz.dyndns.org:52000/git/linux-2.6/.git/commitdiff/175c04414106c34f0130d8d3bf152825b4829ceb

@@ -1,0 +1,953 @@
+cscope 15 /scratch/sym/ipc_drivers/common               0000004563
+	@snd_modif_annots.h
+
+1 
+	#MODIFANNOT
+(
+X
+Ë
+MICRODRIVERS__MODIF_
+ ## 
+	)
+X
+
+2 
+	#MODIFIES
+(
+v¨
+Ë
+	`MICRODRIVERS__DUMMY
+((*Ëv¨)
+
+	)
+
+3 
+	#MODIFIES_ADDROF
+(
+v¨
+Ë
+	`MICRODRIVERS__DUMMY
+((*Ë&v¨)
+
+	)
+
+7 
+	$MICRODRIVERS__DUMMY
+(*
+x
+) {
+
+9 
+	}
+}
+
+12 * 
+	$MODIFANNOT
+(
+kmem_ˇche_zÆloc
+)
+
+13 (
+kmem_ˇche
+ *
+a
+, 
+gÂ_t
+ 
+b
+) {
+
+15 
+	}
+}
+
+18 
+	$MODIFANNOT
+(
+_•ö_lock_úqßve
+)
+
+19 (
+•ölock_t
+ *
+lock
+) {
+
+21 
+	}
+}
+
+24 
+	$MODIFANNOT
+(
+_•ö_u∆ock_úqª°‹e
+)
+
+25 (
+•ölock_t
+ *
+lock
+, 
+Êags
+) {
+
+27 
+	}
+}
+
+30 
+	$MODIFANNOT
+(
+pci_dißbÀ_devi˚
+)
+
+31 (
+pci_dev
+ *
+dev
+) {
+
+32 
+	`MODIFIES
+(
+dev
+->
+bus
+);
+
+33 
+	`MODIFIES
+(
+dev
+->
+dev‚
+);
+
+35 
+	}
+}
+
+38 
+	$MODIFANNOT
+(
+pci_£t_ma°î
+)
+
+39 (
+pci_dev
+ *
+dev
+) {
+
+40 
+	`MODIFIES
+(
+dev
+->
+bus
+);
+
+41 
+	`MODIFIES
+(
+dev
+->
+dev‚
+);
+
+42 
+	`MODIFIES
+(
+dev
+->dev.
+bus_id
+);
+
+44 
+	}
+}
+
+47 
+	$MODIFANNOT
+(
+__ªÀa£_ªgi⁄
+)
+
+48 (
+ªsour˚
+ * 
+a
+, 
+ªsour˚_size_t
+ 
+b
+,Ñesour˚_size_à
+c
+) {
+
+51 
+	}
+}
+
+54 
+	$MODIFANNOT
+(
+__•ö_lock_öô
+)
+
+55 (
+•ölock_t
+ *
+lock
+, c⁄° *
+«me
+, 
+lock_˛ass_key
+ *
+key
+) {
+
+57 
+	}
+}
+
+60 
+ªsour˚
+ * 
+	$MODIFANNOT
+(
+__ªque°_ªgi⁄
+)
+
+61 (
+ªsour˚
+ * 
+a
+, 
+ªsour˚_size_t
+ 
+°¨t
+,
+
+62 
+ªsour˚_size_t
+ 
+n
+, c⁄° *
+«me
+) {
+
+64 
+	}
+}
+
+67 
+	$MODIFANNOT
+(
+pci_íabÀ_devi˚
+)
+
+68 (
+pci_dev
+ *
+dev
+) {
+
+71 
+	}
+}
+
+74 
+	$MODIFANNOT
+(
+pci_uƒegi°î_drivî
+)
+
+75 (
+pci_drivî
+ *
+drv
+) {
+
+76 
+	`MODIFIES_ADDROF
+(
+drv
+->
+drivî
+);
+
+78 
+	}
+}
+
+81 
+	$MODIFANNOT
+(
+_•ö_u∆ock
+)
+
+82 (
+•ölock_t
+ *
+lock
+) {
+
+84 
+	}
+}
+
+87 
+	$MODIFANNOT
+(
+_•ö_lock
+)
+
+88 (
+•ölock_t
+ *
+lock
+) {
+
+90 
+	}
+}
+
+92 
+	$MODIFANNOT
+(
+_•ö_lock_bh
+)
+
+93 (
+•ölock_t
+ *
+lock
+) {
+
+95 
+	}
+}
+
+98 
+	$MODIFANNOT
+(
+__pci_ªgi°î_drivî
+)
+
+99 (
+pci_drivî
+ *
+drv
+, 
+moduÀ
+ *
+ow√r
+) {
+
+100 
+	`MODIFIES
+(
+drv
+->
+drivî
+.
+«me
+);
+
+101 
+	`MODIFIES
+(
+drv
+->
+«me
+);
+
+102 
+	`MODIFIES
+(
+drv
+->
+drivî
+.
+bus
+);
+
+103 
+	`MODIFIES
+(
+drv
+->
+drivî
+.
+ow√r
+);
+
+104 
+	`MODIFIES_ADDROF
+(
+drv
+->
+dynids
+.
+lock
+);
+
+105 
+	`MODIFIES_ADDROF
+(
+drv
+->
+dynids
+.
+li°
+);
+
+106 
+	`MODIFIES_ADDROF
+(
+drv
+->
+drivî
+);
+
+107 
+	`MODIFIES
+(
+drv
+->
+¥obe
+);
+
+110 
+	}
+}
+
+113 
+	$MODIFANNOT
+(
+ªque°_úq
+)
+
+114 (
+a
+,
+
+115 
+	$úqªtu∫_t
+ (*
+h™dÀr
+)(, *, 
+±_ªgs
+ *),
+
+116 
+b
+, c⁄° * 
+c
+, * 
+d
+) {
+
+118 
+	}
+}
+
+121 
+	$MODIFANNOT
+(
+_•ö_u∆ock_bh
+)
+
+122 (
+•ölock_t
+ *
+lock
+) {
+
+124 
+	}
+}
+
+127 
+	$MODIFANNOT
+(
+_•ö_lock_úq
+Ë(
+•ölock_t
+ *
+lock
+) {
+
+129 
+	}
+}
+
+132 
+	$MODIFANNOT
+(
+muãx_u∆ock
+Ë(
+muãx
+ *
+lock
+) {
+
+134 
+	}
+}
+
+137 
+	$MODIFANNOT
+(
+muãx_lock
+Ë(
+muãx
+ *
+lock
+) {
+
+139 
+	}
+}
+
+142 
+	$MODIFANNOT
+(
+_•ö_u∆ock_úq
+Ë(
+•ölock_t
+ *
+lock
+) {
+
+144 
+	}
+}
+
+146 
+	$MODIFANNOT
+(
+__wake_up
+Ë(
+waô_queue_hód_t
+ *
+q
+, 
+mode
+,
+
+147 
+ƒ_ex˛usive
+, *
+key
+) {
+
+149 
+	}
+}
+
+151 
+	$MODIFANNOT
+(
+pci_ªÀa£_ªgi⁄s
+Ë(
+pci_dev
+ *
+pdev
+) {
+
+153 
+	}
+}
+
+155 
+	$MODIFANNOT
+(
+‰ì_úq
+Ë(
+úq
+, *
+dev_id
+) {
+
+157 
+	}
+}
+
+159 
+	$MODIFANNOT
+(
+pci_£t_powî_°©e
+Ë(
+pci_dev
+ *
+dev
+, 
+pci_powî_t
+ 
+°©e
+) {
+
+161 
+	}
+}
+
+163 
+	$MODIFANNOT
+(
+pci_ßve_°©e
+Ë(
+pci_dev
+ *
+dev
+) {
+
+165 
+	}
+}
+
+167 
+	$MODIFANNOT
+(
+pci_ª°‹e_°©e
+Ë(
+pci_dev
+ *
+dev
+) {
+
+169 
+	}
+}
+
+171 
+	$MODIFANNOT
+(
+pci_bus_ªad_c⁄fig_byã
+Ë(
+pci_bus
+ *
+bus
+,
+
+172 
+dev‚
+,
+
+173 
+whîe
+,
+
+174 
+u8
+ *
+vÆ
+) {
+
+176 
+	}
+}
+
+178 
+	$MODIFANNOT
+(
+__muãx_öô
+Ë(
+muãx
+ *
+lock
+, c⁄° *
+«me
+, 
+lock_˛ass_key
+ *
+key
+) {
+
+180 
+	}
+}
+
+182 
+	$MODIFANNOT
+(
+pci_bus_ªad_c⁄fig_w‹d
+Ë(
+pci_bus
+ *
+bus
+,
+
+183 
+dev‚
+,
+
+184 
+whîe
+,
+
+185 
+u16
+ *
+vÆ
+) {
+
+187 
+	}
+}
+
+189 
+	$MODIFANNOT
+(
+pci_ªque°_ªgi⁄s
+Ë(
+pci_dev
+ *
+pdev
+,
+
+190 c⁄° *
+ªs_«me
+) {
+
+192 
+	}
+}
+
+194 
+	$MODIFANNOT
+(
+devi˚_¸óã_fûe
+)(
+devi˚
+ *
+dev
+, 
+devi˚_©åibuã
+ *
+©å
+) {
+
+195 
+	`MODIFIES
+(
+©å
+->©å.
+mode
+);
+
+196 
+	`MODIFIES
+(
+©å
+->©å.
+«me
+);
+
+199 
+	}
+}
+
+201 
+	$MODIFANNOT
+(
+hπimî_gë_ªs
+)(c⁄° 
+˛ockid_t
+ 
+which_˛ock
+, 
+time•ec
+ *
+ç
+) {
+
+202 
+	`MODIFIES
+(
+ç
+->
+tv_£c
+);
+
+203 
+	`MODIFIES
+(
+ç
+->
+tv_n£c
+);
+
+205 
+	}
+}
+
+207 
+¥oc_dú_íåy
+ *
+	$MODIFANNOT
+(
+¸óã_¥oc_íåy
+)(c⁄° *
+«me
+, 
+mode_t
+ 
+mode
+, 
+¥oc_dú_íåy
+ *
+∑ª¡
+) {
+
+208 
+	`MODIFIES
+(
+«me
+);
+
+209 
+	`MODIFIES
+(
+mode
+);
+
+210 
+	`MODIFIES
+(
+∑ª¡
+);
+
+211 
+	`MODIFIES
+(
+∑ª¡
+->
+«me
+);
+
+212  
+NULL
+;
+
+213 
+	}
+}
+
+215 
+¥oc_dú_íåy
+ *
+	$MODIFANNOT
+(
+¥oc_symlök
+)(c⁄° *
+«me
+,
+
+216 
+¥oc_dú_íåy
+ *
+∑ª¡
+, c⁄° *
+de°
+) {
+
+217 
+	`MODIFIES
+(
+∑ª¡
+->
+«me
+);
+
+218  
+NULL
+;
+
+219 
+	}
+}
+
+221 
+	$MODIFANNOT
+(
+logWrôe
+Ë(*
+addr
+ , *
+wh©
+, *
+whîe
+, *
+fûe
+ , 
+löe
+ ) {
+
+223 
+	}
+}
+
+225 
+	$MODIFANNOT
+(
+logRód
+Ë(*
+addr
+ , *
+wh©
+, *
+whîe
+, *
+fûe
+ , 
+löe
+ ) {
+
+227 
+	}
+}
+
+229 
+	$MODIFANNOT
+(
+logSèckFøme
+Ë(*
+func
+ ) {
+
+231 
+	}
+}
+
+233 
+	$MODIFANNOT
+ (
+logAŒoc
+Ë(*
+addr
+ , 
+size
+ , *
+‚
+, *
+fûe
+ , *
+Æloc‚
+, 
+löe
+ ) {
+
+235 
+	}
+}
+
+	@
+1
+.
+1
+/usr/include
+1
+19
+snd_modif_annots.h

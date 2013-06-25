@@ -1,0 +1,11 @@
+digraph G
+ {
+	 ratio="fill";
+	 size="8,10";
+label = <<table border="0" cellborder="1">
+<tr><td>STATS - total functions: 0</td></tr>
+<tr><td>STATS - total_LOC: 0</td></tr>
+<tr><td>STATS - kern_funcs: 0</td></tr>
+<tr><td>STATS - kern_funcs_LOC: -1</td></tr>
+</table>>
+}

@@ -1,0 +1,1207 @@
+Preprocessing cmipci.merged.c
+gcc -D_GNUCC -E -DCIL=1 cmipci.merged.c -o /tmp/cil-HRTvJPjW.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-XfZlpRU0.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots cmipci.entry_points.txt /tmp/cil-HRTvJPjW.i
+Frontc is parsing /tmp/cil-HRTvJPjW.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:69: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:71: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:73: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:75: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:77: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:79: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:82: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:462: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:462: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:612: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:1141: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:1177: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:1598: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:2682: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:2694: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:2707: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:2725: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:2734: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:2753: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:3263: Warning: /scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:3263: CIL only supports attribute((alias)) for functions.
+
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:3359: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:3361: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:3396: Warning: CALL in constant
+/scratch/sym/ipc_drivers/cmipci/cmipci_annotated.c:3398: Warning: CALL in constant
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+ROOT 3 failed: sizeof(index) / sizeof(index[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(index[0])
+ROOT 3 failed: index
+ROOT 3 failed: __param_str_index
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(id) / sizeof(id[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_charp
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_charp
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(id[0])
+ROOT 3 failed: id
+ROOT 3 failed: __param_str_id
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(enable) / sizeof(enable[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_bool
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_bool
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(enable[0])
+ROOT 3 failed: enable
+ROOT 3 failed: __param_str_enable
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(mpu_port) / sizeof(mpu_port[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_long
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_long
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(mpu_port[0])
+ROOT 3 failed: mpu_port
+ROOT 3 failed: __param_str_mpu_port
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(fm_port) / sizeof(fm_port[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_long
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_long
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(fm_port[0])
+ROOT 3 failed: fm_port
+ROOT 3 failed: __param_str_fm_port
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(soft_ac3) / sizeof(soft_ac3[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_bool
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_bool
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(soft_ac3[0])
+ROOT 3 failed: soft_ac3
+ROOT 3 failed: __param_str_soft_ac3
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(joystick_port) / sizeof(joystick_port[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(joystick_port[0])
+ROOT 3 failed: joystick_port
+ROOT 3 failed: __param_str_joystick_port
+ROOT 3 failed: 292U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: "PCM Playback Switch"
+ROOT 3 failed: 0
+ROOT 3 failed: "IEC958 Output Switch"
+ROOT 3 failed: 1
+ROOT 3 failed: "IEC958 Mix Analog"
+ROOT 3 failed: 0
+ROOT 3 failed: "IEC958 Loop"
+ROOT 3 failed: 0
+ROOT 3 failed: 3U
+ROOT 3 failed: hw_channels
+ROOT 3 failed: 0U
+ROOT 3 failed: 4U
+ROOT 3 failed: hw_channels
+ROOT 3 failed: 0U
+ROOT 3 failed: 5U
+ROOT 3 failed: hw_channels
+ROOT 3 failed: 0U
+ROOT 3 failed: 3
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Playback Default"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_spdif_default_info
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 2: snd_cmipci_spdif_default_get
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 2: snd_cmipci_spdif_default_put
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 3 failed: 0UL
+ROOT 3 failed: 3
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Playback Con Mask"
+ROOT 3 failed: 0U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_spdif_mask_info
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 2: snd_cmipci_spdif_mask_get
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 3 failed: 0
+ROOT 5 failed: struct snd_kcontrol_new 
+ROOT 3 failed: 0UL
+ROOT 3 failed: 3
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Playback PCM Stream"
+ROOT 3 failed: 0U
+ROOT 3 failed: (1 | (1 << 1)) | (1 << 8)
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_spdif_stream_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_spdif_stream_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_spdif_stream_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0UL
+ROOT 3 failed: 852227U
+ROOT 3 failed: (1ULL << 1) | (1ULL << 2)
+ROOT 3 failed: 1 | (((((((1 << 1) | (1 << 2)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 6)) | (1 << 7))
+ROOT 3 failed: 5512U
+ROOT 3 failed: 48000U
+ROOT 3 failed: 1U
+ROOT 3 failed: 2U
+ROOT 3 failed: 131072
+ROOT 3 failed: 64
+ROOT 3 failed: 131072
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0
+ROOT 3 failed: 852227U
+ROOT 3 failed: (1ULL << 1) | (1ULL << 2)
+ROOT 3 failed: 1 | (((((((1 << 1) | (1 << 2)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 6)) | (1 << 7))
+ROOT 3 failed: 5512U
+ROOT 3 failed: 48000U
+ROOT 3 failed: 1U
+ROOT 3 failed: 2U
+ROOT 3 failed: 131072
+ROOT 3 failed: 64
+ROOT 3 failed: 131072
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0
+ROOT 3 failed: 852227U
+ROOT 3 failed: 1ULL << 2
+ROOT 3 failed: 1 | (((((((1 << 1) | (1 << 2)) | (1 << 3)) | (1 << 4)) | (1 << 5)) | (1 << 6)) | (1 << 7))
+ROOT 3 failed: 5512U
+ROOT 3 failed: 48000U
+ROOT 3 failed: 2U
+ROOT 3 failed: 2U
+ROOT 3 failed: 131072
+ROOT 3 failed: 64
+ROOT 3 failed: 131072
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0
+ROOT 3 failed: 852227U
+ROOT 3 failed: 1ULL << 2
+ROOT 3 failed: (1 << 6) | (1 << 7)
+ROOT 3 failed: 44100U
+ROOT 3 failed: 48000U
+ROOT 3 failed: 2U
+ROOT 3 failed: 2U
+ROOT 3 failed: 131072
+ROOT 3 failed: 64
+ROOT 3 failed: 131072
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0
+ROOT 3 failed: 852227U
+ROOT 3 failed: 1ULL << 18
+ROOT 3 failed: (1 << 6) | (1 << 7)
+ROOT 3 failed: 44100U
+ROOT 3 failed: 48000U
+ROOT 3 failed: 2U
+ROOT 3 failed: 2U
+ROOT 3 failed: 131072
+ROOT 3 failed: 64
+ROOT 3 failed: 131072
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0
+ROOT 3 failed: 852227U
+ROOT 3 failed: (1ULL << 2) | (1ULL << 18)
+ROOT 3 failed: (1 << 6) | (1 << 7)
+ROOT 3 failed: 44100U
+ROOT 3 failed: 48000U
+ROOT 3 failed: 2U
+ROOT 3 failed: 2U
+ROOT 3 failed: 131072
+ROOT 3 failed: 64
+ROOT 3 failed: 131072
+ROOT 3 failed: 2U
+ROOT 3 failed: 1024U
+ROOT 3 failed: 0
+ROOT 3 failed: sizeof(rate_constraints) / sizeof(rate_constraints[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: rate_constraints
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_playback_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_cmipci_capture_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_cmipci_playback2_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback2_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback2_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback2_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_cmipci_playback_spdif_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_spdif_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_spdif_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_playback_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_cmipci_capture_spdif_open
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_spdif_close
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_pcm_lib_ioctl
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_hw_params
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_spdif_hw_free
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_spdif_prepare
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_trigger
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_capture_pointer
+ROOT 5 failed: struct snd_pcm_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Master Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((48 | (49 << 8)) | (3 << 16)) | (3 << 19)) | (31 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "3D Control - Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((36 | (36 << 8)) | (1 << 16)) | (1 << 19)) | (1 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "PCM Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((50 | (51 << 8)) | (3 << 16)) | (3 << 19)) | (31 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "PCM Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer_sensitive
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer_sensitive
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((36 | (36 << 8)) | (6 << 16)) | (6 << 19)) | (1 << 24)) | (1 << 22)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "PCM Capture Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((36 | (36 << 8)) | (3 << 16)) | (2 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Synth Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((52 | (53 << 8)) | (3 << 16)) | (3 << 19)) | (31 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Synth Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((36 | (36 << 8)) | (7 << 16)) | (7 << 19)) | (1 << 24)) | (1 << 22)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Synth Capture Route"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((61 | (62 << 8)) | (6 << 16)) | (5 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "CD Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((54 | (55 << 8)) | (3 << 16)) | (3 << 19)) | (31 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "CD Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((60 | (60 << 8)) | (2 << 16)) | (1 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "CD Capture Route"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((61 | (62 << 8)) | (2 << 16)) | (1 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Line Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((56 | (57 << 8)) | (3 << 16)) | (3 << 19)) | (31 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Line Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((60 | (60 << 8)) | (4 << 16)) | (3 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Line Capture Route"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_input_sw
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((61 | (62 << 8)) | (4 << 16)) | (3 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((58 | (58 << 8)) | (3 << 16)) | (3 << 19)) | (31 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (60 | (60 << 8)) | (1 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic Capture Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (61 | (62 << 8)) | (1 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "PC Speaker Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((59 | (59 << 8)) | (6 << 16)) | (6 << 19)) | (3 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Aux Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((38 | (38 << 8)) | (4 << 16)) | (15 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Aux Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((37 | (37 << 8)) | (4 << 16)) | (5 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Aux Capture Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((((37 | (37 << 8)) | (6 << 16)) | (7 << 19)) | (1 << 24)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic Boost Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: ((37 | (37 << 8)) | (1 << 24)) | (1 << 22)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic Capture Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_native_mixer
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((37 | (37 << 8)) | (1 << 16)) | (1 << 19)) | (7 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Phone Playback Volume"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((240 | (240 << 8)) | (5 << 16)) | (5 << 19)) | (7 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Phone Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((240 | (240 << 8)) | (4 << 16)) | (4 << 19)) | (1 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "PC Speaker Playback Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (((240 | (240 << 8)) | (3 << 16)) | (3 << 19)) | (1 << 24)
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic Boost Capture Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_info_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_get_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 2: snd_cmipci_put_volume
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 5 failed: struct snd_kcontrol_new [27]
+ROOT 3 failed: (240 | (240 << 8)) | (1 << 24)
+ROOT 3 failed: 8
+ROOT 3 failed: 524288U
+ROOT 3 failed: 524288U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 24
+ROOT 3 failed: 256U
+ROOT 3 failed: 256U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 20
+ROOT 3 failed: 8388608U
+ROOT 3 failed: 8388608U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 4
+ROOT 3 failed: 64U
+ROOT 3 failed: 64U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1U
+ROOT 3 failed: 39
+ROOT 3 failed: 2U
+ROOT 3 failed: 2U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 20
+ROOT 3 failed: 4194304U
+ROOT 3 failed: 4194304U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 20
+ROOT 3 failed: 2097152U
+ROOT 3 failed: 2097152U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1U
+ROOT 3 failed: 24
+ROOT 3 failed: 33554432U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 4
+ROOT 3 failed: 128U
+ROOT 3 failed: 128U
+ROOT 3 failed: 0U
+ROOT 3 failed: 1U
+ROOT 3 failed: 36
+ROOT 3 failed: 1U
+ROOT 3 failed: 1U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 39
+ROOT 3 failed: 4U
+ROOT 3 failed: 4U
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 8
+ROOT 3 failed: 128U
+ROOT 3 failed: 128U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 24
+ROOT 3 failed: 4194304U
+ROOT 3 failed: 4194304U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 24
+ROOT 3 failed: 67108864U
+ROOT 3 failed: 67108864U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 24
+ROOT 3 failed: 96U
+ROOT 3 failed: 64U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Four Channel Mode"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: cmipci_switch_arg_fourch
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Line-In Mode"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_line_in_mode_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: snd_cmipci_line_in_mode_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 2: snd_cmipci_line_in_mode_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [2]
+ROOT 3 failed: 0UL
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Exchange DAC"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: cmipci_switch_arg_exchange_dac
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Output Switch"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_spdout_enable_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_spdout_enable_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 3 failed: 0UL
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 In Valid"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: cmipci_switch_arg_spdi_valid
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Copyright"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: cmipci_switch_arg_spdif_copyright
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 5V"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: cmipci_switch_arg_spdo_5v
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Loop"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: cmipci_switch_arg_spdif_loop
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 In Monitor"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 2: cmipci_switch_arg_spdi_monitor
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [6]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 Mix Analog"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: cmipci_switch_arg_spdif_dac_out
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 In Phase Inverse"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: cmipci_switch_arg_spdi_phase
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 In Select"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: cmipci_switch_arg_spdif_in_sel1
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 In Select"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: cmipci_switch_arg_spdif_in_sel2
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "IEC958 In Phase Inverse"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: cmipci_switch_arg_spdi_phase2
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 2
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Mic-In Mode"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_cmipci_mic_in_mode_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_mic_in_mode_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 2: snd_cmipci_mic_in_mode_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) [3]
+ROOT 3 failed: 0UL
+ROOT 3 failed: 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: "Modem"
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 2: snd_ctl_boolean_mono_info
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_uswitch_get
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: snd_cmipci_uswitch_put
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 2: cmipci_switch_arg_modem
+ROOT 5 failed: struct snd_kcontrol_new  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 5110
+ROOT 3 failed: 256
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5110
+ROOT 3 failed: 257
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5110
+ROOT 3 failed: 273
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5110
+ROOT 3 failed: 274
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4281
+ROOT 3 failed: 273
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0UL
+ROOT 2: snd_cmipci_dev_free
+ROOT 5 failed: struct snd_device_ops  __attribute__((__noderef__, __address_space__(2))) 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 32902
+ROOT 3 failed: 28720
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0UL
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "C-Media PCI"
+ROOT 3 failed: snd_cmipci_ids
+ROOT 2: snd_cmipci_probe
+ROOT 2: snd_cmipci_remove
+ROOT 2: snd_cmipci_suspend
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: snd_cmipci_resume
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+snd_cmipci_remove remove_pci
+snd_cmipci_interrupt interrupt
+snd_cmipci_probe probe_pci
+snd_cmipci_resume resume_pci
+init_module init_module
+cleanup_module cleanup_module
+=======================================================
+=======================================================
+#### Total execution time: 0.528919
+printing file /tmp/cil-XfZlpRU0.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=326.62MB, max=21.33MB, minor=325.89MB, major=22.60MB, promoted=21.86MB
+    minor collections=155  major collections=9 compactions=0
+Preprocessing /tmp/cil-XfZlpRU0.cil.c
+gcc -D_GNUCC -E /tmp/cil-XfZlpRU0.cil.c -o /tmp/cil-3vYcA8fV.cil.i

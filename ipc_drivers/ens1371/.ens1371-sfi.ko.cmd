@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/ens1371/ens1371-sfi.ko := ld -r -m elf_x86_64  --build-id -o /scratch/sym/ipc_drivers/ens1371/ens1371-sfi.ko /scratch/sym/ipc_drivers/ens1371/ens1371-sfi.o /scratch/sym/ipc_drivers/ens1371/ens1371-sfi.mod.o

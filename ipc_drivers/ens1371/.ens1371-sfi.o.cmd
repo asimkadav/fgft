@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/ens1371/ens1371-sfi.o := ld -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/ens1371/ens1371-sfi.o /scratch/sym/ipc_drivers/ens1371/ens1371.sym.o /scratch/sym/ipc_drivers/ens1371/../../common/wrappers_nooks.o /scratch/sym/ipc_drivers/ens1371/../../common/wrappers_sfi.o /scratch/sym/ipc_drivers/ens1371/../../common/wrappers_locks.o 

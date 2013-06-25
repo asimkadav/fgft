@@ -1,0 +1,613 @@
+Preprocessing psmousebase.merged.c
+gcc -D_GNUCC -E -DCIL=1 psmousebase.merged.c -o /tmp/cil-LF6LBpfY.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-ChtNRBFh.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots psmousebase.entry_points.txt /tmp/cil-LF6LBpfY.i
+Frontc is parsing /tmp/cil-LF6LBpfY.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+ROOT 3 failed: __param_str_proto
+ROOT 3 failed: 420U
+ROOT 2: psmouse_set_maxproto
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: psmouse_get_maxproto
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_resolution
+ROOT 3 failed: 420U
+ROOT 2: param_set_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_rate
+ROOT 3 failed: 420U
+ROOT 2: param_set_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_smartscroll
+ROOT 3 failed: 420U
+ROOT 2: param_set_bool
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_bool
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_resetafter
+ROOT 3 failed: 420U
+ROOT 2: param_set_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_resync_time
+ROOT 3 failed: 420U
+ROOT 2: param_set_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_uint
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 0
+ROOT 2: psmouse_attr_show_protocol
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: psmouse_attr_set_protocol
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: & ((struct psmouse *)0)->rate
+ROOT 2: psmouse_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: psmouse_attr_set_rate
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: & ((struct psmouse *)0)->resolution
+ROOT 2: psmouse_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: psmouse_attr_set_resolution
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: & ((struct psmouse *)0)->resetafter
+ROOT 2: psmouse_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: psmouse_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: & ((struct psmouse *)0)->resync_time
+ROOT 2: psmouse_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: psmouse_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: psmouse_attributes
+ROOT 5 failed: struct mutex 
+ROOT 5 failed: struct mutex 
+ROOT 5 failed: struct mutex 
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: psmouse_mutex
+ROOT 5 failed: struct mutex 
+ROOT 5 failed: struct mutex 
+ROOT 3 failed: 1
+ROOT 3 failed: "PS/2"
+ROOT 3 failed: "bare"
+ROOT 3 failed: 1
+ROOT 2: ps2bare_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: "PS2++"
+ROOT 3 failed: "logitech"
+ROOT 3 failed: 0
+ROOT 2: ps2pp_init
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 3
+ROOT 3 failed: "ThinkPS/2"
+ROOT 3 failed: "thinkps"
+ROOT 3 failed: 0
+ROOT 2: thinking_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: "GenPS/2"
+ROOT 3 failed: "genius"
+ROOT 3 failed: 0
+ROOT 2: genius_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 5
+ROOT 3 failed: "ImPS/2"
+ROOT 3 failed: "imps"
+ROOT 3 failed: 1
+ROOT 2: intellimouse_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 6
+ROOT 3 failed: "ImExPS/2"
+ROOT 3 failed: "exps"
+ROOT 3 failed: 1
+ROOT 2: im_explorer_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 7
+ROOT 3 failed: "SynPS/2"
+ROOT 3 failed: "synaptics"
+ROOT 3 failed: 0
+ROOT 2: synaptics_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 2: synaptics_init
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 8
+ROOT 3 failed: "AlpsPS/2"
+ROOT 3 failed: "alps"
+ROOT 3 failed: 0
+ROOT 2: alps_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 2: alps_init
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 9
+ROOT 3 failed: "LBPS/2"
+ROOT 3 failed: "lifebook"
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: lifebook_init
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 10
+ROOT 3 failed: "TPPS/2"
+ROOT 3 failed: "trackpoint"
+ROOT 3 failed: 0
+ROOT 2: trackpoint_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: "CortronPS/2"
+ROOT 3 failed: "cortps"
+ROOT 3 failed: 0
+ROOT 2: cortron_detect
+ROOT 5 failed: struct psmouse_protocol  const  [12]
+ROOT 3 failed: 0
+ROOT 3 failed: 15
+ROOT 3 failed: "auto"
+ROOT 3 failed: "any"
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 255
+ROOT 3 failed: 255
+ROOT 3 failed: 255
+ROOT 3 failed: 5
+ROOT 3 failed: 255
+ROOT 3 failed: 255
+ROOT 3 failed: 255
+ROOT 3 failed: 0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: 0
+ROOT 3 failed: "PS/2 mouse driver"
+ROOT 3 failed: psmouse_serio_ids
+ROOT 3 failed: 0U
+ROOT 3 failed: 0
+ROOT 2: psmouse_interrupt
+ROOT 5 failed: struct serio_driver 
+ROOT 2: psmouse_connect
+ROOT 5 failed: struct serio_driver 
+ROOT 2: psmouse_reconnect
+ROOT 5 failed: struct serio_driver 
+ROOT 2: psmouse_disconnect
+ROOT 5 failed: struct serio_driver 
+ROOT 2: psmouse_cleanup
+ROOT 5 failed: struct serio_driver 
+ROOT 5 failed: struct serio_driver 
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)136
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)16
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)64
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)143
+ROOT 3 failed: (unsigned char)143
+ROOT 3 failed: (unsigned char)2
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)239
+ROOT 3 failed: (unsigned char)239
+ROOT 3 failed: (unsigned char)4
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)32
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)1
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)64
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)33
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)248
+ROOT 3 failed: (unsigned char)33
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)255
+ROOT 3 failed: (unsigned char)255
+ROOT 3 failed: (unsigned char)33
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)207
+ROOT 3 failed: (unsigned char)207
+ROOT 3 failed: (unsigned char)33
+ROOT 5 failed: struct alps_model_info  const  [19]
+ROOT 3 failed: (unsigned char)207
+ROOT 3 failed: (unsigned char)207
+ROOT 3 failed: (unsigned char)4
+ROOT 3 failed: 0
+ROOT 3 failed: "FLORA-ie 55mi"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "LifeBook B"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "Lifebook B"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "Lifebook B213x/B2150"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "Zephyr"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 2: lifebook_set_serio_phys
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: "CF-18"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: "isa0060/serio3"
+ROOT 2: lifebook_set_6byte_proto
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: "Panasonic CF-28"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 2: lifebook_set_6byte_proto
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: "Panasonic CF-29"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 2: lifebook_set_serio_phys
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: "CF-72"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: "isa0060/serio3"
+ROOT 3 failed: 0
+ROOT 3 failed: "Lifebook B142"
+ROOT 5 failed: struct dmi_system_id  const  [10]
+ROOT 3 failed: 0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 0
+ROOT 2: ps2pp_attr_show_smartscroll
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: ps2pp_attr_set_smartscroll
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 12
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 13
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 15
+ROOT 3 failed: 2
+ROOT 3 failed: 63
+ROOT 3 failed: 40
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 41
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 42
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 43
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 50
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 51
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 52
+ROOT 3 failed: 1
+ROOT 3 failed: 5
+ROOT 3 failed: 53
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 56
+ROOT 3 failed: 1
+ROOT 3 failed: 5
+ROOT 3 failed: 61
+ROOT 3 failed: 2
+ROOT 3 failed: 61
+ROOT 3 failed: 66
+ROOT 3 failed: 2
+ROOT 3 failed: 63
+ROOT 3 failed: 72
+ROOT 3 failed: 4
+ROOT 3 failed: 0
+ROOT 3 failed: 73
+ROOT 3 failed: 0
+ROOT 3 failed: 4
+ROOT 3 failed: 75
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 76
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 79
+ROOT 3 failed: 4
+ROOT 3 failed: 1
+ROOT 3 failed: 80
+ROOT 3 failed: 1
+ROOT 3 failed: 5
+ROOT 3 failed: 81
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 83
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 85
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 86
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 87
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 88
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 96
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 97
+ROOT 3 failed: 3
+ROOT 3 failed: 3
+ROOT 3 failed: 99
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 100
+ROOT 3 failed: 2
+ROOT 3 failed: 61
+ROOT 3 failed: 111
+ROOT 3 failed: 2
+ROOT 3 failed: 5
+ROOT 3 failed: 112
+ROOT 3 failed: 2
+ROOT 3 failed: 61
+ROOT 3 failed: 114
+ROOT 3 failed: 2
+ROOT 3 failed: 29
+ROOT 3 failed: & ((struct trackpoint_data *)0)->sensitivity
+ROOT 3 failed: (unsigned char)74
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_sensitivity
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->speed
+ROOT 3 failed: (unsigned char)96
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_speed
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->inertia
+ROOT 3 failed: (unsigned char)77
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_inertia
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->reach
+ROOT 3 failed: (unsigned char)87
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_reach
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->draghys
+ROOT 3 failed: (unsigned char)88
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_draghys
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->mindrag
+ROOT 3 failed: (unsigned char)89
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_mindrag
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->thresh
+ROOT 3 failed: (unsigned char)92
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_thresh
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->upthresh
+ROOT 3 failed: (unsigned char)90
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_upthresh
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->ztime
+ROOT 3 failed: (unsigned char)94
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_ztime
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->jenks
+ROOT 3 failed: (unsigned char)93
+ROOT 3 failed: (unsigned char)0
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_jenks
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->press_to_select
+ROOT 3 failed: (unsigned char)44
+ROOT 3 failed: (unsigned char)1
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_press_to_select
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_bit_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->skipback
+ROOT 3 failed: (unsigned char)45
+ROOT 3 failed: (unsigned char)8
+ROOT 3 failed: (unsigned char)0
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_skipback
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_bit_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: & ((struct trackpoint_data *)0)->ext_dev
+ROOT 3 failed: (unsigned char)35
+ROOT 3 failed: (unsigned char)2
+ROOT 3 failed: (unsigned char)1
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_attr_ext_dev
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_show_int_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 2: trackpoint_set_bit_attr
+ROOT 5 failed: struct psmouse_attribute 
+ROOT 3 failed: 1
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: trackpoint_attrs
+psmouse_interrupt interrupt
+init_module init_module
+cleanup_module cleanup_module
+=======================================================
+=======================================================
+#### Total execution time: 0.254960
+printing file /tmp/cil-ChtNRBFh.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=158.75MB, max=10.16MB, minor=158.62MB, major=10.85MB, promoted=10.72MB
+    minor collections=605  major collections=10 compactions=0
+Preprocessing /tmp/cil-ChtNRBFh.cil.c
+gcc -D_GNUCC -E /tmp/cil-ChtNRBFh.cil.c -o /tmp/cil-f66aJCbd.cil.i

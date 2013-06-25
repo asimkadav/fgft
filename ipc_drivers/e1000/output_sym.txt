@@ -1,0 +1,59 @@
+Preprocessing e1000.merged.sym.c
+gcc -D_GNUCC -E -DCIL=1 e1000.merged.sym.c -o ./e1000.merged.sym.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./e1000.merged.sym.cil.c --verbose --commPrintLnSparse --docarb --sfireads --sfiwrites --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons false --dowhat normal-user e1000.all_annots.txt e1000.entry_points.txt ./e1000.merged.sym.i
+Frontc is parsing ./e1000.merged.sym.i
+Converting CABS->CIL
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+No bugs found.
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating user-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  0 0
+=======================================================
+** Reading entry points from file e1000.entry_points.txt **
+** Reading file e1000.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+kernel function proto: printk
+Function/global mapping heapifyfree -> 1000
+Function/global mapping heapifymalloc -> 1001
+Function/global mapping logAlloc -> 1002
+Function/global mapping logFree -> 1003
+Function/global mapping logRead -> 1004
+Function/global mapping logSfiFrame -> 1005
+Function/global mapping logStackFrame -> 1006
+Function/global mapping logStackVar -> 1007
+Function/global mapping logWrite -> 1008
+Function/global mapping stackguard_get_ra -> 1009
+Function/global mapping stackguard_pop -> 1010
+Function/global mapping stackguard_push -> 1011
+Function/global mapping stackguard_set_ra -> 1012
+Function/global mapping stackguard_stack -> 1013
+execution_mode_map
+Removing unused temporaries
+ Produced user side of the split
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  0 0
+[CHECK]: Converting to NoStorage disp_kern
+=======================================================
+#### Total execution time: 0.028995
+printing file ./e1000.merged.sym.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=21.17MB, max=2.03MB, minor=21.13MB, major=2.31MB, promoted=2.27MB
+    minor collections=80  major collections=6 compactions=0
+Preprocessing ./e1000.merged.sym.cil.c
+gcc -D_GNUCC -E ./e1000.merged.sym.cil.c -o ./e1000.merged.sym.cil.i

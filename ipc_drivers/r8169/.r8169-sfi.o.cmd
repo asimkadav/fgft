@@ -1,0 +1,1 @@
+cmd_/scratch/sym/ipc_drivers/r8169/r8169-sfi.o := ld -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/r8169/r8169-sfi.o /scratch/sym/ipc_drivers/r8169/r8169.sym.o /scratch/sym/ipc_drivers/r8169/../../common/wrappers_nooks.o /scratch/sym/ipc_drivers/r8169/../../common/wrappers_sfi.o 

@@ -1,0 +1,2305 @@
+Preprocessing r8139too.merged.sym.c
+gcc -D_GNUCC -E -DCIL=1 r8139too.merged.sym.c -o ./r8139too.merged.sym.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./r8139too.merged.sym.cil.c --verbose --commPrintLnSparse --docarb --sfireads --sfiwrites --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons false --dowhat normal-user r8139too.all_annots.txt r8139too.entry_points.txt ./r8139too.merged.sym.i
+Frontc is parsing ./r8139too.merged.sym.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/r8139too/modif_annots.h:509: Warning: Body of function MICRODRIVERS__MODIF_mii_link_ok falls-through. Adding a return statement
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:290: Warning: /scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:290: CIL only supports attribute((alias)) for functions.
+
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:633: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:634: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:871: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:2668: Warning: Body of function r8139too_restore falls-through. Adding a return statement
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: rtl8139_get_wol
+                     ::::::::::odftPerforimg heapify rtl8139_get_wolscanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: rtl8139_get_drvinfo
+                     ::::::::::odftPerforimg heapify rtl8139_get_drvinfoscanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: rtl8139_get_msglevel
+                     ::::::::::odftPerforimg heapify rtl8139_get_msglevelscanning globals(0)...
+scanning globals(1)...
+****** ISOLATING :::: rtl8139_get_regs_len
+                     ::::::::::odftPerforimg heapify rtl8139_get_regs_lenscanning globals(1)...
+****** ISOLATING :::: rtl8139_get_regs
+                     ::::::::::odftPerforimg heapify rtl8139_get_regsscanning globals(1)...
+****** ISOLATING :::: rtl8139_get_sset_count
+                     ::::::::::odftPerforimg heapify rtl8139_get_sset_countscanning globals(1)...
+****** ISOLATING :::: rtl8139_get_ethtool_stats
+                     ::::::::::odftPerforimg heapify rtl8139_get_ethtool_statsscanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(2)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+
+====================Hardware dependence bugs======================
+
+ Infinite polling: 0.
+ Unsafe static array deference: 0
+ Dynamic array deference: 0
+ Unsafe halt code:  0
+ Missing error report on device failure: 2
+ Missing error report on device timeout: 4
+ Existing device failures reported: 2
+ Other(ignore)dma 10.
+
+====================Detailed Summary(with line numbers)=================
+ Missing timeout:746 
+ Missing report:840 
+ npa:847 
+ Missing report:865 
+ Missing timeout:871 
+ Missing timeout:1779 
+ Missing timeout:1967 
+
+
+Note: When CIL cannot compute line numbers: Line numbers show up as -1.
+
+
+FAULTINJECTION - NOt perforfming FIAbout to call sfi with kernel parameter 0...
+Performing sfi wth gen_kern 0..
+Activating sfi for fn:rtl8139_get_wol.
+Activating sfi for fn:rtl8139_get_drvinfo.
+Activating sfi for fn:rtl8139_get_msglevel.
+Activating sfi for fn:rtl8139_get_regs_len.
+Activating sfi for fn:rtl8139_get_regs.
+Activating sfi for fn:rtl8139_get_sset_count.
+Activating sfi for fn:rtl8139_get_ethtool_stats.
+Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Added new statement Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating user-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+currently analyzing: set_bit
+currently analyzing: clear_bit
+currently analyzing: test_and_set_bit
+currently analyzing: test_and_clear_bit
+currently analyzing: constant_test_bit
+currently analyzing: native_save_fl
+currently analyzing: __raw_local_save_flags
+currently analyzing: raw_irqs_disabled_flags
+currently analyzing: ERR_PTR
+currently analyzing: PTR_ERR
+currently analyzing: IS_ERR
+currently analyzing: INIT_LIST_HEAD
+currently analyzing: kmalloc
+currently analyzing: dev_name
+currently analyzing: dev_get_drvdata
+currently analyzing: dev_set_drvdata
+currently analyzing: memcpy_fromio
+currently analyzing: pci_read_config_word
+currently analyzing: pci_write_config_word
+currently analyzing: is_device_dma_capable
+currently analyzing: get_dma_ops
+currently analyzing: dma_alloc_coherent_mask
+currently analyzing: dma_alloc_coherent_gfp_flags
+currently analyzing: dma_alloc_coherent
+currently analyzing: dma_free_coherent
+currently analyzing: pci_get_drvdata
+currently analyzing: pci_set_drvdata
+currently analyzing: pci_name
+currently analyzing: skb_reserve
+currently analyzing: netdev_alloc_skb
+currently analyzing: skb_copy_to_linear_data
+currently analyzing: napi_disable_pending
+currently analyzing: napi_schedule_prep
+currently analyzing: napi_disable
+currently analyzing: napi_enable
+currently analyzing: netdev_get_tx_queue
+currently analyzing: netdev_priv
+currently analyzing: netif_tx_start_queue
+currently analyzing: netif_start_queue
+currently analyzing: netif_tx_wake_queue
+currently analyzing: netif_wake_queue
+currently analyzing: netif_tx_stop_queue
+currently analyzing: netif_stop_queue
+currently analyzing: netif_running
+currently analyzing: netif_rx_schedule_prep
+currently analyzing: __netif_rx_schedule
+currently analyzing: __netif_rx_complete
+currently analyzing: if_mii
+currently analyzing: MICRODRIVERS__DUMMY
+currently analyzing: MICRODRIVERS__MODIF_dev_driver_string
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_write_config_word
+currently analyzing: MICRODRIVERS__MODIF_alloc_etherdev_mq
+currently analyzing: MICRODRIVERS__MODIF___alloc_skb
+currently analyzing: MICRODRIVERS__MODIF_dev_kfree_skb_any
+currently analyzing: MICRODRIVERS__MODIF_dma_alloc_coherent
+currently analyzing: MICRODRIVERS__MODIF_dma_free_coherent
+currently analyzing: MICRODRIVERS__MODIF__memcpy_fromio
+currently analyzing: MICRODRIVERS__MODIF_eth_type_trans
+currently analyzing: MICRODRIVERS__MODIF_free_netdev
+currently analyzing: MICRODRIVERS__MODIF_generic_mii_ioctl
+currently analyzing: MICRODRIVERS__MODIF_kfree_skb
+currently analyzing: MICRODRIVERS__MODIF_mii_check_media
+currently analyzing: MICRODRIVERS__MODIF_mii_ethtool_gset
+currently analyzing: MICRODRIVERS__MODIF_mii_ethtool_sset
+currently analyzing: MICRODRIVERS__MODIF_mii_nway_restart
+currently analyzing: MICRODRIVERS__MODIF_netif_carrier_off
+currently analyzing: MICRODRIVERS__MODIF_netif_device_attach
+currently analyzing: MICRODRIVERS__MODIF_netif_device_detach
+currently analyzing: MICRODRIVERS__MODIF_netif_receive_skb
+currently analyzing: MICRODRIVERS__MODIF_netif_rx
+currently analyzing: MICRODRIVERS__MODIF___netif_rx_schedule
+currently analyzing: MICRODRIVERS__MODIF___netif_schedule
+currently analyzing: MICRODRIVERS__MODIF_page_address
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_read_config_byte
+currently analyzing: MICRODRIVERS__MODIF_pci_bus_read_config_word
+currently analyzing: MICRODRIVERS__MODIF_pci_choose_state
+currently analyzing: MICRODRIVERS__MODIF_pci_clear_mwi
+currently analyzing: MICRODRIVERS__MODIF_pci_disable_device
+currently analyzing: MICRODRIVERS__MODIF_pci_enable_device
+currently analyzing: MICRODRIVERS__MODIF_pci_enable_wake
+currently analyzing: MICRODRIVERS__MODIF___pci_register_driver
+currently analyzing: MICRODRIVERS__MODIF_pci_release_regions
+currently analyzing: MICRODRIVERS__MODIF_pci_request_regions
+currently analyzing: MICRODRIVERS__MODIF_pci_restore_state
+currently analyzing: MICRODRIVERS__MODIF_pci_save_state
+currently analyzing: MICRODRIVERS__MODIF_pci_set_consistent_dma_mask
+currently analyzing: MICRODRIVERS__MODIF_pci_set_dma_mask
+currently analyzing: MICRODRIVERS__MODIF_pci_set_master
+currently analyzing: MICRODRIVERS__MODIF_pci_set_mwi
+currently analyzing: MICRODRIVERS__MODIF_pci_set_power_state
+currently analyzing: MICRODRIVERS__MODIF_pci_unregister_driver
+currently analyzing: MICRODRIVERS__MODIF_skb_over_panic
+currently analyzing: MICRODRIVERS__MODIF_unregister_netdev
+currently analyzing: MICRODRIVERS__MODIF_free_irq
+currently analyzing: MICRODRIVERS__MODIF_cancel_rearming_delayed_work
+currently analyzing: MICRODRIVERS__MODIF_schedule_delayed_work
+currently analyzing: MICRODRIVERS__MODIF_init_timer
+currently analyzing: MICRODRIVERS__MODIF_mii_link_ok
+currently analyzing: MICRODRIVERS__MODIF_skb_copy_and_csum_dev
+currently analyzing: MICRODRIVERS__MODIF_netif_stop_queue
+currently analyzing: Nonstub_sk_buff_get_length
+currently analyzing: __rtl8139_cleanup_dev
+currently analyzing: rtl8139_chip_reset
+currently analyzing: rtl8139_init_board
+currently analyzing: rtl8139_init_one
+currently analyzing: rtl8139_remove_one
+currently analyzing: read_eeprom
+currently analyzing: mdio_sync
+currently analyzing: mdio_read
+currently analyzing: mdio_write
+currently analyzing: rtl8139_open
+currently analyzing: rtl_check_media
+currently analyzing: rtl8139_hw_start
+currently analyzing: rtl8139_init_ring
+currently analyzing: rtl8139_tune_twister
+currently analyzing: rtl8139_thread_iter
+currently analyzing: rtl8139_thread
+currently analyzing: rtl8139_start_thread
+currently analyzing: rtl8139_tx_clear
+currently analyzing: rtl8139_tx_timeout_task
+currently analyzing: rtl8139_tx_timeout
+currently analyzing: rtl8139_start_xmit
+currently analyzing: rtl8139_tx_interrupt
+currently analyzing: rtl8139_rx_err
+currently analyzing: rtl8139_isr_ack
+currently analyzing: rtl8139_rx
+currently analyzing: rtl8139_weird_interrupt
+currently analyzing: rtl8139_poll
+currently analyzing: rtl8139_interrupt
+currently analyzing: rtl8139_poll_controller
+currently analyzing: rtl8139_close
+currently analyzing: rtl8139_get_wol
+currently analyzing: rtl8139_set_wol
+currently analyzing: rtl8139_get_drvinfo
+currently analyzing: rtl8139_get_settings
+currently analyzing: rtl8139_set_settings
+currently analyzing: rtl8139_nway_reset
+currently analyzing: rtl8139_get_link
+currently analyzing: rtl8139_get_msglevel
+currently analyzing: rtl8139_set_msglevel
+currently analyzing: rtl8139_get_regs_len
+currently analyzing: rtl8139_get_regs
+currently analyzing: rtl8139_get_sset_count
+currently analyzing: rtl8139_get_ethtool_stats
+currently analyzing: rtl8139_get_strings
+currently analyzing: netdev_ioctl
+currently analyzing: rtl8139_get_stats
+currently analyzing: __set_rx_mode
+currently analyzing: rtl8139_set_rx_mode
+currently analyzing: rtl8139_suspend
+currently analyzing: r8139too_checkpoint
+currently analyzing: r8139too_restore
+currently analyzing: rtl8139_resume
+currently analyzing: rtl8139_init_module
+currently analyzing: rtl8139_cleanup_module
+currently analyzing: init_module
+currently analyzing: cleanup_module
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+DFS completed
+DFS completed
+ modif: Using supplied modif for internal kernel fn:  pci_enable_device
+ modif: Using non-conservative analysis for kernel fn:  __netdev_alloc_skb
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock_irq
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock_irq
+ modif: Using supplied modif for internal kernel fn:  iowrite8
+ modif: Using supplied modif for internal kernel fn:  ioread8
+ modif: Using supplied modif for internal kernel fn:  alloc_etherdev_mq
+ modif: Using supplied modif for internal kernel fn:  iowrite16
+ modif: Using supplied modif for internal kernel fn:  __builtin_expect
+ modif: Using supplied modif for internal kernel fn:  ioread16
+ modif: Using supplied modif for internal kernel fn:  flush_scheduled_work
+ modif: Using supplied modif for internal kernel fn:  init_timer
+ modif: Using supplied modif for internal kernel fn:  pci_disable_device
+ modif: Using supplied modif for internal kernel fn:  __builtin_memcpy
+ modif: Using supplied modif for internal kernel fn:  __kmalloc
+ modif: Using supplied modif for internal kernel fn:  printk
+ modif: Using supplied modif for internal kernel fn:  __const_udelay
+ modif: Using supplied modif for internal kernel fn:  dev_driver_string
+ modif: Using supplied modif for internal kernel fn:  free_netdev
+ modif: Using supplied modif for internal kernel fn:  pci_release_regions
+ modif: Using non-conservative analysis for kernel fn:  pci_iounmap
+ modif: Using supplied modif for internal kernel fn:  pci_set_master
+ modif: Using non-conservative analysis for kernel fn:  pci_iomap
+ modif: Using supplied modif for internal kernel fn:  ioread32
+ modif: Using supplied modif for internal kernel fn:  pci_request_regions
+ modif: Using non-conservative analysis for kernel fn:  register_netdev
+ modif: Using non-conservative analysis for kernel fn:  __spin_lock_init
+ modif: Using non-conservative analysis for kernel fn:  lockdep_init_map
+ modif: Using non-conservative analysis for kernel fn:  netif_napi_add
+ modif: Using supplied modif for internal kernel fn:  netif_device_attach
+ modif: Using supplied modif for internal kernel fn:  pci_bus_read_config_word
+ modif: Using supplied modif for internal kernel fn:  pci_save_state
+ modif: Using supplied modif for internal kernel fn:  mii_check_media
+ modif: Using supplied modif for internal kernel fn:  pci_set_power_state
+ modif: Using supplied modif for internal kernel fn:  netpoll_trap
+ modif: Using supplied modif for internal kernel fn:  pci_restore_state
+ modif: Using supplied modif for internal kernel fn:  logRead
+ modif: Using supplied modif for internal kernel fn:  logStackVar
+ modif: Using supplied modif for internal kernel fn:  logStackFrame
+ modif: Using supplied modif for internal kernel fn:  logWrite
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock_irqrestore
+ modif: Using non-conservative analysis for kernel fn:  odft_hold_and_acquire_lock
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock_irqsave
+ modif: Using supplied modif for internal kernel fn:  iowrite32
+ modif: Using supplied modif for internal kernel fn:  bitrev32
+ modif: Using supplied modif for internal kernel fn:  crc32_le
+ modif: Using supplied modif for internal kernel fn:  mii_link_ok
+ modif: Using supplied modif for internal kernel fn:  schedule_delayed_work
+ modif: Using supplied modif for internal kernel fn:  msleep
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock_bh
+ modif: Using supplied modif for internal kernel fn:  mii_ethtool_sset
+ modif: Using supplied modif for internal kernel fn:  __netif_schedule
+ modif: Using supplied modif for internal kernel fn:  pci_bus_write_config_word
+ modif: Using supplied modif for internal kernel fn:  netif_device_detach
+ modif: Using supplied modif for internal kernel fn:  skb_copy_and_csum_dev
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock
+ modif: Using supplied modif for internal kernel fn:  warn_slowpath
+ modif: Using supplied modif for internal kernel fn:  __pci_register_driver
+ modif: Using non-conservative analysis for kernel fn:  skb_put
+ modif: Using supplied modif for internal kernel fn:  disable_irq
+ modif: Using supplied modif for internal kernel fn:  kfree_skb
+ modif: Using non-conservative analysis for kernel fn:  __napi_complete
+ modif: Using supplied modif for internal kernel fn:  strcpy
+ modif: Using supplied modif for internal kernel fn:  memset
+ modif: Using supplied modif for internal kernel fn:  unregister_netdev
+ modif: Using non-conservative analysis for kernel fn:  __napi_schedule
+ modif: Using supplied modif for internal kernel fn:  __memcpy_fromio
+ modif: Using non-conservative analysis for kernel fn:  request_irq
+ modif: Using supplied modif for internal kernel fn:  rtnl_unlock
+ modif: Using supplied modif for internal kernel fn:  mii_ethtool_gset
+ modif: Using supplied modif for internal kernel fn:  generic_mii_ioctl
+ modif: Using supplied modif for internal kernel fn:  free_irq
+ modif: Using supplied modif for internal kernel fn:  __memcpy
+ modif: Using supplied modif for internal kernel fn:  pci_unregister_driver
+ modif: Using supplied modif for internal kernel fn:  netif_receive_skb
+ modif: Using supplied modif for internal kernel fn:  enable_irq
+ modif: Using supplied modif for internal kernel fn:  eth_type_trans
+ modif: Using supplied modif for internal kernel fn:  net_ratelimit
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock
+ modif: Using supplied modif for internal kernel fn:  mii_nway_restart
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock_bh
+ modif: Using supplied modif for internal kernel fn:  rtnl_lock
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  220 76
+[CHECK]: recursive annotation:  [struct list_head  -> next]
+
+[CHECK]: recursive annotation:  [struct list_head  -> prev]
+
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct device  -> parent]
+
+[CHECK]: recursive annotation:  [struct mii_if_info  -> dev] [struct net_device  -> priv]
+
+=======================================================
+** Reading entry points from file r8139too.entry_points.txt **
+eth_mac_addr
+rtl8139_get_strings
+cleanup_module
+rtl8139_close
+rtl8139_set_settings
+rtl8139_open
+rtl8139_nway_reset
+rtl8139_get_settings
+rtl8139_get_sset_count
+init_module
+rtl8139_set_wol
+rtl8139_get_wol
+rtl8139_tx_timeout
+rtl8139_poll_controller
+rtl8139_resume
+rtl8139_get_stats
+rtl8139_remove_one
+rtl8139_set_rx_mode
+rtl8139_get_regs_len
+rtl8139_init_one
+rtl8139_get_drvinfo
+eth_validate_addr
+rtl8139_start_xmit
+rtl8139_set_msglevel
+rtl8139_get_ethtool_stats
+rtl8139_get_msglevel
+rtl8139_get_regs
+rtl8139_interrupt
+netdev_ioctl
+rtl8139_get_link
+** Reading file r8139too.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+is_override_interface: MICRODRIVERS__MODIF_netif_stop_queue 0
+is_override_interface: kmalloc 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___pci_register_driver 0
+is_override_interface: _spin_unlock 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_thread 0
+is_override_interface: MICRODRIVERS__MODIF_free_netdev 0
+is_override_interface: bitrev32 0
+Asim disabled interface function.
+is_override_interface: rtl8139_get_strings 0
+is_override_interface: pci_set_master 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_mii_check_media 0
+is_override_interface: rtl8139_thread_iter 0
+Asim disabled interface function.
+is_override_interface: init_timer 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_schedule_delayed_work 0
+is_override_interface: MICRODRIVERS__MODIF__memcpy_fromio 0
+is_override_interface: _spin_unlock_bh 0
+Asim disabled interface function.
+is_override_interface: mii_check_media 0
+Asim disabled interface function.
+is_override_interface: rtl8139_chip_reset 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: lockdep_init_map 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_disable_device 0
+is_override_interface: test_and_set_bit 1
+is_override_interface: rtl8139_tx_timeout 0
+is_override_interface: rtl8139_get_settings 0
+is_override_interface: netif_rx_schedule_prep 0
+Asim disabled interface function.
+is_override_interface: rtl8139_remove_one 0
+is_override_interface: native_save_fl 0
+Asim disabled interface function.
+is_override_interface: rtnl_lock 0
+Asim disabled interface function.
+is_override_interface: ioread8 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: netdev_priv 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __const_udelay 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_skb_over_panic 0
+is_override_interface: rtl8139_close 0
+is_override_interface: MICRODRIVERS__MODIF_pci_save_state 0
+is_override_interface: logRead 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: net_ratelimit 0
+Asim disabled interface function.
+is_override_interface: rtl8139_get_msglevel 0
+is_override_interface: rtl8139_resume 0
+is_override_interface: MICRODRIVERS__MODIF_netif_receive_skb 0
+is_override_interface: netif_start_queue 0
+Asim disabled interface function.
+is_override_interface: register_netdev 0
+Asim disabled interface function.
+is_override_interface: dev_name 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: Nonstub_sk_buff_get_length 0
+is_override_interface: netdev_ioctl 0
+is_override_interface: rtl8139_nway_reset 0
+is_override_interface: cleanup_module 0
+is_override_interface: r8139too_restore 0
+is_override_interface: MICRODRIVERS__MODIF_dma_alloc_coherent 0
+is_override_interface: rtl8139_tx_timeout_task 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_skb_copy_and_csum_dev 0
+is_override_interface: rtl8139_poll_controller 0
+is_override_interface: rtl8139_init_ring 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mii_nway_restart 0
+Asim disabled interface function.
+is_override_interface: pci_unregister_driver 0
+Asim disabled interface function.
+is_override_interface: rtl8139_interrupt 0
+Asim disabled interface function.
+is_override_interface: logStackVar 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mii_ethtool_sset 0
+Asim disabled interface function.
+is_override_interface: free_irq 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___netif_schedule 0
+is_override_interface: PTR_ERR 0
+Asim disabled interface function.
+is_override_interface: mdio_read 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_poll 0
+is_override_interface: MICRODRIVERS__MODIF_netif_rx 0
+is_override_interface: rtl8139_rx 0
+Asim disabled interface function.
+is_override_interface: eth_type_trans 0
+Asim disabled interface function.
+is_override_interface: enable_irq 0
+Asim disabled interface function.
+is_override_interface: pci_write_config_word 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_read_config_byte 0
+is_override_interface: mdio_write 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_set_master 0
+is_override_interface: mdio_sync 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_dev_kfree_skb_any 0
+is_override_interface: iowrite8 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_set_dma_mask 0
+is_override_interface: __spin_lock_init 0
+Asim disabled interface function.
+is_override_interface: netif_receive_skb 0
+Asim disabled interface function.
+is_override_interface: _spin_lock_irq 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __builtin_expect 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: strcpy 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_dma_free_coherent 0
+is_override_interface: rtl8139_tune_twister 0
+Asim disabled interface function.
+is_override_interface: __pci_register_driver 0
+Asim disabled interface function.
+is_override_interface: __napi_schedule 0
+Asim disabled interface function.
+is_override_interface: __memcpy_fromio 0
+Asim disabled interface function.
+is_override_interface: netif_napi_add 0
+Asim disabled interface function.
+is_override_interface: __kmalloc 0
+Asim disabled interface function.
+is_override_interface: clear_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_unregister_netdev 0
+is_override_interface: rtl8139_get_regs 0
+is_override_interface: rtl8139_tx_clear 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_cleanup_module 0
+Asim disabled interface function.
+is_override_interface: rtl8139_get_stats 0
+is_override_interface: schedule_delayed_work 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_init_board 0
+Asim disabled interface function.
+is_override_interface: __napi_complete 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___netif_rx_schedule 0
+is_override_interface: free_netdev 0
+Asim disabled interface function.
+is_override_interface: netdev_alloc_skb 0
+Asim disabled interface function.
+is_override_interface: msleep 0
+Asim disabled interface function.
+is_override_interface: init_module 0
+is_override_interface: __memcpy 0
+Asim disabled interface function.
+is_override_interface: logStackFrame 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: napi_enable 0
+Asim disabled interface function.
+is_override_interface: rtl8139_open 0
+is_override_interface: rtl8139_rx_err 0
+Asim disabled interface function.
+is_override_interface: pci_iomap 0
+Asim disabled interface function.
+is_override_interface: logWrite 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: generic_mii_ioctl 0
+Asim disabled interface function.
+is_override_interface: pci_name 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_netif_device_detach 0
+is_override_interface: pci_read_config_word 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_clear_mwi 0
+is_override_interface: rtl8139_set_rx_mode 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_init_timer 0
+is_override_interface: mii_ethtool_gset 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_generic_mii_ioctl 0
+is_override_interface: __set_rx_mode 0
+Asim disabled interface function.
+is_override_interface: rtnl_unlock 0
+Asim disabled interface function.
+is_override_interface: dma_free_coherent 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: request_irq 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_mii_link_ok 0
+is_override_interface: constant_test_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dma_alloc_coherent_gfp_flags 0
+Asim disabled interface function.
+is_override_interface: memcpy_fromio 0
+Asim disabled interface function.
+is_override_interface: __rtl8139_cleanup_dev 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: netif_tx_stop_queue 0
+Asim disabled interface function.
+is_override_interface: __netif_rx_schedule 0
+Asim disabled interface function.
+is_override_interface: get_dma_ops 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_tx_interrupt 0
+Asim disabled interface function.
+is_override_interface: unregister_netdev 0
+Asim disabled interface function.
+is_override_interface: r8139too_checkpoint 0
+is_override_interface: memset 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_netif_carrier_off 0
+is_override_interface: rtl8139_start_xmit 0
+is_override_interface: rtl8139_get_drvinfo 0
+is_override_interface: netif_device_detach 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __netif_rx_complete 0
+Asim disabled interface function.
+is_override_interface: read_eeprom 0
+Asim disabled interface function.
+is_override_interface: _spin_unlock_irq 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: netif_running 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_get_sset_count 0
+is_override_interface: MICRODRIVERS__MODIF_pci_release_regions 0
+is_override_interface: kfree_skb 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_free_irq 0
+is_override_interface: disable_irq 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_write_config_word 0
+is_override_interface: iowrite32 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: napi_disable_pending 0
+Asim disabled interface function.
+is_override_interface: pci_disable_device 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_eth_type_trans 0
+is_override_interface: skb_copy_to_linear_data 0
+Asim disabled interface function.
+is_override_interface: set_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: ioread32 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: skb_put 0
+Asim disabled interface function.
+is_override_interface: rtl8139_init_module 0
+Asim disabled interface function.
+is_override_interface: netif_stop_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: warn_slowpath 0
+Asim disabled interface function.
+is_override_interface: _spin_lock 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pci_release_regions 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: skb_copy_and_csum_dev 0
+Asim disabled interface function.
+is_override_interface: _spin_lock_irqsave 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dev_driver_string 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: test_and_clear_bit 0
+Asim disabled interface function.
+is_override_interface: rtl8139_suspend 0
+is_override_interface: MICRODRIVERS__MODIF_dev_driver_string 0
+is_override_interface: rtl8139_weird_interrupt 0
+Asim disabled interface function.
+is_override_interface: dma_alloc_coherent 0
+Asim disabled interface function.
+is_override_interface: pci_bus_write_config_word 0
+Asim disabled interface function.
+is_override_interface: netif_tx_wake_queue 0
+Asim disabled interface function.
+is_override_interface: netif_wake_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __netif_schedule 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_set_consistent_dma_mask 0
+is_override_interface: MICRODRIVERS__MODIF_pci_set_mwi 0
+is_override_interface: MICRODRIVERS__MODIF_pci_enable_wake 0
+is_override_interface: iowrite16 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_mii_nway_restart 0
+is_override_interface: rtl8139_set_settings 0
+is_override_interface: MICRODRIVERS__MODIF_mii_ethtool_sset 0
+is_override_interface: __builtin_memcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: raw_irqs_disabled_flags 0
+Asim disabled interface function.
+is_override_interface: printk 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: crc32_le 0
+Asim disabled interface function.
+is_override_interface: ioread16 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_lock_bh 0
+Asim disabled interface function.
+is_override_interface: netif_tx_start_queue 0
+Asim disabled interface function.
+is_override_interface: pci_iounmap 0
+Asim disabled interface function.
+is_override_interface: INIT_LIST_HEAD 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_request_regions 0
+is_override_interface: rtl8139_set_msglevel 0
+is_override_interface: _spin_unlock_irqrestore 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_get_ethtool_stats 0
+is_override_interface: MICRODRIVERS__MODIF_page_address 0
+is_override_interface: IS_ERR 0
+Asim disabled interface function.
+is_override_interface: netdev_get_tx_queue 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: napi_disable 0
+Asim disabled interface function.
+is_override_interface: pci_set_drvdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_get_link 0
+is_override_interface: MICRODRIVERS__MODIF_pci_set_power_state 0
+is_override_interface: rtl8139_start_thread 0
+Asim disabled interface function.
+is_override_interface: odft_hold_and_acquire_lock 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dma_alloc_coherent_mask 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF___alloc_skb 0
+is_override_interface: mii_link_ok 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_alloc_etherdev_mq 0
+is_override_interface: MICRODRIVERS__MODIF_pci_bus_read_config_word 0
+is_override_interface: rtl8139_hw_start 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_get_wol 0
+is_override_interface: MICRODRIVERS__MODIF_netif_device_attach 0
+is_override_interface: MICRODRIVERS__MODIF_pci_enable_device 0
+is_override_interface: rtl8139_get_regs_len 0
+is_override_interface: pci_request_regions 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_choose_state 0
+is_override_interface: if_mii 0
+Asim disabled interface function.
+is_override_interface: pci_get_drvdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: dev_set_drvdata 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_unregister_driver 0
+is_override_interface: pci_restore_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_pci_restore_state 0
+is_override_interface: netpoll_trap 0
+Asim disabled interface function.
+is_override_interface: pci_set_power_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_kfree_skb 0
+is_override_interface: rtl_check_media 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pci_save_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: pci_bus_read_config_word 0
+Asim disabled interface function.
+is_override_interface: skb_reserve 0
+Asim disabled interface function.
+is_override_interface: netif_device_attach 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: napi_schedule_prep 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__DUMMY 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: rtl8139_init_one 0
+is_override_interface: dev_get_drvdata 0
+Asim disabled interface function.
+is_override_interface: is_device_dma_capable 0
+Asim disabled interface function.
+is_override_interface: __raw_local_save_flags 0
+Asim disabled interface function.
+is_override_interface: ERR_PTR 0
+Asim disabled interface function.
+is_override_interface: flush_scheduled_work 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_cancel_rearming_delayed_work 0
+is_override_interface: rtl8139_isr_ack 0
+Asim disabled interface function.
+is_override_interface: alloc_etherdev_mq 0
+Asim disabled interface function.
+is_override_interface: MICRODRIVERS__MODIF_mii_ethtool_gset 0
+is_override_interface: rtl8139_set_wol 0
+is_override_interface: __netdev_alloc_skb 0
+Asim disabled interface function.
+is_override_interface: pci_enable_device 0
+Asim disabled interface function.
+Interface function pci_unregister_driver: Annotation is kern
+Interface function pci_set_power_state: Annotation is kern
+Interface function _spin_unlock_irqrestore: Annotation is kern
+Interface function bitrev32: Annotation is kern
+Interface function mii_link_ok: Annotation is kern
+Interface function pci_release_regions: Annotation is kern
+Interface function iowrite16: Annotation is kern
+Interface function printk: Annotation is kern
+Interface function iowrite8: Annotation is kern
+Interface function rtl8139_get_drvinfo: Annotation is user
+Interface function mii_ethtool_sset: Annotation is kern
+Interface function skb_copy_and_csum_dev: Annotation is kern
+Interface function _spin_lock_bh: Annotation is kern
+Interface function logStackVar: Annotation is user
+Interface function _spin_lock_irqsave: Annotation is kern
+Interface function _spin_lock_irq: Annotation is kern
+Interface function enable_irq: Annotation is kern
+Interface function kfree_skb: Annotation is kern
+Interface function pci_bus_read_config_word: Annotation is kern
+Interface function rtnl_lock: Annotation is kern
+Interface function ioread16: Annotation is kern
+Interface function rtnl_unlock: Annotation is kern
+Interface function msleep: Annotation is kern
+Interface function pci_request_regions: Annotation is kern
+Interface function register_netdev: Annotation is kern
+Interface function alloc_etherdev_mq: Annotation is kern
+Interface function netif_receive_skb: Annotation is kern
+Interface function __builtin_expect: Annotation is kern
+Interface function _spin_lock: Annotation is kern
+Interface function crc32_le: Annotation is kern
+Interface function generic_mii_ioctl: Annotation is kern
+Interface function eth_type_trans: Annotation is kern
+Interface function netpoll_trap: Annotation is kern
+Interface function memset: Annotation is kern
+Interface function pci_iounmap: Annotation is kern
+Interface function net_ratelimit: Annotation is kern
+Interface function _spin_unlock_irq: Annotation is kern
+Interface function pci_restore_state: Annotation is kern
+Interface function schedule_delayed_work: Annotation is kern
+Interface function rtl8139_get_wol: Annotation is user
+Interface function mii_nway_restart: Annotation is kern
+Interface function warn_slowpath: Annotation is kern
+Interface function __builtin_memcpy: Annotation is kern
+Interface function logStackFrame: Annotation is user
+Interface function _spin_unlock: Annotation is kern
+Interface function strcpy: Annotation is kern
+Interface function pci_enable_device: Annotation is kern
+Interface function __kmalloc: Annotation is kern
+Interface function free_irq: Annotation is kern
+Interface function pci_disable_device: Annotation is kern
+Interface function flush_scheduled_work: Annotation is kern
+Interface function pci_iomap: Annotation is kern
+Interface function __netif_schedule: Annotation is kern
+Interface function pci_set_master: Annotation is kern
+Interface function __napi_schedule: Annotation is kern
+Interface function rtl8139_get_regs_len: Annotation is user
+Interface function _spin_unlock_bh: Annotation is kern
+Interface function init_timer: Annotation is kern
+Interface function mii_ethtool_gset: Annotation is kern
+Interface function unregister_netdev: Annotation is kern
+Interface function skb_put: Annotation is kern
+Interface function __const_udelay: Annotation is kern
+Interface function disable_irq: Annotation is kern
+Interface function request_irq: Annotation is kern
+Interface function __pci_register_driver: Annotation is kern
+Interface function logRead: Annotation is user
+Interface function free_netdev: Annotation is kern
+Interface function rtl8139_get_msglevel: Annotation is user
+Interface function pci_save_state: Annotation is kern
+Interface function __napi_complete: Annotation is kern
+Interface function pci_bus_write_config_word: Annotation is kern
+Interface function rtl8139_get_sset_count: Annotation is user
+Interface function ioread8: Annotation is kern
+Interface function __spin_lock_init: Annotation is kern
+Interface function __netdev_alloc_skb: Annotation is kern
+Interface function netif_napi_add: Annotation is kern
+Interface function iowrite32: Annotation is kern
+Interface function mii_check_media: Annotation is kern
+Interface function netif_device_attach: Annotation is kern
+Interface function rtl8139_get_ethtool_stats: Annotation is user
+Interface function __memcpy_fromio: Annotation is kern
+Interface function ioread32: Annotation is kern
+Interface function odft_hold_and_acquire_lock: Annotation is kern
+Interface function rtl8139_get_regs: Annotation is user
+Interface function lockdep_init_map: Annotation is kern
+Interface function dev_driver_string: Annotation is kern
+Interface function logWrite: Annotation is user
+Interface function __memcpy: Annotation is kern
+Interface function netif_device_detach: Annotation is kern
+kernel function proto: logRead
+kernel function proto: logWrite
+kernel function proto: logStackFrame
+kernel function proto: logStackVar
+kernel function proto: logAlloc
+kernel function proto: logFree
+kernel function proto: __builtin_memcpy
+kernel function proto: __builtin_expect
+Considering function body for deletion: set_bit
+Considering function body for deletion: clear_bit
+Considering function body for deletion: test_and_set_bit
+Considering function body for deletion: test_and_clear_bit
+Considering function body for deletion: constant_test_bit
+kernel function proto: warn_slowpath
+kernel function proto: printk
+Considering function body for deletion: native_save_fl
+Considering function body for deletion: __raw_local_save_flags
+Considering function body for deletion: raw_irqs_disabled_flags
+Considering function body for deletion: ERR_PTR
+Considering function body for deletion: PTR_ERR
+Considering function body for deletion: IS_ERR
+kernel function proto: __memcpy
+kernel function proto: memset
+kernel function proto: strcpy
+Considering function body for deletion: INIT_LIST_HEAD
+kernel function proto: __spin_lock_init
+kernel function proto: _spin_lock
+kernel function proto: _spin_lock_irq
+kernel function proto: _spin_lock_irqsave
+kernel function proto: _spin_unlock
+kernel function proto: _spin_unlock_irq
+kernel function proto: _spin_unlock_irqrestore
+kernel function proto: __const_udelay
+kernel function proto: msleep
+kernel function proto: __kmalloc
+Considering function body for deletion: kmalloc
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: dev_name
+Considering function body for deletion: dev_get_drvdata
+Considering function body for deletion: dev_set_drvdata
+kernel function proto: ioread8
+kernel function proto: ioread32
+kernel function proto: iowrite8
+kernel function proto: iowrite32
+kernel function proto: __memcpy_fromio
+Considering function body for deletion: memcpy_fromio
+Considering function body for deletion: pci_read_config_word
+Considering function body for deletion: pci_write_config_word
+Considering function body for deletion: is_device_dma_capable
+Considering function body for deletion: get_dma_ops
+Considering function body for deletion: dma_alloc_coherent_mask
+Considering function body for deletion: dma_alloc_coherent_gfp_flags
+Considering function body for deletion: dma_alloc_coherent
+Considering function body for deletion: dma_free_coherent
+Considering function body for deletion: pci_get_drvdata
+Considering function body for deletion: pci_set_drvdata
+Considering function body for deletion: pci_name
+kernel function proto: kfree_skb
+kernel function proto: skb_put
+Considering function body for deletion: skb_reserve
+kernel function proto: __netdev_alloc_skb
+Considering function body for deletion: netdev_alloc_skb
+kernel function proto: skb_copy_and_csum_dev
+Considering function body for deletion: skb_copy_to_linear_data
+Considering function body for deletion: napi_disable_pending
+Considering function body for deletion: napi_schedule_prep
+Considering function body for deletion: napi_disable
+Considering function body for deletion: napi_enable
+Considering function body for deletion: netdev_get_tx_queue
+Considering function body for deletion: netdev_priv
+Considering function body for deletion: netif_tx_start_queue
+Considering function body for deletion: netif_start_queue
+Considering function body for deletion: netif_tx_wake_queue
+Considering function body for deletion: netif_wake_queue
+Considering function body for deletion: netif_tx_stop_queue
+Considering function body for deletion: netif_stop_queue
+Considering function body for deletion: netif_running
+kernel function proto: netif_receive_skb
+Considering function body for deletion: netif_rx_schedule_prep
+Considering function body for deletion: __netif_rx_schedule
+Considering function body for deletion: __netif_rx_complete
+kernel function proto: alloc_etherdev_mq
+kernel function proto: mii_link_ok
+kernel function proto: mii_ethtool_gset
+kernel function proto: mii_ethtool_sset
+Considering function body for deletion: if_mii
+Considering function body for deletion: MICRODRIVERS__DUMMY
+Considering function body for deletion: MICRODRIVERS__MODIF_dev_driver_string
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_write_config_word
+Considering function body for deletion: MICRODRIVERS__MODIF_alloc_etherdev_mq
+Considering function body for deletion: MICRODRIVERS__MODIF___alloc_skb
+Considering function body for deletion: MICRODRIVERS__MODIF_dev_kfree_skb_any
+Considering function body for deletion: MICRODRIVERS__MODIF_dma_alloc_coherent
+Considering function body for deletion: MICRODRIVERS__MODIF_dma_free_coherent
+Considering function body for deletion: MICRODRIVERS__MODIF__memcpy_fromio
+Considering function body for deletion: MICRODRIVERS__MODIF_eth_type_trans
+Considering function body for deletion: MICRODRIVERS__MODIF_free_netdev
+Considering function body for deletion: MICRODRIVERS__MODIF_generic_mii_ioctl
+Considering function body for deletion: MICRODRIVERS__MODIF_kfree_skb
+Considering function body for deletion: MICRODRIVERS__MODIF_mii_check_media
+Considering function body for deletion: MICRODRIVERS__MODIF_mii_ethtool_gset
+Considering function body for deletion: MICRODRIVERS__MODIF_mii_ethtool_sset
+Considering function body for deletion: MICRODRIVERS__MODIF_mii_nway_restart
+Considering function body for deletion: MICRODRIVERS__MODIF_netif_carrier_off
+Considering function body for deletion: MICRODRIVERS__MODIF_netif_device_attach
+Considering function body for deletion: MICRODRIVERS__MODIF_netif_device_detach
+Considering function body for deletion: MICRODRIVERS__MODIF_netif_receive_skb
+Considering function body for deletion: MICRODRIVERS__MODIF_netif_rx
+Considering function body for deletion: MICRODRIVERS__MODIF___netif_rx_schedule
+Considering function body for deletion: MICRODRIVERS__MODIF___netif_schedule
+Considering function body for deletion: MICRODRIVERS__MODIF_page_address
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_read_config_byte
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_bus_read_config_word
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_choose_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_clear_mwi
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_disable_device
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_enable_device
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_enable_wake
+Considering function body for deletion: MICRODRIVERS__MODIF___pci_register_driver
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_release_regions
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_request_regions
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_restore_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_save_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_consistent_dma_mask
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_dma_mask
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_master
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_mwi
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_set_power_state
+Considering function body for deletion: MICRODRIVERS__MODIF_pci_unregister_driver
+Considering function body for deletion: MICRODRIVERS__MODIF_skb_over_panic
+Considering function body for deletion: MICRODRIVERS__MODIF_unregister_netdev
+Considering function body for deletion: MICRODRIVERS__MODIF_free_irq
+Considering function body for deletion: MICRODRIVERS__MODIF_cancel_rearming_delayed_work
+Considering function body for deletion: MICRODRIVERS__MODIF_schedule_delayed_work
+Considering function body for deletion: MICRODRIVERS__MODIF_init_timer
+Considering function body for deletion: MICRODRIVERS__MODIF_mii_link_ok
+Considering function body for deletion: MICRODRIVERS__MODIF_skb_copy_and_csum_dev
+Considering function body for deletion: MICRODRIVERS__MODIF_netif_stop_queue
+Considering function body for deletion: Nonstub_sk_buff_get_length
+Considering function body for deletion: __rtl8139_cleanup_dev
+Considering function body for deletion: rtl8139_chip_reset
+Considering function body for deletion: rtl8139_init_board
+Considering function body for deletion: rtl8139_init_one
+Considering function body for deletion: rtl8139_remove_one
+Considering function body for deletion: read_eeprom
+Considering function body for deletion: mdio_sync
+Considering function body for deletion: mdio_read
+Considering function body for deletion: mdio_write
+Considering function body for deletion: rtl8139_open
+Considering function body for deletion: rtl_check_media
+Considering function body for deletion: rtl8139_hw_start
+Considering function body for deletion: rtl8139_init_ring
+Considering function body for deletion: rtl8139_tune_twister
+Considering function body for deletion: rtl8139_thread_iter
+Considering function body for deletion: rtl8139_thread
+Considering function body for deletion: rtl8139_start_thread
+Considering function body for deletion: rtl8139_tx_clear
+Considering function body for deletion: rtl8139_tx_timeout_task
+Considering function body for deletion: rtl8139_tx_timeout
+Considering function body for deletion: rtl8139_start_xmit
+Considering function body for deletion: rtl8139_tx_interrupt
+Considering function body for deletion: rtl8139_rx_err
+Considering function body for deletion: rtl8139_isr_ack
+Considering function body for deletion: rtl8139_rx
+Considering function body for deletion: rtl8139_weird_interrupt
+Considering function body for deletion: rtl8139_poll
+Considering function body for deletion: rtl8139_interrupt
+Considering function body for deletion: rtl8139_poll_controller
+Considering function body for deletion: rtl8139_close
+Considering function body for deletion: rtl8139_get_wol
+Considering function body for deletion: rtl8139_set_wol
+Considering function body for deletion: rtl8139_get_drvinfo
+Considering function body for deletion: rtl8139_get_settings
+Considering function body for deletion: rtl8139_set_settings
+Considering function body for deletion: rtl8139_nway_reset
+Considering function body for deletion: rtl8139_get_link
+Considering function body for deletion: rtl8139_get_msglevel
+Considering function body for deletion: rtl8139_set_msglevel
+Considering function body for deletion: rtl8139_get_regs_len
+Considering function body for deletion: rtl8139_get_regs
+Considering function body for deletion: rtl8139_get_sset_count
+Considering function body for deletion: rtl8139_get_ethtool_stats
+Considering function body for deletion: rtl8139_get_strings
+Considering function body for deletion: netdev_ioctl
+Considering function body for deletion: rtl8139_get_stats
+Considering function body for deletion: __set_rx_mode
+Considering function body for deletion: rtl8139_set_rx_mode
+Considering function body for deletion: rtl8139_suspend
+Considering function body for deletion: r8139too_checkpoint
+Considering function body for deletion: r8139too_restore
+Considering function body for deletion: rtl8139_resume
+Considering function body for deletion: rtl8139_init_module
+Considering function body for deletion: rtl8139_cleanup_module
+Considering function body for deletion: init_module
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: cleanup_module
+Global to register: __this_module
+Global to register: x86_dma_fallback_dev
+Global to register: media
+Global to register: full_duplex
+Global to register: use_io
+Global to register: multicast_filter_limit
+Global to register: debug
+Global to register: board_info
+Global to register: rtl8139_pci_tbl
+Global to register: ethtool_stats_keys
+Global to register: rtl_chip_info
+Global to register: __param_str_use_io
+Global to register: __param_str_multicast_filter_limit
+Global to register: __param_arr_media
+Global to register: __param_str_media
+Global to register: __param_arr_full_duplex
+Global to register: __param_str_full_duplex
+Global to register: __param_str_debug
+Global to register: rtl8139_ethtool_ops
+Global to register: rtl8139_netdev_ops
+Global to register: __key___5
+Global to register: __key___6
+Global to register: __key___7
+Global to register: mii_2_8139_map
+Global to register: __key___8
+Global to register: rtl8139_ethtool_ops
+Global to register: rtl8139_pci_driver
+Function/global mapping ERR_PTR -> 1000
+Function/global mapping INIT_LIST_HEAD -> 1001
+Function/global mapping IS_ERR -> 1002
+Function/global mapping MICRODRIVERS__DUMMY -> 1003
+Function/global mapping MICRODRIVERS__MODIF___alloc_skb -> 1004
+Function/global mapping MICRODRIVERS__MODIF___netif_rx_schedule -> 1005
+Function/global mapping MICRODRIVERS__MODIF___netif_schedule -> 1006
+Function/global mapping MICRODRIVERS__MODIF___pci_register_driver -> 1007
+Function/global mapping MICRODRIVERS__MODIF__memcpy_fromio -> 1008
+Function/global mapping MICRODRIVERS__MODIF_alloc_etherdev_mq -> 1009
+Function/global mapping MICRODRIVERS__MODIF_cancel_rearming_delayed_work -> 1010
+Function/global mapping MICRODRIVERS__MODIF_dev_driver_string -> 1011
+Function/global mapping MICRODRIVERS__MODIF_dev_kfree_skb_any -> 1012
+Function/global mapping MICRODRIVERS__MODIF_dma_alloc_coherent -> 1013
+Function/global mapping MICRODRIVERS__MODIF_dma_free_coherent -> 1014
+Function/global mapping MICRODRIVERS__MODIF_eth_type_trans -> 1015
+Function/global mapping MICRODRIVERS__MODIF_free_irq -> 1016
+Function/global mapping MICRODRIVERS__MODIF_free_netdev -> 1017
+Function/global mapping MICRODRIVERS__MODIF_generic_mii_ioctl -> 1018
+Function/global mapping MICRODRIVERS__MODIF_init_timer -> 1019
+Function/global mapping MICRODRIVERS__MODIF_kfree_skb -> 1020
+Function/global mapping MICRODRIVERS__MODIF_mii_check_media -> 1021
+Function/global mapping MICRODRIVERS__MODIF_mii_ethtool_gset -> 1022
+Function/global mapping MICRODRIVERS__MODIF_mii_ethtool_sset -> 1023
+Function/global mapping MICRODRIVERS__MODIF_mii_link_ok -> 1024
+Function/global mapping MICRODRIVERS__MODIF_mii_nway_restart -> 1025
+Function/global mapping MICRODRIVERS__MODIF_netif_carrier_off -> 1026
+Function/global mapping MICRODRIVERS__MODIF_netif_device_attach -> 1027
+Function/global mapping MICRODRIVERS__MODIF_netif_device_detach -> 1028
+Function/global mapping MICRODRIVERS__MODIF_netif_receive_skb -> 1029
+Function/global mapping MICRODRIVERS__MODIF_netif_rx -> 1030
+Function/global mapping MICRODRIVERS__MODIF_netif_stop_queue -> 1031
+Function/global mapping MICRODRIVERS__MODIF_page_address -> 1032
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_read_config_byte -> 1033
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_read_config_word -> 1034
+Function/global mapping MICRODRIVERS__MODIF_pci_bus_write_config_word -> 1035
+Function/global mapping MICRODRIVERS__MODIF_pci_choose_state -> 1036
+Function/global mapping MICRODRIVERS__MODIF_pci_clear_mwi -> 1037
+Function/global mapping MICRODRIVERS__MODIF_pci_disable_device -> 1038
+Function/global mapping MICRODRIVERS__MODIF_pci_enable_device -> 1039
+Function/global mapping MICRODRIVERS__MODIF_pci_enable_wake -> 1040
+Function/global mapping MICRODRIVERS__MODIF_pci_release_regions -> 1041
+Function/global mapping MICRODRIVERS__MODIF_pci_request_regions -> 1042
+Function/global mapping MICRODRIVERS__MODIF_pci_restore_state -> 1043
+Function/global mapping MICRODRIVERS__MODIF_pci_save_state -> 1044
+Function/global mapping MICRODRIVERS__MODIF_pci_set_consistent_dma_mask -> 1045
+Function/global mapping MICRODRIVERS__MODIF_pci_set_dma_mask -> 1046
+Function/global mapping MICRODRIVERS__MODIF_pci_set_master -> 1047
+Function/global mapping MICRODRIVERS__MODIF_pci_set_mwi -> 1048
+Function/global mapping MICRODRIVERS__MODIF_pci_set_power_state -> 1049
+Function/global mapping MICRODRIVERS__MODIF_pci_unregister_driver -> 1050
+Function/global mapping MICRODRIVERS__MODIF_schedule_delayed_work -> 1051
+Function/global mapping MICRODRIVERS__MODIF_skb_copy_and_csum_dev -> 1052
+Function/global mapping MICRODRIVERS__MODIF_skb_over_panic -> 1053
+Function/global mapping MICRODRIVERS__MODIF_unregister_netdev -> 1054
+Function/global mapping Nonstub_sk_buff_get_length -> 1055
+Function/global mapping PTR_ERR -> 1056
+Function/global mapping __builtin_expect -> 1057
+Function/global mapping __builtin_memcpy -> 1058
+Function/global mapping __const_udelay -> 1059
+Function/global mapping __key___5 -> 1060
+Function/global mapping __key___6 -> 1061
+Function/global mapping __key___7 -> 1062
+Function/global mapping __key___8 -> 1063
+Function/global mapping __kmalloc -> 1064
+Function/global mapping __memcpy -> 1065
+Function/global mapping __memcpy_fromio -> 1066
+Function/global mapping __napi_complete -> 1067
+Function/global mapping __napi_schedule -> 1068
+Function/global mapping __netdev_alloc_skb -> 1069
+Function/global mapping __netif_rx_complete -> 1070
+Function/global mapping __netif_rx_schedule -> 1071
+Function/global mapping __netif_schedule -> 1072
+Function/global mapping __param_arr_full_duplex -> 1073
+Function/global mapping __param_arr_media -> 1074
+Function/global mapping __param_str_debug -> 1075
+Function/global mapping __param_str_full_duplex -> 1076
+Function/global mapping __param_str_media -> 1077
+Function/global mapping __param_str_multicast_filter_limit -> 1078
+Function/global mapping __param_str_use_io -> 1079
+Function/global mapping __pci_register_driver -> 1080
+Function/global mapping __raw_local_save_flags -> 1081
+Function/global mapping __rtl8139_cleanup_dev -> 1082
+Function/global mapping __set_rx_mode -> 1083
+Function/global mapping __spin_lock_init -> 1084
+Function/global mapping __this_module -> 1085
+Function/global mapping _spin_lock -> 1086
+Function/global mapping _spin_lock_bh -> 1087
+Function/global mapping _spin_lock_irq -> 1088
+Function/global mapping _spin_lock_irqsave -> 1089
+Function/global mapping _spin_unlock -> 1090
+Function/global mapping _spin_unlock_bh -> 1091
+Function/global mapping _spin_unlock_irq -> 1092
+Function/global mapping _spin_unlock_irqrestore -> 1093
+Function/global mapping alloc_etherdev_mq -> 1094
+Function/global mapping bitrev32 -> 1095
+Function/global mapping board_info -> 1096
+Function/global mapping cleanup_module -> 1097
+Function/global mapping clear_bit -> 1098
+Function/global mapping constant_test_bit -> 1099
+Function/global mapping crc32_le -> 1100
+Function/global mapping debug -> 1101
+Function/global mapping dev_driver_string -> 1102
+Function/global mapping dev_get_drvdata -> 1103
+Function/global mapping dev_name -> 1104
+Function/global mapping dev_set_drvdata -> 1105
+Function/global mapping disable_irq -> 1106
+Function/global mapping dma_alloc_coherent -> 1107
+Function/global mapping dma_alloc_coherent_gfp_flags -> 1108
+Function/global mapping dma_alloc_coherent_mask -> 1109
+Function/global mapping dma_free_coherent -> 1110
+Function/global mapping enable_irq -> 1111
+Function/global mapping eth_mac_addr -> 1112
+Function/global mapping eth_type_trans -> 1113
+Function/global mapping eth_validate_addr -> 1114
+Function/global mapping ethtool_stats_keys -> 1115
+Function/global mapping flush_scheduled_work -> 1116
+Function/global mapping free_irq -> 1117
+Function/global mapping free_netdev -> 1118
+Function/global mapping full_duplex -> 1119
+Function/global mapping generic_mii_ioctl -> 1120
+Function/global mapping get_dma_ops -> 1121
+Function/global mapping heapifyfree -> 1122
+Function/global mapping heapifymalloc -> 1123
+Function/global mapping if_mii -> 1124
+Function/global mapping init_module -> 1125
+Function/global mapping init_timer -> 1126
+Function/global mapping ioread16 -> 1127
+Function/global mapping ioread32 -> 1128
+Function/global mapping ioread8 -> 1129
+Function/global mapping iowrite16 -> 1130
+Function/global mapping iowrite32 -> 1131
+Function/global mapping iowrite8 -> 1132
+Function/global mapping is_device_dma_capable -> 1133
+Function/global mapping kfree_skb -> 1134
+Function/global mapping kmalloc -> 1135
+Function/global mapping lockdep_init_map -> 1136
+Function/global mapping logAlloc -> 1137
+Function/global mapping logFree -> 1138
+Function/global mapping logRead -> 1139
+Function/global mapping logSfiFrame -> 1140
+Function/global mapping logStackFrame -> 1141
+Function/global mapping logStackVar -> 1142
+Function/global mapping logWrite -> 1143
+Function/global mapping mdio_read -> 1144
+Function/global mapping mdio_sync -> 1145
+Function/global mapping mdio_write -> 1146
+Function/global mapping media -> 1147
+Function/global mapping memcpy_fromio -> 1148
+Function/global mapping memset -> 1149
+Function/global mapping mii_2_8139_map -> 1150
+Function/global mapping mii_check_media -> 1151
+Function/global mapping mii_ethtool_gset -> 1152
+Function/global mapping mii_ethtool_sset -> 1153
+Function/global mapping mii_link_ok -> 1154
+Function/global mapping mii_nway_restart -> 1155
+Function/global mapping msleep -> 1156
+Function/global mapping multicast_filter_limit -> 1157
+Function/global mapping napi_disable -> 1158
+Function/global mapping napi_disable_pending -> 1159
+Function/global mapping napi_enable -> 1160
+Function/global mapping napi_schedule_prep -> 1161
+Function/global mapping native_save_fl -> 1162
+Function/global mapping net_ratelimit -> 1163
+Function/global mapping netdev_alloc_skb -> 1164
+Function/global mapping netdev_get_tx_queue -> 1165
+Function/global mapping netdev_ioctl -> 1166
+Function/global mapping netdev_priv -> 1167
+Function/global mapping netif_device_attach -> 1168
+Function/global mapping netif_device_detach -> 1169
+Function/global mapping netif_napi_add -> 1170
+Function/global mapping netif_receive_skb -> 1171
+Function/global mapping netif_running -> 1172
+Function/global mapping netif_rx_schedule_prep -> 1173
+Function/global mapping netif_start_queue -> 1174
+Function/global mapping netif_stop_queue -> 1175
+Function/global mapping netif_tx_start_queue -> 1176
+Function/global mapping netif_tx_stop_queue -> 1177
+Function/global mapping netif_tx_wake_queue -> 1178
+Function/global mapping netif_wake_queue -> 1179
+Function/global mapping netpoll_trap -> 1180
+Function/global mapping odft_hold_and_acquire_lock -> 1181
+Function/global mapping param_array_get -> 1182
+Function/global mapping param_array_set -> 1183
+Function/global mapping param_get_int -> 1184
+Function/global mapping param_set_int -> 1185
+Function/global mapping pci_bus_read_config_word -> 1186
+Function/global mapping pci_bus_write_config_word -> 1187
+Function/global mapping pci_disable_device -> 1188
+Function/global mapping pci_enable_device -> 1189
+Function/global mapping pci_get_drvdata -> 1190
+Function/global mapping pci_iomap -> 1191
+Function/global mapping pci_iounmap -> 1192
+Function/global mapping pci_name -> 1193
+Function/global mapping pci_read_config_word -> 1194
+Function/global mapping pci_release_regions -> 1195
+Function/global mapping pci_request_regions -> 1196
+Function/global mapping pci_restore_state -> 1197
+Function/global mapping pci_save_state -> 1198
+Function/global mapping pci_set_drvdata -> 1199
+Function/global mapping pci_set_master -> 1200
+Function/global mapping pci_set_power_state -> 1201
+Function/global mapping pci_unregister_driver -> 1202
+Function/global mapping pci_write_config_word -> 1203
+Function/global mapping printk -> 1204
+Function/global mapping r8139too_checkpoint -> 1205
+Function/global mapping r8139too_restore -> 1206
+Function/global mapping raw_irqs_disabled_flags -> 1207
+Function/global mapping read_eeprom -> 1208
+Function/global mapping register_netdev -> 1209
+Function/global mapping request_irq -> 1210
+Function/global mapping rtl8139_chip_reset -> 1211
+Function/global mapping rtl8139_cleanup_module -> 1212
+Function/global mapping rtl8139_close -> 1213
+Function/global mapping rtl8139_ethtool_ops -> 1214
+Function/global mapping rtl8139_get_drvinfo -> 1215
+Function/global mapping rtl8139_get_ethtool_stats -> 1216
+Function/global mapping rtl8139_get_link -> 1217
+Function/global mapping rtl8139_get_msglevel -> 1218
+Function/global mapping rtl8139_get_regs -> 1219
+Function/global mapping rtl8139_get_regs_len -> 1220
+Function/global mapping rtl8139_get_settings -> 1221
+Function/global mapping rtl8139_get_sset_count -> 1222
+Function/global mapping rtl8139_get_stats -> 1223
+Function/global mapping rtl8139_get_strings -> 1224
+Function/global mapping rtl8139_get_wol -> 1225
+Function/global mapping rtl8139_hw_start -> 1226
+Function/global mapping rtl8139_init_board -> 1227
+Function/global mapping rtl8139_init_module -> 1228
+Function/global mapping rtl8139_init_one -> 1229
+Function/global mapping rtl8139_init_ring -> 1230
+Function/global mapping rtl8139_interrupt -> 1231
+Function/global mapping rtl8139_isr_ack -> 1232
+Function/global mapping rtl8139_netdev_ops -> 1233
+Function/global mapping rtl8139_nway_reset -> 1234
+Function/global mapping rtl8139_open -> 1235
+Function/global mapping rtl8139_pci_driver -> 1236
+Function/global mapping rtl8139_pci_tbl -> 1237
+Function/global mapping rtl8139_poll -> 1238
+Function/global mapping rtl8139_poll_controller -> 1239
+Function/global mapping rtl8139_remove_one -> 1240
+Function/global mapping rtl8139_resume -> 1241
+Function/global mapping rtl8139_rx -> 1242
+Function/global mapping rtl8139_rx_err -> 1243
+Function/global mapping rtl8139_set_msglevel -> 1244
+Function/global mapping rtl8139_set_rx_mode -> 1245
+Function/global mapping rtl8139_set_settings -> 1246
+Function/global mapping rtl8139_set_wol -> 1247
+Function/global mapping rtl8139_start_thread -> 1248
+Function/global mapping rtl8139_start_xmit -> 1249
+Function/global mapping rtl8139_suspend -> 1250
+Function/global mapping rtl8139_thread -> 1251
+Function/global mapping rtl8139_thread_iter -> 1252
+Function/global mapping rtl8139_tune_twister -> 1253
+Function/global mapping rtl8139_tx_clear -> 1254
+Function/global mapping rtl8139_tx_interrupt -> 1255
+Function/global mapping rtl8139_tx_timeout -> 1256
+Function/global mapping rtl8139_tx_timeout_task -> 1257
+Function/global mapping rtl8139_weird_interrupt -> 1258
+Function/global mapping rtl_check_media -> 1259
+Function/global mapping rtl_chip_info -> 1260
+Function/global mapping rtnl_lock -> 1261
+Function/global mapping rtnl_unlock -> 1262
+Function/global mapping schedule_delayed_work -> 1263
+Function/global mapping set_bit -> 1264
+Function/global mapping skb_copy_and_csum_dev -> 1265
+Function/global mapping skb_copy_to_linear_data -> 1266
+Function/global mapping skb_put -> 1267
+Function/global mapping skb_reserve -> 1268
+Function/global mapping stackguard_get_ra -> 1269
+Function/global mapping stackguard_pop -> 1270
+Function/global mapping stackguard_push -> 1271
+Function/global mapping stackguard_set_ra -> 1272
+Function/global mapping stackguard_stack -> 1273
+Function/global mapping str_0 -> 1274
+Function/global mapping str_1005957563 -> 1275
+Function/global mapping str_1027768184 -> 1276
+Function/global mapping str_1030803783 -> 1277
+Function/global mapping str_1032482466 -> 1278
+Function/global mapping str_104143841 -> 1279
+Function/global mapping str_1044758575 -> 1280
+Function/global mapping str_109123010 -> 1281
+Function/global mapping str_116074970 -> 1282
+Function/global mapping str_121469633 -> 1283
+Function/global mapping str_125256093 -> 1284
+Function/global mapping str_127796186 -> 1285
+Function/global mapping str_132512629 -> 1286
+Function/global mapping str_134375996 -> 1287
+Function/global mapping str_134375997 -> 1288
+Function/global mapping str_134376053 -> 1289
+Function/global mapping str_134376062 -> 1290
+Function/global mapping str_147210716 -> 1291
+Function/global mapping str_158874525 -> 1292
+Function/global mapping str_163874838 -> 1293
+Function/global mapping str_179507506 -> 1294
+Function/global mapping str_24509153 -> 1295
+Function/global mapping str_2741974 -> 1296
+Function/global mapping str_313087851 -> 1297
+Function/global mapping str_324733070 -> 1298
+Function/global mapping str_329981504 -> 1299
+Function/global mapping str_330613045 -> 1300
+Function/global mapping str_345323710 -> 1301
+Function/global mapping str_377854906 -> 1302
+Function/global mapping str_378539578 -> 1303
+Function/global mapping str_405661595 -> 1304
+Function/global mapping str_405661596 -> 1305
+Function/global mapping str_405661597 -> 1306
+Function/global mapping str_405811062 -> 1307
+Function/global mapping str_412364345 -> 1308
+Function/global mapping str_41528061 -> 1309
+Function/global mapping str_420282510 -> 1310
+Function/global mapping str_433022166 -> 1311
+Function/global mapping str_462494869 -> 1312
+Function/global mapping str_477198367 -> 1313
+Function/global mapping str_490310456 -> 1314
+Function/global mapping str_511400935 -> 1315
+Function/global mapping str_514297434 -> 1316
+Function/global mapping str_538095050 -> 1317
+Function/global mapping str_5564202 -> 1318
+Function/global mapping str_570110693 -> 1319
+Function/global mapping str_574030498 -> 1320
+Function/global mapping str_587315174 -> 1321
+Function/global mapping str_596348350 -> 1322
+Function/global mapping str_596348369 -> 1323
+Function/global mapping str_600164842 -> 1324
+Function/global mapping str_600935849 -> 1325
+Function/global mapping str_602843239 -> 1326
+Function/global mapping str_60852817 -> 1327
+Function/global mapping str_615495969 -> 1328
+Function/global mapping str_628165251 -> 1329
+Function/global mapping str_630623360 -> 1330
+Function/global mapping str_635740236 -> 1331
+Function/global mapping str_636102046 -> 1332
+Function/global mapping str_644534696 -> 1333
+Function/global mapping str_657261683 -> 1334
+Function/global mapping str_671328675 -> 1335
+Function/global mapping str_703351393 -> 1336
+Function/global mapping str_703549354 -> 1337
+Function/global mapping str_712339161 -> 1338
+Function/global mapping str_712772069 -> 1339
+Function/global mapping str_717162024 -> 1340
+Function/global mapping str_717646979 -> 1341
+Function/global mapping str_742581682 -> 1342
+Function/global mapping str_744015 -> 1343
+Function/global mapping str_744315259 -> 1344
+Function/global mapping str_75026414 -> 1345
+Function/global mapping str_750507 -> 1346
+Function/global mapping str_785739720 -> 1347
+Function/global mapping str_790234912 -> 1348
+Function/global mapping str_821698298 -> 1349
+Function/global mapping str_82423814 -> 1350
+Function/global mapping str_848853072 -> 1351
+Function/global mapping str_856528712 -> 1352
+Function/global mapping str_863156901 -> 1353
+Function/global mapping str_86491625 -> 1354
+Function/global mapping str_868632821 -> 1355
+Function/global mapping str_868924355 -> 1356
+Function/global mapping str_88911246 -> 1357
+Function/global mapping str_898114563 -> 1358
+Function/global mapping str_899178061 -> 1359
+Function/global mapping str_900400584 -> 1360
+Function/global mapping str_906713227 -> 1361
+Function/global mapping str_912264506 -> 1362
+Function/global mapping str_912264525 -> 1363
+Function/global mapping str_912264544 -> 1364
+Function/global mapping str_912264563 -> 1365
+Function/global mapping str_915091444 -> 1366
+Function/global mapping str_921781328 -> 1367
+Function/global mapping str_931764080 -> 1368
+Function/global mapping str_938427090 -> 1369
+Function/global mapping str_95076143 -> 1370
+Function/global mapping str_971035812 -> 1371
+Function/global mapping strcpy -> 1372
+Function/global mapping test_and_clear_bit -> 1373
+Function/global mapping test_and_set_bit -> 1374
+Function/global mapping unregister_netdev -> 1375
+Function/global mapping use_io -> 1376
+Function/global mapping warn_slowpath -> 1377
+Function/global mapping x86_dma_fallback_dev -> 1378
+adding rtl8139_get_wol to interface
+asim get globals for rtl8139_get_wol.
+adding rtl8139_get_drvinfo to interface
+asim get globals for rtl8139_get_drvinfo.
+adding rtl8139_get_msglevel to interface
+asim get globals for rtl8139_get_msglevel.
+adding rtl8139_get_regs_len to interface
+asim get globals for rtl8139_get_regs_len.
+adding rtl8139_get_regs to interface
+asim get globals for rtl8139_get_regs.
+adding rtl8139_get_sset_count to interface
+asim get globals for rtl8139_get_sset_count.
+adding rtl8139_get_ethtool_stats to interface
+asim get globals for rtl8139_get_ethtool_stats.
+execution_mode_map
+pci_unregister_driver      default_mode
+pci_set_power_state      default_mode
+_spin_unlock_irqrestore      default_mode
+bitrev32      default_mode
+mii_link_ok      default_mode
+pci_release_regions      default_mode
+iowrite16      default_mode
+printk      default_mode
+iowrite8      default_mode
+rtl8139_get_drvinfo      symexec_na
+mii_ethtool_sset      default_mode
+skb_copy_and_csum_dev      default_mode
+_spin_lock_bh      default_mode
+logStackVar      symexec_na
+_spin_lock_irqsave      default_mode
+_spin_lock_irq      default_mode
+enable_irq      default_mode
+kfree_skb      default_mode
+pci_bus_read_config_word      default_mode
+rtnl_lock      default_mode
+ioread16      default_mode
+rtnl_unlock      default_mode
+msleep      default_mode
+pci_request_regions      default_mode
+register_netdev      default_mode
+alloc_etherdev_mq      default_mode
+netif_receive_skb      default_mode
+__builtin_expect      default_mode
+_spin_lock      default_mode
+crc32_le      default_mode
+generic_mii_ioctl      default_mode
+eth_type_trans      default_mode
+netpoll_trap      default_mode
+memset      default_mode
+pci_iounmap      default_mode
+net_ratelimit      default_mode
+_spin_unlock_irq      default_mode
+pci_restore_state      default_mode
+schedule_delayed_work      default_mode
+rtl8139_get_wol      symexec_na
+mii_nway_restart      default_mode
+warn_slowpath      default_mode
+__builtin_memcpy      default_mode
+logStackFrame      symexec_na
+_spin_unlock      default_mode
+strcpy      default_mode
+pci_enable_device      default_mode
+__kmalloc      default_mode
+free_irq      default_mode
+pci_disable_device      default_mode
+flush_scheduled_work      default_mode
+pci_iomap      default_mode
+__netif_schedule      default_mode
+pci_set_master      default_mode
+__napi_schedule      default_mode
+rtl8139_get_regs_len      symexec_na
+_spin_unlock_bh      default_mode
+init_timer      default_mode
+mii_ethtool_gset      default_mode
+unregister_netdev      default_mode
+skb_put      default_mode
+__const_udelay      default_mode
+disable_irq      default_mode
+request_irq      default_mode
+__pci_register_driver      default_mode
+logRead      symexec_na
+free_netdev      default_mode
+rtl8139_get_msglevel      symexec_na
+pci_save_state      default_mode
+__napi_complete      default_mode
+pci_bus_write_config_word      default_mode
+rtl8139_get_sset_count      symexec_na
+ioread8      default_mode
+__spin_lock_init      default_mode
+__netdev_alloc_skb      default_mode
+netif_napi_add      default_mode
+iowrite32      default_mode
+mii_check_media      default_mode
+netif_device_attach      default_mode
+rtl8139_get_ethtool_stats      symexec_na
+__memcpy_fromio      default_mode
+ioread32      default_mode
+odft_hold_and_acquire_lock      default_mode
+rtl8139_get_regs      symexec_na
+lockdep_init_map      default_mode
+dev_driver_string      default_mode
+logWrite      symexec_na
+__memcpy      default_mode
+netif_device_detach      default_mode
+Adding fundec for MARSH___STUB__pci_unregister_driver
+Adding fundec for DEMARSH_STUB__pci_unregister_driver
+Adding fundec for pci_unregister_driver
+Processing pci_unregister_driver.
+Adding fundec for MARSH___STUB__pci_set_power_state
+Adding fundec for DEMARSH_STUB__pci_set_power_state
+Adding fundec for pci_set_power_state
+Processing pci_set_power_state.
+Adding fundec for MARSH___STUB__bitrev32
+Adding fundec for DEMARSH_STUB__bitrev32
+Adding fundec for bitrev32
+Processing bitrev32.
+Adding fundec for MARSH___STUB__pci_release_regions
+Adding fundec for DEMARSH_STUB__pci_release_regions
+Adding fundec for pci_release_regions
+Processing pci_release_regions.
+Adding fundec for MARSH___STUB__iowrite16
+Adding fundec for DEMARSH_STUB__iowrite16
+Adding fundec for iowrite16
+Processing iowrite16.
+Adding fundec for MARSH___STUB___spin_lock_bh
+Adding fundec for DEMARSH_STUB___spin_lock_bh
+Adding fundec for _spin_lock_bh
+Processing _spin_lock_bh.
+Adding fundec for MARSH___STUB__enable_irq
+Adding fundec for DEMARSH_STUB__enable_irq
+Adding fundec for enable_irq
+Processing enable_irq.
+Adding fundec for MARSH___STUB__pci_bus_read_config_word
+Adding fundec for DEMARSH_STUB__pci_bus_read_config_word
+Adding fundec for pci_bus_read_config_word
+Processing pci_bus_read_config_word.
+Adding fundec for MARSH___STUB__rtnl_lock
+Adding fundec for DEMARSH_STUB__rtnl_lock
+Adding fundec for rtnl_lock
+Processing rtnl_lock.
+Adding fundec for MARSH___STUB__ioread16
+Adding fundec for DEMARSH_STUB__ioread16
+Adding fundec for ioread16
+Processing ioread16.
+Adding fundec for MARSH___STUB__rtnl_unlock
+Adding fundec for DEMARSH_STUB__rtnl_unlock
+Adding fundec for rtnl_unlock
+Processing rtnl_unlock.
+Adding fundec for MARSH___STUB__pci_request_regions
+Adding fundec for DEMARSH_STUB__pci_request_regions
+Adding fundec for pci_request_regions
+Processing pci_request_regions.
+Adding fundec for MARSH___STUB__register_netdev
+Adding fundec for DEMARSH_STUB__register_netdev
+Adding fundec for register_netdev
+Processing register_netdev.
+Adding fundec for MARSH___STUB__crc32_le
+Adding fundec for DEMARSH_STUB__crc32_le
+Adding fundec for crc32_le
+Processing crc32_le.
+Adding fundec for MARSH___STUB__generic_mii_ioctl
+Adding fundec for DEMARSH_STUB__generic_mii_ioctl
+Adding fundec for generic_mii_ioctl
+Processing generic_mii_ioctl.
+Adding fundec for MARSH___STUB__eth_type_trans
+Adding fundec for DEMARSH_STUB__eth_type_trans
+Adding fundec for eth_type_trans
+Processing eth_type_trans.
+Adding fundec for MARSH___STUB__netpoll_trap
+Adding fundec for DEMARSH_STUB__netpoll_trap
+Adding fundec for netpoll_trap
+Processing netpoll_trap.
+Adding fundec for MARSH___STUB__pci_iounmap
+Adding fundec for DEMARSH_STUB__pci_iounmap
+Adding fundec for pci_iounmap
+Processing pci_iounmap.
+Adding fundec for MARSH___STUB__net_ratelimit
+Adding fundec for DEMARSH_STUB__net_ratelimit
+Adding fundec for net_ratelimit
+Processing net_ratelimit.
+Adding fundec for MARSH___STUB__pci_restore_state
+Adding fundec for DEMARSH_STUB__pci_restore_state
+Adding fundec for pci_restore_state
+Processing pci_restore_state.
+Adding fundec for MARSH___STUB__schedule_delayed_work
+Adding fundec for DEMARSH_STUB__schedule_delayed_work
+Adding fundec for schedule_delayed_work
+Processing schedule_delayed_work.
+Adding fundec for MARSH___STUB__mii_nway_restart
+Adding fundec for DEMARSH_STUB__mii_nway_restart
+Adding fundec for mii_nway_restart
+Processing mii_nway_restart.
+Adding fundec for MARSH___STUB__pci_enable_device
+Adding fundec for DEMARSH_STUB__pci_enable_device
+Adding fundec for pci_enable_device
+Processing pci_enable_device.
+Adding fundec for MARSH___STUB__free_irq
+Adding fundec for DEMARSH_STUB__free_irq
+Adding fundec for free_irq
+Processing free_irq.
+Adding fundec for MARSH___STUB__pci_disable_device
+Adding fundec for DEMARSH_STUB__pci_disable_device
+Adding fundec for pci_disable_device
+Processing pci_disable_device.
+Adding fundec for MARSH___STUB__flush_scheduled_work
+Adding fundec for DEMARSH_STUB__flush_scheduled_work
+Adding fundec for flush_scheduled_work
+Processing flush_scheduled_work.
+Adding fundec for MARSH___STUB__pci_iomap
+Adding fundec for DEMARSH_STUB__pci_iomap
+Adding fundec for pci_iomap
+Processing pci_iomap.
+Adding fundec for MARSH___STUB____netif_schedule
+Adding fundec for DEMARSH_STUB____netif_schedule
+Adding fundec for __netif_schedule
+Processing __netif_schedule.
+Adding fundec for MARSH___STUB__pci_set_master
+Adding fundec for DEMARSH_STUB__pci_set_master
+Adding fundec for pci_set_master
+Processing pci_set_master.
+Adding fundec for MARSH___STUB____napi_schedule
+Adding fundec for DEMARSH_STUB____napi_schedule
+Adding fundec for __napi_schedule
+Processing __napi_schedule.
+Adding fundec for MARSH___STUB___spin_unlock_bh
+Adding fundec for DEMARSH_STUB___spin_unlock_bh
+Adding fundec for _spin_unlock_bh
+Processing _spin_unlock_bh.
+Adding fundec for MARSH___STUB__init_timer
+Adding fundec for DEMARSH_STUB__init_timer
+Adding fundec for init_timer
+Processing init_timer.
+Adding fundec for MARSH___STUB__unregister_netdev
+Adding fundec for DEMARSH_STUB__unregister_netdev
+Adding fundec for unregister_netdev
+Processing unregister_netdev.
+Adding fundec for MARSH___STUB__disable_irq
+Adding fundec for DEMARSH_STUB__disable_irq
+Adding fundec for disable_irq
+Processing disable_irq.
+Adding fundec for MARSH___STUB__request_irq
+Adding fundec for DEMARSH_STUB__request_irq
+Adding fundec for request_irq
+Processing request_irq.
+Adding fundec for MARSH___STUB____pci_register_driver
+Adding fundec for DEMARSH_STUB____pci_register_driver
+Adding fundec for __pci_register_driver
+Processing __pci_register_driver.
+Adding fundec for MARSH___STUB__free_netdev
+Adding fundec for DEMARSH_STUB__free_netdev
+Adding fundec for free_netdev
+Processing free_netdev.
+Adding fundec for MARSH___STUB__pci_save_state
+Adding fundec for DEMARSH_STUB__pci_save_state
+Adding fundec for pci_save_state
+Processing pci_save_state.
+Adding fundec for MARSH___STUB____napi_complete
+Adding fundec for DEMARSH_STUB____napi_complete
+Adding fundec for __napi_complete
+Processing __napi_complete.
+Adding fundec for MARSH___STUB__pci_bus_write_config_word
+Adding fundec for DEMARSH_STUB__pci_bus_write_config_word
+Adding fundec for pci_bus_write_config_word
+Processing pci_bus_write_config_word.
+Adding fundec for MARSH___STUB__netif_napi_add
+Adding fundec for DEMARSH_STUB__netif_napi_add
+Adding fundec for netif_napi_add
+Processing netif_napi_add.
+Adding fundec for MARSH___STUB__mii_check_media
+Adding fundec for DEMARSH_STUB__mii_check_media
+Adding fundec for mii_check_media
+Processing mii_check_media.
+Adding fundec for MARSH___STUB__netif_device_attach
+Adding fundec for DEMARSH_STUB__netif_device_attach
+Adding fundec for netif_device_attach
+Processing netif_device_attach.
+Adding fundec for MARSH___STUB__odft_hold_and_acquire_lock
+Adding fundec for DEMARSH_STUB__odft_hold_and_acquire_lock
+Adding fundec for odft_hold_and_acquire_lock
+Processing odft_hold_and_acquire_lock.
+Adding fundec for MARSH___STUB__lockdep_init_map
+Adding fundec for DEMARSH_STUB__lockdep_init_map
+Adding fundec for lockdep_init_map
+Processing lockdep_init_map.
+Adding fundec for MARSH___STUB__dev_driver_string
+Adding fundec for DEMARSH_STUB__dev_driver_string
+Adding fundec for dev_driver_string
+Processing dev_driver_string.
+Adding fundec for MARSH___STUB__netif_device_detach
+Adding fundec for DEMARSH_STUB__netif_device_detach
+Adding fundec for netif_device_detach
+Processing netif_device_detach.
+gen_registerfn: rtl8139_get_wol
+gen_registerfn: rtl8139_get_drvinfo
+gen_registerfn: rtl8139_get_msglevel
+gen_registerfn: rtl8139_get_regs_len
+gen_registerfn: rtl8139_get_regs
+gen_registerfn: rtl8139_get_sset_count
+gen_registerfn: rtl8139_get_ethtool_stats
+dummy function param_set_int
+dummy function param_get_int
+dummy function param_array_set
+dummy function param_array_get
+dummy function eth_mac_addr
+dummy function eth_validate_addr
+Removing unused temporaries
+ Produced user side of the split
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  220 76
+[CHECK]: recursive annotation:  [struct list_head  -> next]
+
+[CHECK]: recursive annotation:  [struct list_head  -> prev]
+
+[CHECK]: recursive annotation: 
+
+[CHECK]: recursive annotation:  [struct device  -> parent]
+
+[CHECK]: recursive annotation:  [struct mii_if_info  -> dev] [struct net_device  -> priv]
+
+[CHECK]: Formal regbuf of rtl8139_get_regs does not resolve!
+[CHECK]: Formal  of MARSH___STUB__iowrite16 does not resolve!
+[CHECK]: Formal  of DEMARSH_STUB__iowrite16 does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__iowrite16  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal  of MARSH___STUB__ioread16 does not resolve!
+[CHECK]: Formal  of DEMARSH_STUB__ioread16 does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__ioread16  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for 
+ Function: MARSH___STUB__pci_request_regions
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for 
+ Function: DEMARSH_STUB__pci_request_regions
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for p
+ Function: MARSH___STUB__crc32_le
+
+Variable type: unsigned char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for p
+ Function: DEMARSH_STUB__crc32_le
+
+Variable type: unsigned char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for duplex_changed
+ Function: MARSH___STUB__generic_mii_ioctl
+
+Variable type: unsigned int *
+No offset
+[CHECK]: Assuming standard scalar pointer for duplex_changed
+ Function: DEMARSH_STUB__generic_mii_ioctl
+
+Variable type: unsigned int *
+No offset
+[CHECK]: Assuming standard scalar pointer for *skb
+ Function: MARSH___STUB__eth_type_trans
+Structure name: sk_buff, Field name: data
+Exp type: skb
+No offset
+[CHECK]: Assuming standard scalar pointer for skb->data
+ Function: MARSH___STUB__eth_type_trans
+
+Exp type: skb
+Structure name: sk_buff, Field name: data
+[CHECK]: Assuming standard scalar pointer for *skb
+ Function: DEMARSH_STUB__eth_type_trans
+Structure name: sk_buff, Field name: data
+Exp type: skb
+No offset
+[CHECK]: Assuming standard scalar pointer for skb->data
+ Function: DEMARSH_STUB__eth_type_trans
+
+Exp type: skb
+Structure name: sk_buff, Field name: data
+[CHECK]: Formal  of MARSH___STUB__pci_iounmap does not resolve!
+[CHECK]: Formal  of DEMARSH_STUB__pci_iounmap does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__pci_iounmap  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal  of MARSH___STUB__free_irq does not resolve!
+[CHECK]: Formal  of DEMARSH_STUB__free_irq does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__free_irq  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal _retval_ of DEMARSH_STUB__pci_iomap does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__pci_iomap _retval_ Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for 
+ Function: MARSH___STUB__request_irq
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal  of MARSH___STUB__request_irq does not resolve!
+[CHECK]: Assuming standard scalar pointer for 
+ Function: DEMARSH_STUB__request_irq
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal  of DEMARSH_STUB__request_irq does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__request_irq  Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for *
+ Function: MARSH___STUB____pci_register_driver
+Structure name: pci_driver, Field name: name
+Exp type: 
+No offset
+[CHECK]: Assuming standard scalar pointer for ->name
+ Function: MARSH___STUB____pci_register_driver
+
+Exp type: 
+Structure name: pci_driver, Field name: name
+[CHECK]: Assuming standard scalar pointer for mod_name
+ Function: MARSH___STUB____pci_register_driver
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for *
+ Function: DEMARSH_STUB____pci_register_driver
+Structure name: pci_driver, Field name: name
+Exp type: 
+No offset
+[CHECK]: Assuming standard scalar pointer for ->name
+ Function: DEMARSH_STUB____pci_register_driver
+
+Exp type: 
+Structure name: pci_driver, Field name: name
+[CHECK]: Assuming standard scalar pointer for mod_name
+ Function: DEMARSH_STUB____pci_register_driver
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB__lockdep_init_map
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB__lockdep_init_map
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for _retval_
+ Function: DEMARSH_STUB__dev_driver_string
+
+Variable type: char const   *
+No offset
+[CHECK]: Converting to NoStorage disp_kern
+[CHECK]: Converting to NoStorage param_set_int
+[CHECK]: Converting to NoStorage param_get_int
+[CHECK]: Converting to NoStorage param_array_set
+[CHECK]: Converting to NoStorage param_array_get
+[CHECK]: Converting to NoStorage jiffies
+[CHECK]: Converting to NoStorage __this_module
+[CHECK]: Converting to NoStorage x86_dma_fallback_dev
+[CHECK]: Converting to NoStorage dma_ops
+[CHECK]: Converting to NoStorage eth_mac_addr
+[CHECK]: Converting to NoStorage eth_validate_addr
+=======================================================
+#### Total execution time: 1.830721
+printing file ./r8139too.merged.sym.cil.c
+****** ISOLATING :::: rtl8139_get_wol
+                     ::::::::::odftPerforimg heapify rtl8139_get_wol****** ISOLATING :::: rtl8139_get_drvinfo
+                     ::::::::::odftPerforimg heapify rtl8139_get_drvinfo****** ISOLATING :::: rtl8139_get_msglevel
+                     ::::::::::odftPerforimg heapify rtl8139_get_msglevel****** ISOLATING :::: rtl8139_get_regs_len
+                     ::::::::::odftPerforimg heapify rtl8139_get_regs_len****** ISOLATING :::: rtl8139_get_regs
+                     ::::::::::odftPerforimg heapify rtl8139_get_regs****** ISOLATING :::: rtl8139_get_sset_count
+                     ::::::::::odftPerforimg heapify rtl8139_get_sset_count****** ISOLATING :::: rtl8139_get_ethtool_stats
+                     ::::::::::odftPerforimg heapify rtl8139_get_ethtool_statsticks 0 newstmt 0 mem bugs 0 hlt 0 ret 2 rtc 4 pk 2 dma 10.
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=846.55MB, max=38.60MB, minor=845.16MB, major=45.77MB, promoted=44.38MB
+    minor collections=3226  major collections=14 compactions=0
+Preprocessing ./r8139too.merged.sym.cil.c
+gcc -D_GNUCC -E ./r8139too.merged.sym.cil.c -o ./r8139too.merged.sym.cil.i

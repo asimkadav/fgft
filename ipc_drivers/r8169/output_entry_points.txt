@@ -1,0 +1,428 @@
+Preprocessing r8169.merged.c
+gcc -D_GNUCC -E -DCIL=1 r8169.merged.c -o /tmp/cil-z753bk52.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-2gxxXYbK.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots r8169.entry_points.txt /tmp/cil-z753bk52.i
+Frontc is parsing /tmp/cil-z753bk52.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:190: Warning: /scratch/sym/ipc_drivers/r8169/r8169_annotated.c:190: CIL only supports attribute((alias)) for functions.
+
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:786: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1132: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1382: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1403: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1416: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1427: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1440: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1455: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1480: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1507: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1529: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1570: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1605: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:1625: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2108: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2112: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2394: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2585: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2629: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2643: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:2805: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8169/r8169_annotated.c:3858: Warning: Return statement without a value in function returning int 
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+ROOT 3 failed: "RTL8169"
+ROOT 3 failed: 1
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8169s"
+ROOT 3 failed: 2
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8110s"
+ROOT 3 failed: 3
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8169sb/8110sb"
+ROOT 3 failed: 4
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8169sc/8110sc"
+ROOT 3 failed: 5
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8169sc/8110sc"
+ROOT 3 failed: 6
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8102e"
+ROOT 3 failed: 7
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8102e"
+ROOT 3 failed: 8
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8102e"
+ROOT 3 failed: 9
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8101e"
+ROOT 3 failed: 10
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168b/8111b"
+ROOT 3 failed: 11
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168b/8111b"
+ROOT 3 failed: 12
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8101e"
+ROOT 3 failed: 13
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8100e"
+ROOT 3 failed: 14
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8100e"
+ROOT 3 failed: 15
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168b/8111b"
+ROOT 3 failed: 16
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8101e"
+ROOT 3 failed: 17
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168cp/8111cp"
+ROOT 3 failed: 18
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168c/8111c"
+ROOT 3 failed: 19
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168c/8111c"
+ROOT 3 failed: 20
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168c/8111c"
+ROOT 3 failed: 21
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168c/8111c"
+ROOT 3 failed: 22
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168cp/8111cp"
+ROOT 3 failed: 23
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168cp/8111cp"
+ROOT 3 failed: 24
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: "RTL8168d/8111d"
+ROOT 3 failed: 25
+ROOT 3 failed: 4286453888U
+ROOT 3 failed: 4332
+ROOT 3 failed: 33065
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4332
+ROOT 3 failed: 33078
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 4332
+ROOT 3 failed: 33127
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4332
+ROOT 3 failed: 33128
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 4332
+ROOT 3 failed: 33129
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4486
+ROOT 3 failed: 17152
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4697
+ROOT 3 failed: 49415
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5868
+ROOT 3 failed: 278
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5943
+ROOT 3 failed: 4146
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 36
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 33128
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 9232
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0UL
+ROOT 3 failed: -1
+ROOT 3 failed: __param_str_rx_copybreak
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_use_dac
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_debug
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: (((1 | (1 << 5)) | (1 << 1)) | (1 << 3)) | (1 << 2)
+ROOT 3 failed: 82
+ROOT 3 failed: 1
+ROOT 3 failed: 1
+ROOT 3 failed: 84
+ROOT 3 failed: 16
+ROOT 3 failed: 1 << 5
+ROOT 3 failed: 84
+ROOT 3 failed: 32
+ROOT 3 failed: 1 << 1
+ROOT 3 failed: 86
+ROOT 3 failed: 16
+ROOT 3 failed: 1 << 3
+ROOT 3 failed: 86
+ROOT 3 failed: 64
+ROOT 3 failed: 1 << 2
+ROOT 3 failed: 86
+ROOT 3 failed: 32
+ROOT 3 failed: (((1 | (1 << 5)) | (1 << 1)) | (1 << 3)) | (1 << 2)
+ROOT 3 failed: 86
+ROOT 3 failed: 2
+ROOT 2: rtl8169_get_settings
+ROOT 2: rtl8169_set_settings
+ROOT 2: rtl8169_get_drvinfo
+ROOT 2: rtl8169_get_regs_len
+ROOT 2: rtl8169_get_regs
+ROOT 2: rtl8169_get_wol
+ROOT 2: rtl8169_set_wol
+ROOT 2: rtl8169_get_msglevel
+ROOT 2: rtl8169_set_msglevel
+ROOT 3 failed: 0
+ROOT 2: ethtool_op_get_link
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8169_get_rx_csum
+ROOT 2: rtl8169_set_rx_csum
+ROOT 3 failed: 0
+ROOT 2: ethtool_op_set_tx_csum
+ROOT 3 failed: 0
+ROOT 2: ethtool_op_set_sg
+ROOT 3 failed: 0
+ROOT 2: ethtool_op_set_tso
+ROOT 3 failed: 0
+ROOT 2: rtl8169_get_strings
+ROOT 3 failed: 0
+ROOT 2: rtl8169_get_ethtool_stats
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8169_get_sset_count
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl_hw_start_8169
+ROOT 5 failed: struct rtl_cfg_info  const  [3]
+ROOT 3 failed: 1U
+ROOT 3 failed: 0U
+ROOT 3 failed: 32895
+ROOT 3 failed: 93
+ROOT 3 failed: 4U
+ROOT 2: rtl_hw_start_8168
+ROOT 5 failed: struct rtl_cfg_info  const  [3]
+ROOT 3 failed: 2U
+ROOT 3 failed: 8U
+ROOT 3 failed: 32831
+ROOT 3 failed: 29
+ROOT 3 failed: 6U
+ROOT 2: rtl_hw_start_8101
+ROOT 5 failed: struct rtl_cfg_info  const  [3]
+ROOT 3 failed: 2U
+ROOT 3 failed: 8U
+ROOT 3 failed: 49279
+ROOT 3 failed: 93
+ROOT 3 failed: 2U
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8169_open
+ROOT 2: rtl8169_close
+ROOT 2: rtl8169_start_xmit
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl_set_rx_mode
+ROOT 2: rtl_set_mac_address
+ROOT 2: eth_validate_addr
+ROOT 2: rtl8169_ioctl
+ROOT 3 failed: 0
+ROOT 2: rtl8169_change_mtu
+ROOT 3 failed: 0
+ROOT 2: rtl8169_tx_timeout
+ROOT 2: rtl8169_get_stats
+ROOT 2: rtl8169_vlan_rx_register
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8169_netpoll
+ROOT 3 failed: 1U
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 2U
+ROOT 3 failed: 2048
+ROOT 3 failed: 4096
+ROOT 3 failed: 3U
+ROOT 3 failed: 0
+ROOT 3 failed: 66
+ROOT 3 failed: 6U
+ROOT 3 failed: 128
+ROOT 3 failed: 0
+ROOT 3 failed: 7U
+ROOT 3 failed: 0
+ROOT 3 failed: 8192
+ROOT 3 failed: 2U
+ROOT 3 failed: 2048
+ROOT 3 failed: 4096
+ROOT 3 failed: 3U
+ROOT 3 failed: 0
+ROOT 3 failed: 2
+ROOT 3 failed: 6U
+ROOT 3 failed: 128
+ROOT 3 failed: 0
+ROOT 3 failed: 1U
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: 3U
+ROOT 3 failed: 1024
+ROOT 3 failed: 544
+ROOT 3 failed: 1U
+ROOT 3 failed: 0
+ROOT 3 failed: 28261
+ROOT 3 failed: 2U
+ROOT 3 failed: 0
+ROOT 3 failed: 2335
+ROOT 3 failed: 3U
+ROOT 3 failed: 0
+ROOT 3 failed: 49913
+ROOT 3 failed: 6U
+ROOT 3 failed: 0
+ROOT 3 failed: 44981
+ROOT 3 failed: 7U
+ROOT 3 failed: 0
+ROOT 3 failed: 3584
+ROOT 3 failed: 25U
+ROOT 3 failed: 0
+ROOT 3 failed: 60544
+ROOT 3 failed: 1U
+ROOT 3 failed: 0
+ROOT 3 failed: 11877
+ROOT 3 failed: 1U
+ROOT 3 failed: 0
+ROOT 3 failed: 28261
+ROOT 3 failed: "r8169"
+ROOT 3 failed: rtl8169_pci_tbl
+ROOT 2: rtl8169_init_one
+ROOT 2: rtl8169_remove_one
+ROOT 2: rtl8169_suspend
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8169_resume
+ROOT 2: rtl_shutdown
+ROOT 3 failed: 0
+rtl8169_get_strings get_strings
+cleanup_module cleanup_module
+ethtool_op_set_tso set_tso
+rtl8169_get_stats ndo_get_stats
+rtl8169_init_one probe_pci
+rtl8169_get_rx_csum get_rx_csum
+init_module init_module
+rtl_set_mac_address ndo_set_mac_address
+rtl8169_get_regs_len get_regs_len
+rtl8169_netpoll ndo_poll_controller
+rtl8169_get_sset_count get_sset_count
+rtl8169_ioctl ndo_do_ioctl
+rtl8169_tx_timeout ndo_tx_timeout
+ethtool_op_set_tx_csum set_tx_csum
+rtl8169_get_regs get_regs
+rtl8169_set_rx_csum set_rx_csum
+rtl8169_remove_one remove_pci
+rtl8169_resume resume_pci
+rtl8169_set_msglevel set_msglevel
+rtl8169_get_wol get_wol
+rtl8169_get_msglevel get_msglevel
+rtl8169_close ndo_stop
+rtl8169_change_mtu ndo_change_mtu
+rtl8169_vlan_rx_register ndo_vlan_rx_register
+ethtool_op_set_sg set_sg
+rtl8169_interrupt interrupt
+rtl8169_set_wol set_wol
+rtl8169_get_drvinfo get_drvinfo
+eth_validate_addr ndo_validate_addr
+rtl8169_start_xmit ndo_start_xmit
+ethtool_op_get_link get_link
+rtl8169_open ndo_open
+rtl8169_get_settings get_settings
+rtl_set_rx_mode ndo_set_multicast_list
+rtl_shutdown shutdown_pci
+rtl8169_set_settings set_settings
+rtl8169_get_ethtool_stats get_ethtool_stats
+=======================================================
+=======================================================
+#### Total execution time: 0.670897
+printing file /tmp/cil-2gxxXYbK.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=394.56MB, max=28.44MB, minor=393.32MB, major=29.72MB, promoted=28.48MB
+    minor collections=187  major collections=9 compactions=0
+Preprocessing /tmp/cil-2gxxXYbK.cil.c
+gcc -D_GNUCC -E /tmp/cil-2gxxXYbK.cil.c -o /tmp/cil-vOiseo0J.cil.i

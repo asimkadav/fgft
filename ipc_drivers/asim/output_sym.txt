@@ -1,0 +1,4036 @@
+Preprocessing usb-audio.merged.sym.c
+gcc -D_GNUCC -E -DCIL=1 usb-audio.merged.sym.c -o ./usb-audio.merged.sym.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out ./usb-audio.merged.sym.cil.c --verbose --commPrintLnSparse --docarb --sfireads --sfiwrites --heapifyAll --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dobecons false --dowhat normal-user usb-audio.all_annots.txt usb-audio.entry_points.txt ./usb-audio.merged.sym.i
+Frontc is parsing ./usb-audio.merged.sym.i
+Converting CABS->CIL
+usb-audio.merged.sym.c:11021: Warning: usb-audio.merged.sym.c:11021: CIL only supports attribute((alias)) for functions.
+
+Removing unused temporaries
+Running CIL feature carb (Carburizer Analysis)
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(2)...
+scanning globals(1)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+scanning globals(0)...
+No bugs found.
+About to call sfi...
+Performing sfi ..
+About to perform heapify...
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating user-mode split driver
+**************************************************************
+ prune_roots_analysis starting
+currently analyzing: set_bit
+currently analyzing: clear_bit
+currently analyzing: test_and_set_bit
+currently analyzing: variable_test_bit
+currently analyzing: ffs
+currently analyzing: get_order
+currently analyzing: INIT_LIST_HEAD
+currently analyzing: list_add
+currently analyzing: list_add_tail
+currently analyzing: kmalloc
+currently analyzing: kcalloc
+currently analyzing: kzalloc
+currently analyzing: dev_get_drvdata
+currently analyzing: dev_set_drvdata
+currently analyzing: usb_get_intfdata
+currently analyzing: usb_set_intfdata
+currently analyzing: usb_interface_claimed
+currently analyzing: usb_make_path
+currently analyzing: usb_register
+currently analyzing: __create_pipe
+currently analyzing: snd_power_change_state
+currently analyzing: __snd_bug_on
+currently analyzing: snd_info_set_text_ops
+currently analyzing: bytes_to_frames
+currently analyzing: hw_param_mask
+currently analyzing: hw_param_interval
+currently analyzing: snd_mask_min
+currently analyzing: snd_mask_test
+currently analyzing: snd_interval_checkempty
+currently analyzing: Nonstub_get_size
+currently analyzing: Nonstub_usb_host_interface
+currently analyzing: get_usb_full_speed_rate
+currently analyzing: get_usb_high_speed_rate
+currently analyzing: prepare_capture_sync_urb
+currently analyzing: prepare_capture_sync_urb_hs
+currently analyzing: retire_capture_sync_urb
+currently analyzing: prepare_capture_urb
+currently analyzing: retire_capture_urb
+currently analyzing: retire_paused_capture_urb
+currently analyzing: prepare_playback_sync_urb
+currently analyzing: prepare_playback_sync_urb_hs
+currently analyzing: retire_playback_sync_urb
+currently analyzing: retire_playback_sync_urb_hs
+currently analyzing: retire_playback_sync_urb_hs_emu
+currently analyzing: snd_usb_audio_next_packet_size
+currently analyzing: prepare_nodata_playback_urb
+currently analyzing: prepare_playback_urb
+currently analyzing: retire_playback_urb
+currently analyzing: snd_complete_urb
+currently analyzing: snd_complete_sync_urb
+currently analyzing: snd_pcm_get_vmalloc_page
+currently analyzing: snd_pcm_alloc_vmalloc_buffer
+currently analyzing: snd_pcm_free_vmalloc_buffer
+currently analyzing: deactivate_urbs
+currently analyzing: usb_error_string
+currently analyzing: start_urbs
+currently analyzing: wait_clear_urbs
+currently analyzing: snd_usb_pcm_pointer
+currently analyzing: snd_usb_pcm_playback_trigger
+currently analyzing: snd_usb_pcm_capture_trigger
+currently analyzing: release_urb_ctx
+currently analyzing: release_substream_urbs
+currently analyzing: init_substream_urbs
+currently analyzing: find_format
+currently analyzing: init_usb_pitch
+currently analyzing: init_usb_sample_rate
+currently analyzing: set_format
+currently analyzing: snd_usb_hw_params
+currently analyzing: snd_usb_hw_free
+currently analyzing: snd_usb_pcm_prepare
+currently analyzing: hw_check_valid_format
+currently analyzing: hw_rule_rate
+currently analyzing: hw_rule_channels
+currently analyzing: hw_rule_format
+currently analyzing: check_hw_params_convention
+currently analyzing: snd_usb_pcm_check_knot
+currently analyzing: setup_hw_info
+currently analyzing: snd_usb_pcm_open
+currently analyzing: snd_usb_pcm_close
+currently analyzing: snd_usb_playback_open
+currently analyzing: snd_usb_playback_close
+currently analyzing: snd_usb_capture_open
+currently analyzing: snd_usb_capture_close
+currently analyzing: snd_usb_combine_bytes
+currently analyzing: snd_usb_find_desc
+currently analyzing: snd_usb_find_csint_desc
+currently analyzing: snd_usb_ctl_msg
+currently analyzing: proc_pcm_format_add
+currently analyzing: init_substream
+currently analyzing: free_substream
+currently analyzing: snd_usb_audio_stream_free
+currently analyzing: snd_usb_audio_pcm_free
+currently analyzing: add_audio_endpoint
+currently analyzing: is_big_endian_format
+currently analyzing: parse_audio_format_i_type
+currently analyzing: parse_audio_format_rates
+currently analyzing: parse_audio_format_i
+currently analyzing: parse_audio_format_ii
+currently analyzing: parse_audio_format
+currently analyzing: parse_audio_endpoints
+currently analyzing: snd_usb_stream_disconnect
+currently analyzing: snd_usb_create_streams
+currently analyzing: create_fixed_stream_quirk
+currently analyzing: create_standard_audio_quirk
+currently analyzing: create_uaxx_quirk
+currently analyzing: create_ua1000_quirk
+currently analyzing: create_ua101_quirk
+currently analyzing: create_composite_quirk
+currently analyzing: ignore_interface_quirk
+currently analyzing: snd_usb_extigy_boot_quirk
+currently analyzing: snd_usb_audigy2nx_boot_quirk
+currently analyzing: snd_usb_cm106_write_int_reg
+currently analyzing: snd_usb_cm106_boot_quirk
+currently analyzing: audiophile_skip_setting_quirk
+currently analyzing: snd_usb_create_quirk
+currently analyzing: proc_audio_usbbus_read
+currently analyzing: proc_audio_usbid_read
+currently analyzing: snd_usb_audio_create_proc
+currently analyzing: snd_usb_audio_free
+currently analyzing: snd_usb_audio_dev_free
+currently analyzing: snd_usb_audio_create
+currently analyzing: snd_usb_audio_probe
+currently analyzing: snd_usb_audio_disconnect
+currently analyzing: Nonstub_get_usb_device
+currently analyzing: usb_audio_probe
+currently analyzing: usb_audio_disconnect
+currently analyzing: usb_audio_suspend
+currently analyzing: usb_audio_resume
+currently analyzing: snd_usb_audio_init
+currently analyzing: snd_usb_audio_cleanup
+currently analyzing: init_module
+currently analyzing: cleanup_module
+currently analyzing: tasklet_schedule
+currently analyzing: usb_endpoint_num
+currently analyzing: usb_endpoint_dir_in
+currently analyzing: usb_endpoint_dir_out
+currently analyzing: usb_endpoint_xfer_bulk
+currently analyzing: usb_endpoint_xfer_int
+currently analyzing: usb_fill_bulk_urb
+currently analyzing: usb_fill_int_urb
+currently analyzing: usb_maxpacket
+currently analyzing: snd_usbmidi_submit_urb
+currently analyzing: snd_usbmidi_urb_error
+currently analyzing: snd_usbmidi_input_data
+currently analyzing: snd_usbmidi_in_urb_complete
+currently analyzing: snd_usbmidi_out_urb_complete
+currently analyzing: snd_usbmidi_do_output
+currently analyzing: snd_usbmidi_out_tasklet
+currently analyzing: snd_usbmidi_error_timer
+currently analyzing: send_bulk_static_data
+currently analyzing: snd_usbmidi_standard_input
+currently analyzing: snd_usbmidi_midiman_input
+currently analyzing: snd_usbmidi_maudio_broken_running_status_input
+currently analyzing: snd_usbmidi_cme_input
+currently analyzing: snd_usbmidi_output_standard_packet
+currently analyzing: snd_usbmidi_output_midiman_packet
+currently analyzing: snd_usbmidi_transmit_byte
+currently analyzing: snd_usbmidi_standard_output
+currently analyzing: snd_usbmidi_novation_input
+currently analyzing: snd_usbmidi_novation_output
+currently analyzing: snd_usbmidi_raw_input
+currently analyzing: snd_usbmidi_raw_output
+currently analyzing: snd_usbmidi_us122l_input
+currently analyzing: snd_usbmidi_us122l_output
+currently analyzing: snd_usbmidi_emagic_init_out
+currently analyzing: snd_usbmidi_emagic_finish_out
+currently analyzing: snd_usbmidi_emagic_input
+currently analyzing: snd_usbmidi_emagic_output
+currently analyzing: snd_usbmidi_output_open
+currently analyzing: snd_usbmidi_output_close
+currently analyzing: snd_usbmidi_output_trigger
+currently analyzing: snd_usbmidi_input_open
+currently analyzing: snd_usbmidi_input_close
+currently analyzing: snd_usbmidi_input_trigger
+currently analyzing: snd_usbmidi_in_endpoint_delete
+currently analyzing: snd_usbmidi_in_endpoint_create
+currently analyzing: snd_usbmidi_count_bits
+currently analyzing: snd_usbmidi_out_endpoint_delete
+currently analyzing: snd_usbmidi_out_endpoint_create
+currently analyzing: snd_usbmidi_free
+currently analyzing: snd_usbmidi_disconnect
+currently analyzing: snd_usbmidi_rawmidi_free
+currently analyzing: snd_usbmidi_find_substream
+currently analyzing: find_port_info
+currently analyzing: snd_usbmidi_get_port_info
+currently analyzing: snd_usbmidi_init_substream
+currently analyzing: snd_usbmidi_create_endpoints
+currently analyzing: snd_usbmidi_get_ms_info
+currently analyzing: snd_usbmidi_switch_roland_altsetting
+currently analyzing: snd_usbmidi_detect_endpoints
+currently analyzing: snd_usbmidi_detect_per_port_endpoints
+currently analyzing: snd_usbmidi_detect_yamaha
+currently analyzing: snd_usbmidi_create_endpoints_midiman
+currently analyzing: snd_usbmidi_create_rawmidi
+currently analyzing: snd_usbmidi_input_stop
+currently analyzing: snd_usbmidi_input_start_ep
+currently analyzing: snd_usbmidi_input_start
+currently analyzing: snd_usb_create_midi_interface
+currently analyzing: might_fault
+currently analyzing: get_current
+currently analyzing: __xchg
+currently analyzing: test_ti_thread_flag
+currently analyzing: test_tsk_thread_flag
+currently analyzing: signal_pending
+currently analyzing: usb_fill_control_urb
+currently analyzing: poll_wait
+currently analyzing: Nonstub_return_buflen
+currently analyzing: check_mapped_name
+currently analyzing: check_ignored_ctl
+currently analyzing: check_mapped_selector_name
+currently analyzing: find_audio_control_unit
+currently analyzing: snd_usb_copy_string_desc
+currently analyzing: convert_signed_value
+currently analyzing: convert_bytes_value
+currently analyzing: get_relative_value
+currently analyzing: get_abs_value
+currently analyzing: get_ctl_value
+currently analyzing: get_cur_ctl_value
+currently analyzing: get_cur_mix_value
+currently analyzing: set_ctl_value
+currently analyzing: set_cur_ctl_value
+currently analyzing: set_cur_mix_value
+currently analyzing: mixer_vol_tlv
+currently analyzing: check_matrix_bitmap
+currently analyzing: add_control_to_empty
+currently analyzing: get_term_name
+currently analyzing: check_input_term
+currently analyzing: usb_mixer_elem_free
+currently analyzing: get_min_max
+currently analyzing: mixer_ctl_feature_info
+currently analyzing: mixer_ctl_feature_get
+currently analyzing: mixer_ctl_feature_put
+currently analyzing: build_feature_ctl
+currently analyzing: parse_audio_feature_unit
+currently analyzing: build_mixer_unit_ctl
+currently analyzing: parse_audio_mixer_unit
+currently analyzing: mixer_ctl_procunit_get
+currently analyzing: mixer_ctl_procunit_put
+currently analyzing: build_audio_procunit
+currently analyzing: parse_audio_processing_unit
+currently analyzing: parse_audio_extension_unit
+currently analyzing: mixer_ctl_selector_info
+currently analyzing: mixer_ctl_selector_get
+currently analyzing: mixer_ctl_selector_put
+currently analyzing: usb_mixer_selector_elem_free
+currently analyzing: parse_audio_selector_unit
+currently analyzing: parse_audio_unit
+currently analyzing: snd_usb_mixer_free
+currently analyzing: snd_usb_mixer_dev_free
+currently analyzing: snd_usb_mixer_controls
+currently analyzing: snd_usb_mixer_notify_id
+currently analyzing: snd_usb_mixer_memory_change
+currently analyzing: snd_usb_mixer_status_complete
+currently analyzing: snd_usb_mixer_status_create
+currently analyzing: snd_usb_soundblaster_remote_complete
+currently analyzing: snd_usb_sbrc_hwdep_open
+currently analyzing: snd_usb_sbrc_hwdep_release
+currently analyzing: snd_usb_sbrc_hwdep_read
+currently analyzing: snd_usb_sbrc_hwdep_poll
+currently analyzing: snd_usb_soundblaster_remote_init
+currently analyzing: snd_audigy2nx_led_get
+currently analyzing: snd_audigy2nx_led_put
+currently analyzing: snd_audigy2nx_controls_create
+currently analyzing: snd_audigy2nx_proc_read
+currently analyzing: snd_usb_create_mixer
+currently analyzing: snd_usb_mixer_disconnect
+ resolve_opaques_using_casts starting
+ resolve_opaques_using_prop starting
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+!!!!! NOTE !!!!! :  String of length less than 4 int
+DFS completed
+!!!!! NOTE !!!!! :  Rec. broken caller/callee:  build_audio_procunit parse_audio_unit
+!!!!! NOTE !!!!! :   SELF LOOP  check_input_term
+DFS completed
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_mixer_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_mixer_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_mixer_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_mixer_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :  
+	 ---------- RECURSION: BOTH KINDS ----------
+
+DFS completed
+!!!!! NOTE !!!!! :  Rec. broken caller/callee:  parse_audio_mixer_unit parse_audio_unit
+!!!!! NOTE !!!!! :   SELF LOOP  check_input_term
+DFS completed
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :  
+	 ---------- RECURSION: BOTH KINDS ----------
+
+DFS completed
+!!!!! NOTE !!!!! :  Rec. broken caller/callee:  parse_audio_unit parse_audio_selector_unit
+!!!!! NOTE !!!!! :   SELF LOOP  check_input_term
+DFS completed
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit
+!!!!! NOTE !!!!! :   NON-TRIVIAL SCC  parse_audio_feature_unit parse_audio_unit
+!!!!! NOTE !!!!! :  
+	 ---------- RECURSION: BOTH KINDS ----------
+
+DFS completed
+!!!!! NOTE !!!!! :  Rec. broken caller/callee:  parse_audio_feature_unit parse_audio_unit
+!!!!! NOTE !!!!! :   SELF LOOP  check_input_term
+DFS completed
+!!!!! NOTE !!!!! :  
+	 ------------ SELF LOOPS EXIST -------------
+
+DFS completed
+ modif: Using supplied modif for internal kernel fn:  copy_to_user
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_transmit
+ modif: Using non-conservative analysis for kernel fn:  usb_unlink_urb
+ modif: Using non-conservative analysis for kernel fn:  usb_submit_urb
+ modif: Using supplied modif for internal kernel fn:  printk
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_new
+ modif: Using non-conservative analysis for kernel fn:  usb_set_interface
+ modif: Using non-conservative analysis for kernel fn:  usb_buffer_free
+ modif: Using non-conservative analysis for kernel fn:  usb_free_urb
+ modif: Using supplied modif for internal kernel fn:  kfree
+ modif: Using non-conservative analysis for kernel fn:  usb_bulk_msg
+ modif: Using supplied modif for internal kernel fn:  kmemdup
+ modif: Using supplied modif for internal kernel fn:  __builtin_prefetch
+ modif: Using non-conservative analysis for kernel fn:  snd_ctl_find_id
+ modif: Using non-conservative analysis for kernel fn:  snd_iprintf
+ modif: Using non-conservative analysis for kernel fn:  usb_register_driver
+ modif: Using supplied modif for internal kernel fn:  __builtin_memcpy
+ modif: Using non-conservative analysis for kernel fn:  usb_control_msg
+ modif: Using non-conservative analysis for kernel fn:  list_del
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_set_ops
+ modif: Using non-conservative analysis for kernel fn:  mod_timer
+ modif: Using supplied modif for internal kernel fn:  strcpy
+ modif: Using non-conservative analysis for kernel fn:  usb_string
+ modif: Using supplied modif for internal kernel fn:  sprintf
+ modif: Using supplied modif for internal kernel fn:  strlen
+ modif: Using non-conservative analysis for kernel fn:  __wake_up
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_receive
+ modif: Using supplied modif for internal kernel fn:  __kmalloc
+ modif: Using non-conservative analysis for kernel fn:  __list_add
+ modif: Using non-conservative analysis for kernel fn:  __spin_lock_init
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_new_stream
+ modif: Using non-conservative analysis for kernel fn:  usb_ifnum_to_if
+ modif: Using supplied modif for internal kernel fn:  snd_pcm_rate_to_rate_bit
+ modif: Using supplied modif for internal kernel fn:  strlcpy
+ modif: Using non-conservative analysis for kernel fn:  usb_kill_urb
+ modif: Using non-conservative analysis for kernel fn:  __tasklet_schedule
+ modif: Using non-conservative analysis for kernel fn:  prepare_to_wait
+ modif: Using non-conservative analysis for kernel fn:  mutex_unlock
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_transmit_empty
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_transmit_ack
+ modif: Using non-conservative analysis for kernel fn:  snd_card_free_when_closed
+ modif: Using non-conservative analysis for kernel fn:  snd_card_free
+ modif: Using non-conservative analysis for kernel fn:  snd_card_proc_new
+ modif: Using non-conservative analysis for kernel fn:  snd_component_add
+ modif: Using non-conservative analysis for kernel fn:  snd_device_new
+ modif: Using non-conservative analysis for kernel fn:  snd_card_new
+ modif: Using supplied modif for internal kernel fn:  snprintf
+ modif: Using supplied modif for internal kernel fn:  strlcat
+ modif: Using non-conservative analysis for kernel fn:  snd_ctl_add
+ modif: Using non-conservative analysis for kernel fn:  snd_ctl_new1
+ modif: Using non-conservative analysis for kernel fn:  usb_alloc_urb
+ modif: Using non-conservative analysis for kernel fn:  snd_hwdep_new
+ modif: Using non-conservative analysis for kernel fn:  init_waitqueue_head
+ modif: Using supplied modif for internal kernel fn:  memset
+ modif: Using supplied modif for internal kernel fn:  strcmp
+ modif: Using non-conservative analysis for kernel fn:  usb_driver_claim_interface
+ modif: Using non-conservative analysis for kernel fn:  init_timer
+ modif: Using non-conservative analysis for kernel fn:  usb_buffer_alloc
+ modif: Using supplied modif for internal kernel fn:  __builtin_expect
+ modif: Using supplied modif for internal kernel fn:  warn_slowpath
+ modif: Using non-conservative analysis for kernel fn:  tasklet_init
+ modif: Using supplied modif for internal kernel fn:  __memcpy
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_new
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_set_ops
+ modif: Using non-conservative analysis for kernel fn:  usb_reset_configuration
+ modif: Using non-conservative analysis for kernel fn:  usb_get_descriptor
+ modif: Using non-conservative analysis for kernel fn:  mutex_lock_nested
+ modif: Using non-conservative analysis for kernel fn:  snd_card_register
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_stop
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_suspend_all
+ modif: Using supplied modif for internal kernel fn:  __get_free_pages
+ modif: Using supplied modif for internal kernel fn:  free_pages
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock_irqrestore
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock_irqsave
+ modif: Using supplied modif for internal kernel fn:  msecs_to_jiffies
+ modif: Using supplied modif for internal kernel fn:  schedule_timeout_uninterruptible
+ modif: Using non-conservative analysis for kernel fn:  snd_ctl_notify
+ modif: Using non-conservative analysis for kernel fn:  snd_card_disconnect
+ modif: Using supplied modif for internal kernel fn:  schedule
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_hw_constraint_list
+ modif: Using supplied modif for internal kernel fn:  snd_pcm_hw_rule_add_MJR2
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_hw_constraint_minmax
+ modif: Using supplied modif for internal kernel fn:  _cond_resched
+ modif: Using supplied modif for internal kernel fn:  __might_sleep
+ modif: Using supplied modif for internal kernel fn:  __bad_pda_field
+ modif: Using non-conservative analysis for kernel fn:  finish_wait
+ modif: Using non-conservative analysis for kernel fn:  snd_rawmidi_transmit_peek
+ modif: Using supplied modif for internal kernel fn:  __phys_addr
+ modif: Using non-conservative analysis for kernel fn:  snd_pcm_period_elapsed
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock_irq
+ modif: Using non-conservative analysis for kernel fn:  del_timer_sync
+ modif: Using non-conservative analysis for kernel fn:  tasklet_kill
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock_irq
+ modif: Using non-conservative analysis for kernel fn:  _spin_lock
+ modif: Using supplied modif for internal kernel fn:  snd_pcm_format_physical_width
+ modif: Using non-conservative analysis for kernel fn:  usb_deregister
+ modif: Using non-conservative analysis for kernel fn:  _spin_unlock
+CYCLE DETECTION =======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  567 158
+[CHECK]: recursive annotation: 
+
+=======================================================
+** Reading entry points from file usb-audio.entry_points.txt **
+usb_audio_disconnect
+usb_audio_resume
+usb_audio_probe
+init_module
+cleanup_module
+** Reading file usb-audio.all_annots.txt **
+Computing FTPA...
+!!!!! NOTE !!!!! :  FPTA analysis was not done: function-pointer targets will be empty
+Computing callgraph + funcptrs...
+!!!!! NOTE !!!!! :  String of length less than 4 int
+is_override_interface: parse_audio_format_ii 0
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_transmit_peek 1
+is_override_interface: snd_usbmidi_input_open 1
+is_override_interface: __snd_bug_on 1
+is_override_interface: kmalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_mixer_free 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_unlock 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_sbrc_hwdep_open 1
+is_override_interface: usb_string 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_audio_probe 0
+is_override_interface: finish_wait 0
+Asim disabled interface function.
+is_override_interface: snd_interval_checkempty 1
+is_override_interface: usb_deregister 0
+Asim disabled interface function.
+is_override_interface: mixer_ctl_selector_put 0
+is_override_interface: usb_ifnum_to_if 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_timer 0
+Asim disabled interface function.
+is_override_interface: send_bulk_static_data 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_ctl_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: sprintf 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_midiman_input 1
+is_override_interface: snd_usbmidi_detect_yamaha 0
+Asim disabled interface function.
+is_override_interface: test_and_set_bit 1
+is_override_interface: free_substream 0
+Asim disabled interface function.
+is_override_interface: snd_usb_create_streams 0
+Asim disabled interface function.
+is_override_interface: prepare_capture_sync_urb 1
+is_override_interface: snd_usb_pcm_pointer 1
+is_override_interface: snd_usbmidi_error_timer 1
+is_override_interface: usb_endpoint_num 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: add_control_to_empty 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_out_urb_complete 1
+is_override_interface: snd_rawmidi_receive 1
+is_override_interface: proc_pcm_format_add 0
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_transmit_ack 1
+is_override_interface: snd_audigy2nx_proc_read 0
+is_override_interface: del_timer_sync 0
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_new 1
+is_override_interface: check_input_term 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: parse_audio_feature_unit 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_emagic_input 1
+is_override_interface: snd_usb_audio_next_packet_size 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: find_format 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_us122l_output 1
+is_override_interface: snd_usbmidi_create_endpoints_midiman 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_input_start_ep 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mixer_ctl_feature_info 0
+is_override_interface: snd_card_new 1
+is_override_interface: snd_usb_mixer_status_create 0
+Asim disabled interface function.
+is_override_interface: create_uaxx_quirk 1
+is_override_interface: snd_usb_playback_close 1
+is_override_interface: snd_usbmidi_emagic_init_out 1
+is_override_interface: snd_usb_sbrc_hwdep_release 1
+is_override_interface: prepare_capture_sync_urb_hs 1
+is_override_interface: snd_usb_combine_bytes 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: signal_pending 0
+Asim disabled interface function.
+is_override_interface: snd_iprintf 1
+is_override_interface: snd_usb_mixer_memory_change 0
+Asim disabled interface function.
+is_override_interface: usb_driver_claim_interface 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: cleanup_module 0
+is_override_interface: snd_usbmidi_us122l_input 1
+is_override_interface: usb_endpoint_dir_in 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mixer_ctl_selector_get 0
+is_override_interface: setup_hw_info 0
+Asim disabled interface function.
+is_override_interface: hw_rule_format 0
+is_override_interface: __list_add 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: create_fixed_stream_quirk 1
+is_override_interface: build_feature_ctl 0
+Asim disabled interface function.
+is_override_interface: snd_usb_cm106_boot_quirk 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_input_close 1
+is_override_interface: usb_audio_disconnect 0
+is_override_interface: snd_mask_test 1
+is_override_interface: usb_maxpacket 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_find_csint_desc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: msecs_to_jiffies 0
+Asim disabled interface function.
+is_override_interface: snd_usb_hw_free 1
+is_override_interface: usb_bulk_msg 0
+Asim disabled interface function.
+is_override_interface: snd_usb_pcm_check_knot 0
+Asim disabled interface function.
+is_override_interface: __get_free_pages 0
+Asim disabled interface function.
+is_override_interface: parse_audio_extension_unit 0
+Asim disabled interface function.
+is_override_interface: free_pages 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_standard_input 1
+is_override_interface: snd_pcm_hw_rule_add_MJR2 1
+is_override_interface: snd_rawmidi_transmit 1
+is_override_interface: snd_info_set_text_ops 1
+is_override_interface: snd_usb_audio_free 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_suspend_all 0
+Asim disabled interface function.
+is_override_interface: audiophile_skip_setting_quirk 0
+Asim disabled interface function.
+is_override_interface: snd_usb_create_mixer 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_raw_output 1
+is_override_interface: set_ctl_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_mixer_elem_free 1
+is_override_interface: init_usb_pitch 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_alloc_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __spin_lock_init 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_relative_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_cme_input 1
+is_override_interface: snd_pcm_hw_constraint_list 1
+is_override_interface: snd_usbmidi_find_substream 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_new_stream 1
+is_override_interface: snd_usbmidi_create_rawmidi 0
+Asim disabled interface function.
+is_override_interface: strlcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_abs_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_audio_create_proc 0
+Asim disabled interface function.
+is_override_interface: get_usb_high_speed_rate 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_input_stop 1
+is_override_interface: _spin_lock_irq 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_input_start 1
+is_override_interface: parse_audio_unit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_out_tasklet 1
+is_override_interface: usb_get_descriptor 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_output_open 1
+is_override_interface: __builtin_expect 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _cond_resched 0
+Asim disabled interface function.
+is_override_interface: get_order 0
+Asim disabled interface function.
+is_override_interface: strcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: kzalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_mixer_selector_elem_free 1
+is_override_interface: usb_error_string 0
+Asim disabled interface function.
+is_override_interface: hw_param_mask 1
+is_override_interface: snprintf 0
+Asim disabled interface function.
+is_override_interface: retire_playback_sync_urb_hs_emu 1
+is_override_interface: usb_set_intfdata 0
+Asim disabled interface function.
+is_override_interface: snd_usb_audio_cleanup 0
+Asim disabled interface function.
+is_override_interface: snd_complete_sync_urb 1
+is_override_interface: kmemdup 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_set_interface 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __kmalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: clear_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_usb_sample_rate 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_substream 0
+Asim disabled interface function.
+is_override_interface: Nonstub_get_size 0
+is_override_interface: snd_usb_mixer_notify_id 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_pcm_prepare 1
+is_override_interface: snd_usb_soundblaster_remote_complete 1
+is_override_interface: snd_usb_soundblaster_remote_init 0
+Asim disabled interface function.
+is_override_interface: snd_usb_cm106_write_int_reg 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_free_vmalloc_buffer 0
+Asim disabled interface function.
+is_override_interface: retire_playback_sync_urb 1
+is_override_interface: init_module 0
+is_override_interface: might_fault 0
+Asim disabled interface function.
+is_override_interface: __memcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_stop 1
+is_override_interface: snd_usbmidi_output_standard_packet 1
+is_override_interface: set_cur_ctl_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mixer_ctl_feature_put 0
+is_override_interface: snd_usb_audio_init 0
+Asim disabled interface function.
+is_override_interface: usb_fill_control_urb 0
+Asim disabled interface function.
+is_override_interface: strlen 0
+Asim disabled interface function.
+is_override_interface: set_format 0
+Asim disabled interface function.
+is_override_interface: check_mapped_selector_name 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_get_port_info 1
+is_override_interface: mixer_vol_tlv 0
+is_override_interface: usb_control_msg 0
+Asim disabled interface function.
+is_override_interface: snd_usb_extigy_boot_quirk 0
+Asim disabled interface function.
+is_override_interface: __xchg 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_format_physical_width 1
+is_override_interface: snd_usbmidi_novation_input 1
+is_override_interface: snd_power_change_state 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mutex_lock_nested 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_card_register 1
+is_override_interface: release_substream_urbs 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __create_pipe 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_submit_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: tasklet_init 0
+Asim disabled interface function.
+is_override_interface: __might_sleep 0
+Asim disabled interface function.
+is_override_interface: get_current 0
+Asim disabled interface function.
+is_override_interface: usb_endpoint_dir_out 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_disconnect 1
+is_override_interface: check_matrix_bitmap 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: parse_audio_mixer_unit 0
+Asim disabled interface function.
+is_override_interface: init_substream_urbs 0
+Asim disabled interface function.
+is_override_interface: memset 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_output_close 1
+is_override_interface: snd_usb_capture_close 1
+is_override_interface: __tasklet_schedule 0
+Asim disabled interface function.
+is_override_interface: usb_fill_bulk_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: hw_param_interval 1
+is_override_interface: prepare_nodata_playback_urb 1
+is_override_interface: strlcat 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __builtin_prefetch 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_period_elapsed 1
+is_override_interface: mixer_ctl_feature_get 0
+is_override_interface: kfree 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_free_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: _spin_unlock_irq 0
+Asim disabled interface function.
+is_override_interface: parse_audio_processing_unit 0
+Asim disabled interface function.
+is_override_interface: wait_clear_urbs 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_buffer_alloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: find_port_info 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_pcm_playback_trigger 1
+is_override_interface: build_audio_procunit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: retire_paused_capture_urb 1
+is_override_interface: snd_usbmidi_get_ms_info 0
+Asim disabled interface function.
+is_override_interface: usb_reset_configuration 0
+Asim disabled interface function.
+is_override_interface: usb_register_driver 0
+Asim disabled interface function.
+is_override_interface: tasklet_kill 0
+Asim disabled interface function.
+is_override_interface: ffs 0
+Asim disabled interface function.
+is_override_interface: deactivate_urbs 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_detect_per_port_endpoints 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_get_vmalloc_page 0
+is_override_interface: usb_kill_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_playback_open 1
+is_override_interface: snd_usb_create_midi_interface 1
+is_override_interface: set_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_maudio_broken_running_status_input 1
+is_override_interface: list_add 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: strcmp 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_urb_error 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: prepare_playback_urb 1
+is_override_interface: snd_usb_pcm_capture_trigger 1
+is_override_interface: snd_usb_pcm_open 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: convert_signed_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_hw_params 1
+is_override_interface: snd_hwdep_new 1
+is_override_interface: warn_slowpath 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_audigy2nx_controls_create 0
+Asim disabled interface function.
+is_override_interface: test_tsk_thread_flag 1
+is_override_interface: get_cur_ctl_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: init_waitqueue_head 0
+Asim disabled interface function.
+is_override_interface: parse_audio_format_i_type 0
+Asim disabled interface function.
+is_override_interface: _spin_lock 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: retire_playback_urb 1
+is_override_interface: mixer_ctl_selector_info 0
+is_override_interface: release_urb_ctx 0
+Asim disabled interface function.
+is_override_interface: prepare_playback_sync_urb_hs 1
+is_override_interface: _spin_lock_irqsave 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: convert_bytes_value 0
+Asim disabled interface function.
+is_override_interface: snd_usb_audio_disconnect 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_in_endpoint_create 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: schedule_timeout_uninterruptible 0
+Asim disabled interface function.
+is_override_interface: create_standard_audio_quirk 1
+is_override_interface: retire_capture_urb 1
+is_override_interface: snd_usb_audio_pcm_free 1
+is_override_interface: snd_card_free 1
+is_override_interface: mod_timer 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_find_desc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_mixer_controls 0
+Asim disabled interface function.
+is_override_interface: create_ua101_quirk 1
+is_override_interface: prepare_capture_urb 1
+is_override_interface: usb_make_path 0
+Asim disabled interface function.
+is_override_interface: snd_audigy2nx_led_put 0
+is_override_interface: snd_usbmidi_init_substream 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_buffer_free 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: build_mixer_unit_ctl 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_out_endpoint_create 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_get_intfdata 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __phys_addr 0
+Asim disabled interface function.
+is_override_interface: parse_audio_format_rates 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_component_add 1
+is_override_interface: snd_usb_copy_string_desc 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ctl_add 1
+is_override_interface: create_ua1000_quirk 1
+is_override_interface: snd_usbmidi_emagic_output 1
+is_override_interface: snd_usbmidi_create_endpoints 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_output_midiman_packet 1
+is_override_interface: __builtin_memcpy 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_audio_create 0
+Asim disabled interface function.
+is_override_interface: printk 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: __bad_pda_field 0
+Asim disabled interface function.
+is_override_interface: snd_usb_sbrc_hwdep_read 1
+is_override_interface: check_hw_params_convention 0
+Asim disabled interface function.
+is_override_interface: usb_interface_claimed 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_hw_constraint_minmax 1
+is_override_interface: test_ti_thread_flag 1
+is_override_interface: snd_usb_capture_open 1
+is_override_interface: Nonstub_get_usb_device 0
+is_override_interface: usb_submit_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_count_bits 0
+Asim disabled interface function.
+is_override_interface: schedule 0
+Asim disabled interface function.
+is_override_interface: prepare_playback_sync_urb 1
+is_override_interface: snd_usb_mixer_dev_free 1
+is_override_interface: snd_usb_audigy2nx_boot_quirk 0
+Asim disabled interface function.
+is_override_interface: is_big_endian_format 0
+Asim disabled interface function.
+is_override_interface: snd_usb_ctl_msg 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: find_audio_control_unit 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: INIT_LIST_HEAD 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: parse_audio_format_i 0
+Asim disabled interface function.
+is_override_interface: _spin_unlock_irqrestore 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usb_create_quirk 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: create_composite_quirk 1
+is_override_interface: snd_ctl_notify 1
+is_override_interface: snd_mask_min 1
+is_override_interface: parse_audio_selector_unit 0
+Asim disabled interface function.
+is_override_interface: snd_card_disconnect 1
+is_override_interface: Nonstub_return_buflen 0
+is_override_interface: set_cur_mix_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_endpoint_xfer_int 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_do_output 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_detect_endpoints 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_audigy2nx_led_get 0
+is_override_interface: snd_usb_pcm_close 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_ctl_new1 1
+is_override_interface: snd_usb_mixer_status_complete 1
+is_override_interface: snd_usb_stream_disconnect 0
+Asim disabled interface function.
+is_override_interface: retire_playback_sync_urb_hs 1
+is_override_interface: snd_usb_sbrc_hwdep_poll 1
+is_override_interface: snd_pcm_alloc_vmalloc_buffer 0
+Asim disabled interface function.
+is_override_interface: snd_card_proc_new 1
+is_override_interface: retire_capture_sync_urb 1
+is_override_interface: usb_audio_suspend 0
+is_override_interface: mixer_ctl_procunit_put 0
+is_override_interface: variable_test_bit 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: list_add_tail 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: hw_check_valid_format 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: check_ignored_ctl 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_device_new 1
+is_override_interface: hw_rule_rate 0
+is_override_interface: snd_usbmidi_in_endpoint_delete 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: parse_audio_format 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_input_trigger 1
+is_override_interface: usb_fill_int_urb 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_min_max 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: get_usb_full_speed_rate 0
+Asim disabled interface function.
+is_override_interface: get_cur_mix_value 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_complete_urb 1
+is_override_interface: list_del 0
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_set_ops 1
+is_override_interface: dev_set_drvdata 0
+Asim disabled interface function.
+is_override_interface: bytes_to_frames 0
+Asim disabled interface function.
+is_override_interface: snd_usb_audio_probe 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_rawmidi_free 1
+is_override_interface: snd_usbmidi_transmit_byte 0
+Asim disabled interface function.
+is_override_interface: snd_rawmidi_transmit_empty 1
+is_override_interface: snd_card_free_when_closed 1
+is_override_interface: __wake_up 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_output_trigger 1
+is_override_interface: usb_endpoint_xfer_bulk 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_unlink_urb 0
+Asim disabled interface function.
+is_override_interface: snd_usb_audio_dev_free 1
+is_override_interface: snd_usbmidi_out_endpoint_delete 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: add_audio_endpoint 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: mutex_unlock 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_pcm_rate_to_rate_bit 1
+is_override_interface: snd_usbmidi_raw_input 1
+is_override_interface: prepare_to_wait 0
+Asim disabled interface function.
+is_override_interface: tasklet_schedule 1
+is_override_interface: kcalloc 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: proc_audio_usbbus_read 0
+is_override_interface: snd_usb_mixer_disconnect 0
+Asim disabled interface function.
+is_override_interface: check_mapped_name 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: parse_audio_endpoints 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_input_data 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: usb_audio_resume 0
+is_override_interface: get_term_name 0
+Asim disabled interface function.
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_novation_output 1
+is_override_interface: dev_get_drvdata 0
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_in_urb_complete 1
+is_override_interface: snd_pcm_set_ops 1
+is_override_interface: snd_usb_audio_stream_free 0
+Asim disabled interface function.
+is_override_interface: mixer_ctl_procunit_get 0
+is_override_interface: usb_register 0
+Asim disabled interface function.
+is_override_interface: proc_audio_usbid_read 0
+is_override_interface: snd_ctl_find_id 1
+is_override_interface: hw_rule_channels 0
+is_override_interface: snd_usbmidi_emagic_finish_out 1
+is_override_interface: snd_usbmidi_free 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: Nonstub_usb_host_interface 0
+is_override_interface: snd_usbmidi_switch_roland_altsetting 0
+Asim disabled interface function.
+is_override_interface: snd_pcm_new 1
+is_override_interface: poll_wait 0
+Asim disabled interface function.
+is_override_interface: start_urbs 0
+Asim disabled interface function.
+Asim disabled interface function.
+is_override_interface: snd_usbmidi_standard_output 1
+is_override_interface: ignore_interface_quirk 1
+is_override_interface: copy_to_user 0
+Asim disabled interface function.
+Interface function snd_card_new: Annotation is kern
+Interface function _spin_unlock_irqrestore: Annotation is kern
+Interface function strlcat: Annotation is kern
+Interface function snd_rawmidi_set_ops: Annotation is kern
+Interface function strcmp: Annotation is kern
+Interface function usb_buffer_free: Annotation is kern
+Interface function printk: Annotation is kern
+Interface function snd_rawmidi_transmit_ack: Annotation is kern
+Interface function snd_pcm_new_stream: Annotation is kern
+Interface function del_timer_sync: Annotation is kern
+Interface function __phys_addr: Annotation is kern
+Interface function snd_pcm_rate_to_rate_bit: Annotation is kern
+Interface function _spin_lock_irqsave: Annotation is kern
+Interface function _spin_lock_irq: Annotation is kern
+Interface function snd_hwdep_new: Annotation is kern
+Interface function snd_iprintf: Annotation is kern
+Interface function snd_pcm_hw_constraint_list: Annotation is kern
+Interface function usb_buffer_alloc: Annotation is kern
+Interface function snd_rawmidi_transmit_empty: Annotation is kern
+Interface function __wake_up: Annotation is kern
+Interface function usb_driver_claim_interface: Annotation is kern
+Interface function snd_ctl_find_id: Annotation is kern
+Interface function __list_add: Annotation is kern
+Interface function __builtin_expect: Annotation is kern
+Interface function _spin_lock: Annotation is kern
+Interface function snd_card_proc_new: Annotation is kern
+Interface function snd_pcm_new: Annotation is kern
+Interface function schedule: Annotation is kern
+Interface function usb_string: Annotation is kern
+Interface function memset: Annotation is kern
+Interface function tasklet_kill: Annotation is kern
+Interface function usb_kill_urb: Annotation is kern
+Interface function copy_to_user: Annotation is kern
+Interface function usb_deregister: Annotation is kern
+Interface function snd_pcm_suspend_all: Annotation is kern
+Interface function snd_pcm_format_physical_width: Annotation is kern
+Interface function msecs_to_jiffies: Annotation is kern
+Interface function mutex_lock_nested: Annotation is kern
+Interface function _spin_unlock_irq: Annotation is kern
+Interface function mod_timer: Annotation is kern
+Interface function snd_ctl_new1: Annotation is kern
+Interface function prepare_to_wait: Annotation is kern
+Interface function snprintf: Annotation is kern
+Interface function snd_rawmidi_receive: Annotation is kern
+Interface function warn_slowpath: Annotation is kern
+Interface function __builtin_memcpy: Annotation is kern
+Interface function _spin_unlock: Annotation is kern
+Interface function strcpy: Annotation is kern
+Interface function snd_rawmidi_new: Annotation is kern
+Interface function __kmalloc: Annotation is kern
+Interface function usb_submit_urb: Annotation is kern
+Interface function strlcpy: Annotation is kern
+Interface function usb_register_driver: Annotation is kern
+Interface function mutex_unlock: Annotation is kern
+Interface function usb_set_interface: Annotation is kern
+Interface function __tasklet_schedule: Annotation is kern
+Interface function snd_pcm_hw_rule_add_MJR2: Annotation is kern
+Interface function tasklet_init: Annotation is kern
+Interface function _cond_resched: Annotation is kern
+Interface function init_timer: Annotation is kern
+Interface function schedule_timeout_uninterruptible: Annotation is kern
+Interface function snd_ctl_add: Annotation is kern
+Interface function strlen: Annotation is kern
+Interface function free_pages: Annotation is kern
+Interface function usb_alloc_urb: Annotation is kern
+Interface function snd_rawmidi_transmit_peek: Annotation is kern
+Interface function init_waitqueue_head: Annotation is kern
+Interface function usb_ifnum_to_if: Annotation is kern
+Interface function snd_pcm_hw_constraint_minmax: Annotation is kern
+Interface function __might_sleep: Annotation is kern
+Interface function snd_card_free: Annotation is kern
+Interface function usb_unlink_urb: Annotation is kern
+Interface function list_del: Annotation is kern
+Interface function snd_pcm_period_elapsed: Annotation is kern
+Interface function __spin_lock_init: Annotation is kern
+Interface function usb_reset_configuration: Annotation is kern
+Interface function kmemdup: Annotation is kern
+Interface function snd_ctl_notify: Annotation is kern
+Interface function snd_pcm_stop: Annotation is kern
+Interface function snd_pcm_set_ops: Annotation is kern
+Interface function snd_card_disconnect: Annotation is kern
+Interface function finish_wait: Annotation is kern
+Interface function usb_get_descriptor: Annotation is kern
+Interface function snd_component_add: Annotation is kern
+Interface function snd_card_free_when_closed: Annotation is kern
+Interface function usb_bulk_msg: Annotation is kern
+Interface function __bad_pda_field: Annotation is kern
+Interface function snd_device_new: Annotation is kern
+Interface function kfree: Annotation is kern
+Interface function usb_free_urb: Annotation is kern
+Interface function usb_control_msg: Annotation is kern
+Interface function __builtin_prefetch: Annotation is kern
+Interface function sprintf: Annotation is kern
+Interface function snd_rawmidi_transmit: Annotation is kern
+Interface function __memcpy: Annotation is kern
+Interface function __get_free_pages: Annotation is kern
+Interface function snd_card_register: Annotation is kern
+kernel function proto: logRead
+kernel function proto: logWrite
+kernel function proto: logStackFrame
+kernel function proto: logAlloc
+kernel function proto: logFree
+kernel function proto: __builtin_memcpy
+kernel function proto: __builtin_prefetch
+kernel function proto: __builtin_expect
+Considering function body for deletion: set_bit
+Considering function body for deletion: clear_bit
+Considering function body for deletion: test_and_set_bit
+Considering function body for deletion: variable_test_bit
+Considering function body for deletion: ffs
+kernel function proto: warn_slowpath
+kernel function proto: sprintf
+  deleting proto sprintf
+kernel function proto: snprintf
+kernel function proto: printk
+Considering function body for deletion: get_order
+kernel function proto: memset
+kernel function proto: strcpy
+kernel function proto: strlcpy
+kernel function proto: strlcat
+kernel function proto: kmemdup
+Considering function body for deletion: INIT_LIST_HEAD
+Considering function body for deletion: list_add
+Considering function body for deletion: list_add_tail
+kernel function proto: __get_free_pages
+kernel function proto: free_pages
+kernel function proto: kfree
+kernel function proto: __kmalloc
+Considering function body for deletion: kmalloc
+Considering function body for deletion: kcalloc
+Considering function body for deletion: kzalloc
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: dev_get_drvdata
+Considering function body for deletion: dev_set_drvdata
+Considering function body for deletion: usb_get_intfdata
+Considering function body for deletion: usb_set_intfdata
+Considering function body for deletion: usb_interface_claimed
+Considering function body for deletion: usb_make_path
+Considering function body for deletion: usb_register
+Considering function body for deletion: __create_pipe
+Considering function body for deletion: snd_power_change_state
+Considering function body for deletion: __snd_bug_on
+kernel function proto: snd_iprintf
+Considering function body for deletion: snd_info_set_text_ops
+Considering function body for deletion: bytes_to_frames
+Considering function body for deletion: hw_param_mask
+Considering function body for deletion: hw_param_interval
+Considering function body for deletion: snd_mask_min
+Considering function body for deletion: snd_mask_test
+Considering function body for deletion: snd_interval_checkempty
+Considering function body for deletion: Nonstub_get_size
+Considering function body for deletion: Nonstub_usb_host_interface
+Considering function body for deletion: get_usb_full_speed_rate
+Considering function body for deletion: get_usb_high_speed_rate
+Considering function body for deletion: prepare_capture_sync_urb
+Considering function body for deletion: prepare_capture_sync_urb_hs
+Considering function body for deletion: retire_capture_sync_urb
+Considering function body for deletion: prepare_capture_urb
+Considering function body for deletion: retire_capture_urb
+Considering function body for deletion: retire_paused_capture_urb
+Considering function body for deletion: prepare_playback_sync_urb
+Considering function body for deletion: prepare_playback_sync_urb_hs
+Considering function body for deletion: retire_playback_sync_urb
+Considering function body for deletion: retire_playback_sync_urb_hs
+Considering function body for deletion: retire_playback_sync_urb_hs_emu
+Considering function body for deletion: snd_usb_audio_next_packet_size
+Considering function body for deletion: prepare_nodata_playback_urb
+Considering function body for deletion: prepare_playback_urb
+Considering function body for deletion: retire_playback_urb
+Considering function body for deletion: snd_complete_urb
+Considering function body for deletion: snd_complete_sync_urb
+Considering function body for deletion: snd_pcm_get_vmalloc_page
+Considering function body for deletion: snd_pcm_alloc_vmalloc_buffer
+Considering function body for deletion: snd_pcm_free_vmalloc_buffer
+Considering function body for deletion: deactivate_urbs
+Considering function body for deletion: usb_error_string
+Considering function body for deletion: start_urbs
+Considering function body for deletion: wait_clear_urbs
+Considering function body for deletion: snd_usb_pcm_pointer
+Considering function body for deletion: snd_usb_pcm_playback_trigger
+Considering function body for deletion: snd_usb_pcm_capture_trigger
+Considering function body for deletion: release_urb_ctx
+Considering function body for deletion: release_substream_urbs
+Considering function body for deletion: init_substream_urbs
+Considering function body for deletion: find_format
+Considering function body for deletion: init_usb_pitch
+Considering function body for deletion: init_usb_sample_rate
+Considering function body for deletion: set_format
+Considering function body for deletion: snd_usb_hw_params
+Considering function body for deletion: snd_usb_hw_free
+Considering function body for deletion: snd_usb_pcm_prepare
+Considering function body for deletion: hw_check_valid_format
+Considering function body for deletion: hw_rule_rate
+Considering function body for deletion: hw_rule_channels
+Considering function body for deletion: hw_rule_format
+Considering function body for deletion: check_hw_params_convention
+Considering function body for deletion: snd_usb_pcm_check_knot
+Considering function body for deletion: setup_hw_info
+Considering function body for deletion: snd_usb_pcm_open
+Considering function body for deletion: snd_usb_pcm_close
+Considering function body for deletion: snd_usb_playback_open
+Considering function body for deletion: snd_usb_playback_close
+Considering function body for deletion: snd_usb_capture_open
+Considering function body for deletion: snd_usb_capture_close
+Considering function body for deletion: snd_usb_combine_bytes
+Considering function body for deletion: snd_usb_find_desc
+Considering function body for deletion: snd_usb_find_csint_desc
+Considering function body for deletion: snd_usb_ctl_msg
+Considering function body for deletion: proc_pcm_format_add
+Considering function body for deletion: init_substream
+Considering function body for deletion: free_substream
+Considering function body for deletion: snd_usb_audio_stream_free
+Considering function body for deletion: snd_usb_audio_pcm_free
+Considering function body for deletion: add_audio_endpoint
+Considering function body for deletion: is_big_endian_format
+Considering function body for deletion: parse_audio_format_i_type
+Considering function body for deletion: parse_audio_format_rates
+Considering function body for deletion: parse_audio_format_i
+Considering function body for deletion: parse_audio_format_ii
+Considering function body for deletion: parse_audio_format
+Considering function body for deletion: parse_audio_endpoints
+Considering function body for deletion: snd_usb_stream_disconnect
+Considering function body for deletion: snd_usb_create_streams
+Considering function body for deletion: create_fixed_stream_quirk
+Considering function body for deletion: create_standard_audio_quirk
+Considering function body for deletion: create_uaxx_quirk
+Considering function body for deletion: create_ua1000_quirk
+Considering function body for deletion: create_ua101_quirk
+Considering function body for deletion: create_composite_quirk
+Considering function body for deletion: ignore_interface_quirk
+Considering function body for deletion: snd_usb_extigy_boot_quirk
+Considering function body for deletion: snd_usb_audigy2nx_boot_quirk
+Considering function body for deletion: snd_usb_cm106_write_int_reg
+Considering function body for deletion: snd_usb_cm106_boot_quirk
+Considering function body for deletion: audiophile_skip_setting_quirk
+Considering function body for deletion: snd_usb_create_quirk
+Considering function body for deletion: proc_audio_usbbus_read
+Considering function body for deletion: proc_audio_usbid_read
+Considering function body for deletion: snd_usb_audio_create_proc
+Considering function body for deletion: snd_usb_audio_free
+Considering function body for deletion: snd_usb_audio_dev_free
+Considering function body for deletion: snd_usb_audio_create
+Considering function body for deletion: snd_usb_audio_probe
+Considering function body for deletion: snd_usb_audio_disconnect
+Considering function body for deletion: Nonstub_get_usb_device
+Considering function body for deletion: usb_audio_probe
+Considering function body for deletion: usb_audio_disconnect
+Considering function body for deletion: usb_audio_suspend
+Considering function body for deletion: usb_audio_resume
+Considering function body for deletion: snd_usb_audio_init
+Considering function body for deletion: snd_usb_audio_cleanup
+Considering function body for deletion: init_module
+kernel function proto: init_module
+  deleting proto init_module
+Considering function body for deletion: cleanup_module
+Considering function body for deletion: tasklet_schedule
+Considering function body for deletion: usb_endpoint_num
+Considering function body for deletion: usb_endpoint_dir_in
+Considering function body for deletion: usb_endpoint_dir_out
+Considering function body for deletion: usb_endpoint_xfer_bulk
+Considering function body for deletion: usb_endpoint_xfer_int
+Considering function body for deletion: usb_fill_bulk_urb
+Considering function body for deletion: usb_fill_int_urb
+Considering function body for deletion: usb_maxpacket
+Considering function body for deletion: snd_usbmidi_submit_urb
+Considering function body for deletion: snd_usbmidi_urb_error
+Considering function body for deletion: snd_usbmidi_input_data
+Considering function body for deletion: snd_usbmidi_in_urb_complete
+Considering function body for deletion: snd_usbmidi_out_urb_complete
+Considering function body for deletion: snd_usbmidi_do_output
+Considering function body for deletion: snd_usbmidi_out_tasklet
+Considering function body for deletion: snd_usbmidi_error_timer
+Considering function body for deletion: send_bulk_static_data
+Considering function body for deletion: snd_usbmidi_standard_input
+Considering function body for deletion: snd_usbmidi_midiman_input
+Considering function body for deletion: snd_usbmidi_maudio_broken_running_status_input
+Considering function body for deletion: snd_usbmidi_cme_input
+Considering function body for deletion: snd_usbmidi_output_standard_packet
+Considering function body for deletion: snd_usbmidi_output_midiman_packet
+Considering function body for deletion: snd_usbmidi_transmit_byte
+Considering function body for deletion: snd_usbmidi_standard_output
+Considering function body for deletion: snd_usbmidi_novation_input
+Considering function body for deletion: snd_usbmidi_novation_output
+Considering function body for deletion: snd_usbmidi_raw_input
+Considering function body for deletion: snd_usbmidi_raw_output
+Considering function body for deletion: snd_usbmidi_us122l_input
+Considering function body for deletion: snd_usbmidi_us122l_output
+Considering function body for deletion: snd_usbmidi_emagic_init_out
+Considering function body for deletion: snd_usbmidi_emagic_finish_out
+Considering function body for deletion: snd_usbmidi_emagic_input
+Considering function body for deletion: snd_usbmidi_emagic_output
+Considering function body for deletion: snd_usbmidi_output_open
+Considering function body for deletion: snd_usbmidi_output_close
+Considering function body for deletion: snd_usbmidi_output_trigger
+Considering function body for deletion: snd_usbmidi_input_open
+Considering function body for deletion: snd_usbmidi_input_close
+Considering function body for deletion: snd_usbmidi_input_trigger
+Considering function body for deletion: snd_usbmidi_in_endpoint_delete
+Considering function body for deletion: snd_usbmidi_in_endpoint_create
+Considering function body for deletion: snd_usbmidi_count_bits
+Considering function body for deletion: snd_usbmidi_out_endpoint_delete
+Considering function body for deletion: snd_usbmidi_out_endpoint_create
+Considering function body for deletion: snd_usbmidi_free
+Considering function body for deletion: snd_usbmidi_disconnect
+Considering function body for deletion: snd_usbmidi_rawmidi_free
+Considering function body for deletion: snd_usbmidi_find_substream
+Considering function body for deletion: find_port_info
+Considering function body for deletion: snd_usbmidi_get_port_info
+Considering function body for deletion: snd_usbmidi_init_substream
+Considering function body for deletion: snd_usbmidi_create_endpoints
+Considering function body for deletion: snd_usbmidi_get_ms_info
+Considering function body for deletion: snd_usbmidi_switch_roland_altsetting
+Considering function body for deletion: snd_usbmidi_detect_endpoints
+Considering function body for deletion: snd_usbmidi_detect_per_port_endpoints
+Considering function body for deletion: snd_usbmidi_detect_yamaha
+Considering function body for deletion: snd_usbmidi_create_endpoints_midiman
+Considering function body for deletion: snd_usbmidi_create_rawmidi
+Considering function body for deletion: snd_usbmidi_input_stop
+Considering function body for deletion: snd_usbmidi_input_start_ep
+Considering function body for deletion: snd_usbmidi_input_start
+Considering function body for deletion: snd_usb_create_midi_interface
+Considering function body for deletion: might_fault
+Considering function body for deletion: get_current
+Considering function body for deletion: __xchg
+kernel function proto: strlen
+kernel function proto: strcmp
+Considering function body for deletion: test_ti_thread_flag
+Considering function body for deletion: test_tsk_thread_flag
+Considering function body for deletion: signal_pending
+Considering function body for deletion: usb_fill_control_urb
+kernel function proto: copy_to_user
+Considering function body for deletion: poll_wait
+Considering function body for deletion: Nonstub_return_buflen
+Considering function body for deletion: check_mapped_name
+Considering function body for deletion: check_ignored_ctl
+Considering function body for deletion: check_mapped_selector_name
+Considering function body for deletion: find_audio_control_unit
+Considering function body for deletion: snd_usb_copy_string_desc
+Considering function body for deletion: convert_signed_value
+Considering function body for deletion: convert_bytes_value
+Considering function body for deletion: get_relative_value
+Considering function body for deletion: get_abs_value
+Considering function body for deletion: get_ctl_value
+Considering function body for deletion: get_cur_ctl_value
+Considering function body for deletion: get_cur_mix_value
+Considering function body for deletion: set_ctl_value
+Considering function body for deletion: set_cur_ctl_value
+Considering function body for deletion: set_cur_mix_value
+Considering function body for deletion: mixer_vol_tlv
+Considering function body for deletion: check_matrix_bitmap
+Considering function body for deletion: add_control_to_empty
+Considering function body for deletion: get_term_name
+Considering function body for deletion: check_input_term
+Considering function body for deletion: usb_mixer_elem_free
+Considering function body for deletion: get_min_max
+Considering function body for deletion: mixer_ctl_feature_info
+Considering function body for deletion: mixer_ctl_feature_get
+Considering function body for deletion: mixer_ctl_feature_put
+Considering function body for deletion: build_feature_ctl
+Considering function body for deletion: parse_audio_feature_unit
+Considering function body for deletion: build_mixer_unit_ctl
+Considering function body for deletion: parse_audio_mixer_unit
+Considering function body for deletion: mixer_ctl_procunit_get
+Considering function body for deletion: mixer_ctl_procunit_put
+Considering function body for deletion: build_audio_procunit
+Considering function body for deletion: parse_audio_processing_unit
+Considering function body for deletion: parse_audio_extension_unit
+Considering function body for deletion: mixer_ctl_selector_info
+Considering function body for deletion: mixer_ctl_selector_get
+Considering function body for deletion: mixer_ctl_selector_put
+Considering function body for deletion: usb_mixer_selector_elem_free
+Considering function body for deletion: parse_audio_selector_unit
+Considering function body for deletion: parse_audio_unit
+Considering function body for deletion: snd_usb_mixer_free
+Considering function body for deletion: snd_usb_mixer_dev_free
+Considering function body for deletion: snd_usb_mixer_controls
+Considering function body for deletion: snd_usb_mixer_notify_id
+Considering function body for deletion: snd_usb_mixer_memory_change
+Considering function body for deletion: snd_usb_mixer_status_complete
+Considering function body for deletion: snd_usb_mixer_status_create
+Considering function body for deletion: snd_usb_soundblaster_remote_complete
+Considering function body for deletion: snd_usb_sbrc_hwdep_open
+Considering function body for deletion: snd_usb_sbrc_hwdep_release
+Considering function body for deletion: snd_usb_sbrc_hwdep_read
+Considering function body for deletion: snd_usb_sbrc_hwdep_poll
+Considering function body for deletion: snd_usb_soundblaster_remote_init
+Considering function body for deletion: snd_audigy2nx_led_get
+Considering function body for deletion: snd_audigy2nx_led_put
+Considering function body for deletion: snd_audigy2nx_controls_create
+Considering function body for deletion: snd_audigy2nx_proc_read
+Considering function body for deletion: snd_usb_create_mixer
+Considering function body for deletion: snd_usb_mixer_disconnect
+Global to register: __this_module
+Global to register: index
+Global to register: id
+Global to register: enable
+Global to register: vid
+Global to register: pid
+Global to register: nrpacks
+Global to register: async_unlink
+Global to register: device_setup
+Global to register: ignore_ctl_error
+Global to register: __param_arr_index
+Global to register: __param_str_index
+Global to register: __param_arr_id
+Global to register: __param_str_id
+Global to register: __param_arr_enable
+Global to register: __param_str_enable
+Global to register: __param_arr_vid
+Global to register: __param_str_vid
+Global to register: __param_arr_pid
+Global to register: __param_str_pid
+Global to register: __param_str_nrpacks
+Global to register: __param_str_async_unlink
+Global to register: __param_arr_device_setup
+Global to register: __param_str_device_setup
+Global to register: __param_str_ignore_ctl_error
+Global to register: snd_usbmidi_122l_ops
+Global to register: snd_usbmidi_standard_ops
+Global to register: snd_usbmidi_midiman_ops
+Global to register: snd_usbmidi_maudio_broken_running_status_ops
+Global to register: snd_usbmidi_cme_ops
+Global to register: snd_usbmidi_emagic_ops
+Global to register: snd_usbmidi_novation_ops
+Global to register: snd_usbmidi_raw_ops
+Global to register: quirk_funcs
+Global to register: register_mutex
+Global to register: usb_chip
+Global to register: audio_urb_ops
+Global to register: audio_urb_ops_high_speed
+Global to register: snd_usb_playback_ops
+Global to register: snd_usb_capture_ops
+Global to register: __constr_expr_0
+Global to register: __constr_expr_1
+Global to register: __constr_expr_2
+Global to register: __constr_expr_3
+Global to register: __constr_expr_4
+Global to register: __constr_expr_5
+Global to register: __constr_expr_6
+Global to register: __constr_expr_7
+Global to register: __constr_expr_8
+Global to register: __constr_expr_9
+Global to register: __constr_expr_10
+Global to register: __constr_expr_11
+Global to register: __constr_expr_12
+Global to register: __constr_expr_13
+Global to register: __constr_expr_14
+Global to register: __constr_expr_15
+Global to register: __constr_expr_16
+Global to register: __constr_expr_17
+Global to register: __constr_expr_18
+Global to register: __constr_expr_19
+Global to register: __constr_expr_20
+Global to register: __constr_expr_21
+Global to register: __constr_expr_22
+Global to register: __constr_expr_23
+Global to register: __constr_expr_24
+Global to register: __constr_expr_25
+Global to register: __constr_expr_26
+Global to register: __constr_expr_27
+Global to register: __constr_expr_28
+Global to register: __constr_expr_29
+Global to register: __constr_expr_30
+Global to register: __constr_expr_31
+Global to register: __constr_expr_32
+Global to register: __constr_expr_33
+Global to register: __constr_expr_34
+Global to register: __constr_expr_35
+Global to register: __constr_expr_36
+Global to register: __constr_expr_37
+Global to register: __constr_expr_38
+Global to register: __constr_expr_39
+Global to register: __constr_expr_40
+Global to register: __constr_expr_41
+Global to register: __constr_expr_42
+Global to register: __constr_expr_43
+Global to register: __constr_expr_44
+Global to register: __constr_expr_45
+Global to register: __constr_expr_46
+Global to register: __constr_expr_47
+Global to register: __constr_expr_48
+Global to register: __constr_expr_49
+Global to register: __constr_expr_50
+Global to register: __constr_expr_51
+Global to register: __constr_expr_52
+Global to register: __constr_expr_53
+Global to register: __constr_expr_54
+Global to register: __constr_expr_55
+Global to register: __constr_expr_56
+Global to register: __constr_expr_57
+Global to register: __constr_expr_58
+Global to register: __constr_expr_59
+Global to register: __constr_expr_60
+Global to register: __constr_expr_61
+Global to register: __constr_expr_62
+Global to register: __constr_expr_63
+Global to register: __constr_expr_64
+Global to register: __constr_expr_65
+Global to register: __constr_expr_66
+Global to register: __constr_expr_67
+Global to register: __constr_expr_68
+Global to register: __constr_expr_69
+Global to register: __constr_expr_70
+Global to register: __constr_expr_71
+Global to register: __constr_expr_72
+Global to register: __constr_expr_73
+Global to register: __constr_expr_74
+Global to register: __constr_expr_75
+Global to register: __constr_expr_76
+Global to register: __constr_expr_77
+Global to register: __constr_expr_78
+Global to register: __constr_expr_79
+Global to register: __constr_expr_80
+Global to register: __constr_expr_81
+Global to register: __constr_expr_82
+Global to register: __constr_expr_83
+Global to register: __constr_expr_84
+Global to register: __constr_expr_85
+Global to register: __constr_expr_86
+Global to register: __constr_expr_87
+Global to register: __constr_expr_88
+Global to register: __constr_expr_89
+Global to register: __constr_expr_90
+Global to register: __constr_expr_91
+Global to register: __constr_expr_92
+Global to register: __constr_expr_93
+Global to register: __constr_expr_96
+Global to register: __constr_expr_97
+Global to register: __constr_expr_98
+Global to register: __constr_expr_95
+Global to register: __constr_expr_94
+Global to register: __constr_expr_101
+Global to register: __constr_expr_100
+Global to register: __constr_expr_99
+Global to register: __constr_expr_104
+Global to register: __constr_expr_103
+Global to register: __constr_expr_102
+Global to register: __constr_expr_107
+Global to register: __constr_expr_106
+Global to register: __constr_expr_105
+Global to register: __constr_expr_110
+Global to register: __constr_expr_109
+Global to register: __constr_expr_108
+Global to register: __constr_expr_113
+Global to register: __constr_expr_112
+Global to register: __constr_expr_111
+Global to register: __constr_expr_116
+Global to register: __constr_expr_115
+Global to register: __constr_expr_114
+Global to register: __constr_expr_119
+Global to register: __constr_expr_118
+Global to register: __constr_expr_117
+Global to register: __constr_expr_122
+Global to register: __constr_expr_121
+Global to register: __constr_expr_120
+Global to register: __constr_expr_125
+Global to register: __constr_expr_126
+Global to register: __constr_expr_127
+Global to register: __constr_expr_124
+Global to register: __constr_expr_123
+Global to register: __constr_expr_129
+Global to register: __constr_expr_128
+Global to register: __constr_expr_131
+Global to register: __constr_expr_130
+Global to register: __constr_expr_133
+Global to register: __constr_expr_132
+Global to register: __constr_expr_136
+Global to register: __constr_expr_135
+Global to register: __constr_expr_134
+Global to register: __constr_expr_139
+Global to register: __constr_expr_138
+Global to register: __constr_expr_137
+Global to register: __constr_expr_141
+Global to register: __constr_expr_140
+Global to register: __constr_expr_143
+Global to register: __constr_expr_142
+Global to register: __constr_expr_146
+Global to register: __constr_expr_147
+Global to register: __constr_expr_148
+Global to register: __constr_expr_145
+Global to register: __constr_expr_144
+Global to register: __constr_expr_150
+Global to register: __constr_expr_149
+Global to register: __constr_expr_152
+Global to register: __constr_expr_151
+Global to register: __constr_expr_154
+Global to register: __constr_expr_153
+Global to register: __constr_expr_156
+Global to register: __constr_expr_155
+Global to register: __constr_expr_158
+Global to register: __constr_expr_157
+Global to register: __constr_expr_160
+Global to register: __constr_expr_159
+Global to register: __constr_expr_162
+Global to register: __constr_expr_161
+Global to register: __constr_expr_164
+Global to register: __constr_expr_163
+Global to register: __constr_expr_166
+Global to register: __constr_expr_165
+Global to register: __constr_expr_168
+Global to register: __constr_expr_167
+Global to register: __constr_expr_171
+Global to register: __constr_expr_170
+Global to register: __constr_expr_169
+Global to register: __constr_expr_173
+Global to register: __constr_expr_172
+Global to register: __constr_expr_175
+Global to register: __constr_expr_174
+Global to register: __constr_expr_177
+Global to register: __constr_expr_176
+Global to register: __constr_expr_179
+Global to register: __constr_expr_178
+Global to register: __constr_expr_181
+Global to register: __constr_expr_180
+Global to register: __constr_expr_182
+Global to register: __constr_expr_183
+Global to register: __constr_expr_185
+Global to register: __constr_expr_184
+Global to register: __constr_expr_187
+Global to register: __constr_expr_186
+Global to register: __constr_expr_189
+Global to register: __constr_expr_188
+Global to register: __constr_expr_191
+Global to register: __constr_expr_190
+Global to register: __constr_expr_193
+Global to register: __constr_expr_192
+Global to register: __constr_expr_195
+Global to register: __constr_expr_194
+Global to register: __constr_expr_198
+Global to register: __constr_expr_197
+Global to register: __constr_expr_196
+Global to register: __constr_expr_200
+Global to register: __constr_expr_199
+Global to register: __constr_expr_202
+Global to register: __constr_expr_201
+Global to register: __constr_expr_204
+Global to register: __constr_expr_203
+Global to register: __constr_expr_206
+Global to register: __constr_expr_205
+Global to register: __constr_expr_208
+Global to register: __constr_expr_207
+Global to register: __constr_expr_210
+Global to register: __constr_expr_209
+Global to register: __constr_expr_213
+Global to register: __constr_expr_212
+Global to register: __constr_expr_211
+Global to register: __constr_expr_216
+Global to register: __constr_expr_215
+Global to register: __constr_expr_214
+Global to register: __constr_expr_219
+Global to register: __constr_expr_218
+Global to register: __constr_expr_217
+Global to register: __constr_expr_221
+Global to register: __constr_expr_220
+Global to register: __constr_expr_223
+Global to register: __constr_expr_222
+Global to register: __constr_expr_225
+Global to register: __constr_expr_224
+Global to register: __constr_expr_227
+Global to register: __constr_expr_226
+Global to register: __constr_expr_229
+Global to register: __constr_expr_228
+Global to register: __constr_expr_231
+Global to register: __constr_expr_230
+Global to register: __constr_expr_233
+Global to register: __constr_expr_232
+Global to register: __constr_expr_235
+Global to register: __constr_expr_234
+Global to register: __constr_expr_237
+Global to register: __constr_expr_236
+Global to register: __constr_expr_240
+Global to register: __constr_expr_239
+Global to register: __constr_expr_238
+Global to register: __constr_expr_242
+Global to register: __constr_expr_241
+Global to register: __constr_expr_244
+Global to register: __constr_expr_243
+Global to register: __constr_expr_247
+Global to register: __constr_expr_246
+Global to register: __constr_expr_245
+Global to register: __constr_expr_250
+Global to register: __constr_expr_249
+Global to register: __constr_expr_248
+Global to register: __constr_expr_251
+Global to register: __constr_expr_252
+Global to register: __constr_expr_254
+Global to register: __constr_expr_253
+Global to register: __constr_expr_256
+Global to register: __constr_expr_255
+Global to register: __constr_expr_258
+Global to register: __constr_expr_257
+Global to register: __constr_expr_260
+Global to register: __constr_expr_259
+Global to register: __constr_expr_261
+Global to register: __constr_expr_262
+Global to register: __constr_expr_263
+Global to register: __constr_expr_264
+Global to register: __constr_expr_265
+Global to register: __constr_expr_266
+Global to register: __constr_expr_267
+Global to register: __constr_expr_268
+Global to register: __constr_expr_269
+Global to register: __constr_expr_270
+Global to register: __constr_expr_271
+Global to register: __constr_expr_272
+Global to register: __constr_expr_273
+Global to register: usb_audio_ids
+Global to register: usb_audio_driver
+Global to register: __key___5
+Global to register: ua_format
+Global to register: ua700_ep
+Global to register: ua700_quirk
+Global to register: uaxx_ep
+Global to register: uaxx_quirk
+Global to register: ua1000_format
+Global to register: ua101_format
+Global to register: ops
+Global to register: snd_usbmidi_cin_length
+Global to register: init_data
+Global to register: finish_data
+Global to register: snd_usbmidi_output_ops
+Global to register: snd_usbmidi_input_ops
+Global to register: __key___4
+Global to register: snd_usbmidi_port_info
+Global to register: snd_usbmidi_ops
+Global to register: __key___6
+Global to register: __kstrtab_snd_usb_create_midi_interface
+Global to register: __kstrtab_snd_usbmidi_input_stop
+Global to register: __kstrtab_snd_usbmidi_input_start
+Global to register: __kstrtab_snd_usbmidi_disconnect
+Global to register: rc_configs
+Global to register: extigy_map
+Global to register: mp3plus_map
+Global to register: audigy2nx_map
+Global to register: __constr_expr_0___0
+Global to register: __constr_expr_1___0
+Global to register: __constr_expr_2___0
+Global to register: audigy2nx_selectors
+Global to register: live24ext_map
+Global to register: linex_map
+Global to register: maya44_map
+Global to register: justlink_map
+Global to register: aureon_51_2_map
+Global to register: usbmix_ctl_maps
+Global to register: iterm_names
+Global to register: audio_feature_info
+Global to register: usb_feature_unit_ctl
+Global to register: mixer_procunit_ctl
+Global to register: updown_proc_info
+Global to register: prologic_proc_info
+Global to register: threed_enh_proc_info
+Global to register: reverb_proc_info
+Global to register: chorus_proc_info
+Global to register: dcr_proc_info
+Global to register: procunits
+Global to register: default_value_info
+Global to register: default_info
+Global to register: mixer_selectunit_ctl
+Global to register: snd_audigy2nx_controls
+Global to register: jacks_audigy2nx
+Global to register: jacks_live24ext
+Global to register: dev_ops
+Function/global mapping INIT_LIST_HEAD -> 1000
+Function/global mapping Nonstub_get_size -> 1001
+Function/global mapping Nonstub_get_usb_device -> 1002
+Function/global mapping Nonstub_return_buflen -> 1003
+Function/global mapping Nonstub_usb_host_interface -> 1004
+Function/global mapping __bad_pda_field -> 1005
+Function/global mapping __builtin_expect -> 1006
+Function/global mapping __builtin_memcpy -> 1007
+Function/global mapping __builtin_prefetch -> 1008
+Function/global mapping __constr_expr_0 -> 1009
+Function/global mapping __constr_expr_0___0 -> 1010
+Function/global mapping __constr_expr_1 -> 1011
+Function/global mapping __constr_expr_10 -> 1012
+Function/global mapping __constr_expr_100 -> 1013
+Function/global mapping __constr_expr_101 -> 1014
+Function/global mapping __constr_expr_102 -> 1015
+Function/global mapping __constr_expr_103 -> 1016
+Function/global mapping __constr_expr_104 -> 1017
+Function/global mapping __constr_expr_105 -> 1018
+Function/global mapping __constr_expr_106 -> 1019
+Function/global mapping __constr_expr_107 -> 1020
+Function/global mapping __constr_expr_108 -> 1021
+Function/global mapping __constr_expr_109 -> 1022
+Function/global mapping __constr_expr_11 -> 1023
+Function/global mapping __constr_expr_110 -> 1024
+Function/global mapping __constr_expr_111 -> 1025
+Function/global mapping __constr_expr_112 -> 1026
+Function/global mapping __constr_expr_113 -> 1027
+Function/global mapping __constr_expr_114 -> 1028
+Function/global mapping __constr_expr_115 -> 1029
+Function/global mapping __constr_expr_116 -> 1030
+Function/global mapping __constr_expr_117 -> 1031
+Function/global mapping __constr_expr_118 -> 1032
+Function/global mapping __constr_expr_119 -> 1033
+Function/global mapping __constr_expr_12 -> 1034
+Function/global mapping __constr_expr_120 -> 1035
+Function/global mapping __constr_expr_121 -> 1036
+Function/global mapping __constr_expr_122 -> 1037
+Function/global mapping __constr_expr_123 -> 1038
+Function/global mapping __constr_expr_124 -> 1039
+Function/global mapping __constr_expr_125 -> 1040
+Function/global mapping __constr_expr_126 -> 1041
+Function/global mapping __constr_expr_127 -> 1042
+Function/global mapping __constr_expr_128 -> 1043
+Function/global mapping __constr_expr_129 -> 1044
+Function/global mapping __constr_expr_13 -> 1045
+Function/global mapping __constr_expr_130 -> 1046
+Function/global mapping __constr_expr_131 -> 1047
+Function/global mapping __constr_expr_132 -> 1048
+Function/global mapping __constr_expr_133 -> 1049
+Function/global mapping __constr_expr_134 -> 1050
+Function/global mapping __constr_expr_135 -> 1051
+Function/global mapping __constr_expr_136 -> 1052
+Function/global mapping __constr_expr_137 -> 1053
+Function/global mapping __constr_expr_138 -> 1054
+Function/global mapping __constr_expr_139 -> 1055
+Function/global mapping __constr_expr_14 -> 1056
+Function/global mapping __constr_expr_140 -> 1057
+Function/global mapping __constr_expr_141 -> 1058
+Function/global mapping __constr_expr_142 -> 1059
+Function/global mapping __constr_expr_143 -> 1060
+Function/global mapping __constr_expr_144 -> 1061
+Function/global mapping __constr_expr_145 -> 1062
+Function/global mapping __constr_expr_146 -> 1063
+Function/global mapping __constr_expr_147 -> 1064
+Function/global mapping __constr_expr_148 -> 1065
+Function/global mapping __constr_expr_149 -> 1066
+Function/global mapping __constr_expr_15 -> 1067
+Function/global mapping __constr_expr_150 -> 1068
+Function/global mapping __constr_expr_151 -> 1069
+Function/global mapping __constr_expr_152 -> 1070
+Function/global mapping __constr_expr_153 -> 1071
+Function/global mapping __constr_expr_154 -> 1072
+Function/global mapping __constr_expr_155 -> 1073
+Function/global mapping __constr_expr_156 -> 1074
+Function/global mapping __constr_expr_157 -> 1075
+Function/global mapping __constr_expr_158 -> 1076
+Function/global mapping __constr_expr_159 -> 1077
+Function/global mapping __constr_expr_16 -> 1078
+Function/global mapping __constr_expr_160 -> 1079
+Function/global mapping __constr_expr_161 -> 1080
+Function/global mapping __constr_expr_162 -> 1081
+Function/global mapping __constr_expr_163 -> 1082
+Function/global mapping __constr_expr_164 -> 1083
+Function/global mapping __constr_expr_165 -> 1084
+Function/global mapping __constr_expr_166 -> 1085
+Function/global mapping __constr_expr_167 -> 1086
+Function/global mapping __constr_expr_168 -> 1087
+Function/global mapping __constr_expr_169 -> 1088
+Function/global mapping __constr_expr_17 -> 1089
+Function/global mapping __constr_expr_170 -> 1090
+Function/global mapping __constr_expr_171 -> 1091
+Function/global mapping __constr_expr_172 -> 1092
+Function/global mapping __constr_expr_173 -> 1093
+Function/global mapping __constr_expr_174 -> 1094
+Function/global mapping __constr_expr_175 -> 1095
+Function/global mapping __constr_expr_176 -> 1096
+Function/global mapping __constr_expr_177 -> 1097
+Function/global mapping __constr_expr_178 -> 1098
+Function/global mapping __constr_expr_179 -> 1099
+Function/global mapping __constr_expr_18 -> 1100
+Function/global mapping __constr_expr_180 -> 1101
+Function/global mapping __constr_expr_181 -> 1102
+Function/global mapping __constr_expr_182 -> 1103
+Function/global mapping __constr_expr_183 -> 1104
+Function/global mapping __constr_expr_184 -> 1105
+Function/global mapping __constr_expr_185 -> 1106
+Function/global mapping __constr_expr_186 -> 1107
+Function/global mapping __constr_expr_187 -> 1108
+Function/global mapping __constr_expr_188 -> 1109
+Function/global mapping __constr_expr_189 -> 1110
+Function/global mapping __constr_expr_19 -> 1111
+Function/global mapping __constr_expr_190 -> 1112
+Function/global mapping __constr_expr_191 -> 1113
+Function/global mapping __constr_expr_192 -> 1114
+Function/global mapping __constr_expr_193 -> 1115
+Function/global mapping __constr_expr_194 -> 1116
+Function/global mapping __constr_expr_195 -> 1117
+Function/global mapping __constr_expr_196 -> 1118
+Function/global mapping __constr_expr_197 -> 1119
+Function/global mapping __constr_expr_198 -> 1120
+Function/global mapping __constr_expr_199 -> 1121
+Function/global mapping __constr_expr_1___0 -> 1122
+Function/global mapping __constr_expr_2 -> 1123
+Function/global mapping __constr_expr_20 -> 1124
+Function/global mapping __constr_expr_200 -> 1125
+Function/global mapping __constr_expr_201 -> 1126
+Function/global mapping __constr_expr_202 -> 1127
+Function/global mapping __constr_expr_203 -> 1128
+Function/global mapping __constr_expr_204 -> 1129
+Function/global mapping __constr_expr_205 -> 1130
+Function/global mapping __constr_expr_206 -> 1131
+Function/global mapping __constr_expr_207 -> 1132
+Function/global mapping __constr_expr_208 -> 1133
+Function/global mapping __constr_expr_209 -> 1134
+Function/global mapping __constr_expr_21 -> 1135
+Function/global mapping __constr_expr_210 -> 1136
+Function/global mapping __constr_expr_211 -> 1137
+Function/global mapping __constr_expr_212 -> 1138
+Function/global mapping __constr_expr_213 -> 1139
+Function/global mapping __constr_expr_214 -> 1140
+Function/global mapping __constr_expr_215 -> 1141
+Function/global mapping __constr_expr_216 -> 1142
+Function/global mapping __constr_expr_217 -> 1143
+Function/global mapping __constr_expr_218 -> 1144
+Function/global mapping __constr_expr_219 -> 1145
+Function/global mapping __constr_expr_22 -> 1146
+Function/global mapping __constr_expr_220 -> 1147
+Function/global mapping __constr_expr_221 -> 1148
+Function/global mapping __constr_expr_222 -> 1149
+Function/global mapping __constr_expr_223 -> 1150
+Function/global mapping __constr_expr_224 -> 1151
+Function/global mapping __constr_expr_225 -> 1152
+Function/global mapping __constr_expr_226 -> 1153
+Function/global mapping __constr_expr_227 -> 1154
+Function/global mapping __constr_expr_228 -> 1155
+Function/global mapping __constr_expr_229 -> 1156
+Function/global mapping __constr_expr_23 -> 1157
+Function/global mapping __constr_expr_230 -> 1158
+Function/global mapping __constr_expr_231 -> 1159
+Function/global mapping __constr_expr_232 -> 1160
+Function/global mapping __constr_expr_233 -> 1161
+Function/global mapping __constr_expr_234 -> 1162
+Function/global mapping __constr_expr_235 -> 1163
+Function/global mapping __constr_expr_236 -> 1164
+Function/global mapping __constr_expr_237 -> 1165
+Function/global mapping __constr_expr_238 -> 1166
+Function/global mapping __constr_expr_239 -> 1167
+Function/global mapping __constr_expr_24 -> 1168
+Function/global mapping __constr_expr_240 -> 1169
+Function/global mapping __constr_expr_241 -> 1170
+Function/global mapping __constr_expr_242 -> 1171
+Function/global mapping __constr_expr_243 -> 1172
+Function/global mapping __constr_expr_244 -> 1173
+Function/global mapping __constr_expr_245 -> 1174
+Function/global mapping __constr_expr_246 -> 1175
+Function/global mapping __constr_expr_247 -> 1176
+Function/global mapping __constr_expr_248 -> 1177
+Function/global mapping __constr_expr_249 -> 1178
+Function/global mapping __constr_expr_25 -> 1179
+Function/global mapping __constr_expr_250 -> 1180
+Function/global mapping __constr_expr_251 -> 1181
+Function/global mapping __constr_expr_252 -> 1182
+Function/global mapping __constr_expr_253 -> 1183
+Function/global mapping __constr_expr_254 -> 1184
+Function/global mapping __constr_expr_255 -> 1185
+Function/global mapping __constr_expr_256 -> 1186
+Function/global mapping __constr_expr_257 -> 1187
+Function/global mapping __constr_expr_258 -> 1188
+Function/global mapping __constr_expr_259 -> 1189
+Function/global mapping __constr_expr_26 -> 1190
+Function/global mapping __constr_expr_260 -> 1191
+Function/global mapping __constr_expr_261 -> 1192
+Function/global mapping __constr_expr_262 -> 1193
+Function/global mapping __constr_expr_263 -> 1194
+Function/global mapping __constr_expr_264 -> 1195
+Function/global mapping __constr_expr_265 -> 1196
+Function/global mapping __constr_expr_266 -> 1197
+Function/global mapping __constr_expr_267 -> 1198
+Function/global mapping __constr_expr_268 -> 1199
+Function/global mapping __constr_expr_269 -> 1200
+Function/global mapping __constr_expr_27 -> 1201
+Function/global mapping __constr_expr_270 -> 1202
+Function/global mapping __constr_expr_271 -> 1203
+Function/global mapping __constr_expr_272 -> 1204
+Function/global mapping __constr_expr_273 -> 1205
+Function/global mapping __constr_expr_28 -> 1206
+Function/global mapping __constr_expr_29 -> 1207
+Function/global mapping __constr_expr_2___0 -> 1208
+Function/global mapping __constr_expr_3 -> 1209
+Function/global mapping __constr_expr_30 -> 1210
+Function/global mapping __constr_expr_31 -> 1211
+Function/global mapping __constr_expr_32 -> 1212
+Function/global mapping __constr_expr_33 -> 1213
+Function/global mapping __constr_expr_34 -> 1214
+Function/global mapping __constr_expr_35 -> 1215
+Function/global mapping __constr_expr_36 -> 1216
+Function/global mapping __constr_expr_37 -> 1217
+Function/global mapping __constr_expr_38 -> 1218
+Function/global mapping __constr_expr_39 -> 1219
+Function/global mapping __constr_expr_4 -> 1220
+Function/global mapping __constr_expr_40 -> 1221
+Function/global mapping __constr_expr_41 -> 1222
+Function/global mapping __constr_expr_42 -> 1223
+Function/global mapping __constr_expr_43 -> 1224
+Function/global mapping __constr_expr_44 -> 1225
+Function/global mapping __constr_expr_45 -> 1226
+Function/global mapping __constr_expr_46 -> 1227
+Function/global mapping __constr_expr_47 -> 1228
+Function/global mapping __constr_expr_48 -> 1229
+Function/global mapping __constr_expr_49 -> 1230
+Function/global mapping __constr_expr_5 -> 1231
+Function/global mapping __constr_expr_50 -> 1232
+Function/global mapping __constr_expr_51 -> 1233
+Function/global mapping __constr_expr_52 -> 1234
+Function/global mapping __constr_expr_53 -> 1235
+Function/global mapping __constr_expr_54 -> 1236
+Function/global mapping __constr_expr_55 -> 1237
+Function/global mapping __constr_expr_56 -> 1238
+Function/global mapping __constr_expr_57 -> 1239
+Function/global mapping __constr_expr_58 -> 1240
+Function/global mapping __constr_expr_59 -> 1241
+Function/global mapping __constr_expr_6 -> 1242
+Function/global mapping __constr_expr_60 -> 1243
+Function/global mapping __constr_expr_61 -> 1244
+Function/global mapping __constr_expr_62 -> 1245
+Function/global mapping __constr_expr_63 -> 1246
+Function/global mapping __constr_expr_64 -> 1247
+Function/global mapping __constr_expr_65 -> 1248
+Function/global mapping __constr_expr_66 -> 1249
+Function/global mapping __constr_expr_67 -> 1250
+Function/global mapping __constr_expr_68 -> 1251
+Function/global mapping __constr_expr_69 -> 1252
+Function/global mapping __constr_expr_7 -> 1253
+Function/global mapping __constr_expr_70 -> 1254
+Function/global mapping __constr_expr_71 -> 1255
+Function/global mapping __constr_expr_72 -> 1256
+Function/global mapping __constr_expr_73 -> 1257
+Function/global mapping __constr_expr_74 -> 1258
+Function/global mapping __constr_expr_75 -> 1259
+Function/global mapping __constr_expr_76 -> 1260
+Function/global mapping __constr_expr_77 -> 1261
+Function/global mapping __constr_expr_78 -> 1262
+Function/global mapping __constr_expr_79 -> 1263
+Function/global mapping __constr_expr_8 -> 1264
+Function/global mapping __constr_expr_80 -> 1265
+Function/global mapping __constr_expr_81 -> 1266
+Function/global mapping __constr_expr_82 -> 1267
+Function/global mapping __constr_expr_83 -> 1268
+Function/global mapping __constr_expr_84 -> 1269
+Function/global mapping __constr_expr_85 -> 1270
+Function/global mapping __constr_expr_86 -> 1271
+Function/global mapping __constr_expr_87 -> 1272
+Function/global mapping __constr_expr_88 -> 1273
+Function/global mapping __constr_expr_89 -> 1274
+Function/global mapping __constr_expr_9 -> 1275
+Function/global mapping __constr_expr_90 -> 1276
+Function/global mapping __constr_expr_91 -> 1277
+Function/global mapping __constr_expr_92 -> 1278
+Function/global mapping __constr_expr_93 -> 1279
+Function/global mapping __constr_expr_94 -> 1280
+Function/global mapping __constr_expr_95 -> 1281
+Function/global mapping __constr_expr_96 -> 1282
+Function/global mapping __constr_expr_97 -> 1283
+Function/global mapping __constr_expr_98 -> 1284
+Function/global mapping __constr_expr_99 -> 1285
+Function/global mapping __create_pipe -> 1286
+Function/global mapping __get_free_pages -> 1287
+Function/global mapping __key___4 -> 1288
+Function/global mapping __key___5 -> 1289
+Function/global mapping __key___6 -> 1290
+Function/global mapping __kmalloc -> 1291
+Function/global mapping __kstrtab_snd_usb_create_midi_interface -> 1292
+Function/global mapping __kstrtab_snd_usbmidi_disconnect -> 1293
+Function/global mapping __kstrtab_snd_usbmidi_input_start -> 1294
+Function/global mapping __kstrtab_snd_usbmidi_input_stop -> 1295
+Function/global mapping __list_add -> 1296
+Function/global mapping __memcpy -> 1297
+Function/global mapping __might_sleep -> 1298
+Function/global mapping __param_arr_device_setup -> 1299
+Function/global mapping __param_arr_enable -> 1300
+Function/global mapping __param_arr_id -> 1301
+Function/global mapping __param_arr_index -> 1302
+Function/global mapping __param_arr_pid -> 1303
+Function/global mapping __param_arr_vid -> 1304
+Function/global mapping __param_str_async_unlink -> 1305
+Function/global mapping __param_str_device_setup -> 1306
+Function/global mapping __param_str_enable -> 1307
+Function/global mapping __param_str_id -> 1308
+Function/global mapping __param_str_ignore_ctl_error -> 1309
+Function/global mapping __param_str_index -> 1310
+Function/global mapping __param_str_nrpacks -> 1311
+Function/global mapping __param_str_pid -> 1312
+Function/global mapping __param_str_vid -> 1313
+Function/global mapping __phys_addr -> 1314
+Function/global mapping __snd_bug_on -> 1315
+Function/global mapping __spin_lock_init -> 1316
+Function/global mapping __tasklet_schedule -> 1317
+Function/global mapping __this_module -> 1318
+Function/global mapping __wake_up -> 1319
+Function/global mapping __xchg -> 1320
+Function/global mapping _cond_resched -> 1321
+Function/global mapping _spin_lock -> 1322
+Function/global mapping _spin_lock_irq -> 1323
+Function/global mapping _spin_lock_irqsave -> 1324
+Function/global mapping _spin_unlock -> 1325
+Function/global mapping _spin_unlock_irq -> 1326
+Function/global mapping _spin_unlock_irqrestore -> 1327
+Function/global mapping add_audio_endpoint -> 1328
+Function/global mapping add_control_to_empty -> 1329
+Function/global mapping async_unlink -> 1330
+Function/global mapping audigy2nx_map -> 1331
+Function/global mapping audigy2nx_selectors -> 1332
+Function/global mapping audio_feature_info -> 1333
+Function/global mapping audio_urb_ops -> 1334
+Function/global mapping audio_urb_ops_high_speed -> 1335
+Function/global mapping audiophile_skip_setting_quirk -> 1336
+Function/global mapping aureon_51_2_map -> 1337
+Function/global mapping autoremove_wake_function -> 1338
+Function/global mapping build_audio_procunit -> 1339
+Function/global mapping build_feature_ctl -> 1340
+Function/global mapping build_mixer_unit_ctl -> 1341
+Function/global mapping bytes_to_frames -> 1342
+Function/global mapping check_hw_params_convention -> 1343
+Function/global mapping check_ignored_ctl -> 1344
+Function/global mapping check_input_term -> 1345
+Function/global mapping check_mapped_name -> 1346
+Function/global mapping check_mapped_selector_name -> 1347
+Function/global mapping check_matrix_bitmap -> 1348
+Function/global mapping chorus_proc_info -> 1349
+Function/global mapping cleanup_module -> 1350
+Function/global mapping clear_bit -> 1351
+Function/global mapping convert_bytes_value -> 1352
+Function/global mapping convert_signed_value -> 1353
+Function/global mapping copy_to_user -> 1354
+Function/global mapping create_composite_quirk -> 1355
+Function/global mapping create_fixed_stream_quirk -> 1356
+Function/global mapping create_standard_audio_quirk -> 1357
+Function/global mapping create_ua1000_quirk -> 1358
+Function/global mapping create_ua101_quirk -> 1359
+Function/global mapping create_uaxx_quirk -> 1360
+Function/global mapping dcr_proc_info -> 1361
+Function/global mapping deactivate_urbs -> 1362
+Function/global mapping default_info -> 1363
+Function/global mapping default_value_info -> 1364
+Function/global mapping del_timer_sync -> 1365
+Function/global mapping dev_get_drvdata -> 1366
+Function/global mapping dev_ops -> 1367
+Function/global mapping dev_set_drvdata -> 1368
+Function/global mapping device_setup -> 1369
+Function/global mapping enable -> 1370
+Function/global mapping extigy_map -> 1371
+Function/global mapping ffs -> 1372
+Function/global mapping find_audio_control_unit -> 1373
+Function/global mapping find_format -> 1374
+Function/global mapping find_port_info -> 1375
+Function/global mapping finish_data -> 1376
+Function/global mapping finish_wait -> 1377
+Function/global mapping free_pages -> 1378
+Function/global mapping free_substream -> 1379
+Function/global mapping get_abs_value -> 1380
+Function/global mapping get_ctl_value -> 1381
+Function/global mapping get_cur_ctl_value -> 1382
+Function/global mapping get_cur_mix_value -> 1383
+Function/global mapping get_current -> 1384
+Function/global mapping get_min_max -> 1385
+Function/global mapping get_order -> 1386
+Function/global mapping get_relative_value -> 1387
+Function/global mapping get_term_name -> 1388
+Function/global mapping get_usb_full_speed_rate -> 1389
+Function/global mapping get_usb_high_speed_rate -> 1390
+Function/global mapping heapifyfree -> 1391
+Function/global mapping heapifymalloc -> 1392
+Function/global mapping hw_check_valid_format -> 1393
+Function/global mapping hw_param_interval -> 1394
+Function/global mapping hw_param_mask -> 1395
+Function/global mapping hw_rule_channels -> 1396
+Function/global mapping hw_rule_format -> 1397
+Function/global mapping hw_rule_rate -> 1398
+Function/global mapping id -> 1399
+Function/global mapping ignore_ctl_error -> 1400
+Function/global mapping ignore_interface_quirk -> 1401
+Function/global mapping index -> 1402
+Function/global mapping init_data -> 1403
+Function/global mapping init_module -> 1404
+Function/global mapping init_substream -> 1405
+Function/global mapping init_substream_urbs -> 1406
+Function/global mapping init_timer -> 1407
+Function/global mapping init_usb_pitch -> 1408
+Function/global mapping init_usb_sample_rate -> 1409
+Function/global mapping init_waitqueue_head -> 1410
+Function/global mapping is_big_endian_format -> 1411
+Function/global mapping iterm_names -> 1412
+Function/global mapping jacks_audigy2nx -> 1413
+Function/global mapping jacks_live24ext -> 1414
+Function/global mapping justlink_map -> 1415
+Function/global mapping kcalloc -> 1416
+Function/global mapping kfree -> 1417
+Function/global mapping kmalloc -> 1418
+Function/global mapping kmemdup -> 1419
+Function/global mapping kzalloc -> 1420
+Function/global mapping linex_map -> 1421
+Function/global mapping list_add -> 1422
+Function/global mapping list_add_tail -> 1423
+Function/global mapping list_del -> 1424
+Function/global mapping live24ext_map -> 1425
+Function/global mapping logRead -> 1426
+Function/global mapping logStackFrame -> 1427
+Function/global mapping logWrite -> 1428
+Function/global mapping maya44_map -> 1429
+Function/global mapping memset -> 1430
+Function/global mapping might_fault -> 1431
+Function/global mapping mixer_ctl_feature_get -> 1432
+Function/global mapping mixer_ctl_feature_info -> 1433
+Function/global mapping mixer_ctl_feature_put -> 1434
+Function/global mapping mixer_ctl_procunit_get -> 1435
+Function/global mapping mixer_ctl_procunit_put -> 1436
+Function/global mapping mixer_ctl_selector_get -> 1437
+Function/global mapping mixer_ctl_selector_info -> 1438
+Function/global mapping mixer_ctl_selector_put -> 1439
+Function/global mapping mixer_procunit_ctl -> 1440
+Function/global mapping mixer_selectunit_ctl -> 1441
+Function/global mapping mixer_vol_tlv -> 1442
+Function/global mapping mod_timer -> 1443
+Function/global mapping mp3plus_map -> 1444
+Function/global mapping msecs_to_jiffies -> 1445
+Function/global mapping mutex_lock_nested -> 1446
+Function/global mapping mutex_unlock -> 1447
+Function/global mapping nrpacks -> 1448
+Function/global mapping ops -> 1449
+Function/global mapping param_array_get -> 1450
+Function/global mapping param_array_set -> 1451
+Function/global mapping param_get_bool -> 1452
+Function/global mapping param_get_charp -> 1453
+Function/global mapping param_get_int -> 1454
+Function/global mapping param_set_bool -> 1455
+Function/global mapping param_set_charp -> 1456
+Function/global mapping param_set_int -> 1457
+Function/global mapping parse_audio_endpoints -> 1458
+Function/global mapping parse_audio_extension_unit -> 1459
+Function/global mapping parse_audio_feature_unit -> 1460
+Function/global mapping parse_audio_format -> 1461
+Function/global mapping parse_audio_format_i -> 1462
+Function/global mapping parse_audio_format_i_type -> 1463
+Function/global mapping parse_audio_format_ii -> 1464
+Function/global mapping parse_audio_format_rates -> 1465
+Function/global mapping parse_audio_mixer_unit -> 1466
+Function/global mapping parse_audio_processing_unit -> 1467
+Function/global mapping parse_audio_selector_unit -> 1468
+Function/global mapping parse_audio_unit -> 1469
+Function/global mapping pid -> 1470
+Function/global mapping poll_wait -> 1471
+Function/global mapping prepare_capture_sync_urb -> 1472
+Function/global mapping prepare_capture_sync_urb_hs -> 1473
+Function/global mapping prepare_capture_urb -> 1474
+Function/global mapping prepare_nodata_playback_urb -> 1475
+Function/global mapping prepare_playback_sync_urb -> 1476
+Function/global mapping prepare_playback_sync_urb_hs -> 1477
+Function/global mapping prepare_playback_urb -> 1478
+Function/global mapping prepare_to_wait -> 1479
+Function/global mapping printk -> 1480
+Function/global mapping proc_audio_usbbus_read -> 1481
+Function/global mapping proc_audio_usbid_read -> 1482
+Function/global mapping proc_pcm_format_add -> 1483
+Function/global mapping procunits -> 1484
+Function/global mapping prologic_proc_info -> 1485
+Function/global mapping quirk_funcs -> 1486
+Function/global mapping rc_configs -> 1487
+Function/global mapping register_mutex -> 1488
+Function/global mapping release_substream_urbs -> 1489
+Function/global mapping release_urb_ctx -> 1490
+Function/global mapping retire_capture_sync_urb -> 1491
+Function/global mapping retire_capture_urb -> 1492
+Function/global mapping retire_paused_capture_urb -> 1493
+Function/global mapping retire_playback_sync_urb -> 1494
+Function/global mapping retire_playback_sync_urb_hs -> 1495
+Function/global mapping retire_playback_sync_urb_hs_emu -> 1496
+Function/global mapping retire_playback_urb -> 1497
+Function/global mapping reverb_proc_info -> 1498
+Function/global mapping schedule -> 1499
+Function/global mapping schedule_timeout_uninterruptible -> 1500
+Function/global mapping send_bulk_static_data -> 1501
+Function/global mapping set_bit -> 1502
+Function/global mapping set_ctl_value -> 1503
+Function/global mapping set_cur_ctl_value -> 1504
+Function/global mapping set_cur_mix_value -> 1505
+Function/global mapping set_format -> 1506
+Function/global mapping setup_hw_info -> 1507
+Function/global mapping signal_pending -> 1508
+Function/global mapping snd_audigy2nx_controls -> 1509
+Function/global mapping snd_audigy2nx_controls_create -> 1510
+Function/global mapping snd_audigy2nx_led_get -> 1511
+Function/global mapping snd_audigy2nx_led_put -> 1512
+Function/global mapping snd_audigy2nx_proc_read -> 1513
+Function/global mapping snd_card_disconnect -> 1514
+Function/global mapping snd_card_free -> 1515
+Function/global mapping snd_card_free_when_closed -> 1516
+Function/global mapping snd_card_new -> 1517
+Function/global mapping snd_card_proc_new -> 1518
+Function/global mapping snd_card_register -> 1519
+Function/global mapping snd_complete_sync_urb -> 1520
+Function/global mapping snd_complete_urb -> 1521
+Function/global mapping snd_component_add -> 1522
+Function/global mapping snd_ctl_add -> 1523
+Function/global mapping snd_ctl_boolean_mono_info -> 1524
+Function/global mapping snd_ctl_find_id -> 1525
+Function/global mapping snd_ctl_new1 -> 1526
+Function/global mapping snd_ctl_notify -> 1527
+Function/global mapping snd_device_new -> 1528
+Function/global mapping snd_hwdep_new -> 1529
+Function/global mapping snd_info_set_text_ops -> 1530
+Function/global mapping snd_interval_checkempty -> 1531
+Function/global mapping snd_iprintf -> 1532
+Function/global mapping snd_mask_min -> 1533
+Function/global mapping snd_mask_test -> 1534
+Function/global mapping snd_pcm_alloc_vmalloc_buffer -> 1535
+Function/global mapping snd_pcm_format_physical_width -> 1536
+Function/global mapping snd_pcm_free_vmalloc_buffer -> 1537
+Function/global mapping snd_pcm_get_vmalloc_page -> 1538
+Function/global mapping snd_pcm_hw_constraint_list -> 1539
+Function/global mapping snd_pcm_hw_constraint_minmax -> 1540
+Function/global mapping snd_pcm_hw_rule_add_MJR2 -> 1541
+Function/global mapping snd_pcm_lib_ioctl -> 1542
+Function/global mapping snd_pcm_new -> 1543
+Function/global mapping snd_pcm_new_stream -> 1544
+Function/global mapping snd_pcm_period_elapsed -> 1545
+Function/global mapping snd_pcm_rate_to_rate_bit -> 1546
+Function/global mapping snd_pcm_set_ops -> 1547
+Function/global mapping snd_pcm_stop -> 1548
+Function/global mapping snd_pcm_suspend_all -> 1549
+Function/global mapping snd_power_change_state -> 1550
+Function/global mapping snd_rawmidi_new -> 1551
+Function/global mapping snd_rawmidi_receive -> 1552
+Function/global mapping snd_rawmidi_set_ops -> 1553
+Function/global mapping snd_rawmidi_transmit -> 1554
+Function/global mapping snd_rawmidi_transmit_ack -> 1555
+Function/global mapping snd_rawmidi_transmit_empty -> 1556
+Function/global mapping snd_rawmidi_transmit_peek -> 1557
+Function/global mapping snd_usb_audigy2nx_boot_quirk -> 1558
+Function/global mapping snd_usb_audio_cleanup -> 1559
+Function/global mapping snd_usb_audio_create -> 1560
+Function/global mapping snd_usb_audio_create_proc -> 1561
+Function/global mapping snd_usb_audio_dev_free -> 1562
+Function/global mapping snd_usb_audio_disconnect -> 1563
+Function/global mapping snd_usb_audio_free -> 1564
+Function/global mapping snd_usb_audio_init -> 1565
+Function/global mapping snd_usb_audio_next_packet_size -> 1566
+Function/global mapping snd_usb_audio_pcm_free -> 1567
+Function/global mapping snd_usb_audio_probe -> 1568
+Function/global mapping snd_usb_audio_stream_free -> 1569
+Function/global mapping snd_usb_capture_close -> 1570
+Function/global mapping snd_usb_capture_open -> 1571
+Function/global mapping snd_usb_capture_ops -> 1572
+Function/global mapping snd_usb_cm106_boot_quirk -> 1573
+Function/global mapping snd_usb_cm106_write_int_reg -> 1574
+Function/global mapping snd_usb_combine_bytes -> 1575
+Function/global mapping snd_usb_copy_string_desc -> 1576
+Function/global mapping snd_usb_create_midi_interface -> 1577
+Function/global mapping snd_usb_create_mixer -> 1578
+Function/global mapping snd_usb_create_quirk -> 1579
+Function/global mapping snd_usb_create_streams -> 1580
+Function/global mapping snd_usb_ctl_msg -> 1581
+Function/global mapping snd_usb_extigy_boot_quirk -> 1582
+Function/global mapping snd_usb_find_csint_desc -> 1583
+Function/global mapping snd_usb_find_desc -> 1584
+Function/global mapping snd_usb_hw_free -> 1585
+Function/global mapping snd_usb_hw_params -> 1586
+Function/global mapping snd_usb_mixer_controls -> 1587
+Function/global mapping snd_usb_mixer_dev_free -> 1588
+Function/global mapping snd_usb_mixer_disconnect -> 1589
+Function/global mapping snd_usb_mixer_free -> 1590
+Function/global mapping snd_usb_mixer_memory_change -> 1591
+Function/global mapping snd_usb_mixer_notify_id -> 1592
+Function/global mapping snd_usb_mixer_status_complete -> 1593
+Function/global mapping snd_usb_mixer_status_create -> 1594
+Function/global mapping snd_usb_pcm_capture_trigger -> 1595
+Function/global mapping snd_usb_pcm_check_knot -> 1596
+Function/global mapping snd_usb_pcm_close -> 1597
+Function/global mapping snd_usb_pcm_open -> 1598
+Function/global mapping snd_usb_pcm_playback_trigger -> 1599
+Function/global mapping snd_usb_pcm_pointer -> 1600
+Function/global mapping snd_usb_pcm_prepare -> 1601
+Function/global mapping snd_usb_playback_close -> 1602
+Function/global mapping snd_usb_playback_open -> 1603
+Function/global mapping snd_usb_playback_ops -> 1604
+Function/global mapping snd_usb_sbrc_hwdep_open -> 1605
+Function/global mapping snd_usb_sbrc_hwdep_poll -> 1606
+Function/global mapping snd_usb_sbrc_hwdep_read -> 1607
+Function/global mapping snd_usb_sbrc_hwdep_release -> 1608
+Function/global mapping snd_usb_soundblaster_remote_complete -> 1609
+Function/global mapping snd_usb_soundblaster_remote_init -> 1610
+Function/global mapping snd_usb_stream_disconnect -> 1611
+Function/global mapping snd_usbmidi_122l_ops -> 1612
+Function/global mapping snd_usbmidi_cin_length -> 1613
+Function/global mapping snd_usbmidi_cme_input -> 1614
+Function/global mapping snd_usbmidi_cme_ops -> 1615
+Function/global mapping snd_usbmidi_count_bits -> 1616
+Function/global mapping snd_usbmidi_create_endpoints -> 1617
+Function/global mapping snd_usbmidi_create_endpoints_midiman -> 1618
+Function/global mapping snd_usbmidi_create_rawmidi -> 1619
+Function/global mapping snd_usbmidi_detect_endpoints -> 1620
+Function/global mapping snd_usbmidi_detect_per_port_endpoints -> 1621
+Function/global mapping snd_usbmidi_detect_yamaha -> 1622
+Function/global mapping snd_usbmidi_disconnect -> 1623
+Function/global mapping snd_usbmidi_do_output -> 1624
+Function/global mapping snd_usbmidi_emagic_finish_out -> 1625
+Function/global mapping snd_usbmidi_emagic_init_out -> 1626
+Function/global mapping snd_usbmidi_emagic_input -> 1627
+Function/global mapping snd_usbmidi_emagic_ops -> 1628
+Function/global mapping snd_usbmidi_emagic_output -> 1629
+Function/global mapping snd_usbmidi_error_timer -> 1630
+Function/global mapping snd_usbmidi_find_substream -> 1631
+Function/global mapping snd_usbmidi_free -> 1632
+Function/global mapping snd_usbmidi_get_ms_info -> 1633
+Function/global mapping snd_usbmidi_get_port_info -> 1634
+Function/global mapping snd_usbmidi_in_endpoint_create -> 1635
+Function/global mapping snd_usbmidi_in_endpoint_delete -> 1636
+Function/global mapping snd_usbmidi_in_urb_complete -> 1637
+Function/global mapping snd_usbmidi_init_substream -> 1638
+Function/global mapping snd_usbmidi_input_close -> 1639
+Function/global mapping snd_usbmidi_input_data -> 1640
+Function/global mapping snd_usbmidi_input_open -> 1641
+Function/global mapping snd_usbmidi_input_ops -> 1642
+Function/global mapping snd_usbmidi_input_start -> 1643
+Function/global mapping snd_usbmidi_input_start_ep -> 1644
+Function/global mapping snd_usbmidi_input_stop -> 1645
+Function/global mapping snd_usbmidi_input_trigger -> 1646
+Function/global mapping snd_usbmidi_maudio_broken_running_status_input -> 1647
+Function/global mapping snd_usbmidi_maudio_broken_running_status_ops -> 1648
+Function/global mapping snd_usbmidi_midiman_input -> 1649
+Function/global mapping snd_usbmidi_midiman_ops -> 1650
+Function/global mapping snd_usbmidi_novation_input -> 1651
+Function/global mapping snd_usbmidi_novation_ops -> 1652
+Function/global mapping snd_usbmidi_novation_output -> 1653
+Function/global mapping snd_usbmidi_ops -> 1654
+Function/global mapping snd_usbmidi_out_endpoint_create -> 1655
+Function/global mapping snd_usbmidi_out_endpoint_delete -> 1656
+Function/global mapping snd_usbmidi_out_tasklet -> 1657
+Function/global mapping snd_usbmidi_out_urb_complete -> 1658
+Function/global mapping snd_usbmidi_output_close -> 1659
+Function/global mapping snd_usbmidi_output_midiman_packet -> 1660
+Function/global mapping snd_usbmidi_output_open -> 1661
+Function/global mapping snd_usbmidi_output_ops -> 1662
+Function/global mapping snd_usbmidi_output_standard_packet -> 1663
+Function/global mapping snd_usbmidi_output_trigger -> 1664
+Function/global mapping snd_usbmidi_port_info -> 1665
+Function/global mapping snd_usbmidi_raw_input -> 1666
+Function/global mapping snd_usbmidi_raw_ops -> 1667
+Function/global mapping snd_usbmidi_raw_output -> 1668
+Function/global mapping snd_usbmidi_rawmidi_free -> 1669
+Function/global mapping snd_usbmidi_standard_input -> 1670
+Function/global mapping snd_usbmidi_standard_ops -> 1671
+Function/global mapping snd_usbmidi_standard_output -> 1672
+Function/global mapping snd_usbmidi_submit_urb -> 1673
+Function/global mapping snd_usbmidi_switch_roland_altsetting -> 1674
+Function/global mapping snd_usbmidi_transmit_byte -> 1675
+Function/global mapping snd_usbmidi_urb_error -> 1676
+Function/global mapping snd_usbmidi_us122l_input -> 1677
+Function/global mapping snd_usbmidi_us122l_output -> 1678
+Function/global mapping snprintf -> 1679
+Function/global mapping sprintf -> 1680
+Function/global mapping stackguard_get_ra -> 1681
+Function/global mapping stackguard_pop -> 1682
+Function/global mapping stackguard_push -> 1683
+Function/global mapping stackguard_set_ra -> 1684
+Function/global mapping stackguard_stack -> 1685
+Function/global mapping start_urbs -> 1686
+Function/global mapping str_0 -> 1687
+Function/global mapping str_1004535908 -> 1688
+Function/global mapping str_1005803972 -> 1689
+Function/global mapping str_1014490587 -> 1690
+Function/global mapping str_1015625071 -> 1691
+Function/global mapping str_1028937 -> 1692
+Function/global mapping str_1030557429 -> 1693
+Function/global mapping str_1034644995 -> 1694
+Function/global mapping str_1039773507 -> 1695
+Function/global mapping str_1040058580 -> 1696
+Function/global mapping str_1041397175 -> 1697
+Function/global mapping str_1041470126 -> 1698
+Function/global mapping str_1042685215 -> 1699
+Function/global mapping str_10530917 -> 1700
+Function/global mapping str_1054178865 -> 1701
+Function/global mapping str_1055203368 -> 1702
+Function/global mapping str_10592645 -> 1703
+Function/global mapping str_1059676627 -> 1704
+Function/global mapping str_1060371900 -> 1705
+Function/global mapping str_1060912469 -> 1706
+Function/global mapping str_1061019973 -> 1707
+Function/global mapping str_106136500 -> 1708
+Function/global mapping str_10637825 -> 1709
+Function/global mapping str_10641780 -> 1710
+Function/global mapping str_1064537007 -> 1711
+Function/global mapping str_1068557351 -> 1712
+Function/global mapping str_1069376918 -> 1713
+Function/global mapping str_1073431585 -> 1714
+Function/global mapping str_10753440 -> 1715
+Function/global mapping str_10800265 -> 1716
+Function/global mapping str_10902533 -> 1717
+Function/global mapping str_10915739 -> 1718
+Function/global mapping str_10915755 -> 1719
+Function/global mapping str_11174419 -> 1720
+Function/global mapping str_11181278 -> 1721
+Function/global mapping str_11272957 -> 1722
+Function/global mapping str_11300298 -> 1723
+Function/global mapping str_11300412 -> 1724
+Function/global mapping str_11300431 -> 1725
+Function/global mapping str_11395627 -> 1726
+Function/global mapping str_11480405 -> 1727
+Function/global mapping str_11540363 -> 1728
+Function/global mapping str_11540368 -> 1729
+Function/global mapping str_11554596 -> 1730
+Function/global mapping str_11554634 -> 1731
+Function/global mapping str_11588601 -> 1732
+Function/global mapping str_11694111 -> 1733
+Function/global mapping str_11699988 -> 1734
+Function/global mapping str_1207 -> 1735
+Function/global mapping str_125301167 -> 1736
+Function/global mapping str_129785158 -> 1737
+Function/global mapping str_129785196 -> 1738
+Function/global mapping str_129785201 -> 1739
+Function/global mapping str_133922991 -> 1740
+Function/global mapping str_1341 -> 1741
+Function/global mapping str_14089218 -> 1742
+Function/global mapping str_145470558 -> 1743
+Function/global mapping str_15231084 -> 1744
+Function/global mapping str_154546418 -> 1745
+Function/global mapping str_154546420 -> 1746
+Function/global mapping str_154546422 -> 1747
+Function/global mapping str_154546433 -> 1748
+Function/global mapping str_154546776 -> 1749
+Function/global mapping str_154546778 -> 1750
+Function/global mapping str_154546780 -> 1751
+Function/global mapping str_154546782 -> 1752
+Function/global mapping str_154546784 -> 1753
+Function/global mapping str_158039148 -> 1754
+Function/global mapping str_158454992 -> 1755
+Function/global mapping str_159293978 -> 1756
+Function/global mapping str_16073815 -> 1757
+Function/global mapping str_164490267 -> 1758
+Function/global mapping str_165493744 -> 1759
+Function/global mapping str_165494466 -> 1760
+Function/global mapping str_168675912 -> 1761
+Function/global mapping str_174936368 -> 1762
+Function/global mapping str_178763828 -> 1763
+Function/global mapping str_178770687 -> 1764
+Function/global mapping str_178901836 -> 1765
+Function/global mapping str_178903280 -> 1766
+Function/global mapping str_179391037 -> 1767
+Function/global mapping str_180244545 -> 1768
+Function/global mapping str_180256858 -> 1769
+Function/global mapping str_181451660 -> 1770
+Function/global mapping str_181728381 -> 1771
+Function/global mapping str_182916092 -> 1772
+Function/global mapping str_185760420 -> 1773
+Function/global mapping str_186466258 -> 1774
+Function/global mapping str_199274370 -> 1775
+Function/global mapping str_201558875 -> 1776
+Function/global mapping str_201558876 -> 1777
+Function/global mapping str_201558877 -> 1778
+Function/global mapping str_202091287 -> 1779
+Function/global mapping str_202098146 -> 1780
+Function/global mapping str_204133454 -> 1781
+Function/global mapping str_207147453 -> 1782
+Function/global mapping str_207539138 -> 1783
+Function/global mapping str_208320737 -> 1784
+Function/global mapping str_209484720 -> 1785
+Function/global mapping str_209941598 -> 1786
+Function/global mapping str_21158850 -> 1787
+Function/global mapping str_211697793 -> 1788
+Function/global mapping str_214582020 -> 1789
+Function/global mapping str_21498367 -> 1790
+Function/global mapping str_215226995 -> 1791
+Function/global mapping str_215619040 -> 1792
+Function/global mapping str_216271012 -> 1793
+Function/global mapping str_217050626 -> 1794
+Function/global mapping str_217733085 -> 1795
+Function/global mapping str_218283728 -> 1796
+Function/global mapping str_218563518 -> 1797
+Function/global mapping str_219266584 -> 1798
+Function/global mapping str_219266585 -> 1799
+Function/global mapping str_219267023 -> 1800
+Function/global mapping str_219267764 -> 1801
+Function/global mapping str_219268125 -> 1802
+Function/global mapping str_219268750 -> 1803
+Function/global mapping str_220831141 -> 1804
+Function/global mapping str_220831597 -> 1805
+Function/global mapping str_220831975 -> 1806
+Function/global mapping str_220833115 -> 1807
+Function/global mapping str_221788472 -> 1808
+Function/global mapping str_225760646 -> 1809
+Function/global mapping str_226407066 -> 1810
+Function/global mapping str_228195326 -> 1811
+Function/global mapping str_229836041 -> 1812
+Function/global mapping str_233798669 -> 1813
+Function/global mapping str_236948253 -> 1814
+Function/global mapping str_238177709 -> 1815
+Function/global mapping str_238745560 -> 1816
+Function/global mapping str_239825392 -> 1817
+Function/global mapping str_248349902 -> 1818
+Function/global mapping str_254016772 -> 1819
+Function/global mapping str_256741 -> 1820
+Function/global mapping str_25867 -> 1821
+Function/global mapping str_25888 -> 1822
+Function/global mapping str_25903 -> 1823
+Function/global mapping str_26232 -> 1824
+Function/global mapping str_267488495 -> 1825
+Function/global mapping str_279917523 -> 1826
+Function/global mapping str_28835 -> 1827
+Function/global mapping str_295955 -> 1828
+Function/global mapping str_295956 -> 1829
+Function/global mapping str_296432 -> 1830
+Function/global mapping str_298493551 -> 1831
+Function/global mapping str_298606004 -> 1832
+Function/global mapping str_29891 -> 1833
+Function/global mapping str_30230 -> 1834
+Function/global mapping str_30235 -> 1835
+Function/global mapping str_305400396 -> 1836
+Function/global mapping str_30931 -> 1837
+Function/global mapping str_31094 -> 1838
+Function/global mapping str_312378469 -> 1839
+Function/global mapping str_312951437 -> 1840
+Function/global mapping str_31596 -> 1841
+Function/global mapping str_316584895 -> 1842
+Function/global mapping str_317885218 -> 1843
+Function/global mapping str_32 -> 1844
+Function/global mapping str_32155715 -> 1845
+Function/global mapping str_32328 -> 1846
+Function/global mapping str_324299317 -> 1847
+Function/global mapping str_325836133 -> 1848
+Function/global mapping str_327960850 -> 1849
+Function/global mapping str_333096528 -> 1850
+Function/global mapping str_335406018 -> 1851
+Function/global mapping str_336410471 -> 1852
+Function/global mapping str_346970378 -> 1853
+Function/global mapping str_349765498 -> 1854
+Function/global mapping str_35173879 -> 1855
+Function/global mapping str_351748476 -> 1856
+Function/global mapping str_358300541 -> 1857
+Function/global mapping str_3623250 -> 1858
+Function/global mapping str_376161077 -> 1859
+Function/global mapping str_388213389 -> 1860
+Function/global mapping str_391949103 -> 1861
+Function/global mapping str_400614853 -> 1862
+Function/global mapping str_403701822 -> 1863
+Function/global mapping str_405545197 -> 1864
+Function/global mapping str_405545198 -> 1865
+Function/global mapping str_405545199 -> 1866
+Function/global mapping str_410776958 -> 1867
+Function/global mapping str_411382038 -> 1868
+Function/global mapping str_412731004 -> 1869
+Function/global mapping str_415308913 -> 1870
+Function/global mapping str_427276364 -> 1871
+Function/global mapping str_429534546 -> 1872
+Function/global mapping str_43365079 -> 1873
+Function/global mapping str_433838956 -> 1874
+Function/global mapping str_438695472 -> 1875
+Function/global mapping str_442778450 -> 1876
+Function/global mapping str_444495457 -> 1877
+Function/global mapping str_445429857 -> 1878
+Function/global mapping str_447048969 -> 1879
+Function/global mapping str_449190836 -> 1880
+Function/global mapping str_459503637 -> 1881
+Function/global mapping str_461878866 -> 1882
+Function/global mapping str_461880310 -> 1883
+Function/global mapping str_461885725 -> 1884
+Function/global mapping str_461892223 -> 1885
+Function/global mapping str_468492697 -> 1886
+Function/global mapping str_473127585 -> 1887
+Function/global mapping str_473778296 -> 1888
+Function/global mapping str_482873 -> 1889
+Function/global mapping str_489702074 -> 1890
+Function/global mapping str_490515 -> 1891
+Function/global mapping str_496460573 -> 1892
+Function/global mapping str_496506222 -> 1893
+Function/global mapping str_496823950 -> 1894
+Function/global mapping str_496823969 -> 1895
+Function/global mapping str_496823988 -> 1896
+Function/global mapping str_496824007 -> 1897
+Function/global mapping str_496824026 -> 1898
+Function/global mapping str_496824045 -> 1899
+Function/global mapping str_496824064 -> 1900
+Function/global mapping str_496824083 -> 1901
+Function/global mapping str_497625127 -> 1902
+Function/global mapping str_501945809 -> 1903
+Function/global mapping str_504327 -> 1904
+Function/global mapping str_508178660 -> 1905
+Function/global mapping str_508915848 -> 1906
+Function/global mapping str_515799417 -> 1907
+Function/global mapping str_51703753 -> 1908
+Function/global mapping str_521161324 -> 1909
+Function/global mapping str_522043394 -> 1910
+Function/global mapping str_526151313 -> 1911
+Function/global mapping str_528878465 -> 1912
+Function/global mapping str_532616561 -> 1913
+Function/global mapping str_544751132 -> 1914
+Function/global mapping str_550941773 -> 1915
+Function/global mapping str_556279697 -> 1916
+Function/global mapping str_558343 -> 1917
+Function/global mapping str_561380 -> 1918
+Function/global mapping str_564233269 -> 1919
+Function/global mapping str_569364926 -> 1920
+Function/global mapping str_570853617 -> 1921
+Function/global mapping str_572685 -> 1922
+Function/global mapping str_576734707 -> 1923
+Function/global mapping str_577592 -> 1924
+Function/global mapping str_582837192 -> 1925
+Function/global mapping str_585972373 -> 1926
+Function/global mapping str_589782702 -> 1927
+Function/global mapping str_595159629 -> 1928
+Function/global mapping str_595175755 -> 1929
+Function/global mapping str_596491274 -> 1930
+Function/global mapping str_597637 -> 1931
+Function/global mapping str_597914956 -> 1932
+Function/global mapping str_599646 -> 1933
+Function/global mapping str_599760 -> 1934
+Function/global mapping str_600119615 -> 1935
+Function/global mapping str_601293204 -> 1936
+Function/global mapping str_601293205 -> 1937
+Function/global mapping str_601293220 -> 1938
+Function/global mapping str_601293221 -> 1939
+Function/global mapping str_601554213 -> 1940
+Function/global mapping str_607388 -> 1941
+Function/global mapping str_607981 -> 1942
+Function/global mapping str_608393064 -> 1943
+Function/global mapping str_608431467 -> 1944
+Function/global mapping str_609203 -> 1945
+Function/global mapping str_611716 -> 1946
+Function/global mapping str_611717 -> 1947
+Function/global mapping str_611719 -> 1948
+Function/global mapping str_612180258 -> 1949
+Function/global mapping str_612180259 -> 1950
+Function/global mapping str_612180260 -> 1951
+Function/global mapping str_612180261 -> 1952
+Function/global mapping str_615768 -> 1953
+Function/global mapping str_615920 -> 1954
+Function/global mapping str_615991579 -> 1955
+Function/global mapping str_616233 -> 1956
+Function/global mapping str_62046100 -> 1957
+Function/global mapping str_629245061 -> 1958
+Function/global mapping str_631087734 -> 1959
+Function/global mapping str_635602341 -> 1960
+Function/global mapping str_63622457 -> 1961
+Function/global mapping str_639341561 -> 1962
+Function/global mapping str_64240467 -> 1963
+Function/global mapping str_64261101 -> 1964
+Function/global mapping str_647061483 -> 1965
+Function/global mapping str_65189559 -> 1966
+Function/global mapping str_652131613 -> 1967
+Function/global mapping str_652565892 -> 1968
+Function/global mapping str_653514840 -> 1969
+Function/global mapping str_657372624 -> 1970
+Function/global mapping str_657602785 -> 1971
+Function/global mapping str_659772121 -> 1972
+Function/global mapping str_659921694 -> 1973
+Function/global mapping str_6623682 -> 1974
+Function/global mapping str_6629097 -> 1975
+Function/global mapping str_667951693 -> 1976
+Function/global mapping str_677216733 -> 1977
+Function/global mapping str_677794626 -> 1978
+Function/global mapping str_679801322 -> 1979
+Function/global mapping str_680563518 -> 1980
+Function/global mapping str_683293777 -> 1981
+Function/global mapping str_686943043 -> 1982
+Function/global mapping str_687152508 -> 1983
+Function/global mapping str_690022538 -> 1984
+Function/global mapping str_694732782 -> 1985
+Function/global mapping str_698010430 -> 1986
+Function/global mapping str_698187463 -> 1987
+Function/global mapping str_699349911 -> 1988
+Function/global mapping str_706759643 -> 1989
+Function/global mapping str_708091878 -> 1990
+Function/global mapping str_709717790 -> 1991
+Function/global mapping str_721858797 -> 1992
+Function/global mapping str_735532888 -> 1993
+Function/global mapping str_738260344 -> 1994
+Function/global mapping str_743645852 -> 1995
+Function/global mapping str_747151802 -> 1996
+Function/global mapping str_75292164 -> 1997
+Function/global mapping str_752941123 -> 1998
+Function/global mapping str_754636363 -> 1999
+Function/global mapping str_756280652 -> 2000
+Function/global mapping str_75719076 -> 2001
+Function/global mapping str_757471119 -> 2002
+Function/global mapping str_758343632 -> 2003
+Function/global mapping str_761039825 -> 2004
+Function/global mapping str_764792676 -> 2005
+Function/global mapping str_764993234 -> 2006
+Function/global mapping str_765604581 -> 2007
+Function/global mapping str_772338763 -> 2008
+Function/global mapping str_778694563 -> 2009
+Function/global mapping str_781461537 -> 2010
+Function/global mapping str_782488767 -> 2011
+Function/global mapping str_785022198 -> 2012
+Function/global mapping str_790741568 -> 2013
+Function/global mapping str_791573890 -> 2014
+Function/global mapping str_797487953 -> 2015
+Function/global mapping str_799096034 -> 2016
+Function/global mapping str_803117500 -> 2017
+Function/global mapping str_803851448 -> 2018
+Function/global mapping str_806837355 -> 2019
+Function/global mapping str_80732848 -> 2020
+Function/global mapping str_809021430 -> 2021
+Function/global mapping str_812255493 -> 2022
+Function/global mapping str_835963836 -> 2023
+Function/global mapping str_840389807 -> 2024
+Function/global mapping str_841139419 -> 2025
+Function/global mapping str_843424035 -> 2026
+Function/global mapping str_852258126 -> 2027
+Function/global mapping str_85230465 -> 2028
+Function/global mapping str_854498725 -> 2029
+Function/global mapping str_854499087 -> 2030
+Function/global mapping str_854499089 -> 2031
+Function/global mapping str_854499811 -> 2032
+Function/global mapping str_854501259 -> 2033
+Function/global mapping str_855751047 -> 2034
+Function/global mapping str_855751104 -> 2035
+Function/global mapping str_856339116 -> 2036
+Function/global mapping str_857529930 -> 2037
+Function/global mapping str_863125700 -> 2038
+Function/global mapping str_868332612 -> 2039
+Function/global mapping str_870290969 -> 2040
+Function/global mapping str_872419140 -> 2041
+Function/global mapping str_873074482 -> 2042
+Function/global mapping str_877389318 -> 2043
+Function/global mapping str_87817340 -> 2044
+Function/global mapping str_87930470 -> 2045
+Function/global mapping str_882451506 -> 2046
+Function/global mapping str_883168199 -> 2047
+Function/global mapping str_88429757 -> 2048
+Function/global mapping str_884756751 -> 2049
+Function/global mapping str_885550103 -> 2050
+Function/global mapping str_888942698 -> 2051
+Function/global mapping str_892675406 -> 2052
+Function/global mapping str_893500057 -> 2053
+Function/global mapping str_894397911 -> 2054
+Function/global mapping str_902805966 -> 2055
+Function/global mapping str_908632785 -> 2056
+Function/global mapping str_923436265 -> 2057
+Function/global mapping str_924615310 -> 2058
+Function/global mapping str_927843941 -> 2059
+Function/global mapping str_93429168 -> 2060
+Function/global mapping str_934616211 -> 2061
+Function/global mapping str_934776571 -> 2062
+Function/global mapping str_9378605 -> 2063
+Function/global mapping str_9378607 -> 2064
+Function/global mapping str_941262301 -> 2065
+Function/global mapping str_9415899 -> 2066
+Function/global mapping str_941834121 -> 2067
+Function/global mapping str_9440451 -> 2068
+Function/global mapping str_944839672 -> 2069
+Function/global mapping str_944848775 -> 2070
+Function/global mapping str_9461004 -> 2071
+Function/global mapping str_947601669 -> 2072
+Function/global mapping str_948881558 -> 2073
+Function/global mapping str_953588697 -> 2074
+Function/global mapping str_956433291 -> 2075
+Function/global mapping str_956492597 -> 2076
+Function/global mapping str_9595539 -> 2077
+Function/global mapping str_9597327 -> 2078
+Function/global mapping str_960860569 -> 2079
+Function/global mapping str_960884417 -> 2080
+Function/global mapping str_967653936 -> 2081
+Function/global mapping str_968180269 -> 2082
+Function/global mapping str_96862090 -> 2083
+Function/global mapping str_974050335 -> 2084
+Function/global mapping str_974276422 -> 2085
+Function/global mapping str_974774143 -> 2086
+Function/global mapping str_974799125 -> 2087
+Function/global mapping str_9770741 -> 2088
+Function/global mapping str_977636194 -> 2089
+Function/global mapping str_981105601 -> 2090
+Function/global mapping str_981956828 -> 2091
+Function/global mapping str_9839312 -> 2092
+Function/global mapping str_983984005 -> 2093
+Function/global mapping str_984249857 -> 2094
+Function/global mapping str_986049528 -> 2095
+Function/global mapping str_994182456 -> 2096
+Function/global mapping str_9946673 -> 2097
+Function/global mapping strcmp -> 2098
+Function/global mapping strcpy -> 2099
+Function/global mapping strlcat -> 2100
+Function/global mapping strlcpy -> 2101
+Function/global mapping strlen -> 2102
+Function/global mapping tasklet_init -> 2103
+Function/global mapping tasklet_kill -> 2104
+Function/global mapping tasklet_schedule -> 2105
+Function/global mapping test_and_set_bit -> 2106
+Function/global mapping test_ti_thread_flag -> 2107
+Function/global mapping test_tsk_thread_flag -> 2108
+Function/global mapping threed_enh_proc_info -> 2109
+Function/global mapping ua1000_format -> 2110
+Function/global mapping ua101_format -> 2111
+Function/global mapping ua700_ep -> 2112
+Function/global mapping ua700_quirk -> 2113
+Function/global mapping ua_format -> 2114
+Function/global mapping uaxx_ep -> 2115
+Function/global mapping uaxx_quirk -> 2116
+Function/global mapping updown_proc_info -> 2117
+Function/global mapping usb_alloc_urb -> 2118
+Function/global mapping usb_audio_disconnect -> 2119
+Function/global mapping usb_audio_driver -> 2120
+Function/global mapping usb_audio_ids -> 2121
+Function/global mapping usb_audio_probe -> 2122
+Function/global mapping usb_audio_resume -> 2123
+Function/global mapping usb_audio_suspend -> 2124
+Function/global mapping usb_buffer_alloc -> 2125
+Function/global mapping usb_buffer_free -> 2126
+Function/global mapping usb_bulk_msg -> 2127
+Function/global mapping usb_chip -> 2128
+Function/global mapping usb_control_msg -> 2129
+Function/global mapping usb_deregister -> 2130
+Function/global mapping usb_driver_claim_interface -> 2131
+Function/global mapping usb_endpoint_dir_in -> 2132
+Function/global mapping usb_endpoint_dir_out -> 2133
+Function/global mapping usb_endpoint_num -> 2134
+Function/global mapping usb_endpoint_xfer_bulk -> 2135
+Function/global mapping usb_endpoint_xfer_int -> 2136
+Function/global mapping usb_error_string -> 2137
+Function/global mapping usb_feature_unit_ctl -> 2138
+Function/global mapping usb_fill_bulk_urb -> 2139
+Function/global mapping usb_fill_control_urb -> 2140
+Function/global mapping usb_fill_int_urb -> 2141
+Function/global mapping usb_free_urb -> 2142
+Function/global mapping usb_get_descriptor -> 2143
+Function/global mapping usb_get_intfdata -> 2144
+Function/global mapping usb_ifnum_to_if -> 2145
+Function/global mapping usb_interface_claimed -> 2146
+Function/global mapping usb_kill_urb -> 2147
+Function/global mapping usb_make_path -> 2148
+Function/global mapping usb_maxpacket -> 2149
+Function/global mapping usb_mixer_elem_free -> 2150
+Function/global mapping usb_mixer_selector_elem_free -> 2151
+Function/global mapping usb_register -> 2152
+Function/global mapping usb_register_driver -> 2153
+Function/global mapping usb_reset_configuration -> 2154
+Function/global mapping usb_set_interface -> 2155
+Function/global mapping usb_set_intfdata -> 2156
+Function/global mapping usb_string -> 2157
+Function/global mapping usb_submit_urb -> 2158
+Function/global mapping usb_unlink_urb -> 2159
+Function/global mapping usbmix_ctl_maps -> 2160
+Function/global mapping variable_test_bit -> 2161
+Function/global mapping vid -> 2162
+Function/global mapping wait_clear_urbs -> 2163
+Function/global mapping warn_slowpath -> 2164
+execution_mode_map
+snd_card_new      default_mode
+_spin_unlock_irqrestore      default_mode
+strlcat      default_mode
+snd_rawmidi_set_ops      default_mode
+strcmp      default_mode
+usb_buffer_free      default_mode
+printk      default_mode
+snd_rawmidi_transmit_ack      default_mode
+snd_pcm_new_stream      default_mode
+del_timer_sync      default_mode
+__phys_addr      default_mode
+snd_pcm_rate_to_rate_bit      default_mode
+_spin_lock_irqsave      default_mode
+_spin_lock_irq      default_mode
+snd_hwdep_new      default_mode
+snd_iprintf      default_mode
+snd_pcm_hw_constraint_list      default_mode
+usb_buffer_alloc      default_mode
+snd_rawmidi_transmit_empty      default_mode
+__wake_up      default_mode
+usb_driver_claim_interface      default_mode
+snd_ctl_find_id      default_mode
+__list_add      default_mode
+__builtin_expect      default_mode
+_spin_lock      default_mode
+snd_card_proc_new      default_mode
+snd_pcm_new      default_mode
+schedule      default_mode
+usb_string      default_mode
+memset      default_mode
+tasklet_kill      default_mode
+usb_kill_urb      default_mode
+copy_to_user      default_mode
+usb_deregister      default_mode
+snd_pcm_suspend_all      default_mode
+snd_pcm_format_physical_width      default_mode
+msecs_to_jiffies      default_mode
+mutex_lock_nested      default_mode
+_spin_unlock_irq      default_mode
+mod_timer      default_mode
+snd_ctl_new1      default_mode
+prepare_to_wait      default_mode
+snprintf      default_mode
+snd_rawmidi_receive      default_mode
+warn_slowpath      default_mode
+__builtin_memcpy      default_mode
+_spin_unlock      default_mode
+strcpy      default_mode
+snd_rawmidi_new      default_mode
+__kmalloc      default_mode
+usb_submit_urb      default_mode
+strlcpy      default_mode
+usb_register_driver      default_mode
+mutex_unlock      default_mode
+usb_set_interface      default_mode
+__tasklet_schedule      default_mode
+snd_pcm_hw_rule_add_MJR2      default_mode
+tasklet_init      default_mode
+_cond_resched      default_mode
+init_timer      default_mode
+schedule_timeout_uninterruptible      default_mode
+snd_ctl_add      default_mode
+strlen      default_mode
+free_pages      default_mode
+usb_alloc_urb      default_mode
+snd_rawmidi_transmit_peek      default_mode
+init_waitqueue_head      default_mode
+usb_ifnum_to_if      default_mode
+snd_pcm_hw_constraint_minmax      default_mode
+__might_sleep      default_mode
+snd_card_free      default_mode
+usb_unlink_urb      default_mode
+list_del      default_mode
+snd_pcm_period_elapsed      default_mode
+__spin_lock_init      default_mode
+usb_reset_configuration      default_mode
+kmemdup      default_mode
+snd_ctl_notify      default_mode
+snd_pcm_stop      default_mode
+snd_pcm_set_ops      default_mode
+snd_card_disconnect      default_mode
+finish_wait      default_mode
+usb_get_descriptor      default_mode
+snd_component_add      default_mode
+snd_card_free_when_closed      default_mode
+usb_bulk_msg      default_mode
+__bad_pda_field      default_mode
+snd_device_new      default_mode
+kfree      default_mode
+usb_free_urb      default_mode
+usb_control_msg      default_mode
+__builtin_prefetch      default_mode
+sprintf      default_mode
+snd_rawmidi_transmit      default_mode
+__memcpy      default_mode
+__get_free_pages      default_mode
+snd_card_register      default_mode
+Adding fundec for MARSH___STUB__snd_card_new
+Adding fundec for DEMARSH_STUB__snd_card_new
+Adding fundec for snd_card_new
+Adding fundec for MARSH___STUB___spin_unlock_irqrestore
+Adding fundec for DEMARSH_STUB___spin_unlock_irqrestore
+Adding fundec for _spin_unlock_irqrestore
+Adding fundec for MARSH___STUB__snd_rawmidi_set_ops
+Adding fundec for DEMARSH_STUB__snd_rawmidi_set_ops
+Adding fundec for snd_rawmidi_set_ops
+Adding fundec for MARSH___STUB__usb_buffer_free
+Adding fundec for DEMARSH_STUB__usb_buffer_free
+Adding fundec for usb_buffer_free
+Adding fundec for MARSH___STUB__snd_rawmidi_transmit_ack
+Adding fundec for DEMARSH_STUB__snd_rawmidi_transmit_ack
+Adding fundec for snd_rawmidi_transmit_ack
+Adding fundec for MARSH___STUB__snd_pcm_new_stream
+Adding fundec for DEMARSH_STUB__snd_pcm_new_stream
+Adding fundec for snd_pcm_new_stream
+Adding fundec for MARSH___STUB__del_timer_sync
+Adding fundec for DEMARSH_STUB__del_timer_sync
+Adding fundec for del_timer_sync
+Adding fundec for MARSH___STUB____phys_addr
+Adding fundec for DEMARSH_STUB____phys_addr
+Adding fundec for __phys_addr
+Adding fundec for MARSH___STUB__snd_pcm_rate_to_rate_bit
+Adding fundec for DEMARSH_STUB__snd_pcm_rate_to_rate_bit
+Adding fundec for snd_pcm_rate_to_rate_bit
+Adding fundec for MARSH___STUB___spin_lock_irqsave
+Adding fundec for DEMARSH_STUB___spin_lock_irqsave
+Adding fundec for _spin_lock_irqsave
+Adding fundec for MARSH___STUB___spin_lock_irq
+Adding fundec for DEMARSH_STUB___spin_lock_irq
+Adding fundec for _spin_lock_irq
+Adding fundec for MARSH___STUB__snd_hwdep_new
+Adding fundec for DEMARSH_STUB__snd_hwdep_new
+Adding fundec for snd_hwdep_new
+Adding fundec for MARSH___STUB__snd_pcm_hw_constraint_list
+Adding fundec for DEMARSH_STUB__snd_pcm_hw_constraint_list
+Adding fundec for snd_pcm_hw_constraint_list
+Adding fundec for MARSH___STUB__usb_buffer_alloc
+Adding fundec for DEMARSH_STUB__usb_buffer_alloc
+Adding fundec for usb_buffer_alloc
+Adding fundec for MARSH___STUB__snd_rawmidi_transmit_empty
+Adding fundec for DEMARSH_STUB__snd_rawmidi_transmit_empty
+Adding fundec for snd_rawmidi_transmit_empty
+Adding fundec for MARSH___STUB____wake_up
+Adding fundec for DEMARSH_STUB____wake_up
+Adding fundec for __wake_up
+Adding fundec for MARSH___STUB__usb_driver_claim_interface
+Adding fundec for DEMARSH_STUB__usb_driver_claim_interface
+Adding fundec for usb_driver_claim_interface
+Adding fundec for MARSH___STUB__snd_ctl_find_id
+Adding fundec for DEMARSH_STUB__snd_ctl_find_id
+Adding fundec for snd_ctl_find_id
+Adding fundec for MARSH___STUB____list_add
+Adding fundec for DEMARSH_STUB____list_add
+Adding fundec for __list_add
+Adding fundec for MARSH___STUB___spin_lock
+Adding fundec for DEMARSH_STUB___spin_lock
+Adding fundec for _spin_lock
+Adding fundec for MARSH___STUB__snd_card_proc_new
+Adding fundec for DEMARSH_STUB__snd_card_proc_new
+Adding fundec for snd_card_proc_new
+Adding fundec for MARSH___STUB__snd_pcm_new
+Adding fundec for DEMARSH_STUB__snd_pcm_new
+Adding fundec for snd_pcm_new
+Adding fundec for MARSH___STUB__schedule
+Adding fundec for DEMARSH_STUB__schedule
+Adding fundec for schedule
+Adding fundec for MARSH___STUB__usb_string
+Adding fundec for DEMARSH_STUB__usb_string
+Adding fundec for usb_string
+Adding fundec for MARSH___STUB__tasklet_kill
+Adding fundec for DEMARSH_STUB__tasklet_kill
+Adding fundec for tasklet_kill
+Adding fundec for MARSH___STUB__usb_kill_urb
+Adding fundec for DEMARSH_STUB__usb_kill_urb
+Adding fundec for usb_kill_urb
+Adding fundec for MARSH___STUB__usb_deregister
+Adding fundec for DEMARSH_STUB__usb_deregister
+Adding fundec for usb_deregister
+Adding fundec for MARSH___STUB__snd_pcm_suspend_all
+Adding fundec for DEMARSH_STUB__snd_pcm_suspend_all
+Adding fundec for snd_pcm_suspend_all
+Adding fundec for MARSH___STUB__snd_pcm_format_physical_width
+Adding fundec for DEMARSH_STUB__snd_pcm_format_physical_width
+Adding fundec for snd_pcm_format_physical_width
+Adding fundec for MARSH___STUB__msecs_to_jiffies
+Adding fundec for DEMARSH_STUB__msecs_to_jiffies
+Adding fundec for msecs_to_jiffies
+Adding fundec for MARSH___STUB__mutex_lock_nested
+Adding fundec for DEMARSH_STUB__mutex_lock_nested
+Adding fundec for mutex_lock_nested
+Adding fundec for MARSH___STUB___spin_unlock_irq
+Adding fundec for DEMARSH_STUB___spin_unlock_irq
+Adding fundec for _spin_unlock_irq
+Adding fundec for MARSH___STUB__mod_timer
+Adding fundec for DEMARSH_STUB__mod_timer
+Adding fundec for mod_timer
+Adding fundec for MARSH___STUB__snd_ctl_new1
+Adding fundec for DEMARSH_STUB__snd_ctl_new1
+Adding fundec for snd_ctl_new1
+Adding fundec for MARSH___STUB__prepare_to_wait
+Adding fundec for DEMARSH_STUB__prepare_to_wait
+Adding fundec for prepare_to_wait
+Adding fundec for MARSH___STUB__snd_rawmidi_receive
+Adding fundec for DEMARSH_STUB__snd_rawmidi_receive
+Adding fundec for snd_rawmidi_receive
+Adding fundec for MARSH___STUB___spin_unlock
+Adding fundec for DEMARSH_STUB___spin_unlock
+Adding fundec for _spin_unlock
+Adding fundec for MARSH___STUB__snd_rawmidi_new
+Adding fundec for DEMARSH_STUB__snd_rawmidi_new
+Adding fundec for snd_rawmidi_new
+Adding fundec for MARSH___STUB__usb_submit_urb
+Adding fundec for DEMARSH_STUB__usb_submit_urb
+Adding fundec for usb_submit_urb
+Adding fundec for MARSH___STUB__usb_register_driver
+Adding fundec for DEMARSH_STUB__usb_register_driver
+Adding fundec for usb_register_driver
+Adding fundec for MARSH___STUB__mutex_unlock
+Adding fundec for DEMARSH_STUB__mutex_unlock
+Adding fundec for mutex_unlock
+Adding fundec for MARSH___STUB__usb_set_interface
+Adding fundec for DEMARSH_STUB__usb_set_interface
+Adding fundec for usb_set_interface
+Adding fundec for MARSH___STUB____tasklet_schedule
+Adding fundec for DEMARSH_STUB____tasklet_schedule
+Adding fundec for __tasklet_schedule
+Adding fundec for MARSH___STUB__snd_pcm_hw_rule_add_MJR2
+Adding fundec for DEMARSH_STUB__snd_pcm_hw_rule_add_MJR2
+Adding fundec for snd_pcm_hw_rule_add_MJR2
+Adding fundec for MARSH___STUB__tasklet_init
+Adding fundec for DEMARSH_STUB__tasklet_init
+Adding fundec for tasklet_init
+Adding fundec for MARSH___STUB___cond_resched
+Adding fundec for DEMARSH_STUB___cond_resched
+Adding fundec for _cond_resched
+Adding fundec for MARSH___STUB__init_timer
+Adding fundec for DEMARSH_STUB__init_timer
+Adding fundec for init_timer
+Adding fundec for MARSH___STUB__schedule_timeout_uninterruptible
+Adding fundec for DEMARSH_STUB__schedule_timeout_uninterruptible
+Adding fundec for schedule_timeout_uninterruptible
+Adding fundec for MARSH___STUB__snd_ctl_add
+Adding fundec for DEMARSH_STUB__snd_ctl_add
+Adding fundec for snd_ctl_add
+Adding fundec for MARSH___STUB__usb_alloc_urb
+Adding fundec for DEMARSH_STUB__usb_alloc_urb
+Adding fundec for usb_alloc_urb
+Adding fundec for MARSH___STUB__snd_rawmidi_transmit_peek
+Adding fundec for DEMARSH_STUB__snd_rawmidi_transmit_peek
+Adding fundec for snd_rawmidi_transmit_peek
+Adding fundec for MARSH___STUB__init_waitqueue_head
+Adding fundec for DEMARSH_STUB__init_waitqueue_head
+Adding fundec for init_waitqueue_head
+Adding fundec for MARSH___STUB__usb_ifnum_to_if
+Adding fundec for DEMARSH_STUB__usb_ifnum_to_if
+Adding fundec for usb_ifnum_to_if
+Adding fundec for MARSH___STUB__snd_pcm_hw_constraint_minmax
+Adding fundec for DEMARSH_STUB__snd_pcm_hw_constraint_minmax
+Adding fundec for snd_pcm_hw_constraint_minmax
+Adding fundec for MARSH___STUB____might_sleep
+Adding fundec for DEMARSH_STUB____might_sleep
+Adding fundec for __might_sleep
+Adding fundec for MARSH___STUB__snd_card_free
+Adding fundec for DEMARSH_STUB__snd_card_free
+Adding fundec for snd_card_free
+Adding fundec for MARSH___STUB__usb_unlink_urb
+Adding fundec for DEMARSH_STUB__usb_unlink_urb
+Adding fundec for usb_unlink_urb
+Adding fundec for MARSH___STUB__list_del
+Adding fundec for DEMARSH_STUB__list_del
+Adding fundec for list_del
+Adding fundec for MARSH___STUB__snd_pcm_period_elapsed
+Adding fundec for DEMARSH_STUB__snd_pcm_period_elapsed
+Adding fundec for snd_pcm_period_elapsed
+Adding fundec for MARSH___STUB____spin_lock_init
+Adding fundec for DEMARSH_STUB____spin_lock_init
+Adding fundec for __spin_lock_init
+Adding fundec for MARSH___STUB__usb_reset_configuration
+Adding fundec for DEMARSH_STUB__usb_reset_configuration
+Adding fundec for usb_reset_configuration
+Adding fundec for MARSH___STUB__snd_ctl_notify
+Adding fundec for DEMARSH_STUB__snd_ctl_notify
+Adding fundec for snd_ctl_notify
+Adding fundec for MARSH___STUB__snd_pcm_stop
+Adding fundec for DEMARSH_STUB__snd_pcm_stop
+Adding fundec for snd_pcm_stop
+Adding fundec for MARSH___STUB__snd_pcm_set_ops
+Adding fundec for DEMARSH_STUB__snd_pcm_set_ops
+Adding fundec for snd_pcm_set_ops
+Adding fundec for MARSH___STUB__snd_card_disconnect
+Adding fundec for DEMARSH_STUB__snd_card_disconnect
+Adding fundec for snd_card_disconnect
+Adding fundec for MARSH___STUB__finish_wait
+Adding fundec for DEMARSH_STUB__finish_wait
+Adding fundec for finish_wait
+Adding fundec for MARSH___STUB__usb_get_descriptor
+Adding fundec for DEMARSH_STUB__usb_get_descriptor
+Adding fundec for usb_get_descriptor
+Adding fundec for MARSH___STUB__snd_component_add
+Adding fundec for DEMARSH_STUB__snd_component_add
+Adding fundec for snd_component_add
+Adding fundec for MARSH___STUB__snd_card_free_when_closed
+Adding fundec for DEMARSH_STUB__snd_card_free_when_closed
+Adding fundec for snd_card_free_when_closed
+Adding fundec for MARSH___STUB__usb_bulk_msg
+Adding fundec for DEMARSH_STUB__usb_bulk_msg
+Adding fundec for usb_bulk_msg
+Adding fundec for MARSH___STUB____bad_pda_field
+Adding fundec for DEMARSH_STUB____bad_pda_field
+Adding fundec for __bad_pda_field
+Adding fundec for MARSH___STUB__snd_device_new
+Adding fundec for DEMARSH_STUB__snd_device_new
+Adding fundec for snd_device_new
+Adding fundec for MARSH___STUB__usb_free_urb
+Adding fundec for DEMARSH_STUB__usb_free_urb
+Adding fundec for usb_free_urb
+Adding fundec for MARSH___STUB__usb_control_msg
+Adding fundec for DEMARSH_STUB__usb_control_msg
+Adding fundec for usb_control_msg
+Adding fundec for MARSH___STUB__snd_rawmidi_transmit
+Adding fundec for DEMARSH_STUB__snd_rawmidi_transmit
+Adding fundec for snd_rawmidi_transmit
+Adding fundec for MARSH___STUB____memcpy
+Adding fundec for DEMARSH_STUB____memcpy
+Adding fundec for __memcpy
+Adding fundec for MARSH___STUB__snd_card_register
+Adding fundec for DEMARSH_STUB__snd_card_register
+Adding fundec for snd_card_register
+dummy function param_set_int
+dummy function param_get_int
+dummy function param_set_charp
+dummy function param_get_charp
+dummy function param_set_bool
+dummy function param_get_bool
+dummy function param_array_set
+dummy function param_array_get
+dummy function snd_pcm_lib_ioctl
+dummy function autoremove_wake_function
+dummy function snd_ctl_boolean_mono_info
+Removing unused temporaries
+ Produced user side of the split
+=======================================================
+[CHECK]: CYCLE DETECTION (edges, nodes):  567 158
+[CHECK]: recursive annotation: 
+
+[CHECK]: Formal addr of MARSH___STUB__usb_buffer_free does not resolve!
+[CHECK]: Formal addr of DEMARSH_STUB__usb_buffer_free does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__usb_buffer_free addr Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal _retval_ of DEMARSH_STUB__usb_buffer_alloc does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__usb_buffer_alloc _retval_ Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal key of MARSH___STUB____wake_up does not resolve!
+[CHECK]: Formal key of DEMARSH_STUB____wake_up does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB____wake_up key Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal priv of MARSH___STUB__usb_driver_claim_interface does not resolve!
+[CHECK]: Formal priv of DEMARSH_STUB__usb_driver_claim_interface does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__usb_driver_claim_interface priv Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for buf
+ Function: MARSH___STUB__usb_string
+
+Variable type: char * __attribute__((__exp__(Nonstub_get_size("size")))) 
+No offset
+[CHECK]: Assuming standard scalar pointer for buf
+ Function: DEMARSH_STUB__usb_string
+
+Variable type: char * __attribute__((__exp__(Nonstub_get_size("size")))) 
+No offset
+[CHECK]: Formal private_data of MARSH___STUB__snd_ctl_new1 does not resolve!
+[CHECK]: Formal private_data of DEMARSH_STUB__snd_ctl_new1 does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__snd_ctl_new1 private_data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: MARSH___STUB__snd_rawmidi_receive
+
+Variable type: unsigned char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: DEMARSH_STUB__snd_rawmidi_receive
+
+Variable type: unsigned char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: MARSH___STUB__snd_rawmidi_transmit_peek
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: DEMARSH_STUB__snd_rawmidi_transmit_peek
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for file
+ Function: MARSH___STUB____might_sleep
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for file
+ Function: DEMARSH_STUB____might_sleep
+
+Variable type: char *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: MARSH___STUB____spin_lock_init
+
+Variable type: char const   *
+No offset
+[CHECK]: Assuming standard scalar pointer for name
+ Function: DEMARSH_STUB____spin_lock_init
+
+Variable type: char const   *
+No offset
+[CHECK]: Formal buf of MARSH___STUB__usb_get_descriptor does not resolve!
+[CHECK]: Formal buf of DEMARSH_STUB__usb_get_descriptor does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__usb_get_descriptor buf Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal data of MARSH___STUB__usb_bulk_msg does not resolve!
+[CHECK]: Assuming standard scalar pointer for actual_length
+ Function: MARSH___STUB__usb_bulk_msg
+
+Variable type: int *
+No offset
+[CHECK]: Formal data of DEMARSH_STUB__usb_bulk_msg does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__usb_bulk_msg data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for actual_length
+ Function: DEMARSH_STUB__usb_bulk_msg
+
+Variable type: int *
+No offset
+[CHECK]: Formal device_data of MARSH___STUB__snd_device_new does not resolve!
+[CHECK]: Formal device_data of DEMARSH_STUB__snd_device_new does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__snd_device_new device_data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal data of MARSH___STUB__usb_control_msg does not resolve!
+[CHECK]: Formal data of DEMARSH_STUB__usb_control_msg does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB__usb_control_msg data Fix this, or you'll have memory corruption at runtime
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: MARSH___STUB__snd_rawmidi_transmit
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Assuming standard scalar pointer for buffer
+ Function: DEMARSH_STUB__snd_rawmidi_transmit
+
+Variable type: unsigned char *
+No offset
+[CHECK]: Formal to of MARSH___STUB____memcpy does not resolve!
+[CHECK]: Formal from of MARSH___STUB____memcpy does not resolve!
+[CHECK]: Formal to of DEMARSH_STUB____memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB____memcpy to Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal from of DEMARSH_STUB____memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB____memcpy from Fix this, or you'll have memory corruption at runtime
+[CHECK]: Formal _retval_ of DEMARSH_STUB____memcpy does not resolve!
+[CHECK]: Void type passed to nooks_ot_lookup:  DEMARSH_STUB____memcpy _retval_ Fix this, or you'll have memory corruption at runtime
+[CHECK]: Converting to NoStorage disp_kern
+[CHECK]: Converting to NoStorage jiffies
+[CHECK]: Converting to NoStorage param_set_int
+[CHECK]: Converting to NoStorage param_get_int
+[CHECK]: Converting to NoStorage param_set_charp
+[CHECK]: Converting to NoStorage param_get_charp
+[CHECK]: Converting to NoStorage param_set_bool
+[CHECK]: Converting to NoStorage param_get_bool
+[CHECK]: Converting to NoStorage param_array_set
+[CHECK]: Converting to NoStorage param_array_get
+[CHECK]: Converting to NoStorage __this_module
+[CHECK]: Converting to NoStorage snd_pcm_lib_ioctl
+[CHECK]: Converting to NoStorage _proxy_pda
+[CHECK]: Converting to NoStorage autoremove_wake_function
+[CHECK]: Converting to NoStorage snd_ctl_boolean_mono_info
+=======================================================
+#### Total execution time: 5.511162
+printing file ./usb-audio.merged.sym.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=2230.67MB, max=49.77MB, minor=2229.94MB, major=86.94MB, promoted=86.21MB
+    minor collections=8511  major collections=18 compactions=0
+Preprocessing ./usb-audio.merged.sym.cil.c
+gcc -D_GNUCC -E ./usb-audio.merged.sym.cil.c -o ./usb-audio.merged.sym.cil.i

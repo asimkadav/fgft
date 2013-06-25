@@ -1,0 +1,142 @@
+int mdio_read - does not return error
+void mdio_sync
+void mdio_write
+int read_eeprom - does not return error
+void rtl_check_media
+void rtl8139_chip_reset
+void __rtl8139_cleanup_dev
+int rtl8139_close - always returns success
+void __exit rtl8139_cleanup_module
+void rtl8139_get_drvinfo
+void rtl8139_get_ethtool_stats
+void rtl8139_get_regs
+struct net_device_stats *rtl8139_get_stats - does not return error
+void rtl8139_get_strings
+int rtl8139_get_settings - does not return error
+void rtl8139_get_wol
+void rtl8139_hw_start
+void rtl8139_init_ring
+irqreturn_t rtl8139_interrupt
+void rtl8139_isr_ack
+void rtl8139_poll_controller
+void rtl8139_remove_one
+int rtl8139_resume - always returns success
+void rtl8139_rx_err
+void rtl8139_set_msglevel
+void rtl8139_set_rx_mode
+void rtl8139_start_thread
+int rtl8139_start_xmit - does not return error even on dropped packet
+int rtl8139_suspend - always returns success
+void rtl8139_thread_iter
+void rtl8139_thread
+void rtl8139_tune_twister
+void rtl8139_tx_clear
+void rtl8139_tx_interrupt
+void rtl8139_tx_timeout_task
+void rtl8139_tx_timeout
+void rtl8139_weird_interrupt
+void __set_rx_mode
+void wrap_copy
+
+struct net_device * rtl8139_init_board
+    - alloc_ethdev fails
+    - pci_enable_device fails
+    - I/O memory or port I/O allocation fails (pci_resource_start/end/flags
+    return incorrect values)
+    - pci_request_regions fails
+    - pci_iomap fails
+    - chip doesn't respond (return 0xffffffff)
+
+int rtl8139_init_one
+    - pci_dev->vendor/device incorrect
+    - rtl8139_init_board fails
+    - register_netdev fails
+
+int rtl8139_open
+    - request_irq fails
+    - dma_alloc_coherent (two calls) fails
+
+int rtl8139_rx
+    - returns -1 if the device writes an invalid size to the DMA buffer or if
+    status is bad
+
+int rtl8139_poll
+    - returns rtl8139_rx return value
+
+int rtl8139_set_wol
+    - Checks that the chip supports wake on LAN first.  If not, the function
+    fails.
+    
+int rtl8139_set_settings
+    - mii_ethtool_sset fails
+
+int rtl8139_nway_reset
+    - mii_nway_restart fails
+
+u32 rtl8139_get_link
+    - mii_link_ok fails
+
+u32 rtl8139_get_msglevel
+    - np->msg_enable is an error code
+    
+int rtl8139_get_regs_len
+    - np->regs_len is an error code
+
+int rtl8139_get_sset_count
+    - the parameter passed in must be ETH_SS_STATS in which case it's
+    successful, else -EOPNOTSUPP
+    
+int netdev_ioctl
+    - generic_mii_ioctl fails
+
+int rtl8139_init_module 
+    - pci_register_driver fails
+    
+--------------------------------------------------------------------------------
+
+static int rtl8139_start_xmit (struct sk_buff *skb, struct net_device *dev)
+- Drops the packet if packet length is >= 1536 (maximum ethernet frame size)
+- Crashes if netdev_priv returns NULL.
+  * Could happen if probe function was not called
+- Fails if DMA memory is not set up properly
+  * Could happen if open function was not called
+- Fails if I/O memory or port I/O base registers are not initialized properly
+  * Could happen if probe function was not called
+- Stops TX queue if:
+            if ((tp->cur_tx - NUM_TX_DESC) == tp->dirty_tx) // NUM_TX_DESC==4
+                netif_stop_queue (dev);
+  * The idea is that the kernel has provided a bunch of packets.
+    The driver queues these packets in DMA memory
+    The device needs to transmit them.  Once transmitted, the driver
+    receives an interrupt and marks them as dirty.
+    
+    Invariant:  tp->cur_tx - tp->dirty_tx <= NUM_TX_DESC and
+                tp->cur_tx - tp->dirty_tx >= 0
+
+
+
+
+static int e1000_xmit_frame(struct sk_buff *skb, struct net_device *netdev)
+- Fails if the adapter state is not "up"
+  * Frees the SKB and return NETDEV_TX_OK
+- Requires skb->len > 0
+- Collision in tx_queue_lock - returns NETDEV_TX_LOCKED.
+  * Seems to mean that we're already transmitting.
+- e1000_maybe_stop_tx might netif_stop_queue if there isn't enough space for new
+packets
+
+
+
+--------------------------------------------------------------------------------
+static int rtl8139_poll(struct napi_struct *napi, int budget)
+- Probe needs to have been called
+- Open needs to have been called.
+- Calls rtl8139_rx
+  * netif_running must return true - this is required for the function to make
+  progress
+  * data must be present according to the chip
+  * rx_size (value from hw) is out of range causes abort
+    - rx_size > MAX_ETH_FRAME_SIZE + 4
+    - rx_size < 8
+    - rx_status is not OK
+  * memory for SKB must be available

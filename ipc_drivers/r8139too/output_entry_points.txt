@@ -1,0 +1,391 @@
+Preprocessing r8139too.merged.c
+gcc -D_GNUCC -E -DCIL=1 r8139too.merged.c -o /tmp/cil-PDWwNm4S.i
+/scratch/sym/cil/obj/x86_LINUX/cilly.asm.exe --out /tmp/cil-ZTa4rcBp.cil.c --verbose --dodrivers --dofuncptr false --dovoidptr false --do-symdriver-test false --dowhat find-roots r8139too.entry_points.txt /tmp/cil-PDWwNm4S.i
+Frontc is parsing /tmp/cil-PDWwNm4S.i
+Converting CABS->CIL
+/scratch/sym/ipc_drivers/r8139too/modif_annots.h:509: Warning: Body of function MICRODRIVERS__MODIF_mii_link_ok falls-through. Adding a return statement
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:290: Warning: /scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:290: CIL only supports attribute((alias)) for functions.
+
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:633: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:634: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:871: Warning: CALL in constant
+/scratch/sym/ipc_drivers/r8139too/r8139too_annotated.c:2668: Warning: Body of function r8139too_restore falls-through. Adding a return statement
+Removing unused temporaries
+Running CIL feature drivers (device-driver analysis)
+**************************************************************
+	Generating Root annotations
+**************************************************************
+ROOT 3 failed: "RealTek RTL8139"
+ROOT 3 failed: 393216
+ROOT 3 failed: "RealTek RTL8129"
+ROOT 3 failed: 65536
+ROOT 3 failed: 4332
+ROOT 3 failed: 33081
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4332
+ROOT 3 failed: 33080
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4371
+ROOT 3 failed: 4625
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5376
+ROOT 3 failed: 4960
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 16435
+ROOT 3 failed: 4960
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4486
+ROOT 3 failed: 4864
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4486
+ROOT 3 failed: 4928
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5073
+ROOT 3 failed: 43782
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4697
+ROOT 3 failed: 41239
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4697
+ROOT 3 failed: 41246
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5354
+ROOT 3 failed: 43782
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5354
+ROOT 3 failed: 43783
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4571
+ROOT 3 failed: 4660
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5170
+ROOT 3 failed: 37168
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 684
+ROOT 3 failed: 4114
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 394
+ROOT 3 failed: 262
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4716
+ROOT 3 failed: 4625
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 5955
+ROOT 3 failed: 33081
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 539
+ROOT 3 failed: 33081
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 4332
+ROOT 3 failed: 33065
+ROOT 3 failed: ~ 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 1
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 33081
+ROOT 3 failed: 4332
+ROOT 3 failed: 33081
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 33081
+ROOT 3 failed: 4486
+ROOT 3 failed: 4864
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: ~ 0
+ROOT 3 failed: 33081
+ROOT 3 failed: 5073
+ROOT 3 failed: 43782
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0U
+ROOT 3 failed: 0UL
+ROOT 5 failed: struct __anonstruct_ethtool_stats_keys_302 [4]
+ROOT 5 failed: struct __anonstruct_ethtool_stats_keys_302 [4]
+ROOT 5 failed: struct __anonstruct_ethtool_stats_keys_302 [4]
+ROOT 5 failed: struct __anonstruct_ethtool_stats_keys_302 [4]
+ROOT 3 failed: "RTL-8139"
+ROOT 3 failed: 1 << 30
+ROOT 3 failed: 1
+ROOT 3 failed: "RTL-8139 rev K"
+ROOT 3 failed: (1 << 30) | (1 << 29)
+ROOT 3 failed: 1
+ROOT 3 failed: "RTL-8139A"
+ROOT 3 failed: ((1 << 30) | (1 << 29)) | (1 << 28)
+ROOT 3 failed: 1
+ROOT 3 failed: "RTL-8139A rev G"
+ROOT 3 failed: (((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 23)
+ROOT 3 failed: 1
+ROOT 3 failed: "RTL-8139B"
+ROOT 3 failed: (((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 27)
+ROOT 3 failed: 2
+ROOT 3 failed: "RTL-8130"
+ROOT 3 failed: ((((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 27)) | (1 << 26)
+ROOT 3 failed: 2
+ROOT 3 failed: "RTL-8139C"
+ROOT 3 failed: (((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 26)
+ROOT 3 failed: 2
+ROOT 3 failed: "RTL-8100"
+ROOT 3 failed: ((((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 27)) | (1 << 23)
+ROOT 3 failed: 2
+ROOT 3 failed: "RTL-8100B/8139D"
+ROOT 3 failed: ((((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 26)) | (1 << 22)
+ROOT 3 failed: 3
+ROOT 3 failed: "RTL-8101"
+ROOT 3 failed: (((((1 << 30) | (1 << 29)) | (1 << 28)) | (1 << 26)) | (1 << 23)) | (1 << 22)
+ROOT 3 failed: 2
+ROOT 3 failed: __param_str_use_io
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_multicast_filter_limit
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(media) / sizeof(media[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(media[0])
+ROOT 3 failed: media
+ROOT 3 failed: __param_str_media
+ROOT 3 failed: 0U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: sizeof(full_duplex) / sizeof(full_duplex[0]) + (sizeof(char [1]) - 1UL)
+ROOT 3 failed: 0
+ROOT 2: param_set_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kparam_array  const  
+ROOT 3 failed: sizeof(full_duplex[0])
+ROOT 3 failed: full_duplex
+ROOT 3 failed: __param_str_full_duplex
+ROOT 3 failed: 0U
+ROOT 2: param_array_set
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_array_get
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: __param_str_debug
+ROOT 3 failed: 0U
+ROOT 2: param_set_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 2: param_get_int
+ROOT 5 failed: struct kernel_param  const  
+ROOT 5 failed: struct kernel_param  const  
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_open
+ROOT 2: rtl8139_close
+ROOT 2: rtl8139_start_xmit
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_set_rx_mode
+ROOT 2: eth_mac_addr
+ROOT 2: eth_validate_addr
+ROOT 2: netdev_ioctl
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_tx_timeout
+ROOT 2: rtl8139_get_stats
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_poll_controller
+ROOT 2: rtl8139_get_settings
+ROOT 2: rtl8139_set_settings
+ROOT 2: rtl8139_get_drvinfo
+ROOT 2: rtl8139_get_regs_len
+ROOT 2: rtl8139_get_regs
+ROOT 2: rtl8139_get_wol
+ROOT 2: rtl8139_set_wol
+ROOT 2: rtl8139_get_msglevel
+ROOT 2: rtl8139_set_msglevel
+ROOT 2: rtl8139_nway_reset
+ROOT 2: rtl8139_get_link
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_get_strings
+ROOT 3 failed: 0
+ROOT 2: rtl8139_get_ethtool_stats
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_get_sset_count
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 3 failed: "8139too"
+ROOT 3 failed: rtl8139_pci_tbl
+ROOT 2: rtl8139_init_one
+ROOT 2: rtl8139_remove_one
+ROOT 2: rtl8139_suspend
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+ROOT 2: rtl8139_resume
+ROOT 3 failed: 0
+ROOT 3 failed: 0
+eth_mac_addr ndo_set_mac_address
+rtl8139_get_strings get_strings
+cleanup_module cleanup_module
+rtl8139_close ndo_stop
+rtl8139_set_settings set_settings
+rtl8139_open ndo_open
+rtl8139_nway_reset nway_reset
+rtl8139_get_settings get_settings
+rtl8139_get_sset_count get_sset_count
+init_module init_module
+rtl8139_set_wol set_wol
+rtl8139_get_wol get_wol
+rtl8139_tx_timeout ndo_tx_timeout
+rtl8139_poll_controller ndo_poll_controller
+rtl8139_resume resume_pci
+rtl8139_get_stats ndo_get_stats
+rtl8139_remove_one remove_pci
+rtl8139_set_rx_mode ndo_set_multicast_list
+rtl8139_get_regs_len get_regs_len
+rtl8139_init_one probe_pci
+rtl8139_get_drvinfo get_drvinfo
+eth_validate_addr ndo_validate_addr
+rtl8139_start_xmit ndo_start_xmit
+rtl8139_set_msglevel set_msglevel
+rtl8139_get_ethtool_stats get_ethtool_stats
+rtl8139_get_msglevel get_msglevel
+rtl8139_get_regs get_regs
+rtl8139_interrupt interrupt
+netdev_ioctl ndo_do_ioctl
+rtl8139_get_link get_link
+=======================================================
+=======================================================
+#### Total execution time: 0.789879
+printing file /tmp/cil-ZTa4rcBp.cil.c
+Timings:
+TOTAL                           0.000 s
+Timing used
+Memory statistics: total=332.01MB, max=26.41MB, minor=330.79MB, major=28.05MB, promoted=26.82MB
+    minor collections=1262  major collections=13 compactions=0
+Preprocessing /tmp/cil-ZTa4rcBp.cil.c
+gcc -D_GNUCC -E /tmp/cil-ZTa4rcBp.cil.c -o /tmp/cil-F9vYKcY4.cil.i
