@@ -1,1 +1,0 @@
-cmd_/scratch/sym/ipc_drivers/psmousebase/psmousebase-stub.o := ld -m elf_x86_64   -r -o /scratch/sym/ipc_drivers/psmousebase/psmousebase-stub.o /scratch/sym/ipc_drivers/psmousebase/psmousebase.kernel.o 
